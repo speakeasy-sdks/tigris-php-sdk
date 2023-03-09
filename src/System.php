@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace tigris\core;
 
-class ApplicationKeys 
+class System 
 {
 	
 	
@@ -30,104 +30,15 @@ class ApplicationKeys
 	}
     
     /**
-     * tigrisCreateAppKey - Creates the app key
+     * getHealth - Health Check
      *
-     * Create an app key.
+     * This endpoint can be used to check the liveness of the server.
     */
-    public function tigrisCreateAppKey(
-        \tigris\core\Models\Operations\TigrisCreateAppKeyRequest $request,
-    ): \tigris\core\Models\Operations\TigrisCreateAppKeyResponse
+    public function getHealth(
+    ): \tigris\core\Models\Operations\HealthAPIHealthResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/apps/keys/create', $request->pathParams);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
-        if ($body === null) {
-            throw new \Exception('Request body is required');
-        }
-        $options = array_merge_recursive($options, $body);
-        
-        $httpResponse = $this->_securityClient->request('POST', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \tigris\core\Models\Operations\TigrisCreateAppKeyResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->createAppKeyResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\CreateAppKeyResponse', 'json');
-            }
-        }
-        else {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
-            }
-        }
-
-        return $response;
-    }
-    
-    /**
-     * tigrisDeleteAppKey - Deletes the app key
-     *
-     * Delete an app key.
-    */
-    public function tigrisDeleteAppKey(
-        \tigris\core\Models\Operations\TigrisDeleteAppKeyRequest $request,
-    ): \tigris\core\Models\Operations\TigrisDeleteAppKeyResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/apps/keys/delete', $request->pathParams);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
-        if ($body === null) {
-            throw new \Exception('Request body is required');
-        }
-        $options = array_merge_recursive($options, $body);
-        
-        $httpResponse = $this->_securityClient->request('DELETE', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \tigris\core\Models\Operations\TigrisDeleteAppKeyResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->deleteAppKeyResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\DeleteAppKeyResponse', 'json');
-            }
-        }
-        else {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
-            }
-        }
-
-        return $response;
-    }
-    
-    /**
-     * tigrisListAppKeys - List all the app keys
-     *
-     * Lists all app keys visible to requesting actor.
-    */
-    public function tigrisListAppKeys(
-        \tigris\core\Models\Operations\TigrisListAppKeysRequest $request,
-    ): \tigris\core\Models\Operations\TigrisListAppKeysResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/apps/keys', $request->pathParams);
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/health');
         
         $options = ['http_errors' => false];
         
@@ -135,7 +46,7 @@ class ApplicationKeys
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \tigris\core\Models\Operations\TigrisListAppKeysResponse();
+        $response = new \tigris\core\Models\Operations\HealthAPIHealthResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -143,7 +54,7 @@ class ApplicationKeys
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->listAppKeysResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\ListAppKeysResponse', 'json');
+                $response->healthCheckResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\HealthCheckResponse', 'json');
             }
         }
         else {
@@ -157,29 +68,23 @@ class ApplicationKeys
     }
     
     /**
-     * tigrisRotateAppKeySecret - Rotates the app key secret
+     * getServerInfo - Information about the server
      *
-     * Endpoint is used to rotate the secret for the app key.
+     * Provides the information about the server. This information includes returning the server version, etc.
     */
-    public function tigrisRotateAppKeySecret(
-        \tigris\core\Models\Operations\TigrisRotateAppKeySecretRequest $request,
-    ): \tigris\core\Models\Operations\TigrisRotateAppKeySecretResponse
+    public function getServerInfo(
+    ): \tigris\core\Models\Operations\ObservabilityGetInfoResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/apps/keys/rotate', $request->pathParams);
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/observability/info');
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
-        if ($body === null) {
-            throw new \Exception('Request body is required');
-        }
-        $options = array_merge_recursive($options, $body);
         
-        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \tigris\core\Models\Operations\TigrisRotateAppKeySecretResponse();
+        $response = new \tigris\core\Models\Operations\ObservabilityGetInfoResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -187,7 +92,7 @@ class ApplicationKeys
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->rotateAppKeyResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\RotateAppKeyResponse', 'json');
+                $response->getInfoResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\GetInfoResponse', 'json');
             }
         }
         else {
@@ -201,16 +106,16 @@ class ApplicationKeys
     }
     
     /**
-     * tigrisUpdateAppKey - Updates the description of the app key
+     * observabilityQuotaUsage - Queries current namespace quota usage
      *
-     * Update the description of an app key.
+     * Returns current namespace quota limits
     */
-    public function tigrisUpdateAppKey(
-        \tigris\core\Models\Operations\TigrisUpdateAppKeyRequest $request,
-    ): \tigris\core\Models\Operations\TigrisUpdateAppKeyResponse
+    public function observabilityQuotaUsage(
+        \tigris\core\Models\Operations\ObservabilityQuotaUsageRequest $request,
+    ): \tigris\core\Models\Operations\ObservabilityQuotaUsageResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/apps/keys/update', $request->pathParams);
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/observability/quota/usage');
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request);
@@ -223,7 +128,7 @@ class ApplicationKeys
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \tigris\core\Models\Operations\TigrisUpdateAppKeyResponse();
+        $response = new \tigris\core\Models\Operations\ObservabilityQuotaUsageResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -231,7 +136,95 @@ class ApplicationKeys
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->updateAppKeyResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\UpdateAppKeyResponse', 'json');
+                $response->quotaUsageResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\QuotaUsageResponse', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
+            }
+        }
+
+        return $response;
+    }
+    
+    /**
+     * queryQuotaLimits - Queries current namespace quota limits
+     *
+     * Returns current namespace quota limits
+    */
+    public function queryQuotaLimits(
+        \tigris\core\Models\Operations\ObservabilityQuotaLimitsRequest $request,
+    ): \tigris\core\Models\Operations\ObservabilityQuotaLimitsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/observability/quota/limits');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \tigris\core\Models\Operations\ObservabilityQuotaLimitsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->quotaLimitsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\QuotaLimitsResponse', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
+            }
+        }
+
+        return $response;
+    }
+    
+    /**
+     * queryTimeSeriesMetrics - Queries time series metrics
+     *
+     * Queries time series metrics
+    */
+    public function queryTimeSeriesMetrics(
+        \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsRequest $request,
+    ): \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/observability/metrics/timeseries/query');
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->queryTimeSeriesMetricsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\QueryTimeSeriesMetricsResponse', 'json');
             }
         }
         else {

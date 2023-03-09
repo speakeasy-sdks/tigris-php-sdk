@@ -33,13 +33,13 @@ class Database
 	}
     
     /**
-     * tigrisBeginTransaction - Begin a transaction
+     * beginTransaction - Begin a transaction
      *
      * Starts a new transaction and returns a transactional object. All reads/writes performed
      *  within a transaction will run with serializable isolation. Tigris offers global transactions,
      *  with ACID properties and strict serializability.
     */
-    public function tigrisBeginTransaction(
+    public function beginTransaction(
         \tigris\core\Models\Operations\TigrisBeginTransactionRequest $request,
     ): \tigris\core\Models\Operations\TigrisBeginTransactionResponse
     {
@@ -79,12 +79,12 @@ class Database
     }
     
     /**
-     * tigrisCommitTransaction - Commit a Transaction
+     * commitTransaction - Commit a Transaction
      *
      * Atomically commit all the changes performed in the context of the transaction. Commit provides all
      *  or nothing semantics by ensuring no partial updates are in the project due to a transaction failure.
     */
-    public function tigrisCommitTransaction(
+    public function commitTransaction(
         \tigris\core\Models\Operations\TigrisCommitTransactionRequest $request,
     ): \tigris\core\Models\Operations\TigrisCommitTransactionResponse
     {
@@ -124,11 +124,11 @@ class Database
     }
     
     /**
-     * tigrisCreateBranch - Create a database branch
+     * createBranch - Create a database branch
      *
      * Creates a new database branch, if not already existing.
     */
-    public function tigrisCreateBranch(
+    public function createBranch(
         \tigris\core\Models\Operations\TigrisCreateBranchRequest $request,
     ): \tigris\core\Models\Operations\TigrisCreateBranchResponse
     {
@@ -168,12 +168,12 @@ class Database
     }
     
     /**
-     * tigrisDeleteBranch - Delete a database branch
+     * deleteBranch - Delete a database branch
      *
      * Deletes a database branch, if exists.
      *  Throws 400 Bad Request if "main" branch is being deleted
     */
-    public function tigrisDeleteBranch(
+    public function deleteBranch(
         \tigris\core\Models\Operations\TigrisDeleteBranchRequest $request,
     ): \tigris\core\Models\Operations\TigrisDeleteBranchResponse
     {
@@ -213,12 +213,12 @@ class Database
     }
     
     /**
-     * tigrisDescribeDatabase - Describe database
+     * describe - Describe database
      *
      * This API returns information related to the project along with all the collections inside the project.
      *  This can be used to retrieve the size of the project or to retrieve schemas, branches and the size of all the collections present in this project.
     */
-    public function tigrisDescribeDatabase(
+    public function describe(
         \tigris\core\Models\Operations\TigrisDescribeDatabaseRequest $request,
     ): \tigris\core\Models\Operations\TigrisDescribeDatabaseResponse
     {
@@ -258,50 +258,11 @@ class Database
     }
     
     /**
-     * tigrisListBranches - List database branches
-     *
-     * List database branches
-    */
-    public function tigrisListBranches(
-        \tigris\core\Models\Operations\TigrisListBranchesRequest $request,
-    ): \tigris\core\Models\Operations\TigrisListBranchesResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/database/branches', $request->pathParams);
-        
-        $options = ['http_errors' => false];
-        
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \tigris\core\Models\Operations\TigrisListBranchesResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->listBranchesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\ListBranchesResponse', 'json');
-            }
-        }
-        else {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
-            }
-        }
-
-        return $response;
-    }
-    
-    /**
-     * tigrisListCollections - List Collections
+     * listCollections - List Collections
      *
      * List all the collections present in the project passed in the request.
     */
-    public function tigrisListCollections(
+    public function listCollections(
         \tigris\core\Models\Operations\TigrisListCollectionsRequest $request,
     ): \tigris\core\Models\Operations\TigrisListCollectionsResponse
     {
@@ -337,12 +298,12 @@ class Database
     }
     
     /**
-     * tigrisRollbackTransaction - Rollback a transaction
+     * rollbackTransaction - Rollback a transaction
      *
      * Rollback transaction discards all the changes
      *  performed in the transaction
     */
-    public function tigrisRollbackTransaction(
+    public function rollbackTransaction(
         \tigris\core\Models\Operations\TigrisRollbackTransactionRequest $request,
     ): \tigris\core\Models\Operations\TigrisRollbackTransactionResponse
     {
@@ -369,6 +330,45 @@ class Database
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
                 $response->rollbackTransactionResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\RollbackTransactionResponse', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
+            }
+        }
+
+        return $response;
+    }
+    
+    /**
+     * tigrisListBranches - List database branches
+     *
+     * List database branches
+    */
+    public function tigrisListBranches(
+        \tigris\core\Models\Operations\TigrisListBranchesRequest $request,
+    ): \tigris\core\Models\Operations\TigrisListBranchesResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/database/branches', $request->pathParams);
+        
+        $options = ['http_errors' => false];
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \tigris\core\Models\Operations\TigrisListBranchesResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listBranchesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\ListBranchesResponse', 'json');
             }
         }
         else {

@@ -6,7 +6,7 @@ namespace tigris\core\Models\Operations;
 
 
 
-class ManagementCreateNamespaceResponse
+class CreateNamespaceResponse
 {
     public string $contentType;
     

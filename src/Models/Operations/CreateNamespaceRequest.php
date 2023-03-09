@@ -6,7 +6,7 @@ namespace tigris\core\Models\Operations;
 
 use \tigris\core\Utils\SpeakeasyMetadata;
 
-class ManagementCreateNamespaceRequest
+class CreateNamespaceRequest
 {
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public \tigris\core\Models\Shared\CreateNamespaceRequest $request;

@@ -71,16 +71,17 @@ class SDK
 		'http://localhost:8081',
 	];
   	
-  	public ApplicationKeys $applicationKeys;
-  	public Authentication $authentication;
+  	public AppKey $appKey;
+  	public Auth $auth;
   	public Cache $cache;
-  	public Collections $collections;
+  	public Channel $channel;
+  	public Collection $collection;
   	public Database $database;
-  	public Management $management;
-  	public Observability $observability;
-  	public Projects $projects;
-  	public Realtime $realtime;
-  	public Search $search;	
+  	public NamespaceT $namespace;
+  	public Project $project;
+  	public Search $search;
+  	public System $system;
+  	public User $user;	
 
 	// SDK private variables namespaced with _ to avoid conflicts with API models
 	private ?\GuzzleHttp\ClientInterface $_defaultClient;
@@ -88,8 +89,8 @@ class SDK
 	private ?Models\Shared\Security $_security;
 	private string $_serverUrl;
 	private string $_language = "php";
-	private string $_sdkVersion = "0.1.0";
-	private string $_genVersion = "1.9.0";
+	private string $_sdkVersion = "0.0.1";
+	private string $_genVersion = "1.9.1";
 
 	public static function builder(): SDKBuilder
 	{
@@ -130,7 +131,7 @@ class SDK
 			$this->_serverUrl = $this::SERVERS[0];
 		}
 		
-		$this->applicationKeys = new ApplicationKeys(
+		$this->appKey = new AppKey(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,
@@ -139,7 +140,7 @@ class SDK
 			$this->_genVersion
 		);
 		
-		$this->authentication = new Authentication(
+		$this->auth = new Auth(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,
@@ -157,7 +158,16 @@ class SDK
 			$this->_genVersion
 		);
 		
-		$this->collections = new Collections(
+		$this->channel = new Channel(
+			$this->_defaultClient,
+			$this->_securityClient,
+			$this->_serverUrl,
+			$this->_language,
+			$this->_sdkVersion,
+			$this->_genVersion
+		);
+		
+		$this->collection = new Collection(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,
@@ -175,7 +185,7 @@ class SDK
 			$this->_genVersion
 		);
 		
-		$this->management = new Management(
+		$this->namespace = new NamespaceT(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,
@@ -184,25 +194,7 @@ class SDK
 			$this->_genVersion
 		);
 		
-		$this->observability = new Observability(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion
-		);
-		
-		$this->projects = new Projects(
-			$this->_defaultClient,
-			$this->_securityClient,
-			$this->_serverUrl,
-			$this->_language,
-			$this->_sdkVersion,
-			$this->_genVersion
-		);
-		
-		$this->realtime = new Realtime(
+		$this->project = new Project(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,
@@ -212,6 +204,24 @@ class SDK
 		);
 		
 		$this->search = new Search(
+			$this->_defaultClient,
+			$this->_securityClient,
+			$this->_serverUrl,
+			$this->_language,
+			$this->_sdkVersion,
+			$this->_genVersion
+		);
+		
+		$this->system = new System(
+			$this->_defaultClient,
+			$this->_securityClient,
+			$this->_serverUrl,
+			$this->_language,
+			$this->_sdkVersion,
+			$this->_genVersion
+		);
+		
+		$this->user = new User(
 			$this->_defaultClient,
 			$this->_securityClient,
 			$this->_serverUrl,

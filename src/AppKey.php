@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace tigris\core;
 
-class Realtime 
+class AppKey 
 {
-	
 	
 	
 	
@@ -31,22 +30,29 @@ class Realtime
 	}
     
     /**
-     * realtimeGetRTChannel - Get the details about a channel
+     * delete - Deletes the app key
+     *
+     * Delete an app key.
     */
-    public function realtimeGetRTChannel(
-        \tigris\core\Models\Operations\RealtimeGetRTChannelRequest $request,
-    ): \tigris\core\Models\Operations\RealtimeGetRTChannelResponse
+    public function delete(
+        \tigris\core\Models\Operations\TigrisDeleteAppKeyRequest $request,
+    ): \tigris\core\Models\Operations\TigrisDeleteAppKeyResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}', $request->pathParams);
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/apps/keys/delete', $request->pathParams);
         
         $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
         
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        $httpResponse = $this->_securityClient->request('DELETE', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \tigris\core\Models\Operations\RealtimeGetRTChannelResponse();
+        $response = new \tigris\core\Models\Operations\TigrisDeleteAppKeyResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -54,7 +60,7 @@ class Realtime
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getRTChannelResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\GetRTChannelResponse', 'json');
+                $response->deleteAppKeyResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\DeleteAppKeyResponse', 'json');
             }
         }
         else {
@@ -68,14 +74,16 @@ class Realtime
     }
     
     /**
-     * realtimeGetRTChannels - Get all channels for your application project
+     * list - List all the app keys
+     *
+     * Lists all app keys visible to requesting actor.
     */
-    public function realtimeGetRTChannels(
-        \tigris\core\Models\Operations\RealtimeGetRTChannelsRequest $request,
-    ): \tigris\core\Models\Operations\RealtimeGetRTChannelsResponse
+    public function list(
+        \tigris\core\Models\Operations\TigrisListAppKeysRequest $request,
+    ): \tigris\core\Models\Operations\TigrisListAppKeysResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/realtime/channels', $request->pathParams);
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/apps/keys', $request->pathParams);
         
         $options = ['http_errors' => false];
         
@@ -83,7 +91,7 @@ class Realtime
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \tigris\core\Models\Operations\RealtimeGetRTChannelsResponse();
+        $response = new \tigris\core\Models\Operations\TigrisListAppKeysResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -91,7 +99,7 @@ class Realtime
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->getRTChannelsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\GetRTChannelsResponse', 'json');
+                $response->listAppKeysResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\ListAppKeysResponse', 'json');
             }
         }
         else {
@@ -105,52 +113,16 @@ class Realtime
     }
     
     /**
-     * realtimeListSubscriptions - Get the subscriptions details about a channel
+     * rotate - Rotates the app key secret
+     *
+     * Endpoint is used to rotate the secret for the app key.
     */
-    public function realtimeListSubscriptions(
-        \tigris\core\Models\Operations\RealtimeListSubscriptionsRequest $request,
-    ): \tigris\core\Models\Operations\RealtimeListSubscriptionsResponse
+    public function rotate(
+        \tigris\core\Models\Operations\TigrisRotateAppKeySecretRequest $request,
+    ): \tigris\core\Models\Operations\TigrisRotateAppKeySecretResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}/subscriptions', $request->pathParams);
-        
-        $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams($request->queryParams));
-        
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \tigris\core\Models\Operations\RealtimeListSubscriptionsResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->listSubscriptionResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\ListSubscriptionResponse', 'json');
-            }
-        }
-        else {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
-            }
-        }
-
-        return $response;
-    }
-    
-    /**
-     * realtimeMessages - push messages to a single channel
-    */
-    public function realtimeMessages(
-        \tigris\core\Models\Operations\RealtimeMessagesRequest $request,
-    ): \tigris\core\Models\Operations\RealtimeMessagesResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}/messages', $request->pathParams);
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/apps/keys/rotate', $request->pathParams);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request);
@@ -163,7 +135,7 @@ class Realtime
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \tigris\core\Models\Operations\RealtimeMessagesResponse();
+        $response = new \tigris\core\Models\Operations\TigrisRotateAppKeySecretResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -171,7 +143,7 @@ class Realtime
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->messagesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\MessagesResponse', 'json');
+                $response->rotateAppKeyResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\RotateAppKeyResponse', 'json');
             }
         }
         else {
@@ -185,22 +157,29 @@ class Realtime
     }
     
     /**
-     * realtimePresence - Presence about the channel
+     * tigrisCreateAppKey - Creates the app key
+     *
+     * Create an app key.
     */
-    public function realtimePresence(
-        \tigris\core\Models\Operations\RealtimePresenceRequest $request,
-    ): \tigris\core\Models\Operations\RealtimePresenceResponse
+    public function tigrisCreateAppKey(
+        \tigris\core\Models\Operations\TigrisCreateAppKeyRequest $request,
+    ): \tigris\core\Models\Operations\TigrisCreateAppKeyResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}/presence', $request->pathParams);
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/apps/keys/create', $request->pathParams);
         
         $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
         
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \tigris\core\Models\Operations\RealtimePresenceResponse();
+        $response = new \tigris\core\Models\Operations\TigrisCreateAppKeyResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -208,7 +187,7 @@ class Realtime
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->presenceResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\PresenceResponse', 'json');
+                $response->createAppKeyResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\CreateAppKeyResponse', 'json');
             }
         }
         else {
@@ -222,23 +201,29 @@ class Realtime
     }
     
     /**
-     * realtimeReadMessages - Get all messages for a channel
+     * update - Updates the description of the app key
+     *
+     * Update the description of an app key.
     */
-    public function realtimeReadMessages(
-        \tigris\core\Models\Operations\RealtimeReadMessagesRequest $request,
-    ): \tigris\core\Models\Operations\RealtimeReadMessagesResponse
+    public function update(
+        \tigris\core\Models\Operations\TigrisUpdateAppKeyRequest $request,
+    ): \tigris\core\Models\Operations\TigrisUpdateAppKeyResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}/messages', $request->pathParams);
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/apps/keys/update', $request->pathParams);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams($request->queryParams));
+        $body = Utils\Utils::serializeRequestBody($request);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
         
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \tigris\core\Models\Operations\RealtimeReadMessagesResponse();
+        $response = new \tigris\core\Models\Operations\TigrisUpdateAppKeyResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -246,7 +231,7 @@ class Realtime
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->readMessagesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\ReadMessagesResponse', 'json');
+                $response->updateAppKeyResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\UpdateAppKeyResponse', 'json');
             }
         }
         else {

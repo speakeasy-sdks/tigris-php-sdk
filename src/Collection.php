@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace tigris\core;
 
-class Collections 
+class Collection 
 {
 	
 	
@@ -35,7 +35,7 @@ class Collections
 	}
     
     /**
-     * tigrisCreateOrUpdateCollection - Create or update a collection
+     * create - Create or update a collection
      *
      * Creates a new collection or atomically upgrades the collection to the new schema provided in the request.
      *  Schema changes are applied atomically and immediately without any downtime.
@@ -43,7 +43,7 @@ class Collections
      *     <li> `DOCUMENTS`: Offers rich CRUD APIs.
      *     <li> `MESSAGES`: Offers event streaming APIs.
     */
-    public function tigrisCreateOrUpdateCollection(
+    public function create(
         \tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionRequest $request,
     ): \tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionResponse
     {
@@ -83,11 +83,11 @@ class Collections
     }
     
     /**
-     * tigrisDelete - Delete Documents
+     * deleteDocuments - Delete Documents
      *
      * Delete a range of documents in the collection using the condition provided in the filter.
     */
-    public function tigrisDelete(
+    public function deleteDocuments(
         \tigris\core\Models\Operations\TigrisDeleteRequest $request,
     ): \tigris\core\Models\Operations\TigrisDeleteResponse
     {
@@ -127,11 +127,11 @@ class Collections
     }
     
     /**
-     * tigrisDescribeCollection - Describe Collection
+     * describe - Describe Collection
      *
      * Returns the information related to the collection. This can be used to retrieve the schema or size of the collection.
     */
-    public function tigrisDescribeCollection(
+    public function describe(
         \tigris\core\Models\Operations\TigrisDescribeCollectionRequest $request,
     ): \tigris\core\Models\Operations\TigrisDescribeCollectionResponse
     {
@@ -171,12 +171,12 @@ class Collections
     }
     
     /**
-     * tigrisDropCollection - Drop Collection
+     * drop - Drop Collection
      *
      * Drops the collection inside this project. This API deletes all of the
      *  documents inside this collection and any metadata associated with it.
     */
-    public function tigrisDropCollection(
+    public function drop(
         \tigris\core\Models\Operations\TigrisDropCollectionRequest $request,
     ): \tigris\core\Models\Operations\TigrisDropCollectionResponse
     {
@@ -216,7 +216,7 @@ class Collections
     }
     
     /**
-     * tigrisImport - Import Documents
+     * importDocuments - Import Documents
      *
      * Imports documents into the collection.
      * 
@@ -225,7 +225,7 @@ class Collections
      *   * Evolves the schema as soon as it's backward compatible
      *   * Creates collection with inferred schema (if requested)
     */
-    public function tigrisImport(
+    public function importDocuments(
         \tigris\core\Models\Operations\TigrisImportRequest $request,
     ): \tigris\core\Models\Operations\TigrisImportResponse
     {
@@ -265,13 +265,13 @@ class Collections
     }
     
     /**
-     * tigrisInsert - Insert Documents
+     * insertDocuments - Insert Documents
      *
      * Inserts new documents in the collection and returns an AlreadyExists error if any of the documents
      *  in the request already exists. Insert provides idempotency by returning an error if the document
      *  already exists. To replace documents, use REPLACE API instead of INSERT.
     */
-    public function tigrisInsert(
+    public function insertDocuments(
         \tigris\core\Models\Operations\TigrisInsertRequest $request,
     ): \tigris\core\Models\Operations\TigrisInsertResponse
     {
@@ -311,7 +311,7 @@ class Collections
     }
     
     /**
-     * tigrisRead - Read Documents
+     * readDocuments - Read Documents
      *
      * Reads a range of documents from the collection, or messages from a collection in case of event streaming. Tigris does not require you to
      *  index any fields and automatically index all the fields which means you can filter by any field in the document.
@@ -320,7 +320,7 @@ class Collections
      *  the `limit` parameter is used to specify the number of documents to read. You can find more detailed documentation
      *  of the Read API <a href="https://docs.tigrisdata.com/overview/query" title="here">here</a>.
     */
-    public function tigrisRead(
+    public function readDocuments(
         \tigris\core\Models\Operations\TigrisReadRequest $request,
     ): \tigris\core\Models\Operations\TigrisReadResponse
     {
@@ -360,11 +360,11 @@ class Collections
     }
     
     /**
-     * tigrisReplace - Insert or Replace Documents
+     * replaceDocuments - Insert or Replace Documents
      *
      * Inserts the documents or replaces the existing documents in the collections.
     */
-    public function tigrisReplace(
+    public function replaceDocuments(
         \tigris\core\Models\Operations\TigrisReplaceRequest $request,
     ): \tigris\core\Models\Operations\TigrisReplaceResponse
     {
@@ -404,14 +404,14 @@ class Collections
     }
     
     /**
-     * tigrisSearch - Search Documents.
+     * searchDocuments - Search Documents.
      *
      * Searches a collection for the documents matching the query, or messages in case of event streaming. A search can be
      *  a term search or a phrase search. Search API allows filtering the result set using filters as documented <a href="https://docs.tigrisdata.com/overview/query#specification-1" title="here">here</a>.
      *  You can also perform a faceted search by passing the fields in the facet parameter.
      *  You can find more detailed documentation of the Search API with multiple examples <a href="https://docs.tigrisdata.com/overview/search" title="here">here</a>.
     */
-    public function tigrisSearch(
+    public function searchDocuments(
         \tigris\core\Models\Operations\TigrisSearchRequest $request,
     ): \tigris\core\Models\Operations\TigrisSearchResponse
     {
@@ -451,11 +451,11 @@ class Collections
     }
     
     /**
-     * tigrisUpdate - Update Documents.
+     * updateDocuments - Update Documents.
      *
      * Update a range of documents in the collection using the condition provided in the filter.
     */
-    public function tigrisUpdate(
+    public function updateDocuments(
         \tigris\core\Models\Operations\TigrisUpdateRequest $request,
     ): \tigris\core\Models\Operations\TigrisUpdateResponse
     {

@@ -33,9 +33,9 @@ class Cache
 	}
     
     /**
-     * cacheCreateCache - Creates the cache
+     * create - Creates the cache
     */
-    public function cacheCreateCache(
+    public function create(
         \tigris\core\Models\Operations\CacheCreateCacheRequest $request,
     ): \tigris\core\Models\Operations\CacheCreateCacheResponse
     {
@@ -75,51 +75,9 @@ class Cache
     }
     
     /**
-     * cacheDel - Deletes an entry from cache
+     * delete - Deletes the cache
     */
-    public function cacheDel(
-        \tigris\core\Models\Operations\CacheDelRequest $request,
-    ): \tigris\core\Models\Operations\CacheDelResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/caches/{name}/{key}/delete', $request->pathParams);
-        
-        $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
-        if ($body === null) {
-            throw new \Exception('Request body is required');
-        }
-        $options = array_merge_recursive($options, $body);
-        
-        $httpResponse = $this->_securityClient->request('DELETE', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \tigris\core\Models\Operations\CacheDelResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->delResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\DelResponse', 'json');
-            }
-        }
-        else {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
-            }
-        }
-
-        return $response;
-    }
-    
-    /**
-     * cacheDeleteCache - Deletes the cache
-    */
-    public function cacheDeleteCache(
+    public function delete(
         \tigris\core\Models\Operations\CacheDeleteCacheRequest $request,
     ): \tigris\core\Models\Operations\CacheDeleteCacheResponse
     {
@@ -159,9 +117,51 @@ class Cache
     }
     
     /**
-     * cacheGet - Reads an entry from cache
+     * deleteKeys - Deletes an entry from cache
     */
-    public function cacheGet(
+    public function deleteKeys(
+        \tigris\core\Models\Operations\CacheDelRequest $request,
+    ): \tigris\core\Models\Operations\CacheDelResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/caches/{name}/{key}/delete', $request->pathParams);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('DELETE', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \tigris\core\Models\Operations\CacheDelResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->delResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\DelResponse', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
+            }
+        }
+
+        return $response;
+    }
+    
+    /**
+     * getKey - Reads an entry from cache
+    */
+    public function getKey(
         \tigris\core\Models\Operations\CacheGetRequest $request,
     ): \tigris\core\Models\Operations\CacheGetResponse
     {
@@ -196,9 +196,9 @@ class Cache
     }
     
     /**
-     * cacheGetSet - Sets an entry in the cache and returns the previous value if exists
+     * getSetKey - Sets an entry in the cache and returns the previous value if exists
     */
-    public function cacheGetSet(
+    public function getSetKey(
         \tigris\core\Models\Operations\CacheGetSetRequest $request,
     ): \tigris\core\Models\Operations\CacheGetSetResponse
     {
@@ -238,9 +238,46 @@ class Cache
     }
     
     /**
-     * cacheKeys - Lists all the key for this cache
+     * list - Lists all the caches for the given project
     */
-    public function cacheKeys(
+    public function list(
+        \tigris\core\Models\Operations\CacheListCachesRequest $request,
+    ): \tigris\core\Models\Operations\CacheListCachesResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/caches/list', $request->pathParams);
+        
+        $options = ['http_errors' => false];
+        
+        $httpResponse = $this->_securityClient->request('GET', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \tigris\core\Models\Operations\CacheListCachesResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listCachesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\ListCachesResponse', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
+            }
+        }
+
+        return $response;
+    }
+    
+    /**
+     * listKeys - Lists all the key for this cache
+    */
+    public function listKeys(
         \tigris\core\Models\Operations\CacheKeysRequest $request,
     ): \tigris\core\Models\Operations\CacheKeysResponse
     {
@@ -276,46 +313,9 @@ class Cache
     }
     
     /**
-     * cacheListCaches - Lists all the caches for the given project
+     * setKey - Sets an entry in the cache
     */
-    public function cacheListCaches(
-        \tigris\core\Models\Operations\CacheListCachesRequest $request,
-    ): \tigris\core\Models\Operations\CacheListCachesResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/caches/list', $request->pathParams);
-        
-        $options = ['http_errors' => false];
-        
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \tigris\core\Models\Operations\CacheListCachesResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->listCachesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\ListCachesResponse', 'json');
-            }
-        }
-        else {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
-            }
-        }
-
-        return $response;
-    }
-    
-    /**
-     * cacheSet - Sets an entry in the cache
-    */
-    public function cacheSet(
+    public function setKey(
         \tigris\core\Models\Operations\CacheSetRequest $request,
     ): \tigris\core\Models\Operations\CacheSetResponse
     {

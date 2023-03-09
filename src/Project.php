@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace tigris\core;
 
-class Projects 
+class Project 
 {
 	
 	
@@ -28,11 +28,11 @@ class Projects
 	}
     
     /**
-     * tigrisCreateProject - Create Project
+     * create - Create Project
      *
      * Creates a new project. Returns an AlreadyExists error with a status code 409 if the project already exists.
     */
-    public function tigrisCreateProject(
+    public function create(
         \tigris\core\Models\Operations\TigrisCreateProjectRequest $request,
     ): \tigris\core\Models\Operations\TigrisCreateProjectResponse
     {
@@ -72,11 +72,11 @@ class Projects
     }
     
     /**
-     * tigrisDeleteProject - Delete Project and all resources under project
+     * deleteProject - Delete Project and all resources under project
      *
      * Delete Project deletes all the collections in this project along with all of the documents, and associated metadata for these collections.
     */
-    public function tigrisDeleteProject(
+    public function deleteProject(
         \tigris\core\Models\Operations\TigrisDeleteProjectRequest $request,
     ): \tigris\core\Models\Operations\TigrisDeleteProjectResponse
     {
@@ -116,11 +116,11 @@ class Projects
     }
     
     /**
-     * tigrisListProjects - List Projects
+     * list - List Projects
      *
      * List returns all the projects.
     */
-    public function tigrisListProjects(
+    public function list(
     ): \tigris\core\Models\Operations\TigrisListProjectsResponse
     {
         $baseUrl = $this->_serverUrl;

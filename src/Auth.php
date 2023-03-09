@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace tigris\core;
 
-class Authentication 
+class Auth 
 {
 	
 	// SDK private variables namespaced with _ to avoid conflicts with API models
@@ -26,13 +26,13 @@ class Authentication
 	}
     
     /**
-     * authGetAccessToken - Access Token
+     * get - Access Token
      *
      * Endpoint for receiving access token from Tigris Server. The endpoint requires Grant Type(`grant_type`) which has
      *  two possible values <i>"REFRESH_TOKEN"</i> or <i>"CLIENT_CREDENTIALS"</i> based on which either Refresh token(`refresh_token`)
      *  needs to be set or client credentials(`client_id`, `client_secret`).
     */
-    public function authGetAccessToken(
+    public function get(
     ): \tigris\core\Models\Operations\AuthGetAccessTokenResponse
     {
         $baseUrl = $this->_serverUrl;

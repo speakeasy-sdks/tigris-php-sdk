@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace tigris\core;
 
-class Observability 
+class NamespaceT 
 {
+	
 	
 	
 	
@@ -30,92 +31,16 @@ class Observability
 	}
     
     /**
-     * healthAPIHealth - Health Check
+     * create - Creates a Namespace
      *
-     * This endpoint can be used to check the liveness of the server.
+     * Creates a new namespace, if it does not exist
     */
-    public function healthAPIHealth(
-    ): \tigris\core\Models\Operations\HealthAPIHealthResponse
+    public function create(
+        \tigris\core\Models\Operations\CreateNamespaceRequest $request,
+    ): \tigris\core\Models\Operations\CreateNamespaceResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/health');
-        
-        $options = ['http_errors' => false];
-        
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \tigris\core\Models\Operations\HealthAPIHealthResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->healthCheckResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\HealthCheckResponse', 'json');
-            }
-        }
-        else {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
-            }
-        }
-
-        return $response;
-    }
-    
-    /**
-     * observabilityGetInfo - Information about the server
-     *
-     * Provides the information about the server. This information includes returning the server version, etc.
-    */
-    public function observabilityGetInfo(
-    ): \tigris\core\Models\Operations\ObservabilityGetInfoResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/observability/info');
-        
-        $options = ['http_errors' => false];
-        
-        $httpResponse = $this->_securityClient->request('GET', $url, $options);
-        
-        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
-
-        $response = new \tigris\core\Models\Operations\ObservabilityGetInfoResponse();
-        $response->statusCode = $httpResponse->getStatusCode();
-        $response->contentType = $contentType;
-        $response->rawResponse = $httpResponse;
-        
-        if ($httpResponse->getStatusCode() === 200) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->getInfoResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\GetInfoResponse', 'json');
-            }
-        }
-        else {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $serializer = Utils\JSON::createSerializer();
-                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
-            }
-        }
-
-        return $response;
-    }
-    
-    /**
-     * observabilityQueryTimeSeriesMetrics - Queries time series metrics
-     *
-     * Queries time series metrics
-    */
-    public function observabilityQueryTimeSeriesMetrics(
-        \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsRequest $request,
-    ): \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsResponse
-    {
-        $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/observability/metrics/timeseries/query');
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/management/namespaces/create');
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request);
@@ -128,7 +53,7 @@ class Observability
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsResponse();
+        $response = new \tigris\core\Models\Operations\CreateNamespaceResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -136,7 +61,7 @@ class Observability
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->queryTimeSeriesMetricsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\QueryTimeSeriesMetricsResponse', 'json');
+                $response->createNamespaceResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\CreateNamespaceResponse', 'json');
             }
         }
         else {
@@ -150,29 +75,23 @@ class Observability
     }
     
     /**
-     * observabilityQuotaLimits - Queries current namespace quota limits
+     * get - Describe the details of all namespaces
      *
-     * Returns current namespace quota limits
+     * Get details for all namespaces
     */
-    public function observabilityQuotaLimits(
-        \tigris\core\Models\Operations\ObservabilityQuotaLimitsRequest $request,
-    ): \tigris\core\Models\Operations\ObservabilityQuotaLimitsResponse
+    public function get(
+    ): \tigris\core\Models\Operations\ManagementDescribeNamespacesResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/observability/quota/limits');
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/management/namespaces/describe');
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
-        if ($body === null) {
-            throw new \Exception('Request body is required');
-        }
-        $options = array_merge_recursive($options, $body);
         
         $httpResponse = $this->_securityClient->request('POST', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \tigris\core\Models\Operations\ObservabilityQuotaLimitsResponse();
+        $response = new \tigris\core\Models\Operations\ManagementDescribeNamespacesResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -180,7 +99,7 @@ class Observability
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->quotaLimitsResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\QuotaLimitsResponse', 'json');
+                $response->describeNamespacesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\DescribeNamespacesResponse', 'json');
             }
         }
         else {
@@ -194,16 +113,16 @@ class Observability
     }
     
     /**
-     * observabilityQuotaUsage - Queries current namespace quota usage
+     * getMetadata - Reads the Namespace Metadata
      *
-     * Returns current namespace quota limits
+     * GetNamespaceMetadata inserts the user metadata object
     */
-    public function observabilityQuotaUsage(
-        \tigris\core\Models\Operations\ObservabilityQuotaUsageRequest $request,
-    ): \tigris\core\Models\Operations\ObservabilityQuotaUsageResponse
+    public function getMetadata(
+        \tigris\core\Models\Operations\ManagementGetNamespaceMetadataRequest $request,
+    ): \tigris\core\Models\Operations\ManagementGetNamespaceMetadataResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/observability/quota/usage');
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/management/namespace/metadata/{metadataKey}/get', $request->pathParams);
         
         $options = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request);
@@ -216,7 +135,7 @@ class Observability
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
-        $response = new \tigris\core\Models\Operations\ObservabilityQuotaUsageResponse();
+        $response = new \tigris\core\Models\Operations\ManagementGetNamespaceMetadataResponse();
         $response->statusCode = $httpResponse->getStatusCode();
         $response->contentType = $contentType;
         $response->rawResponse = $httpResponse;
@@ -224,7 +143,133 @@ class Observability
         if ($httpResponse->getStatusCode() === 200) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
                 $serializer = Utils\JSON::createSerializer();
-                $response->quotaUsageResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\QuotaUsageResponse', 'json');
+                $response->getNamespaceMetadataResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\GetNamespaceMetadataResponse', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
+            }
+        }
+
+        return $response;
+    }
+    
+    /**
+     * insertMetadata - Inserts Namespace Metadata
+     *
+     * InsertNamespaceMetadata inserts the namespace metadata object
+    */
+    public function insertMetadata(
+        \tigris\core\Models\Operations\ManagementInsertNamespaceMetadataRequest $request,
+    ): \tigris\core\Models\Operations\ManagementInsertNamespaceMetadataResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/management/namespace/metadata/{metadataKey}/insert', $request->pathParams);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \tigris\core\Models\Operations\ManagementInsertNamespaceMetadataResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->insertNamespaceMetadataResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\InsertNamespaceMetadataResponse', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
+            }
+        }
+
+        return $response;
+    }
+    
+    /**
+     * list - Lists all Namespaces
+     *
+     * List all namespace
+    */
+    public function list(
+    ): \tigris\core\Models\Operations\ManagementListNamespacesResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/management/namespaces/list');
+        
+        $options = ['http_errors' => false];
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \tigris\core\Models\Operations\ManagementListNamespacesResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->listNamespacesResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\ListNamespacesResponse', 'json');
+            }
+        }
+        else {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->status = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\Status', 'json');
+            }
+        }
+
+        return $response;
+    }
+    
+    /**
+     * updateMetadata - Updates Namespace Metadata
+     *
+     * UpdateNamespaceMetadata updates the user metadata object
+    */
+    public function updateMetadata(
+        \tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataRequest $request,
+    ): \tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataResponse
+    {
+        $baseUrl = $this->_serverUrl;
+        $url = Utils\Utils::generateURL($baseUrl, '/v1/management/namespace/metadata/{metadataKey}/update', $request->pathParams);
+        
+        $options = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request);
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $options = array_merge_recursive($options, $body);
+        
+        $httpResponse = $this->_securityClient->request('POST', $url, $options);
+        
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        $response = new \tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataResponse();
+        $response->statusCode = $httpResponse->getStatusCode();
+        $response->contentType = $contentType;
+        $response->rawResponse = $httpResponse;
+        
+        if ($httpResponse->getStatusCode() === 200) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $serializer = Utils\JSON::createSerializer();
+                $response->updateNamespaceMetadataResponse = $serializer->deserialize((string)$httpResponse->getBody(), 'tigris\core\Models\Shared\UpdateNamespaceMetadataResponse', 'json');
             }
         }
         else {
