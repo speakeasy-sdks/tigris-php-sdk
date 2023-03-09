@@ -1,0 +1,30 @@
+<?php
+
+declare(strict_types=1);
+
+namespace tigris\core\Models\Shared;
+
+
+enum ErrorCodeEnum: string
+{
+    case OK = 'OK';
+    case CANCELLED = 'CANCELLED';
+    case UNKNOWN = 'UNKNOWN';
+    case INVALID_ARGUMENT = 'INVALID_ARGUMENT';
+    case DEADLINE_EXCEEDED = 'DEADLINE_EXCEEDED';
+    case NOT_FOUND = 'NOT_FOUND';
+    case ALREADY_EXISTS = 'ALREADY_EXISTS';
+    case PERMISSION_DENIED = 'PERMISSION_DENIED';
+    case RESOURCE_EXHAUSTED = 'RESOURCE_EXHAUSTED';
+    case FAILED_PRECONDITION = 'FAILED_PRECONDITION';
+    case ABORTED = 'ABORTED';
+    case OUT_OF_RANGE = 'OUT_OF_RANGE';
+    case UNIMPLEMENTED = 'UNIMPLEMENTED';
+    case INTERNAL = 'INTERNAL';
+    case UNAVAILABLE = 'UNAVAILABLE';
+    case DATA_LOSS = 'DATA_LOSS';
+    case UNAUTHENTICATED = 'UNAUTHENTICATED';
+    case CONFLICT = 'CONFLICT';
+    case BAD_GATEWAY = 'BAD_GATEWAY';
+    case METHOD_NOT_ALLOWED = 'METHOD_NOT_ALLOWED';
+}
