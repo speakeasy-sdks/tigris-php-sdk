@@ -8,6 +8,6 @@ generation:
   sdkClassName: SDK
   sdkFlattening: false
 php:
-  version: 0.1.0
+  version: ""
   namespace: tigris\core
   packageName: tigris-data/tigris-api
