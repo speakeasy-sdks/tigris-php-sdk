@@ -6,24 +6,23 @@ namespace tigris\core;
 
 class Collection 
 {
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	// SDK private variables namespaced with _ to avoid conflicts with API models
 	private \GuzzleHttp\ClientInterface $_defaultClient;
 	private \GuzzleHttp\ClientInterface $_securityClient;
 	private string $_serverUrl;
 	private string $_language;
 	private string $_sdkVersion;
-	private string $_genVersion;
+	private string $_genVersion;	
 
+	/**
+	 * @param \GuzzleHttp\ClientInterface $defaultClient
+	 * @param \GuzzleHttp\ClientInterface $securityClient
+	 * @param string $serverUrl
+	 * @param string $language
+	 * @param string $sdkVersion
+	 * @param string $genVersion
+	 */
 	public function __construct(\GuzzleHttp\ClientInterface $defaultClient, \GuzzleHttp\ClientInterface $securityClient, string $serverUrl, string $language, string $sdkVersion, string $genVersion)
 	{
 		$this->_defaultClient = $defaultClient;
@@ -33,7 +32,7 @@ class Collection
 		$this->_sdkVersion = $sdkVersion;
 		$this->_genVersion = $genVersion;
 	}
-    
+	
     /**
      * create - Create or update a collection
      *
@@ -42,16 +41,17 @@ class Collection
      *  Tigris Offers two types of collections: <p></p>
      *     <li> `DOCUMENTS`: Offers rich CRUD APIs.
      *     <li> `MESSAGES`: Offers event streaming APIs.
+     * @param \tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionRequest $request
     */
     public function create(
         \tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionRequest $request,
     ): \tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/database/collections/{collection}/createOrUpdate', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/createOrUpdate', \tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -81,21 +81,22 @@ class Collection
 
         return $response;
     }
-    
+	
     /**
      * deleteDocuments - Delete Documents
      *
      * Delete a range of documents in the collection using the condition provided in the filter.
+     * @param \tigris\core\Models\Operations\TigrisDeleteRequest $request
     */
     public function deleteDocuments(
         \tigris\core\Models\Operations\TigrisDeleteRequest $request,
     ): \tigris\core\Models\Operations\TigrisDeleteResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/delete', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/delete', \tigris\core\Models\Operations\TigrisDeletePathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -125,21 +126,22 @@ class Collection
 
         return $response;
     }
-    
+	
     /**
      * describe - Describe Collection
      *
      * Returns the information related to the collection. This can be used to retrieve the schema or size of the collection.
+     * @param \tigris\core\Models\Operations\TigrisDescribeCollectionRequest $request
     */
     public function describe(
         \tigris\core\Models\Operations\TigrisDescribeCollectionRequest $request,
     ): \tigris\core\Models\Operations\TigrisDescribeCollectionResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/database/collections/{collection}/describe', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/describe', \tigris\core\Models\Operations\TigrisDescribeCollectionPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -169,22 +171,23 @@ class Collection
 
         return $response;
     }
-    
+	
     /**
      * drop - Drop Collection
      *
      * Drops the collection inside this project. This API deletes all of the
      *  documents inside this collection and any metadata associated with it.
+     * @param \tigris\core\Models\Operations\TigrisDropCollectionRequest $request
     */
     public function drop(
         \tigris\core\Models\Operations\TigrisDropCollectionRequest $request,
     ): \tigris\core\Models\Operations\TigrisDropCollectionResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/database/collections/{collection}/drop', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/drop', \tigris\core\Models\Operations\TigrisDropCollectionPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -214,7 +217,7 @@ class Collection
 
         return $response;
     }
-    
+	
     /**
      * importDocuments - Import Documents
      *
@@ -224,16 +227,17 @@ class Collection
      *   * Detects the schema of the documents in the batch
      *   * Evolves the schema as soon as it's backward compatible
      *   * Creates collection with inferred schema (if requested)
+     * @param \tigris\core\Models\Operations\TigrisImportRequest $request
     */
     public function importDocuments(
         \tigris\core\Models\Operations\TigrisImportRequest $request,
     ): \tigris\core\Models\Operations\TigrisImportResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/import', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/import', \tigris\core\Models\Operations\TigrisImportPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -263,23 +267,24 @@ class Collection
 
         return $response;
     }
-    
+	
     /**
      * insertDocuments - Insert Documents
      *
      * Inserts new documents in the collection and returns an AlreadyExists error if any of the documents
      *  in the request already exists. Insert provides idempotency by returning an error if the document
      *  already exists. To replace documents, use REPLACE API instead of INSERT.
+     * @param \tigris\core\Models\Operations\TigrisInsertRequest $request
     */
     public function insertDocuments(
         \tigris\core\Models\Operations\TigrisInsertRequest $request,
     ): \tigris\core\Models\Operations\TigrisInsertResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/insert', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/insert', \tigris\core\Models\Operations\TigrisInsertPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -309,7 +314,7 @@ class Collection
 
         return $response;
     }
-    
+	
     /**
      * readDocuments - Read Documents
      *
@@ -319,16 +324,17 @@ class Collection
      *  can be used by passing `Limit/Skip` parameters. The `skip` parameter skips the number of documents from the start and
      *  the `limit` parameter is used to specify the number of documents to read. You can find more detailed documentation
      *  of the Read API <a href="https://docs.tigrisdata.com/overview/query" title="here">here</a>.
+     * @param \tigris\core\Models\Operations\TigrisReadRequest $request
     */
     public function readDocuments(
         \tigris\core\Models\Operations\TigrisReadRequest $request,
     ): \tigris\core\Models\Operations\TigrisReadResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/read', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/read', \tigris\core\Models\Operations\TigrisReadPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -358,21 +364,22 @@ class Collection
 
         return $response;
     }
-    
+	
     /**
      * replaceDocuments - Insert or Replace Documents
      *
      * Inserts the documents or replaces the existing documents in the collections.
+     * @param \tigris\core\Models\Operations\TigrisReplaceRequest $request
     */
     public function replaceDocuments(
         \tigris\core\Models\Operations\TigrisReplaceRequest $request,
     ): \tigris\core\Models\Operations\TigrisReplaceResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/replace', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/replace', \tigris\core\Models\Operations\TigrisReplacePathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -402,7 +409,7 @@ class Collection
 
         return $response;
     }
-    
+	
     /**
      * searchDocuments - Search Documents.
      *
@@ -410,16 +417,17 @@ class Collection
      *  a term search or a phrase search. Search API allows filtering the result set using filters as documented <a href="https://docs.tigrisdata.com/overview/query#specification-1" title="here">here</a>.
      *  You can also perform a faceted search by passing the fields in the facet parameter.
      *  You can find more detailed documentation of the Search API with multiple examples <a href="https://docs.tigrisdata.com/overview/search" title="here">here</a>.
+     * @param \tigris\core\Models\Operations\TigrisSearchRequest $request
     */
     public function searchDocuments(
         \tigris\core\Models\Operations\TigrisSearchRequest $request,
     ): \tigris\core\Models\Operations\TigrisSearchResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/search', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/search', \tigris\core\Models\Operations\TigrisSearchPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -449,21 +457,22 @@ class Collection
 
         return $response;
     }
-    
+	
     /**
      * updateDocuments - Update Documents.
      *
      * Update a range of documents in the collection using the condition provided in the filter.
+     * @param \tigris\core\Models\Operations\TigrisUpdateRequest $request
     */
     public function updateDocuments(
         \tigris\core\Models\Operations\TigrisUpdateRequest $request,
     ): \tigris\core\Models\Operations\TigrisUpdateResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/update', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/update', \tigris\core\Models\Operations\TigrisUpdatePathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
