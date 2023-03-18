@@ -6,17 +6,23 @@ namespace tigris\core;
 
 class User 
 {
-	
-	
-	
+
 	// SDK private variables namespaced with _ to avoid conflicts with API models
 	private \GuzzleHttp\ClientInterface $_defaultClient;
 	private \GuzzleHttp\ClientInterface $_securityClient;
 	private string $_serverUrl;
 	private string $_language;
 	private string $_sdkVersion;
-	private string $_genVersion;
+	private string $_genVersion;	
 
+	/**
+	 * @param \GuzzleHttp\ClientInterface $defaultClient
+	 * @param \GuzzleHttp\ClientInterface $securityClient
+	 * @param string $serverUrl
+	 * @param string $language
+	 * @param string $sdkVersion
+	 * @param string $genVersion
+	 */
 	public function __construct(\GuzzleHttp\ClientInterface $defaultClient, \GuzzleHttp\ClientInterface $securityClient, string $serverUrl, string $language, string $sdkVersion, string $genVersion)
 	{
 		$this->_defaultClient = $defaultClient;
@@ -26,21 +32,22 @@ class User
 		$this->_sdkVersion = $sdkVersion;
 		$this->_genVersion = $genVersion;
 	}
-    
+	
     /**
      * getMetadata - Reads the User Metadata
      *
      * GetUserMetadata inserts the user metadata object
+     * @param \tigris\core\Models\Operations\ManagementGetUserMetadataRequest $request
     */
     public function getMetadata(
         \tigris\core\Models\Operations\ManagementGetUserMetadataRequest $request,
     ): \tigris\core\Models\Operations\ManagementGetUserMetadataResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/management/users/metadata/{metadataKey}/get', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/users/metadata/{metadataKey}/get', \tigris\core\Models\Operations\ManagementGetUserMetadataPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -70,21 +77,22 @@ class User
 
         return $response;
     }
-    
+	
     /**
      * insertMetadata - Inserts User Metadata
      *
      * insertUserMetadata inserts the user metadata object
+     * @param \tigris\core\Models\Operations\ManagementInsertUserMetadataRequest $request
     */
     public function insertMetadata(
         \tigris\core\Models\Operations\ManagementInsertUserMetadataRequest $request,
     ): \tigris\core\Models\Operations\ManagementInsertUserMetadataResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/management/users/metadata/{metadataKey}/insert', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/users/metadata/{metadataKey}/insert', \tigris\core\Models\Operations\ManagementInsertUserMetadataPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -114,21 +122,22 @@ class User
 
         return $response;
     }
-    
+	
     /**
      * updateMetadata - Updates User Metadata
      *
      * updateUserMetadata updates the user metadata object
+     * @param \tigris\core\Models\Operations\ManagementUpdateUserMetadataRequest $request
     */
     public function updateMetadata(
         \tigris\core\Models\Operations\ManagementUpdateUserMetadataRequest $request,
     ): \tigris\core\Models\Operations\ManagementUpdateUserMetadataResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/management/users/metadata/{metadataKey}/update', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/users/metadata/{metadataKey}/update', \tigris\core\Models\Operations\ManagementUpdateUserMetadataPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
