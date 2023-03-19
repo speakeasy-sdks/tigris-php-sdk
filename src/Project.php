@@ -6,17 +6,23 @@ namespace tigris\core;
 
 class Project 
 {
-	
-	
-	
+
 	// SDK private variables namespaced with _ to avoid conflicts with API models
 	private \GuzzleHttp\ClientInterface $_defaultClient;
 	private \GuzzleHttp\ClientInterface $_securityClient;
 	private string $_serverUrl;
 	private string $_language;
 	private string $_sdkVersion;
-	private string $_genVersion;
+	private string $_genVersion;	
 
+	/**
+	 * @param \GuzzleHttp\ClientInterface $defaultClient
+	 * @param \GuzzleHttp\ClientInterface $securityClient
+	 * @param string $serverUrl
+	 * @param string $language
+	 * @param string $sdkVersion
+	 * @param string $genVersion
+	 */
 	public function __construct(\GuzzleHttp\ClientInterface $defaultClient, \GuzzleHttp\ClientInterface $securityClient, string $serverUrl, string $language, string $sdkVersion, string $genVersion)
 	{
 		$this->_defaultClient = $defaultClient;
@@ -26,21 +32,22 @@ class Project
 		$this->_sdkVersion = $sdkVersion;
 		$this->_genVersion = $genVersion;
 	}
-    
+	
     /**
      * create - Create Project
      *
      * Creates a new project. Returns an AlreadyExists error with a status code 409 if the project already exists.
+     * @param \tigris\core\Models\Operations\TigrisCreateProjectRequest $request
     */
     public function create(
         \tigris\core\Models\Operations\TigrisCreateProjectRequest $request,
     ): \tigris\core\Models\Operations\TigrisCreateProjectResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/create', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/create', \tigris\core\Models\Operations\TigrisCreateProjectPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -70,21 +77,22 @@ class Project
 
         return $response;
     }
-    
+	
     /**
      * deleteProject - Delete Project and all resources under project
      *
      * Delete Project deletes all the collections in this project along with all of the documents, and associated metadata for these collections.
+     * @param \tigris\core\Models\Operations\TigrisDeleteProjectRequest $request
     */
     public function deleteProject(
         \tigris\core\Models\Operations\TigrisDeleteProjectRequest $request,
     ): \tigris\core\Models\Operations\TigrisDeleteProjectResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/delete', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/delete', \tigris\core\Models\Operations\TigrisDeleteProjectPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -114,7 +122,7 @@ class Project
 
         return $response;
     }
-    
+	
     /**
      * list - List Projects
      *
@@ -124,7 +132,7 @@ class Project
     ): \tigris\core\Models\Operations\TigrisListProjectsResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects');
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects');
         
         $options = ['http_errors' => false];
         

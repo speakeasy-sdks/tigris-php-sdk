@@ -6,19 +6,23 @@ namespace tigris\core;
 
 class System 
 {
-	
-	
-	
-	
-	
+
 	// SDK private variables namespaced with _ to avoid conflicts with API models
 	private \GuzzleHttp\ClientInterface $_defaultClient;
 	private \GuzzleHttp\ClientInterface $_securityClient;
 	private string $_serverUrl;
 	private string $_language;
 	private string $_sdkVersion;
-	private string $_genVersion;
+	private string $_genVersion;	
 
+	/**
+	 * @param \GuzzleHttp\ClientInterface $defaultClient
+	 * @param \GuzzleHttp\ClientInterface $securityClient
+	 * @param string $serverUrl
+	 * @param string $language
+	 * @param string $sdkVersion
+	 * @param string $genVersion
+	 */
 	public function __construct(\GuzzleHttp\ClientInterface $defaultClient, \GuzzleHttp\ClientInterface $securityClient, string $serverUrl, string $language, string $sdkVersion, string $genVersion)
 	{
 		$this->_defaultClient = $defaultClient;
@@ -28,7 +32,7 @@ class System
 		$this->_sdkVersion = $sdkVersion;
 		$this->_genVersion = $genVersion;
 	}
-    
+	
     /**
      * getHealth - Health Check
      *
@@ -38,7 +42,7 @@ class System
     ): \tigris\core\Models\Operations\HealthAPIHealthResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/health');
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/health');
         
         $options = ['http_errors' => false];
         
@@ -66,7 +70,7 @@ class System
 
         return $response;
     }
-    
+	
     /**
      * getServerInfo - Information about the server
      *
@@ -76,7 +80,7 @@ class System
     ): \tigris\core\Models\Operations\ObservabilityGetInfoResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/observability/info');
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/observability/info');
         
         $options = ['http_errors' => false];
         
@@ -104,21 +108,22 @@ class System
 
         return $response;
     }
-    
+	
     /**
      * observabilityQuotaUsage - Queries current namespace quota usage
      *
      * Returns current namespace quota limits
+     * @param \tigris\core\Models\Operations\ObservabilityQuotaUsageRequest $request
     */
     public function observabilityQuotaUsage(
         \tigris\core\Models\Operations\ObservabilityQuotaUsageRequest $request,
     ): \tigris\core\Models\Operations\ObservabilityQuotaUsageResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/observability/quota/usage');
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/observability/quota/usage');
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -148,21 +153,22 @@ class System
 
         return $response;
     }
-    
+	
     /**
      * queryQuotaLimits - Queries current namespace quota limits
      *
      * Returns current namespace quota limits
+     * @param \tigris\core\Models\Operations\ObservabilityQuotaLimitsRequest $request
     */
     public function queryQuotaLimits(
         \tigris\core\Models\Operations\ObservabilityQuotaLimitsRequest $request,
     ): \tigris\core\Models\Operations\ObservabilityQuotaLimitsResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/observability/quota/limits');
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/observability/quota/limits');
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -192,21 +198,22 @@ class System
 
         return $response;
     }
-    
+	
     /**
      * queryTimeSeriesMetrics - Queries time series metrics
      *
      * Queries time series metrics
+     * @param \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsRequest $request
     */
     public function queryTimeSeriesMetrics(
         \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsRequest $request,
     ): \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/observability/metrics/timeseries/query');
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/observability/metrics/timeseries/query');
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
