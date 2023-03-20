@@ -6,26 +6,23 @@ namespace tigris\core;
 
 class Search 
 {
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	// SDK private variables namespaced with _ to avoid conflicts with API models
 	private \GuzzleHttp\ClientInterface $_defaultClient;
 	private \GuzzleHttp\ClientInterface $_securityClient;
 	private string $_serverUrl;
 	private string $_language;
 	private string $_sdkVersion;
-	private string $_genVersion;
+	private string $_genVersion;	
 
+	/**
+	 * @param \GuzzleHttp\ClientInterface $defaultClient
+	 * @param \GuzzleHttp\ClientInterface $securityClient
+	 * @param string $serverUrl
+	 * @param string $language
+	 * @param string $sdkVersion
+	 * @param string $genVersion
+	 */
 	public function __construct(\GuzzleHttp\ClientInterface $defaultClient, \GuzzleHttp\ClientInterface $securityClient, string $serverUrl, string $language, string $sdkVersion, string $genVersion)
 	{
 		$this->_defaultClient = $defaultClient;
@@ -35,7 +32,7 @@ class Search
 		$this->_sdkVersion = $sdkVersion;
 		$this->_genVersion = $genVersion;
 	}
-    
+	
     /**
      * createDocument - Create a single document
      *
@@ -43,16 +40,17 @@ class Search
      *  and the server can automatically generate it for you in case it is missing. In cases an id is provided in
      *  the document and the document already exists then that document will not be indexed and an error is returned
      *  with HTTP status code 409.
+     * @param \tigris\core\Models\Operations\SearchCreateByIdRequest $request
     */
     public function createDocument(
         \tigris\core\Models\Operations\SearchCreateByIdRequest $request,
     ): \tigris\core\Models\Operations\SearchCreateByIdResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents/{id}', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents/{id}', \tigris\core\Models\Operations\SearchCreateByIdPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -82,7 +80,7 @@ class Search
 
         return $response;
     }
-    
+	
     /**
      * createDocuments - Create multiple documents
      *
@@ -91,16 +89,17 @@ class Search
      *  case it is missing. In cases when an id is provided in the document and the document already exists then that
      *  document will not be indexed and in the response there will be an error corresponding to that document id other
      *  documents will succeed. Returns an array of status indicating the status of each document.
+     * @param \tigris\core\Models\Operations\SearchCreateRequest $request
     */
     public function createDocuments(
         \tigris\core\Models\Operations\SearchCreateRequest $request,
     ): \tigris\core\Models\Operations\SearchCreateResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchCreatePathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -130,23 +129,24 @@ class Search
 
         return $response;
     }
-    
+	
     /**
      * deleteDocuments - Delete documents by ids
      *
      * Delete one or more documents by id. Returns an array of status indicating the status of each document. Each status
      *  has an error field that is set to null in case document is deleted successfully otherwise it will non null with
      *  an error code and message.
+     * @param \tigris\core\Models\Operations\SearchDeleteRequest $request
     */
     public function deleteDocuments(
         \tigris\core\Models\Operations\SearchDeleteRequest $request,
     ): \tigris\core\Models\Operations\SearchDeleteResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchDeletePathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -176,19 +176,20 @@ class Search
 
         return $response;
     }
-    
+	
     /**
      * deleteIndex - Deletes search index
+     * @param \tigris\core\Models\Operations\SearchDeleteIndexRequest $request
     */
     public function deleteIndex(
         \tigris\core\Models\Operations\SearchDeleteIndexRequest $request,
     ): \tigris\core\Models\Operations\SearchDeleteIndexResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/search/indexes/{name}', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{name}', \tigris\core\Models\Operations\SearchDeleteIndexPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -218,7 +219,7 @@ class Search
 
         return $response;
     }
-    
+	
     /**
      * findDocuments - Search Documents.
      *
@@ -227,16 +228,17 @@ class Search
      *  <a href="https://docs.tigrisdata.com/overview/query#specification-1" title="here">here</a>. You can also perform
      *  a faceted search by passing the fields in the facet parameter. You can find more detailed documentation of the
      *  Search API with multiple examples <a href="https://docs.tigrisdata.com/overview/search" title="here">here</a>.
+     * @param \tigris\core\Models\Operations\SearchSearchRequest $request
     */
     public function findDocuments(
         \tigris\core\Models\Operations\SearchSearchRequest $request,
     ): \tigris\core\Models\Operations\SearchSearchResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents/search', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents/search', \tigris\core\Models\Operations\SearchSearchPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -266,22 +268,23 @@ class Search
 
         return $response;
     }
-    
+	
     /**
      * getDocuments - Get a single or multiple documents
      *
      * Retrieves one or more documents by id. The response is an array of documents in the same order it is requests.
      *  A null is returned for the documents that are not found.
+     * @param \tigris\core\Models\Operations\SearchGetRequest $request
     */
     public function getDocuments(
         \tigris\core\Models\Operations\SearchGetRequest $request,
     ): \tigris\core\Models\Operations\SearchGetResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchGetPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams($request->queryParams));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\SearchGetQueryParams::class, $request->queryParams, null));
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
@@ -307,16 +310,17 @@ class Search
 
         return $response;
     }
-    
+	
     /**
      * getIndex - Get information about a search index
+     * @param \tigris\core\Models\Operations\SearchGetIndexRequest $request
     */
     public function getIndex(
         \tigris\core\Models\Operations\SearchGetIndexRequest $request,
     ): \tigris\core\Models\Operations\SearchGetIndexResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/search/indexes/{name}', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{name}', \tigris\core\Models\Operations\SearchGetIndexPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
         
@@ -344,19 +348,20 @@ class Search
 
         return $response;
     }
-    
+	
     /**
      * listIndexes - List search indexes
+     * @param \tigris\core\Models\Operations\SearchListIndexesRequest $request
     */
     public function listIndexes(
         \tigris\core\Models\Operations\SearchListIndexesRequest $request,
     ): \tigris\core\Models\Operations\SearchListIndexesResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/search/indexes', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes', \tigris\core\Models\Operations\SearchListIndexesPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams($request->queryParams));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\SearchListIndexesQueryParams::class, $request->queryParams, null));
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
@@ -382,22 +387,23 @@ class Search
 
         return $response;
     }
-    
+	
     /**
      * queryDeleteDocuments - Delete documents by query
      *
      * DeleteByQuery is used to delete documents that match the filter. A filter is required. To delete document by id,
      *  you can pass the filter as follows ```{"id": "test"}```. Returns a count of number of documents deleted.
+     * @param \tigris\core\Models\Operations\SearchDeleteByQueryRequest $request
     */
     public function queryDeleteDocuments(
         \tigris\core\Models\Operations\SearchDeleteByQueryRequest $request,
     ): \tigris\core\Models\Operations\SearchDeleteByQueryResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents/deleteByQuery', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents/deleteByQuery', \tigris\core\Models\Operations\SearchDeleteByQueryPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -427,7 +433,7 @@ class Search
 
         return $response;
     }
-    
+	
     /**
      * replaceDocuments - Create or replace documents in an index
      *
@@ -435,16 +441,17 @@ class Search
      *  if it already exists. An "id" is generated automatically in case it is missing in the document. The
      *  document is created if "id" doesn't exists otherwise it is replaced. Returns an array of status indicating
      *  the status of each document.
+     * @param \tigris\core\Models\Operations\SearchCreateOrReplaceRequest $request
     */
     public function replaceDocuments(
         \tigris\core\Models\Operations\SearchCreateOrReplaceRequest $request,
     ): \tigris\core\Models\Operations\SearchCreateOrReplaceResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchCreateOrReplacePathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -474,7 +481,7 @@ class Search
 
         return $response;
     }
-    
+	
     /**
      * updateDocuments - Update documents in an index
      *
@@ -482,16 +489,17 @@ class Search
      *  "id" field in it. Returns an array of status indicating the status of each document. Each status
      *  has an error field that is set to null in case document is updated successfully otherwise the error
      *  field is set with a code and message.
+     * @param \tigris\core\Models\Operations\SearchUpdateRequest $request
     */
     public function updateDocuments(
         \tigris\core\Models\Operations\SearchUpdateRequest $request,
     ): \tigris\core\Models\Operations\SearchUpdateResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchUpdatePathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -521,19 +529,20 @@ class Search
 
         return $response;
     }
-    
+	
     /**
      * updateIndex - Creates or updates search index
+     * @param \tigris\core\Models\Operations\SearchCreateOrUpdateIndexRequest $request
     */
     public function updateIndex(
         \tigris\core\Models\Operations\SearchCreateOrUpdateIndexRequest $request,
     ): \tigris\core\Models\Operations\SearchCreateOrUpdateIndexResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateURL($baseUrl, '/v1/projects/{project}/search/indexes/{name}', $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{name}', \tigris\core\Models\Operations\SearchCreateOrUpdateIndexPathParams::class, $request->pathParams);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request);
+        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
