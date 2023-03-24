@@ -5,8 +5,26 @@
 
 ### Composer
 
+To install the SDK first add the below to your `composer.json` file:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "github",
+            "url": "https://github.com/speakeasy-sdks/tigris-php-sdk.git"
+        }
+    ],
+    "require": {
+        "tigris-data/tigris-api": "*"
+    }
+}
+```
+
+Then run the following command:
+
 ```bash
-composer require "tigris-data/tigris-api"
+composer update
 ```
 <!-- End SDK Installation -->
 
