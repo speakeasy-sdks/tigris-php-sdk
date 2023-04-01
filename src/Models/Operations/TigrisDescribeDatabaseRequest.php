@@ -11,15 +11,20 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisDescribeDatabaseRequest
 {
-	
-    public TigrisDescribeDatabasePathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\DescribeDatabaseRequest $request;
+    public \tigris\core\Models\Shared\DescribeDatabaseRequest $describeDatabaseRequest;
+    
+    /**
+     * Project name whose db is under target to get description.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisDescribeDatabasePathParams();
-		$this->request = new \tigris\core\Models\Shared\DescribeDatabaseRequest();
+		$this->describeDatabaseRequest = new \tigris\core\Models\Shared\DescribeDatabaseRequest();
+		$this->project = "";
 	}
 }

@@ -11,11 +11,11 @@ namespace tigris\core\Models\Shared;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class Security
 {
-	#[SpeakeasyMetadata('security:scheme=true,type=http,subtype=bearer')]
-    public SchemeBearerAuth $bearerAuth;
+	#[SpeakeasyMetadata('security:scheme=true,type=http,subtype=bearer,name=Authorization')]
+    public string $bearerAuth;
     
 	public function __construct()
 	{
-		$this->bearerAuth = new \tigris\core\Models\Shared\SchemeBearerAuth();
+		$this->bearerAuth = "";
 	}
 }

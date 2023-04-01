@@ -11,20 +11,25 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisDeleteProjectRequest
 {
-	
-    public TigrisDeleteProjectPathParams $pathParams;
-    
     /**
-     * $request
+     * $requestBody
      * 
-     * @var array<string, mixed> $request
+     * @var array<string, mixed> $requestBody
      */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public array $request;
+    public array $requestBody;
+    
+    /**
+     * Delete Project with this name. <p></p>**Note**: Deletes all resources under this project. Use with caution.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisDeleteProjectPathParams();
-		$this->request = [];
+		$this->requestBody = [];
+		$this->project = "";
 	}
 }

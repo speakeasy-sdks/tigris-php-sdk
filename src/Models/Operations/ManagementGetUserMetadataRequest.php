@@ -11,15 +11,15 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class ManagementGetUserMetadataRequest
 {
-	
-    public ManagementGetUserMetadataPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\GetUserMetadataRequest $request;
+    public \tigris\core\Models\Shared\GetUserMetadataRequest $getUserMetadataRequest;
+    
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=metadataKey')]
+    public string $metadataKey;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\ManagementGetUserMetadataPathParams();
-		$this->request = new \tigris\core\Models\Shared\GetUserMetadataRequest();
+		$this->getUserMetadataRequest = new \tigris\core\Models\Shared\GetUserMetadataRequest();
+		$this->metadataKey = "";
 	}
 }

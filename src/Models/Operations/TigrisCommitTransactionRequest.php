@@ -11,15 +11,20 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisCommitTransactionRequest
 {
-	
-    public TigrisCommitTransactionPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\CommitTransactionRequest $request;
+    public \tigris\core\Models\Shared\CommitTransactionRequest $commitTransactionRequest;
+    
+    /**
+     * Project name whose DB this transaction belongs to.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisCommitTransactionPathParams();
-		$this->request = new \tigris\core\Models\Shared\CommitTransactionRequest();
+		$this->commitTransactionRequest = new \tigris\core\Models\Shared\CommitTransactionRequest();
+		$this->project = "";
 	}
 }

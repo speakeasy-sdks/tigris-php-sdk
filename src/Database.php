@@ -52,10 +52,10 @@ class Database
     ): \tigris\core\Models\Operations\TigrisBeginTransactionResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/transactions/begin', \tigris\core\Models\Operations\TigrisBeginTransactionPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/transactions/begin', \tigris\core\Models\Operations\TigrisBeginTransactionRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "beginTransactionRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -100,10 +100,10 @@ class Database
     ): \tigris\core\Models\Operations\TigrisCommitTransactionResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/transactions/commit', \tigris\core\Models\Operations\TigrisCommitTransactionPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/transactions/commit', \tigris\core\Models\Operations\TigrisCommitTransactionRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "commitTransactionRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -147,10 +147,10 @@ class Database
     ): \tigris\core\Models\Operations\TigrisCreateBranchResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/branches/{branch}/create', \tigris\core\Models\Operations\TigrisCreateBranchPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/branches/{branch}/create', \tigris\core\Models\Operations\TigrisCreateBranchRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -195,10 +195,10 @@ class Database
     ): \tigris\core\Models\Operations\TigrisDeleteBranchResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/branches/{branch}/delete', \tigris\core\Models\Operations\TigrisDeleteBranchPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/branches/{branch}/delete', \tigris\core\Models\Operations\TigrisDeleteBranchRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -243,10 +243,10 @@ class Database
     ): \tigris\core\Models\Operations\TigrisDescribeDatabaseResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/describe', \tigris\core\Models\Operations\TigrisDescribeDatabasePathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/describe', \tigris\core\Models\Operations\TigrisDescribeDatabaseRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "describeDatabaseRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -290,10 +290,10 @@ class Database
     ): \tigris\core\Models\Operations\TigrisListCollectionsResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections', \tigris\core\Models\Operations\TigrisListCollectionsPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections', \tigris\core\Models\Operations\TigrisListCollectionsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\TigrisListCollectionsQueryParams::class, $request->queryParams, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\TigrisListCollectionsRequest::class, $request, null));
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
@@ -334,10 +334,10 @@ class Database
     ): \tigris\core\Models\Operations\TigrisRollbackTransactionResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/transactions/rollback', \tigris\core\Models\Operations\TigrisRollbackTransactionPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/transactions/rollback', \tigris\core\Models\Operations\TigrisRollbackTransactionRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "rollbackTransactionRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -381,7 +381,7 @@ class Database
     ): \tigris\core\Models\Operations\TigrisListBranchesResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/branches', \tigris\core\Models\Operations\TigrisListBranchesPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/branches', \tigris\core\Models\Operations\TigrisListBranchesRequest::class, $request);
         
         $options = ['http_errors' => false];
         

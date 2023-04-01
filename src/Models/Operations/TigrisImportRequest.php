@@ -11,15 +11,29 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisImportRequest
 {
-	
-    public TigrisImportPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\ImportRequest $request;
+    public \tigris\core\Models\Shared\ImportRequest $importRequest;
+    
+    /**
+     * Collection name where to import documents.
+     * 
+     * @var string $collection
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=collection')]
+    public string $collection;
+    
+    /**
+     * Project name whose db is under target to import documents.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisImportPathParams();
-		$this->request = new \tigris\core\Models\Shared\ImportRequest();
+		$this->importRequest = new \tigris\core\Models\Shared\ImportRequest();
+		$this->collection = "";
+		$this->project = "";
 	}
 }

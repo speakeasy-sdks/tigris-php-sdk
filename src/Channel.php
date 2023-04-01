@@ -48,7 +48,7 @@ class Channel
     ): \tigris\core\Models\Operations\RealtimeGetRTChannelResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}', \tigris\core\Models\Operations\RealtimeGetRTChannelPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}', \tigris\core\Models\Operations\RealtimeGetRTChannelRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -88,10 +88,10 @@ class Channel
     ): \tigris\core\Models\Operations\RealtimeReadMessagesResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}/messages', \tigris\core\Models\Operations\RealtimeReadMessagesPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}/messages', \tigris\core\Models\Operations\RealtimeReadMessagesRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\RealtimeReadMessagesQueryParams::class, $request->queryParams, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\RealtimeReadMessagesRequest::class, $request, null));
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
@@ -129,7 +129,7 @@ class Channel
     ): \tigris\core\Models\Operations\RealtimeGetRTChannelsResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/realtime/channels', \tigris\core\Models\Operations\RealtimeGetRTChannelsPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/realtime/channels', \tigris\core\Models\Operations\RealtimeGetRTChannelsRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -169,10 +169,10 @@ class Channel
     ): \tigris\core\Models\Operations\RealtimeListSubscriptionsResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}/subscriptions', \tigris\core\Models\Operations\RealtimeListSubscriptionsPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}/subscriptions', \tigris\core\Models\Operations\RealtimeListSubscriptionsRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\RealtimeListSubscriptionsQueryParams::class, $request->queryParams, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\RealtimeListSubscriptionsRequest::class, $request, null));
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
@@ -210,10 +210,10 @@ class Channel
     ): \tigris\core\Models\Operations\RealtimeMessagesResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}/messages', \tigris\core\Models\Operations\RealtimeMessagesPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}/messages', \tigris\core\Models\Operations\RealtimeMessagesRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "messagesRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -255,7 +255,7 @@ class Channel
     ): \tigris\core\Models\Operations\RealtimePresenceResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}/presence', \tigris\core\Models\Operations\RealtimePresencePathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/realtime/channels/{channel}/presence', \tigris\core\Models\Operations\RealtimePresenceRequest::class, $request);
         
         $options = ['http_errors' => false];
         

@@ -11,15 +11,29 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class SearchCreateOrUpdateIndexRequest
 {
-	
-    public SearchCreateOrUpdateIndexPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\CreateOrUpdateIndexRequest $request;
+    public \tigris\core\Models\Shared\CreateOrUpdateIndexRequest $createOrUpdateIndexRequest;
+    
+    /**
+     * search index name.
+     * 
+     * @var string $name
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=name')]
+    public string $name;
+    
+    /**
+     * Tigris project name.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\SearchCreateOrUpdateIndexPathParams();
-		$this->request = new \tigris\core\Models\Shared\CreateOrUpdateIndexRequest();
+		$this->createOrUpdateIndexRequest = new \tigris\core\Models\Shared\CreateOrUpdateIndexRequest();
+		$this->name = "";
+		$this->project = "";
 	}
 }

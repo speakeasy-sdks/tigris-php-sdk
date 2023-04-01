@@ -11,15 +11,20 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisRotateAppKeySecretRequest
 {
-	
-    public TigrisRotateAppKeySecretPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\RotateAppKeyRequest $request;
+    public \tigris\core\Models\Shared\RotateAppKeyRequest $rotateAppKeyRequest;
+    
+    /**
+     * project name
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisRotateAppKeySecretPathParams();
-		$this->request = new \tigris\core\Models\Shared\RotateAppKeyRequest();
+		$this->rotateAppKeyRequest = new \tigris\core\Models\Shared\RotateAppKeyRequest();
+		$this->project = "";
 	}
 }

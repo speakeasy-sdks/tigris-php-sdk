@@ -11,15 +11,20 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisCreateAppKeyRequest
 {
-	
-    public TigrisCreateAppKeyPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\CreateAppKeyRequest $request;
+    public \tigris\core\Models\Shared\CreateAppKeyRequest $createAppKeyRequest;
+    
+    /**
+     * Project name
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisCreateAppKeyPathParams();
-		$this->request = new \tigris\core\Models\Shared\CreateAppKeyRequest();
+		$this->createAppKeyRequest = new \tigris\core\Models\Shared\CreateAppKeyRequest();
+		$this->project = "";
 	}
 }

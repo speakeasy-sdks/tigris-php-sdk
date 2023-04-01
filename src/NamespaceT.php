@@ -42,11 +42,11 @@ class NamespaceT
      * 
      * Creates a new namespace, if it does not exist
      * 
-     * @param \tigris\core\Models\Operations\CreateNamespaceRequest $request
+     * @param \tigris\core\Models\Shared\CreateNamespaceRequest $request
      * @return \tigris\core\Models\Operations\CreateNamespaceResponse
      */
 	public function create(
-        \tigris\core\Models\Operations\CreateNamespaceRequest $request,
+        \tigris\core\Models\Shared\CreateNamespaceRequest $request,
     ): \tigris\core\Models\Operations\CreateNamespaceResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -137,10 +137,10 @@ class NamespaceT
     ): \tigris\core\Models\Operations\ManagementGetNamespaceMetadataResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/namespace/metadata/{metadataKey}/get', \tigris\core\Models\Operations\ManagementGetNamespaceMetadataPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/namespace/metadata/{metadataKey}/get', \tigris\core\Models\Operations\ManagementGetNamespaceMetadataRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "getNamespaceMetadataRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -184,10 +184,10 @@ class NamespaceT
     ): \tigris\core\Models\Operations\ManagementInsertNamespaceMetadataResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/namespace/metadata/{metadataKey}/insert', \tigris\core\Models\Operations\ManagementInsertNamespaceMetadataPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/namespace/metadata/{metadataKey}/insert', \tigris\core\Models\Operations\ManagementInsertNamespaceMetadataRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "insertNamespaceMetadataRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -271,10 +271,10 @@ class NamespaceT
     ): \tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/namespace/metadata/{metadataKey}/update', \tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/namespace/metadata/{metadataKey}/update', \tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "updateNamespaceMetadataRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }

@@ -48,10 +48,10 @@ class Cache
     ): \tigris\core\Models\Operations\CacheCreateCacheResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/create', \tigris\core\Models\Operations\CacheCreateCachePathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/create', \tigris\core\Models\Operations\CacheCreateCacheRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "createCacheRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -93,10 +93,10 @@ class Cache
     ): \tigris\core\Models\Operations\CacheDeleteCacheResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/delete', \tigris\core\Models\Operations\CacheDeleteCachePathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/delete', \tigris\core\Models\Operations\CacheDeleteCacheRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -138,10 +138,10 @@ class Cache
     ): \tigris\core\Models\Operations\CacheDelResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/{key}/delete', \tigris\core\Models\Operations\CacheDelPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/{key}/delete', \tigris\core\Models\Operations\CacheDelRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -183,7 +183,7 @@ class Cache
     ): \tigris\core\Models\Operations\CacheGetResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/{key}/get', \tigris\core\Models\Operations\CacheGetPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/{key}/get', \tigris\core\Models\Operations\CacheGetRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -223,10 +223,10 @@ class Cache
     ): \tigris\core\Models\Operations\CacheGetSetResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/{key}/getset', \tigris\core\Models\Operations\CacheGetSetPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/{key}/getset', \tigris\core\Models\Operations\CacheGetSetRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "getSetRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -268,7 +268,7 @@ class Cache
     ): \tigris\core\Models\Operations\CacheListCachesResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/list', \tigris\core\Models\Operations\CacheListCachesPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/list', \tigris\core\Models\Operations\CacheListCachesRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -308,10 +308,10 @@ class Cache
     ): \tigris\core\Models\Operations\CacheKeysResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/keys', \tigris\core\Models\Operations\CacheKeysPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/keys', \tigris\core\Models\Operations\CacheKeysRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\CacheKeysQueryParams::class, $request->queryParams, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\CacheKeysRequest::class, $request, null));
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
@@ -349,10 +349,10 @@ class Cache
     ): \tigris\core\Models\Operations\CacheSetResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/{key}/set', \tigris\core\Models\Operations\CacheSetPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/{key}/set', \tigris\core\Models\Operations\CacheSetRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "setRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }

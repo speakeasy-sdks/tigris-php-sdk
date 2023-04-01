@@ -11,15 +11,29 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class SearchSearchRequest
 {
-	
-    public SearchSearchPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\SearchIndexRequest $request;
+    public \tigris\core\Models\Shared\SearchIndexRequest $searchIndexRequest;
+    
+    /**
+     * The index name to search documents from.
+     * 
+     * @var string $index
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=index')]
+    public string $index;
+    
+    /**
+     * Project name whose db is under target to search documents from.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\SearchSearchPathParams();
-		$this->request = new \tigris\core\Models\Shared\SearchIndexRequest();
+		$this->searchIndexRequest = new \tigris\core\Models\Shared\SearchIndexRequest();
+		$this->index = "";
+		$this->project = "";
 	}
 }

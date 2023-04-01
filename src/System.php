@@ -122,11 +122,11 @@ class System
      * 
      * Returns current namespace quota limits
      * 
-     * @param \tigris\core\Models\Operations\ObservabilityQuotaUsageRequest $request
+     * @param array<string, mixed> $request
      * @return \tigris\core\Models\Operations\ObservabilityQuotaUsageResponse
      */
 	public function observabilityQuotaUsage(
-        \tigris\core\Models\Operations\ObservabilityQuotaUsageRequest $request,
+        array $request,
     ): \tigris\core\Models\Operations\ObservabilityQuotaUsageResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -169,11 +169,11 @@ class System
      * 
      * Returns current namespace quota limits
      * 
-     * @param \tigris\core\Models\Operations\ObservabilityQuotaLimitsRequest $request
+     * @param array<string, mixed> $request
      * @return \tigris\core\Models\Operations\ObservabilityQuotaLimitsResponse
      */
 	public function queryQuotaLimits(
-        \tigris\core\Models\Operations\ObservabilityQuotaLimitsRequest $request,
+        array $request,
     ): \tigris\core\Models\Operations\ObservabilityQuotaLimitsResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -216,11 +216,11 @@ class System
      * 
      * Queries time series metrics
      * 
-     * @param \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsRequest $request
+     * @param \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequest $request
      * @return \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsResponse
      */
 	public function queryTimeSeriesMetrics(
-        \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsRequest $request,
+        \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequest $request,
     ): \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsResponse
     {
         $baseUrl = $this->_serverUrl;

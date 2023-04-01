@@ -50,10 +50,10 @@ class AppKey
     ): \tigris\core\Models\Operations\TigrisDeleteAppKeyResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/apps/keys/delete', \tigris\core\Models\Operations\TigrisDeleteAppKeyPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/apps/keys/delete', \tigris\core\Models\Operations\TigrisDeleteAppKeyRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "deleteAppKeyRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -97,7 +97,7 @@ class AppKey
     ): \tigris\core\Models\Operations\TigrisListAppKeysResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/apps/keys', \tigris\core\Models\Operations\TigrisListAppKeysPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/apps/keys', \tigris\core\Models\Operations\TigrisListAppKeysRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -139,10 +139,10 @@ class AppKey
     ): \tigris\core\Models\Operations\TigrisRotateAppKeySecretResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/apps/keys/rotate', \tigris\core\Models\Operations\TigrisRotateAppKeySecretPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/apps/keys/rotate', \tigris\core\Models\Operations\TigrisRotateAppKeySecretRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "rotateAppKeyRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -186,10 +186,10 @@ class AppKey
     ): \tigris\core\Models\Operations\TigrisCreateAppKeyResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/apps/keys/create', \tigris\core\Models\Operations\TigrisCreateAppKeyPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/apps/keys/create', \tigris\core\Models\Operations\TigrisCreateAppKeyRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "createAppKeyRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -233,10 +233,10 @@ class AppKey
     ): \tigris\core\Models\Operations\TigrisUpdateAppKeyResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/apps/keys/update', \tigris\core\Models\Operations\TigrisUpdateAppKeyPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/apps/keys/update', \tigris\core\Models\Operations\TigrisUpdateAppKeyRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "updateAppKeyRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }

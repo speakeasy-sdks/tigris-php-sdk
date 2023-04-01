@@ -11,15 +11,29 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisReadRequest
 {
-	
-    public TigrisReadPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\ReadRequest $request;
+    public \tigris\core\Models\Shared\ReadRequest $readRequest;
+    
+    /**
+     * Collection name to read documents from.
+     * 
+     * @var string $collection
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=collection')]
+    public string $collection;
+    
+    /**
+     * Project name whose db is under target to read documents from.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisReadPathParams();
-		$this->request = new \tigris\core\Models\Shared\ReadRequest();
+		$this->readRequest = new \tigris\core\Models\Shared\ReadRequest();
+		$this->collection = "";
+		$this->project = "";
 	}
 }

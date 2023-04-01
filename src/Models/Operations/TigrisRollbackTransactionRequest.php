@@ -11,15 +11,20 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisRollbackTransactionRequest
 {
-	
-    public TigrisRollbackTransactionPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\RollbackTransactionRequest $request;
+    public \tigris\core\Models\Shared\RollbackTransactionRequest $rollbackTransactionRequest;
+    
+    /**
+     * Project name whose DB this transaction belongs to.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisRollbackTransactionPathParams();
-		$this->request = new \tigris\core\Models\Shared\RollbackTransactionRequest();
+		$this->rollbackTransactionRequest = new \tigris\core\Models\Shared\RollbackTransactionRequest();
+		$this->project = "";
 	}
 }

@@ -11,15 +11,29 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class SearchCreateRequest
 {
-	
-    public SearchCreatePathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\CreateDocumentRequest $request;
+    public \tigris\core\Models\Shared\CreateDocumentRequest $createDocumentRequest;
+    
+    /**
+     * index name where to create documents.
+     * 
+     * @var string $index
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=index')]
+    public string $index;
+    
+    /**
+     * Tigris project name.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\SearchCreatePathParams();
-		$this->request = new \tigris\core\Models\Shared\CreateDocumentRequest();
+		$this->createDocumentRequest = new \tigris\core\Models\Shared\CreateDocumentRequest();
+		$this->index = "";
+		$this->project = "";
 	}
 }

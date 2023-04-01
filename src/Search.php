@@ -53,10 +53,10 @@ class Search
     ): \tigris\core\Models\Operations\SearchCreateByIdResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents/{id}', \tigris\core\Models\Operations\SearchCreateByIdPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents/{id}', \tigris\core\Models\Operations\SearchCreateByIdRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "createByIdRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -104,10 +104,10 @@ class Search
     ): \tigris\core\Models\Operations\SearchCreateResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchCreatePathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchCreateRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "createDocumentRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -153,10 +153,10 @@ class Search
     ): \tigris\core\Models\Operations\SearchDeleteResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchDeletePathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchDeleteRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "deleteDocumentRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -198,10 +198,10 @@ class Search
     ): \tigris\core\Models\Operations\SearchDeleteIndexResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{name}', \tigris\core\Models\Operations\SearchDeleteIndexPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{name}', \tigris\core\Models\Operations\SearchDeleteIndexRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "deleteIndexRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -249,10 +249,10 @@ class Search
     ): \tigris\core\Models\Operations\SearchSearchResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents/search', \tigris\core\Models\Operations\SearchSearchPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents/search', \tigris\core\Models\Operations\SearchSearchRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "searchIndexRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -297,10 +297,10 @@ class Search
     ): \tigris\core\Models\Operations\SearchGetResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchGetPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchGetRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\SearchGetQueryParams::class, $request->queryParams, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\SearchGetRequest::class, $request, null));
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
@@ -338,7 +338,7 @@ class Search
     ): \tigris\core\Models\Operations\SearchGetIndexResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{name}', \tigris\core\Models\Operations\SearchGetIndexPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{name}', \tigris\core\Models\Operations\SearchGetIndexRequest::class, $request);
         
         $options = ['http_errors' => false];
         
@@ -378,10 +378,10 @@ class Search
     ): \tigris\core\Models\Operations\SearchListIndexesResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes', \tigris\core\Models\Operations\SearchListIndexesPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes', \tigris\core\Models\Operations\SearchListIndexesRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\SearchListIndexesQueryParams::class, $request->queryParams, null));
+        $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\SearchListIndexesRequest::class, $request, null));
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
@@ -422,10 +422,10 @@ class Search
     ): \tigris\core\Models\Operations\SearchDeleteByQueryResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents/deleteByQuery', \tigris\core\Models\Operations\SearchDeleteByQueryPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents/deleteByQuery', \tigris\core\Models\Operations\SearchDeleteByQueryRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "deleteByQueryRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -472,10 +472,10 @@ class Search
     ): \tigris\core\Models\Operations\SearchCreateOrReplaceResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchCreateOrReplacePathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchCreateOrReplaceRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "createOrReplaceDocumentRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -522,10 +522,10 @@ class Search
     ): \tigris\core\Models\Operations\SearchUpdateResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchUpdatePathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{index}/documents', \tigris\core\Models\Operations\SearchUpdateRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "updateDocumentRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -567,10 +567,10 @@ class Search
     ): \tigris\core\Models\Operations\SearchCreateOrUpdateIndexResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{name}', \tigris\core\Models\Operations\SearchCreateOrUpdateIndexPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{name}', \tigris\core\Models\Operations\SearchCreateOrUpdateIndexRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "createOrUpdateIndexRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }

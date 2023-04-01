@@ -11,15 +11,29 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class SearchCreateOrReplaceRequest
 {
-	
-    public SearchCreateOrReplacePathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\CreateOrReplaceDocumentRequest $request;
+    public \tigris\core\Models\Shared\CreateOrReplaceDocumentRequest $createOrReplaceDocumentRequest;
+    
+    /**
+     * index name where to create documents.
+     * 
+     * @var string $index
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=index')]
+    public string $index;
+    
+    /**
+     * Project name whose db is under target to insert documents.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\SearchCreateOrReplacePathParams();
-		$this->request = new \tigris\core\Models\Shared\CreateOrReplaceDocumentRequest();
+		$this->createOrReplaceDocumentRequest = new \tigris\core\Models\Shared\CreateOrReplaceDocumentRequest();
+		$this->index = "";
+		$this->project = "";
 	}
 }

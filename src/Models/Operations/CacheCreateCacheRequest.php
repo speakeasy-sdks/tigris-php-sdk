@@ -11,15 +11,29 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class CacheCreateCacheRequest
 {
-	
-    public CacheCreateCachePathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\CreateCacheRequest $request;
+    public \tigris\core\Models\Shared\CreateCacheRequest $createCacheRequest;
+    
+    /**
+     * cache name
+     * 
+     * @var string $name
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=name')]
+    public string $name;
+    
+    /**
+     * Tigris project name
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\CacheCreateCachePathParams();
-		$this->request = new \tigris\core\Models\Shared\CreateCacheRequest();
+		$this->createCacheRequest = new \tigris\core\Models\Shared\CreateCacheRequest();
+		$this->name = "";
+		$this->project = "";
 	}
 }

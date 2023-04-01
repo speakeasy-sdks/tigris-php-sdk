@@ -11,15 +11,19 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class RealtimeMessagesRequest
 {
-	
-    public RealtimeMessagesPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\MessagesRequest $request;
+    public \tigris\core\Models\Shared\MessagesRequest $messagesRequest;
+    
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=channel')]
+    public string $channel;
+    
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\RealtimeMessagesPathParams();
-		$this->request = new \tigris\core\Models\Shared\MessagesRequest();
+		$this->messagesRequest = new \tigris\core\Models\Shared\MessagesRequest();
+		$this->channel = "";
+		$this->project = "";
 	}
 }

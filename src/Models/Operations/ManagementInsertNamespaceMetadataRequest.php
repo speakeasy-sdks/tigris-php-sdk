@@ -11,15 +11,15 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class ManagementInsertNamespaceMetadataRequest
 {
-	
-    public ManagementInsertNamespaceMetadataPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\InsertNamespaceMetadataRequest $request;
+    public \tigris\core\Models\Shared\InsertNamespaceMetadataRequest $insertNamespaceMetadataRequest;
+    
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=metadataKey')]
+    public string $metadataKey;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\ManagementInsertNamespaceMetadataPathParams();
-		$this->request = new \tigris\core\Models\Shared\InsertNamespaceMetadataRequest();
+		$this->insertNamespaceMetadataRequest = new \tigris\core\Models\Shared\InsertNamespaceMetadataRequest();
+		$this->metadataKey = "";
 	}
 }

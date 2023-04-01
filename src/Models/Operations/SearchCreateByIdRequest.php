@@ -11,15 +11,38 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class SearchCreateByIdRequest
 {
-	
-    public SearchCreateByIdPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\CreateByIdRequest $request;
+    public \tigris\core\Models\Shared\CreateByIdRequest $createByIdRequest;
+    
+    /**
+     * document id.
+     * 
+     * @var string $id
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=id')]
+    public string $id;
+    
+    /**
+     * index name where to create document.
+     * 
+     * @var string $index
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=index')]
+    public string $index;
+    
+    /**
+     * Tigris project name.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\SearchCreateByIdPathParams();
-		$this->request = new \tigris\core\Models\Shared\CreateByIdRequest();
+		$this->createByIdRequest = new \tigris\core\Models\Shared\CreateByIdRequest();
+		$this->id = "";
+		$this->index = "";
+		$this->project = "";
 	}
 }

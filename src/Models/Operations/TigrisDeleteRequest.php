@@ -11,15 +11,29 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisDeleteRequest
 {
-	
-    public TigrisDeletePathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\DeleteRequest $request;
+    public \tigris\core\Models\Shared\DeleteRequest $deleteRequest;
+    
+    /**
+     * Collection name where to insert documents.
+     * 
+     * @var string $collection
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=collection')]
+    public string $collection;
+    
+    /**
+     * Project name whose db is under target to delete documents.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisDeletePathParams();
-		$this->request = new \tigris\core\Models\Shared\DeleteRequest();
+		$this->deleteRequest = new \tigris\core\Models\Shared\DeleteRequest();
+		$this->collection = "";
+		$this->project = "";
 	}
 }

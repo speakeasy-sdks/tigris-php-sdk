@@ -8,14 +8,37 @@ declare(strict_types=1);
 
 namespace tigris\core\Models\Operations;
 
-
+use \tigris\core\Utils\SpeakeasyMetadata;
 class CacheGetRequest
 {
-	
-    public CacheGetPathParams $pathParams;
+    /**
+     * cache key
+     * 
+     * @var string $key
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=key')]
+    public string $key;
+    
+    /**
+     * cache name
+     * 
+     * @var string $name
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=name')]
+    public string $name;
+    
+    /**
+     * Tigris project name
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\CacheGetPathParams();
+		$this->key = "";
+		$this->name = "";
+		$this->project = "";
 	}
 }

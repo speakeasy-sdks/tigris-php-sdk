@@ -11,15 +11,20 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisUpdateAppKeyRequest
 {
-	
-    public TigrisUpdateAppKeyPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\UpdateAppKeyRequest $request;
+    public \tigris\core\Models\Shared\UpdateAppKeyRequest $updateAppKeyRequest;
+    
+    /**
+     * project name -  this is not allowed to update
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisUpdateAppKeyPathParams();
-		$this->request = new \tigris\core\Models\Shared\UpdateAppKeyRequest();
+		$this->updateAppKeyRequest = new \tigris\core\Models\Shared\UpdateAppKeyRequest();
+		$this->project = "";
 	}
 }

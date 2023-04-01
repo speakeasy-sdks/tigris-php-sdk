@@ -8,18 +8,26 @@ declare(strict_types=1);
 
 namespace tigris\core\Models\Operations;
 
-
+use \tigris\core\Utils\SpeakeasyMetadata;
 class RealtimeListSubscriptionsRequest
 {
-	
-    public RealtimeListSubscriptionsPathParams $pathParams;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=channel')]
+    public string $channel;
     
-	
-    public RealtimeListSubscriptionsQueryParams $queryParams;
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=page')]
+    public ?int $page = null;
+    
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=page_size')]
+    public ?int $pageSize = null;
+    
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\RealtimeListSubscriptionsPathParams();
-		$this->queryParams = new \tigris\core\Models\Operations\RealtimeListSubscriptionsQueryParams();
+		$this->channel = "";
+		$this->page = null;
+		$this->pageSize = null;
+		$this->project = "";
 	}
 }

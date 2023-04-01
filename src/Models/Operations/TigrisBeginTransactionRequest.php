@@ -11,15 +11,20 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisBeginTransactionRequest
 {
-	
-    public TigrisBeginTransactionPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\BeginTransactionRequest $request;
+    public \tigris\core\Models\Shared\BeginTransactionRequest $beginTransactionRequest;
+    
+    /**
+     * Project name whose DB this transaction belongs to.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisBeginTransactionPathParams();
-		$this->request = new \tigris\core\Models\Shared\BeginTransactionRequest();
+		$this->beginTransactionRequest = new \tigris\core\Models\Shared\BeginTransactionRequest();
+		$this->project = "";
 	}
 }

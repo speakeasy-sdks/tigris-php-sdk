@@ -11,15 +11,29 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisDescribeCollectionRequest
 {
-	
-    public TigrisDescribeCollectionPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\DescribeCollectionRequest $request;
+    public \tigris\core\Models\Shared\DescribeCollectionRequest $describeCollectionRequest;
+    
+    /**
+     * Name of the collection.
+     * 
+     * @var string $collection
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=collection')]
+    public string $collection;
+    
+    /**
+     * Project name whose db is under target to get description of its collection.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisDescribeCollectionPathParams();
-		$this->request = new \tigris\core\Models\Shared\DescribeCollectionRequest();
+		$this->describeCollectionRequest = new \tigris\core\Models\Shared\DescribeCollectionRequest();
+		$this->collection = "";
+		$this->project = "";
 	}
 }

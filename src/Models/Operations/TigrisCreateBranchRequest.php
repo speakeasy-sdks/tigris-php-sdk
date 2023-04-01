@@ -11,20 +11,34 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisCreateBranchRequest
 {
-	
-    public TigrisCreateBranchPathParams $pathParams;
-    
     /**
-     * $request
+     * $requestBody
      * 
-     * @var array<string, mixed> $request
+     * @var array<string, mixed> $requestBody
      */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public array $request;
+    public array $requestBody;
+    
+    /**
+     * Name of the database branch to be created. <p></p>**Note**: `main` is a reserved branch name for primary database and is automatically created with CreateProject
+     * 
+     * @var string $branch
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=branch')]
+    public string $branch;
+    
+    /**
+     * Create a database branch in this project
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisCreateBranchPathParams();
-		$this->request = [];
+		$this->requestBody = [];
+		$this->branch = "";
+		$this->project = "";
 	}
 }

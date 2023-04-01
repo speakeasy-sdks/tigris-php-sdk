@@ -8,18 +8,42 @@ declare(strict_types=1);
 
 namespace tigris\core\Models\Operations;
 
-
+use \tigris\core\Utils\SpeakeasyMetadata;
 class RealtimeReadMessagesRequest
 {
-	
-    public RealtimeReadMessagesPathParams $pathParams;
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=channel')]
+    public string $channel;
     
-	
-    public RealtimeReadMessagesQueryParams $queryParams;
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end')]
+    public ?string $end = null;
+    
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=event')]
+    public ?string $event = null;
+    
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
+    public ?int $limit = null;
+    
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
+    
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=session_id')]
+    public ?string $sessionId = null;
+    
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=socket_id')]
+    public ?string $socketId = null;
+    
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=start')]
+    public ?string $start = null;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\RealtimeReadMessagesPathParams();
-		$this->queryParams = new \tigris\core\Models\Operations\RealtimeReadMessagesQueryParams();
+		$this->channel = "";
+		$this->end = null;
+		$this->event = null;
+		$this->limit = null;
+		$this->project = "";
+		$this->sessionId = null;
+		$this->socketId = null;
+		$this->start = null;
 	}
 }

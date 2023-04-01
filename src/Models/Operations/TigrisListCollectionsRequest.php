@@ -8,18 +8,28 @@ declare(strict_types=1);
 
 namespace tigris\core\Models\Operations;
 
-
+use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisListCollectionsRequest
 {
-	
-    public TigrisListCollectionsPathParams $pathParams;
+    /**
+     * Optionally specify a database branch name to perform operation on
+     * 
+     * @var ?string $branch
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=branch')]
+    public ?string $branch = null;
     
-	
-    public TigrisListCollectionsQueryParams $queryParams;
+    /**
+     * Project name whose db is under target to list collections.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisListCollectionsPathParams();
-		$this->queryParams = new \tigris\core\Models\Operations\TigrisListCollectionsQueryParams();
+		$this->branch = null;
+		$this->project = "";
 	}
 }

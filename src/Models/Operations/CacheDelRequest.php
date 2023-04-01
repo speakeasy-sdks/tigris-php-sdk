@@ -11,20 +11,43 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class CacheDelRequest
 {
-	
-    public CacheDelPathParams $pathParams;
-    
     /**
-     * $request
+     * $requestBody
      * 
-     * @var array<string, mixed> $request
+     * @var array<string, mixed> $requestBody
      */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public array $request;
+    public array $requestBody;
+    
+    /**
+     * cache key
+     * 
+     * @var string $key
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=key')]
+    public string $key;
+    
+    /**
+     * cache name
+     * 
+     * @var string $name
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=name')]
+    public string $name;
+    
+    /**
+     * Tigris project name
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\CacheDelPathParams();
-		$this->request = [];
+		$this->requestBody = [];
+		$this->key = "";
+		$this->name = "";
+		$this->project = "";
 	}
 }

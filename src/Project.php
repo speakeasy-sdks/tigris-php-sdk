@@ -50,10 +50,10 @@ class Project
     ): \tigris\core\Models\Operations\TigrisCreateProjectResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/create', \tigris\core\Models\Operations\TigrisCreateProjectPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/create', \tigris\core\Models\Operations\TigrisCreateProjectRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -97,10 +97,10 @@ class Project
     ): \tigris\core\Models\Operations\TigrisDeleteProjectResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/delete', \tigris\core\Models\Operations\TigrisDeleteProjectPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/delete', \tigris\core\Models\Operations\TigrisDeleteProjectRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }

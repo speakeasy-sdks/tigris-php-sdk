@@ -11,15 +11,29 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisDropCollectionRequest
 {
-	
-    public TigrisDropCollectionPathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\DropCollectionRequest $request;
+    public \tigris\core\Models\Shared\DropCollectionRequest $dropCollectionRequest;
+    
+    /**
+     * Collection name to delete.
+     * 
+     * @var string $collection
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=collection')]
+    public string $collection;
+    
+    /**
+     * Project name whose db is under target to delete collection.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisDropCollectionPathParams();
-		$this->request = new \tigris\core\Models\Shared\DropCollectionRequest();
+		$this->dropCollectionRequest = new \tigris\core\Models\Shared\DropCollectionRequest();
+		$this->collection = "";
+		$this->project = "";
 	}
 }

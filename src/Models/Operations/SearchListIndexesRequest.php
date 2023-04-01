@@ -8,18 +8,46 @@ declare(strict_types=1);
 
 namespace tigris\core\Models\Operations;
 
-
+use \tigris\core\Utils\SpeakeasyMetadata;
 class SearchListIndexesRequest
 {
-	
-    public SearchListIndexesPathParams $pathParams;
+    /**
+     * Applicable only in case index is backed by Tigris collection. This is the database branch for the above collection. For primary database it can be omitted or "main" can be passed.
+     * 
+     * @var ?string $filterBranch
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter.branch')]
+    public ?string $filterBranch = null;
     
-	
-    public SearchListIndexesQueryParams $queryParams;
+    /**
+     * Applicable only in case index is backed by Tigris collection.
+     * 
+     * @var ?string $filterCollection
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter.collection')]
+    public ?string $filterCollection = null;
+    
+    /**
+     * An index can be either managed by user explicitly then the type is set as "user" or the index is backed by Tigris collection. In case it is backed by Tigris collection the type is "tigris".
+     * 
+     * @var ?string $filterType
+     */
+	#[SpeakeasyMetadata('queryParam:style=form,explode=true,name=filter.type')]
+    public ?string $filterType = null;
+    
+    /**
+     * Tigris project name.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\SearchListIndexesPathParams();
-		$this->queryParams = new \tigris\core\Models\Operations\SearchListIndexesQueryParams();
+		$this->filterBranch = null;
+		$this->filterCollection = null;
+		$this->filterType = null;
+		$this->project = "";
 	}
 }

@@ -54,10 +54,10 @@ class Collection
     ): \tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/createOrUpdate', \tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/createOrUpdate', \tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "createOrUpdateCollectionRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -101,10 +101,10 @@ class Collection
     ): \tigris\core\Models\Operations\TigrisDeleteResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/delete', \tigris\core\Models\Operations\TigrisDeletePathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/delete', \tigris\core\Models\Operations\TigrisDeleteRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "deleteRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -148,10 +148,10 @@ class Collection
     ): \tigris\core\Models\Operations\TigrisDescribeCollectionResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/describe', \tigris\core\Models\Operations\TigrisDescribeCollectionPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/describe', \tigris\core\Models\Operations\TigrisDescribeCollectionRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "describeCollectionRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -196,10 +196,10 @@ class Collection
     ): \tigris\core\Models\Operations\TigrisDropCollectionResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/drop', \tigris\core\Models\Operations\TigrisDropCollectionPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/drop', \tigris\core\Models\Operations\TigrisDropCollectionRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "dropCollectionRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -248,10 +248,10 @@ class Collection
     ): \tigris\core\Models\Operations\TigrisImportResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/import', \tigris\core\Models\Operations\TigrisImportPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/import', \tigris\core\Models\Operations\TigrisImportRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "importRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -297,10 +297,10 @@ class Collection
     ): \tigris\core\Models\Operations\TigrisInsertResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/insert', \tigris\core\Models\Operations\TigrisInsertPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/insert', \tigris\core\Models\Operations\TigrisInsertRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "insertRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -349,10 +349,10 @@ class Collection
     ): \tigris\core\Models\Operations\TigrisReadResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/read', \tigris\core\Models\Operations\TigrisReadPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/read', \tigris\core\Models\Operations\TigrisReadRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "readRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -396,10 +396,10 @@ class Collection
     ): \tigris\core\Models\Operations\TigrisReplaceResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/replace', \tigris\core\Models\Operations\TigrisReplacePathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/replace', \tigris\core\Models\Operations\TigrisReplaceRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "replaceRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -446,10 +446,10 @@ class Collection
     ): \tigris\core\Models\Operations\TigrisSearchResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/search', \tigris\core\Models\Operations\TigrisSearchPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/search', \tigris\core\Models\Operations\TigrisSearchRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "searchRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -493,10 +493,10 @@ class Collection
     ): \tigris\core\Models\Operations\TigrisUpdateResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/update', \tigris\core\Models\Operations\TigrisUpdatePathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/collections/{collection}/documents/update', \tigris\core\Models\Operations\TigrisUpdateRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "updateRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }

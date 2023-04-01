@@ -50,10 +50,10 @@ class User
     ): \tigris\core\Models\Operations\ManagementGetUserMetadataResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/users/metadata/{metadataKey}/get', \tigris\core\Models\Operations\ManagementGetUserMetadataPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/users/metadata/{metadataKey}/get', \tigris\core\Models\Operations\ManagementGetUserMetadataRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "getUserMetadataRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -97,10 +97,10 @@ class User
     ): \tigris\core\Models\Operations\ManagementInsertUserMetadataResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/users/metadata/{metadataKey}/insert', \tigris\core\Models\Operations\ManagementInsertUserMetadataPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/users/metadata/{metadataKey}/insert', \tigris\core\Models\Operations\ManagementInsertUserMetadataRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "insertUserMetadataRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -144,10 +144,10 @@ class User
     ): \tigris\core\Models\Operations\ManagementUpdateUserMetadataResponse
     {
         $baseUrl = $this->_serverUrl;
-        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/users/metadata/{metadataKey}/update', \tigris\core\Models\Operations\ManagementUpdateUserMetadataPathParams::class, $request->pathParams);
+        $url = Utils\Utils::generateUrl($baseUrl, '/v1/management/users/metadata/{metadataKey}/update', \tigris\core\Models\Operations\ManagementUpdateUserMetadataRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "request", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "updateUserMetadataRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }

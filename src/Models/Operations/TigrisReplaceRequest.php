@@ -11,15 +11,29 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisReplaceRequest
 {
-	
-    public TigrisReplacePathParams $pathParams;
-    
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public \tigris\core\Models\Shared\ReplaceRequest $request;
+    public \tigris\core\Models\Shared\ReplaceRequest $replaceRequest;
+    
+    /**
+     * Collection name where to replace documents.
+     * 
+     * @var string $collection
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=collection')]
+    public string $collection;
+    
+    /**
+     * Project name whose db is under target to replace documents.
+     * 
+     * @var string $project
+     */
+	#[SpeakeasyMetadata('pathParam:style=simple,explode=false,name=project')]
+    public string $project;
     
 	public function __construct()
 	{
-		$this->pathParams = new \tigris\core\Models\Operations\TigrisReplacePathParams();
-		$this->request = new \tigris\core\Models\Shared\ReplaceRequest();
+		$this->replaceRequest = new \tigris\core\Models\Shared\ReplaceRequest();
+		$this->collection = "";
+		$this->project = "";
 	}
 }
