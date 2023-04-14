@@ -19,8 +19,8 @@ $sdk = SDK::builder()
 try {
     $request = new TigrisDeleteAppKeyRequest();
     $request->deleteAppKeyRequest = new DeleteAppKeyRequest();
-    $request->deleteAppKeyRequest->id = 'corrupti';
-    $request->project = 'provident';
+    $request->deleteAppKeyRequest->id = '89bd9d8d-69a6-474e-8f46-7cc8796ed151';
+    $request->project = 'deserunt';
 
     $response = $sdk->appKey->delete($request);
 
