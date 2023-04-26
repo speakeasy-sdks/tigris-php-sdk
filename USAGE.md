@@ -3,17 +3,14 @@
 <?php
 
 declare(strict_types=1);
+require_once 'vendor/autoload.php';
 
-use tigris\core\SDK;
+use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisDeleteAppKeyRequest;
 use \tigris\core\Models\Shared\DeleteAppKeyRequest;
 
-$security = new Security();
-$security->bearerAuth = 'Bearer YOUR_BEARER_TOKEN_HERE';
-
 $sdk = SDK::builder()
-    ->setSecurity($security);
     ->build();
 
 try {
