@@ -7,21 +7,24 @@ require_once 'vendor/autoload.php';
 
 use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisDeleteAppKeyRequest;
-use \tigris\core\Models\Shared\DeleteAppKeyRequest;
+use \tigris\core\Models\Operations\CacheCreateCacheRequest;
+use \tigris\core\Models\Shared\CreateCacheRequest;
+use \tigris\core\Models\Shared\CreateCacheOptions;
 
 $sdk = SDK::builder()
     ->build();
 
 try {
-    $request = new TigrisDeleteAppKeyRequest();
-    $request->deleteAppKeyRequest = new DeleteAppKeyRequest();
-    $request->deleteAppKeyRequest->id = '89bd9d8d-69a6-474e-8f46-7cc8796ed151';
-    $request->project = 'deserunt';
+    $request = new CacheCreateCacheRequest();
+    $request->createCacheRequest = new CreateCacheRequest();
+    $request->createCacheRequest->options = new CreateCacheOptions();
+    $request->createCacheRequest->options->ttlMs = 548814;
+    $request->name = 'Kelvin Sporer';
+    $request->project = 'corrupti';
 
-    $response = $sdk->appKey->delete($request);
+    $response = $sdk->cache->create($request);
 
-    if ($response->deleteAppKeyResponse !== null) {
+    if ($response->createCacheResponse !== null) {
         // handle response
     }
 } catch (Exception $e) {
