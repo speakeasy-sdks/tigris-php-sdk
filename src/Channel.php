@@ -43,7 +43,8 @@ class Channel
      * @param \tigris\core\Models\Operations\RealtimeGetRTChannelRequest $request
      * @return \tigris\core\Models\Operations\RealtimeGetRTChannelResponse
      */
-	public function get(
+	
+    public function get(
         \tigris\core\Models\Operations\RealtimeGetRTChannelRequest $request,
     ): \tigris\core\Models\Operations\RealtimeGetRTChannelResponse
     {
@@ -83,7 +84,8 @@ class Channel
      * @param \tigris\core\Models\Operations\RealtimeReadMessagesRequest $request
      * @return \tigris\core\Models\Operations\RealtimeReadMessagesResponse
      */
-	public function getMessages(
+	
+    public function getMessages(
         \tigris\core\Models\Operations\RealtimeReadMessagesRequest $request,
     ): \tigris\core\Models\Operations\RealtimeReadMessagesResponse
     {
@@ -124,7 +126,8 @@ class Channel
      * @param \tigris\core\Models\Operations\RealtimeGetRTChannelsRequest $request
      * @return \tigris\core\Models\Operations\RealtimeGetRTChannelsResponse
      */
-	public function list(
+	
+    public function list(
         \tigris\core\Models\Operations\RealtimeGetRTChannelsRequest $request,
     ): \tigris\core\Models\Operations\RealtimeGetRTChannelsResponse
     {
@@ -164,7 +167,8 @@ class Channel
      * @param \tigris\core\Models\Operations\RealtimeListSubscriptionsRequest $request
      * @return \tigris\core\Models\Operations\RealtimeListSubscriptionsResponse
      */
-	public function listSubscriptions(
+	
+    public function listSubscriptions(
         \tigris\core\Models\Operations\RealtimeListSubscriptionsRequest $request,
     ): \tigris\core\Models\Operations\RealtimeListSubscriptionsResponse
     {
@@ -205,7 +209,8 @@ class Channel
      * @param \tigris\core\Models\Operations\RealtimeMessagesRequest $request
      * @return \tigris\core\Models\Operations\RealtimeMessagesResponse
      */
-	public function pushMessages(
+	
+    public function pushMessages(
         \tigris\core\Models\Operations\RealtimeMessagesRequest $request,
     ): \tigris\core\Models\Operations\RealtimeMessagesResponse
     {
@@ -250,7 +255,8 @@ class Channel
      * @param \tigris\core\Models\Operations\RealtimePresenceRequest $request
      * @return \tigris\core\Models\Operations\RealtimePresenceResponse
      */
-	public function realtimePresence(
+	
+    public function realtimePresence(
         \tigris\core\Models\Operations\RealtimePresenceRequest $request,
     ): \tigris\core\Models\Operations\RealtimePresenceResponse
     {

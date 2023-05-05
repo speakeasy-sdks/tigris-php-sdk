@@ -49,7 +49,8 @@ class Collection
      * @param \tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionRequest $request
      * @return \tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionResponse
      */
-	public function create(
+	
+    public function create(
         \tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionRequest $request,
     ): \tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionResponse
     {
@@ -96,7 +97,8 @@ class Collection
      * @param \tigris\core\Models\Operations\TigrisDeleteRequest $request
      * @return \tigris\core\Models\Operations\TigrisDeleteResponse
      */
-	public function deleteDocuments(
+	
+    public function deleteDocuments(
         \tigris\core\Models\Operations\TigrisDeleteRequest $request,
     ): \tigris\core\Models\Operations\TigrisDeleteResponse
     {
@@ -143,7 +145,8 @@ class Collection
      * @param \tigris\core\Models\Operations\TigrisDescribeCollectionRequest $request
      * @return \tigris\core\Models\Operations\TigrisDescribeCollectionResponse
      */
-	public function describe(
+	
+    public function describe(
         \tigris\core\Models\Operations\TigrisDescribeCollectionRequest $request,
     ): \tigris\core\Models\Operations\TigrisDescribeCollectionResponse
     {
@@ -191,7 +194,8 @@ class Collection
      * @param \tigris\core\Models\Operations\TigrisDropCollectionRequest $request
      * @return \tigris\core\Models\Operations\TigrisDropCollectionResponse
      */
-	public function drop(
+	
+    public function drop(
         \tigris\core\Models\Operations\TigrisDropCollectionRequest $request,
     ): \tigris\core\Models\Operations\TigrisDropCollectionResponse
     {
@@ -243,7 +247,8 @@ class Collection
      * @param \tigris\core\Models\Operations\TigrisImportRequest $request
      * @return \tigris\core\Models\Operations\TigrisImportResponse
      */
-	public function importDocuments(
+	
+    public function importDocuments(
         \tigris\core\Models\Operations\TigrisImportRequest $request,
     ): \tigris\core\Models\Operations\TigrisImportResponse
     {
@@ -292,7 +297,8 @@ class Collection
      * @param \tigris\core\Models\Operations\TigrisInsertRequest $request
      * @return \tigris\core\Models\Operations\TigrisInsertResponse
      */
-	public function insertDocuments(
+	
+    public function insertDocuments(
         \tigris\core\Models\Operations\TigrisInsertRequest $request,
     ): \tigris\core\Models\Operations\TigrisInsertResponse
     {
@@ -344,7 +350,8 @@ class Collection
      * @param \tigris\core\Models\Operations\TigrisReadRequest $request
      * @return \tigris\core\Models\Operations\TigrisReadResponse
      */
-	public function readDocuments(
+	
+    public function readDocuments(
         \tigris\core\Models\Operations\TigrisReadRequest $request,
     ): \tigris\core\Models\Operations\TigrisReadResponse
     {
@@ -391,7 +398,8 @@ class Collection
      * @param \tigris\core\Models\Operations\TigrisReplaceRequest $request
      * @return \tigris\core\Models\Operations\TigrisReplaceResponse
      */
-	public function replaceDocuments(
+	
+    public function replaceDocuments(
         \tigris\core\Models\Operations\TigrisReplaceRequest $request,
     ): \tigris\core\Models\Operations\TigrisReplaceResponse
     {
@@ -441,7 +449,8 @@ class Collection
      * @param \tigris\core\Models\Operations\TigrisSearchRequest $request
      * @return \tigris\core\Models\Operations\TigrisSearchResponse
      */
-	public function searchDocuments(
+	
+    public function searchDocuments(
         \tigris\core\Models\Operations\TigrisSearchRequest $request,
     ): \tigris\core\Models\Operations\TigrisSearchResponse
     {
@@ -488,7 +497,8 @@ class Collection
      * @param \tigris\core\Models\Operations\TigrisUpdateRequest $request
      * @return \tigris\core\Models\Operations\TigrisUpdateResponse
      */
-	public function updateDocuments(
+	
+    public function updateDocuments(
         \tigris\core\Models\Operations\TigrisUpdateRequest $request,
     ): \tigris\core\Models\Operations\TigrisUpdateResponse
     {

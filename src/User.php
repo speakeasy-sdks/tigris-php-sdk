@@ -45,7 +45,8 @@ class User
      * @param \tigris\core\Models\Operations\ManagementGetUserMetadataRequest $request
      * @return \tigris\core\Models\Operations\ManagementGetUserMetadataResponse
      */
-	public function getMetadata(
+	
+    public function getMetadata(
         \tigris\core\Models\Operations\ManagementGetUserMetadataRequest $request,
     ): \tigris\core\Models\Operations\ManagementGetUserMetadataResponse
     {
@@ -92,7 +93,8 @@ class User
      * @param \tigris\core\Models\Operations\ManagementInsertUserMetadataRequest $request
      * @return \tigris\core\Models\Operations\ManagementInsertUserMetadataResponse
      */
-	public function insertMetadata(
+	
+    public function insertMetadata(
         \tigris\core\Models\Operations\ManagementInsertUserMetadataRequest $request,
     ): \tigris\core\Models\Operations\ManagementInsertUserMetadataResponse
     {
@@ -139,7 +141,8 @@ class User
      * @param \tigris\core\Models\Operations\ManagementUpdateUserMetadataRequest $request
      * @return \tigris\core\Models\Operations\ManagementUpdateUserMetadataResponse
      */
-	public function updateMetadata(
+	
+    public function updateMetadata(
         \tigris\core\Models\Operations\ManagementUpdateUserMetadataRequest $request,
     ): \tigris\core\Models\Operations\ManagementUpdateUserMetadataResponse
     {
