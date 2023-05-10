@@ -44,8 +44,7 @@ class System
      * 
      * @return \tigris\core\Models\Operations\HealthAPIHealthResponse
      */
-	
-    public function getHealth(
+	public function getHealth(
     ): \tigris\core\Models\Operations\HealthAPIHealthResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -85,8 +84,7 @@ class System
      * 
      * @return \tigris\core\Models\Operations\ObservabilityGetInfoResponse
      */
-	
-    public function getServerInfo(
+	public function getServerInfo(
     ): \tigris\core\Models\Operations\ObservabilityGetInfoResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -127,8 +125,7 @@ class System
      * @param array<string, mixed> $request
      * @return \tigris\core\Models\Operations\ObservabilityQuotaUsageResponse
      */
-	
-    public function observabilityQuotaUsage(
+	public function observabilityQuotaUsage(
         array $request,
     ): \tigris\core\Models\Operations\ObservabilityQuotaUsageResponse
     {
@@ -175,8 +172,7 @@ class System
      * @param array<string, mixed> $request
      * @return \tigris\core\Models\Operations\ObservabilityQuotaLimitsResponse
      */
-	
-    public function queryQuotaLimits(
+	public function queryQuotaLimits(
         array $request,
     ): \tigris\core\Models\Operations\ObservabilityQuotaLimitsResponse
     {
@@ -223,8 +219,7 @@ class System
      * @param \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequest $request
      * @return \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsResponse
      */
-	
-    public function queryTimeSeriesMetrics(
+	public function queryTimeSeriesMetrics(
         \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequest $request,
     ): \tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsResponse
     {

@@ -45,8 +45,7 @@ class AppKey
      * @param \tigris\core\Models\Operations\TigrisDeleteAppKeyRequest $request
      * @return \tigris\core\Models\Operations\TigrisDeleteAppKeyResponse
      */
-	
-    public function delete(
+	public function delete(
         \tigris\core\Models\Operations\TigrisDeleteAppKeyRequest $request,
     ): \tigris\core\Models\Operations\TigrisDeleteAppKeyResponse
     {
@@ -93,8 +92,7 @@ class AppKey
      * @param \tigris\core\Models\Operations\TigrisListAppKeysRequest $request
      * @return \tigris\core\Models\Operations\TigrisListAppKeysResponse
      */
-	
-    public function list(
+	public function list(
         \tigris\core\Models\Operations\TigrisListAppKeysRequest $request,
     ): \tigris\core\Models\Operations\TigrisListAppKeysResponse
     {
@@ -136,8 +134,7 @@ class AppKey
      * @param \tigris\core\Models\Operations\TigrisRotateAppKeySecretRequest $request
      * @return \tigris\core\Models\Operations\TigrisRotateAppKeySecretResponse
      */
-	
-    public function rotate(
+	public function rotate(
         \tigris\core\Models\Operations\TigrisRotateAppKeySecretRequest $request,
     ): \tigris\core\Models\Operations\TigrisRotateAppKeySecretResponse
     {
@@ -184,8 +181,7 @@ class AppKey
      * @param \tigris\core\Models\Operations\TigrisCreateAppKeyRequest $request
      * @return \tigris\core\Models\Operations\TigrisCreateAppKeyResponse
      */
-	
-    public function tigrisCreateAppKey(
+	public function tigrisCreateAppKey(
         \tigris\core\Models\Operations\TigrisCreateAppKeyRequest $request,
     ): \tigris\core\Models\Operations\TigrisCreateAppKeyResponse
     {
@@ -232,8 +228,7 @@ class AppKey
      * @param \tigris\core\Models\Operations\TigrisUpdateAppKeyRequest $request
      * @return \tigris\core\Models\Operations\TigrisUpdateAppKeyResponse
      */
-	
-    public function update(
+	public function update(
         \tigris\core\Models\Operations\TigrisUpdateAppKeyRequest $request,
     ): \tigris\core\Models\Operations\TigrisUpdateAppKeyResponse
     {

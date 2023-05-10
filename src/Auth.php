@@ -46,8 +46,7 @@ class Auth
      * 
      * @return \tigris\core\Models\Operations\AuthGetAccessTokenResponse
      */
-	
-    public function get(
+	public function get(
     ): \tigris\core\Models\Operations\AuthGetAccessTokenResponse
     {
         $baseUrl = $this->_serverUrl;

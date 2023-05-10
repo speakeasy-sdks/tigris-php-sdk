@@ -45,8 +45,7 @@ class Project
      * @param \tigris\core\Models\Operations\TigrisCreateProjectRequest $request
      * @return \tigris\core\Models\Operations\TigrisCreateProjectResponse
      */
-	
-    public function create(
+	public function create(
         \tigris\core\Models\Operations\TigrisCreateProjectRequest $request,
     ): \tigris\core\Models\Operations\TigrisCreateProjectResponse
     {
@@ -93,8 +92,7 @@ class Project
      * @param \tigris\core\Models\Operations\TigrisDeleteProjectRequest $request
      * @return \tigris\core\Models\Operations\TigrisDeleteProjectResponse
      */
-	
-    public function deleteProject(
+	public function deleteProject(
         \tigris\core\Models\Operations\TigrisDeleteProjectRequest $request,
     ): \tigris\core\Models\Operations\TigrisDeleteProjectResponse
     {
@@ -140,8 +138,7 @@ class Project
      * 
      * @return \tigris\core\Models\Operations\TigrisListProjectsResponse
      */
-	
-    public function list(
+	public function list(
     ): \tigris\core\Models\Operations\TigrisListProjectsResponse
     {
         $baseUrl = $this->_serverUrl;

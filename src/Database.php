@@ -47,8 +47,7 @@ class Database
      * @param \tigris\core\Models\Operations\TigrisBeginTransactionRequest $request
      * @return \tigris\core\Models\Operations\TigrisBeginTransactionResponse
      */
-	
-    public function beginTransaction(
+	public function beginTransaction(
         \tigris\core\Models\Operations\TigrisBeginTransactionRequest $request,
     ): \tigris\core\Models\Operations\TigrisBeginTransactionResponse
     {
@@ -96,8 +95,7 @@ class Database
      * @param \tigris\core\Models\Operations\TigrisCommitTransactionRequest $request
      * @return \tigris\core\Models\Operations\TigrisCommitTransactionResponse
      */
-	
-    public function commitTransaction(
+	public function commitTransaction(
         \tigris\core\Models\Operations\TigrisCommitTransactionRequest $request,
     ): \tigris\core\Models\Operations\TigrisCommitTransactionResponse
     {
@@ -144,8 +142,7 @@ class Database
      * @param \tigris\core\Models\Operations\TigrisCreateBranchRequest $request
      * @return \tigris\core\Models\Operations\TigrisCreateBranchResponse
      */
-	
-    public function createBranch(
+	public function createBranch(
         \tigris\core\Models\Operations\TigrisCreateBranchRequest $request,
     ): \tigris\core\Models\Operations\TigrisCreateBranchResponse
     {
@@ -193,8 +190,7 @@ class Database
      * @param \tigris\core\Models\Operations\TigrisDeleteBranchRequest $request
      * @return \tigris\core\Models\Operations\TigrisDeleteBranchResponse
      */
-	
-    public function deleteBranch(
+	public function deleteBranch(
         \tigris\core\Models\Operations\TigrisDeleteBranchRequest $request,
     ): \tigris\core\Models\Operations\TigrisDeleteBranchResponse
     {
@@ -242,8 +238,7 @@ class Database
      * @param \tigris\core\Models\Operations\TigrisDescribeDatabaseRequest $request
      * @return \tigris\core\Models\Operations\TigrisDescribeDatabaseResponse
      */
-	
-    public function describe(
+	public function describe(
         \tigris\core\Models\Operations\TigrisDescribeDatabaseRequest $request,
     ): \tigris\core\Models\Operations\TigrisDescribeDatabaseResponse
     {
@@ -290,8 +285,7 @@ class Database
      * @param \tigris\core\Models\Operations\TigrisListCollectionsRequest $request
      * @return \tigris\core\Models\Operations\TigrisListCollectionsResponse
      */
-	
-    public function listCollections(
+	public function listCollections(
         \tigris\core\Models\Operations\TigrisListCollectionsRequest $request,
     ): \tigris\core\Models\Operations\TigrisListCollectionsResponse
     {
@@ -335,8 +329,7 @@ class Database
      * @param \tigris\core\Models\Operations\TigrisRollbackTransactionRequest $request
      * @return \tigris\core\Models\Operations\TigrisRollbackTransactionResponse
      */
-	
-    public function rollbackTransaction(
+	public function rollbackTransaction(
         \tigris\core\Models\Operations\TigrisRollbackTransactionRequest $request,
     ): \tigris\core\Models\Operations\TigrisRollbackTransactionResponse
     {
@@ -383,8 +376,7 @@ class Database
      * @param \tigris\core\Models\Operations\TigrisListBranchesRequest $request
      * @return \tigris\core\Models\Operations\TigrisListBranchesResponse
      */
-	
-    public function tigrisListBranches(
+	public function tigrisListBranches(
         \tigris\core\Models\Operations\TigrisListBranchesRequest $request,
     ): \tigris\core\Models\Operations\TigrisListBranchesResponse
     {

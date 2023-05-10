@@ -43,8 +43,7 @@ class Cache
      * @param \tigris\core\Models\Operations\CacheCreateCacheRequest $request
      * @return \tigris\core\Models\Operations\CacheCreateCacheResponse
      */
-	
-    public function create(
+	public function create(
         \tigris\core\Models\Operations\CacheCreateCacheRequest $request,
     ): \tigris\core\Models\Operations\CacheCreateCacheResponse
     {
@@ -89,8 +88,7 @@ class Cache
      * @param \tigris\core\Models\Operations\CacheDeleteCacheRequest $request
      * @return \tigris\core\Models\Operations\CacheDeleteCacheResponse
      */
-	
-    public function delete(
+	public function delete(
         \tigris\core\Models\Operations\CacheDeleteCacheRequest $request,
     ): \tigris\core\Models\Operations\CacheDeleteCacheResponse
     {
@@ -135,8 +133,7 @@ class Cache
      * @param \tigris\core\Models\Operations\CacheDelRequest $request
      * @return \tigris\core\Models\Operations\CacheDelResponse
      */
-	
-    public function deleteKeys(
+	public function deleteKeys(
         \tigris\core\Models\Operations\CacheDelRequest $request,
     ): \tigris\core\Models\Operations\CacheDelResponse
     {
@@ -181,8 +178,7 @@ class Cache
      * @param \tigris\core\Models\Operations\CacheGetRequest $request
      * @return \tigris\core\Models\Operations\CacheGetResponse
      */
-	
-    public function getKey(
+	public function getKey(
         \tigris\core\Models\Operations\CacheGetRequest $request,
     ): \tigris\core\Models\Operations\CacheGetResponse
     {
@@ -222,8 +218,7 @@ class Cache
      * @param \tigris\core\Models\Operations\CacheGetSetRequest $request
      * @return \tigris\core\Models\Operations\CacheGetSetResponse
      */
-	
-    public function getSetKey(
+	public function getSetKey(
         \tigris\core\Models\Operations\CacheGetSetRequest $request,
     ): \tigris\core\Models\Operations\CacheGetSetResponse
     {
@@ -268,8 +263,7 @@ class Cache
      * @param \tigris\core\Models\Operations\CacheListCachesRequest $request
      * @return \tigris\core\Models\Operations\CacheListCachesResponse
      */
-	
-    public function list(
+	public function list(
         \tigris\core\Models\Operations\CacheListCachesRequest $request,
     ): \tigris\core\Models\Operations\CacheListCachesResponse
     {
@@ -309,8 +303,7 @@ class Cache
      * @param \tigris\core\Models\Operations\CacheKeysRequest $request
      * @return \tigris\core\Models\Operations\CacheKeysResponse
      */
-	
-    public function listKeys(
+	public function listKeys(
         \tigris\core\Models\Operations\CacheKeysRequest $request,
     ): \tigris\core\Models\Operations\CacheKeysResponse
     {
@@ -351,8 +344,7 @@ class Cache
      * @param \tigris\core\Models\Operations\CacheSetRequest $request
      * @return \tigris\core\Models\Operations\CacheSetResponse
      */
-	
-    public function setKey(
+	public function setKey(
         \tigris\core\Models\Operations\CacheSetRequest $request,
     ): \tigris\core\Models\Operations\CacheSetResponse
     {

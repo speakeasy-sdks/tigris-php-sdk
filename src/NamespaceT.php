@@ -45,8 +45,7 @@ class NamespaceT
      * @param \tigris\core\Models\Shared\CreateNamespaceRequest $request
      * @return \tigris\core\Models\Operations\CreateNamespaceResponse
      */
-	
-    public function create(
+	public function create(
         \tigris\core\Models\Shared\CreateNamespaceRequest $request,
     ): \tigris\core\Models\Operations\CreateNamespaceResponse
     {
@@ -92,8 +91,7 @@ class NamespaceT
      * 
      * @return \tigris\core\Models\Operations\ManagementDescribeNamespacesResponse
      */
-	
-    public function get(
+	public function get(
     ): \tigris\core\Models\Operations\ManagementDescribeNamespacesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -134,8 +132,7 @@ class NamespaceT
      * @param \tigris\core\Models\Operations\ManagementGetNamespaceMetadataRequest $request
      * @return \tigris\core\Models\Operations\ManagementGetNamespaceMetadataResponse
      */
-	
-    public function getMetadata(
+	public function getMetadata(
         \tigris\core\Models\Operations\ManagementGetNamespaceMetadataRequest $request,
     ): \tigris\core\Models\Operations\ManagementGetNamespaceMetadataResponse
     {
@@ -182,8 +179,7 @@ class NamespaceT
      * @param \tigris\core\Models\Operations\ManagementInsertNamespaceMetadataRequest $request
      * @return \tigris\core\Models\Operations\ManagementInsertNamespaceMetadataResponse
      */
-	
-    public function insertMetadata(
+	public function insertMetadata(
         \tigris\core\Models\Operations\ManagementInsertNamespaceMetadataRequest $request,
     ): \tigris\core\Models\Operations\ManagementInsertNamespaceMetadataResponse
     {
@@ -229,8 +225,7 @@ class NamespaceT
      * 
      * @return \tigris\core\Models\Operations\ManagementListNamespacesResponse
      */
-	
-    public function list(
+	public function list(
     ): \tigris\core\Models\Operations\ManagementListNamespacesResponse
     {
         $baseUrl = $this->_serverUrl;
@@ -271,8 +266,7 @@ class NamespaceT
      * @param \tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataRequest $request
      * @return \tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataResponse
      */
-	
-    public function updateMetadata(
+	public function updateMetadata(
         \tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataRequest $request,
     ): \tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataResponse
     {

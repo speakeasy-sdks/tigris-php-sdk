@@ -48,8 +48,7 @@ class Search
      * @param \tigris\core\Models\Operations\SearchCreateByIdRequest $request
      * @return \tigris\core\Models\Operations\SearchCreateByIdResponse
      */
-	
-    public function createDocument(
+	public function createDocument(
         \tigris\core\Models\Operations\SearchCreateByIdRequest $request,
     ): \tigris\core\Models\Operations\SearchCreateByIdResponse
     {
@@ -100,8 +99,7 @@ class Search
      * @param \tigris\core\Models\Operations\SearchCreateRequest $request
      * @return \tigris\core\Models\Operations\SearchCreateResponse
      */
-	
-    public function createDocuments(
+	public function createDocuments(
         \tigris\core\Models\Operations\SearchCreateRequest $request,
     ): \tigris\core\Models\Operations\SearchCreateResponse
     {
@@ -150,8 +148,7 @@ class Search
      * @param \tigris\core\Models\Operations\SearchDeleteRequest $request
      * @return \tigris\core\Models\Operations\SearchDeleteResponse
      */
-	
-    public function deleteDocuments(
+	public function deleteDocuments(
         \tigris\core\Models\Operations\SearchDeleteRequest $request,
     ): \tigris\core\Models\Operations\SearchDeleteResponse
     {
@@ -196,8 +193,7 @@ class Search
      * @param \tigris\core\Models\Operations\SearchDeleteIndexRequest $request
      * @return \tigris\core\Models\Operations\SearchDeleteIndexResponse
      */
-	
-    public function deleteIndex(
+	public function deleteIndex(
         \tigris\core\Models\Operations\SearchDeleteIndexRequest $request,
     ): \tigris\core\Models\Operations\SearchDeleteIndexResponse
     {
@@ -248,8 +244,7 @@ class Search
      * @param \tigris\core\Models\Operations\SearchSearchRequest $request
      * @return \tigris\core\Models\Operations\SearchSearchResponse
      */
-	
-    public function findDocuments(
+	public function findDocuments(
         \tigris\core\Models\Operations\SearchSearchRequest $request,
     ): \tigris\core\Models\Operations\SearchSearchResponse
     {
@@ -297,8 +292,7 @@ class Search
      * @param \tigris\core\Models\Operations\SearchGetRequest $request
      * @return \tigris\core\Models\Operations\SearchGetResponse
      */
-	
-    public function getDocuments(
+	public function getDocuments(
         \tigris\core\Models\Operations\SearchGetRequest $request,
     ): \tigris\core\Models\Operations\SearchGetResponse
     {
@@ -339,8 +333,7 @@ class Search
      * @param \tigris\core\Models\Operations\SearchGetIndexRequest $request
      * @return \tigris\core\Models\Operations\SearchGetIndexResponse
      */
-	
-    public function getIndex(
+	public function getIndex(
         \tigris\core\Models\Operations\SearchGetIndexRequest $request,
     ): \tigris\core\Models\Operations\SearchGetIndexResponse
     {
@@ -380,8 +373,7 @@ class Search
      * @param \tigris\core\Models\Operations\SearchListIndexesRequest $request
      * @return \tigris\core\Models\Operations\SearchListIndexesResponse
      */
-	
-    public function listIndexes(
+	public function listIndexes(
         \tigris\core\Models\Operations\SearchListIndexesRequest $request,
     ): \tigris\core\Models\Operations\SearchListIndexesResponse
     {
@@ -425,8 +417,7 @@ class Search
      * @param \tigris\core\Models\Operations\SearchDeleteByQueryRequest $request
      * @return \tigris\core\Models\Operations\SearchDeleteByQueryResponse
      */
-	
-    public function queryDeleteDocuments(
+	public function queryDeleteDocuments(
         \tigris\core\Models\Operations\SearchDeleteByQueryRequest $request,
     ): \tigris\core\Models\Operations\SearchDeleteByQueryResponse
     {
@@ -476,8 +467,7 @@ class Search
      * @param \tigris\core\Models\Operations\SearchCreateOrReplaceRequest $request
      * @return \tigris\core\Models\Operations\SearchCreateOrReplaceResponse
      */
-	
-    public function replaceDocuments(
+	public function replaceDocuments(
         \tigris\core\Models\Operations\SearchCreateOrReplaceRequest $request,
     ): \tigris\core\Models\Operations\SearchCreateOrReplaceResponse
     {
@@ -527,8 +517,7 @@ class Search
      * @param \tigris\core\Models\Operations\SearchUpdateRequest $request
      * @return \tigris\core\Models\Operations\SearchUpdateResponse
      */
-	
-    public function updateDocuments(
+	public function updateDocuments(
         \tigris\core\Models\Operations\SearchUpdateRequest $request,
     ): \tigris\core\Models\Operations\SearchUpdateResponse
     {
@@ -573,8 +562,7 @@ class Search
      * @param \tigris\core\Models\Operations\SearchCreateOrUpdateIndexRequest $request
      * @return \tigris\core\Models\Operations\SearchCreateOrUpdateIndexResponse
      */
-	
-    public function updateIndex(
+	public function updateIndex(
         \tigris\core\Models\Operations\SearchCreateOrUpdateIndexRequest $request,
     ): \tigris\core\Models\Operations\SearchCreateOrUpdateIndexResponse
     {
