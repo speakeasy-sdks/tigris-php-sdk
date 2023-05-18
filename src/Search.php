@@ -61,6 +61,7 @@ class Search
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('POST', $url, $options);
         
@@ -112,6 +113,7 @@ class Search
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('POST', $url, $options);
         
@@ -161,6 +163,7 @@ class Search
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('DELETE', $url, $options);
         
@@ -206,6 +209,7 @@ class Search
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('DELETE', $url, $options);
         
@@ -257,6 +261,7 @@ class Search
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('POST', $url, $options);
         
@@ -301,6 +306,7 @@ class Search
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\SearchGetRequest::class, $request, null));
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
@@ -341,6 +347,7 @@ class Search
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/search/indexes/{name}', \tigris\core\Models\Operations\SearchGetIndexRequest::class, $request);
         
         $options = ['http_errors' => false];
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
@@ -382,6 +389,7 @@ class Search
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\SearchListIndexesRequest::class, $request, null));
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
@@ -430,6 +438,7 @@ class Search
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('DELETE', $url, $options);
         
@@ -480,6 +489,7 @@ class Search
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('PUT', $url, $options);
         
@@ -530,6 +540,7 @@ class Search
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('PATCH', $url, $options);
         
@@ -575,6 +586,7 @@ class Search
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('PUT', $url, $options);
         

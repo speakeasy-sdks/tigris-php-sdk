@@ -58,6 +58,7 @@ class Project
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('POST', $url, $options);
         
@@ -105,6 +106,7 @@ class Project
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('DELETE', $url, $options);
         
@@ -145,6 +147,7 @@ class Project
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects');
         
         $options = ['http_errors' => false];
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('GET', $url, $options);
         
