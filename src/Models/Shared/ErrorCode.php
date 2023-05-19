@@ -10,7 +10,7 @@ namespace tigris\core\Models\Shared;
 
 
 /** The status code is a short, machine parsable string, which uniquely identifies the error type. Tigris to HTTP code mapping [here](/reference/http-code) */
-enum ErrorCodeEnum: string
+enum ErrorCode: string
 {
     case OK = 'OK';
     case CANCELLED = 'CANCELLED';

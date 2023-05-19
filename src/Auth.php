@@ -53,6 +53,7 @@ class Auth
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/auth/token');
         
         $options = ['http_errors' => false];
+        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('POST', $url, $options);

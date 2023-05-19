@@ -156,10 +156,10 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequest;
 use \tigris\core\Models\Shared\AdditionalFunction;
 use \tigris\core\Models\Shared\RollupFunction;
-use \tigris\core\Models\Shared\RollupFunctionAggregatorEnum;
-use \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestFunctionEnum;
-use \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestSpaceAggregationEnum;
-use \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestTigrisOperationEnum;
+use \tigris\core\Models\Shared\RollupFunctionAggregator;
+use \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestFunction;
+use \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestSpaceAggregation;
+use \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestTigrisOperation;
 
 $sdk = SDK::builder()
     ->build();
@@ -175,14 +175,14 @@ try {
     $request->collection = 'minima';
     $request->db = 'nisi';
     $request->from = 147014;
-    $request->function = QueryTimeSeriesMetricsRequestFunctionEnum::NONE;
+    $request->function = QueryTimeSeriesMetricsRequestFunction::NONE;
     $request->metricName = 'consequuntur';
     $request->quantile = 1871.31;
     $request->spaceAggregatedBy = [
         'saepe',
     ];
-    $request->spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregationEnum::MAX;
-    $request->tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperationEnum::WRITE;
+    $request->spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation::MAX;
+    $request->tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation::WRITE;
     $request->to = 92260;
 
     $response = $sdk->system->queryTimeSeriesMetrics($request);

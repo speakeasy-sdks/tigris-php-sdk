@@ -58,6 +58,7 @@ class User
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('POST', $url, $options);
@@ -106,6 +107,7 @@ class User
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('POST', $url, $options);
@@ -154,6 +156,7 @@ class User
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
+        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_securityClient->request('POST', $url, $options);

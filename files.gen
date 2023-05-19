@@ -154,7 +154,7 @@ src/Models/Operations/ManagementInsertUserMetadataResponse.php
 src/Models/Operations/ManagementUpdateUserMetadataRequest.php
 src/Models/Operations/ManagementUpdateUserMetadataResponse.php
 src/Models/Shared/Status.php
-src/Models/Shared/ErrorCodeEnum.php
+src/Models/Shared/ErrorCode.php
 src/Models/Shared/Error.php
 src/Models/Shared/DeleteAppKeyResponse.php
 src/Models/Shared/DeleteAppKeyRequest.php
@@ -290,12 +290,12 @@ src/Models/Shared/QuotaLimitsResponse.php
 src/Models/Shared/QueryTimeSeriesMetricsResponse.php
 src/Models/Shared/MetricSeries.php
 src/Models/Shared/DataPoint.php
-src/Models/Shared/QueryTimeSeriesMetricsRequestFunctionEnum.php
-src/Models/Shared/QueryTimeSeriesMetricsRequestSpaceAggregationEnum.php
-src/Models/Shared/QueryTimeSeriesMetricsRequestTigrisOperationEnum.php
+src/Models/Shared/QueryTimeSeriesMetricsRequestFunction.php
+src/Models/Shared/QueryTimeSeriesMetricsRequestSpaceAggregation.php
+src/Models/Shared/QueryTimeSeriesMetricsRequestTigrisOperation.php
 src/Models/Shared/QueryTimeSeriesMetricsRequest.php
 src/Models/Shared/AdditionalFunction.php
-src/Models/Shared/RollupFunctionAggregatorEnum.php
+src/Models/Shared/RollupFunctionAggregator.php
 src/Models/Shared/RollupFunction.php
 src/Models/Shared/GetUserMetadataResponse.php
 src/Models/Shared/GetUserMetadataRequest.php

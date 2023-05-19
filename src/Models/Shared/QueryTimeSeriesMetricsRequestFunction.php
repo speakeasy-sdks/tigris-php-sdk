@@ -9,10 +9,9 @@ declare(strict_types=1);
 namespace tigris\core\Models\Shared;
 
 
-enum QueryTimeSeriesMetricsRequestSpaceAggregationEnum: string
+enum QueryTimeSeriesMetricsRequestFunction: string
 {
-    case AVG = 'AVG';
-    case MIN = 'MIN';
-    case MAX = 'MAX';
-    case SUM = 'SUM';
+    case RATE = 'RATE';
+    case COUNT = 'COUNT';
+    case NONE = 'NONE';
 }
