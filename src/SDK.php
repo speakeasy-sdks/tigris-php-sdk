@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace tigris\core;
 
 /**
- * SDK - # Overview
+ * SDK - Tigris API Reference: # Overview
  * 
  * This section is organized around HTTP APIs. The APIs accepts JSON requests and returns JSON-encoded responses.The APIs conforms to standard HTTP status codes.
  * 
