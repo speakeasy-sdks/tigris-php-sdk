@@ -11,8 +11,8 @@ namespace tigris\core\Models\Shared;
 
 enum QueryTimeSeriesMetricsRequestTigrisOperation: string
 {
-    case ALL = 'ALL';
-    case READ = 'READ';
-    case WRITE = 'WRITE';
-    case METADATA = 'METADATA';
+    case All = 'ALL';
+    case Read = 'READ';
+    case Write = 'WRITE';
+    case Metadata = 'METADATA';
 }

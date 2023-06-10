@@ -24,22 +24,22 @@ class UpdateRequest
     /**
      * Fields contains set of fields with the values which need to be updated. Should be proper JSON object.
      * 
-     * @var ?array<string, mixed> $fields
+     * @var ?\tigris\core\Models\Shared\UpdateRequestFields $fields
      */
 	#[\JMS\Serializer\Annotation\SerializedName('fields')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\UpdateRequestFields')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $fields = null;
+    public ?UpdateRequestFields $fields = null;
     
     /**
      * Update documents which matching specified filter. A filter can simply be key, value where key is the field name and value would be the value for this field. Or a filter can be logical where two or more fields can be logically joined using $or and $and. A few examples of filter: <li> To update a user document where the id has a value 1: ```{"id": 1 }``` <li> To update all the user documents where the key "id" has a value 1 or 2 or 3: `{"$or": [{"id": 1}, {"id": 2}, {"id": 3}]}`
      * 
-     * @var ?array<string, mixed> $filter
+     * @var ?\tigris\core\Models\Shared\UpdateRequestFilter $filter
      */
 	#[\JMS\Serializer\Annotation\SerializedName('filter')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\UpdateRequestFilter')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $filter = null;
+    public ?UpdateRequestFilter $filter = null;
     
     /**
      * Additional options for update requests.

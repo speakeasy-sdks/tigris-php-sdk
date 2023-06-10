@@ -11,9 +11,9 @@ namespace tigris\core\Models\Shared;
 
 enum RollupFunctionAggregator: string
 {
-    case ROLLUP_AGGREGATOR_SUM = 'ROLLUP_AGGREGATOR_SUM';
-    case ROLLUP_AGGREGATOR_COUNT = 'ROLLUP_AGGREGATOR_COUNT';
-    case ROLLUP_AGGREGATOR_MIN = 'ROLLUP_AGGREGATOR_MIN';
-    case ROLLUP_AGGREGATOR_MAX = 'ROLLUP_AGGREGATOR_MAX';
-    case ROLLUP_AGGREGATOR_AVG = 'ROLLUP_AGGREGATOR_AVG';
+    case RollupAggregatorSum = 'ROLLUP_AGGREGATOR_SUM';
+    case RollupAggregatorCount = 'ROLLUP_AGGREGATOR_COUNT';
+    case RollupAggregatorMin = 'ROLLUP_AGGREGATOR_MIN';
+    case RollupAggregatorMax = 'ROLLUP_AGGREGATOR_MAX';
+    case RollupAggregatorAvg = 'ROLLUP_AGGREGATOR_AVG';
 }

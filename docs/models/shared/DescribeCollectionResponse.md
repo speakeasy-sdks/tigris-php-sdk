@@ -1,0 +1,13 @@
+# DescribeCollectionResponse
+
+A detailed description of the collection. The description returns collection metadata and the schema.
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `collection`                                                                                 | *?string*                                                                                    | :heavy_minus_sign:                                                                           | Name of the collection.                                                                      |
+| `metadata`                                                                                   | [?CollectionMetadata](../../models/shared/CollectionMetadata.md)                             | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `schema`                                                                                     | [?DescribeCollectionResponseSchema](../../models/shared/DescribeCollectionResponseSchema.md) | :heavy_minus_sign:                                                                           | Schema of this collection.                                                                   |
+| `size`                                                                                       | *?int*                                                                                       | :heavy_minus_sign:                                                                           | The size of this collection in bytes.                                                        |

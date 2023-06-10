@@ -12,24 +12,24 @@ namespace tigris\core\Models\Shared;
 /** The status code is a short, machine parsable string, which uniquely identifies the error type. Tigris to HTTP code mapping [here](/reference/http-code) */
 enum ErrorCode: string
 {
-    case OK = 'OK';
-    case CANCELLED = 'CANCELLED';
-    case UNKNOWN = 'UNKNOWN';
-    case INVALID_ARGUMENT = 'INVALID_ARGUMENT';
-    case DEADLINE_EXCEEDED = 'DEADLINE_EXCEEDED';
-    case NOT_FOUND = 'NOT_FOUND';
-    case ALREADY_EXISTS = 'ALREADY_EXISTS';
-    case PERMISSION_DENIED = 'PERMISSION_DENIED';
-    case RESOURCE_EXHAUSTED = 'RESOURCE_EXHAUSTED';
-    case FAILED_PRECONDITION = 'FAILED_PRECONDITION';
-    case ABORTED = 'ABORTED';
-    case OUT_OF_RANGE = 'OUT_OF_RANGE';
-    case UNIMPLEMENTED = 'UNIMPLEMENTED';
-    case INTERNAL = 'INTERNAL';
-    case UNAVAILABLE = 'UNAVAILABLE';
-    case DATA_LOSS = 'DATA_LOSS';
-    case UNAUTHENTICATED = 'UNAUTHENTICATED';
-    case CONFLICT = 'CONFLICT';
-    case BAD_GATEWAY = 'BAD_GATEWAY';
-    case METHOD_NOT_ALLOWED = 'METHOD_NOT_ALLOWED';
+    case Ok = 'OK';
+    case Cancelled = 'CANCELLED';
+    case Unknown = 'UNKNOWN';
+    case InvalidArgument = 'INVALID_ARGUMENT';
+    case DeadlineExceeded = 'DEADLINE_EXCEEDED';
+    case NotFound = 'NOT_FOUND';
+    case AlreadyExists = 'ALREADY_EXISTS';
+    case PermissionDenied = 'PERMISSION_DENIED';
+    case ResourceExhausted = 'RESOURCE_EXHAUSTED';
+    case FailedPrecondition = 'FAILED_PRECONDITION';
+    case Aborted = 'ABORTED';
+    case OutOfRange = 'OUT_OF_RANGE';
+    case Unimplemented = 'UNIMPLEMENTED';
+    case Internal = 'INTERNAL';
+    case Unavailable = 'UNAVAILABLE';
+    case DataLoss = 'DATA_LOSS';
+    case Unauthenticated = 'UNAUTHENTICATED';
+    case Conflict = 'CONFLICT';
+    case BadGateway = 'BAD_GATEWAY';
+    case MethodNotAllowed = 'METHOD_NOT_ALLOWED';
 }

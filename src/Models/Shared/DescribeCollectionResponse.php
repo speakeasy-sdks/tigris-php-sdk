@@ -27,25 +27,20 @@ class DescribeCollectionResponse
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $collection = null;
     
-    /**
-     * $metadata
-     * 
-     * @var ?array<string, mixed> $metadata
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('metadata')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\CollectionMetadata')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $metadata = null;
+    public ?CollectionMetadata $metadata = null;
     
     /**
      * Schema of this collection.
      * 
-     * @var ?array<string, mixed> $schema
+     * @var ?\tigris\core\Models\Shared\DescribeCollectionResponseSchema $schema
      */
 	#[\JMS\Serializer\Annotation\SerializedName('schema')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\DescribeCollectionResponseSchema')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $schema = null;
+    public ?DescribeCollectionResponseSchema $schema = null;
     
     /**
      * The size of this collection in bytes.

@@ -11,7 +11,7 @@ namespace tigris\core\Models\Shared;
 
 enum QueryTimeSeriesMetricsRequestFunction: string
 {
-    case RATE = 'RATE';
-    case COUNT = 'COUNT';
-    case NONE = 'NONE';
+    case Rate = 'RATE';
+    case Count = 'COUNT';
+    case None = 'NONE';
 }

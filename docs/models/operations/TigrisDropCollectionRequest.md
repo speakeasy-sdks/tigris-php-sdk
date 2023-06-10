@@ -1,0 +1,10 @@
+# TigrisDropCollectionRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `dropCollectionRequest`                                                                          | [\tigris\core\Models\Shared\DropCollectionRequest](../../models/shared/DropCollectionRequest.md) | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `collection`                                                                                     | *string*                                                                                         | :heavy_check_mark:                                                                               | Collection name to delete.                                                                       |
+| `project`                                                                                        | *string*                                                                                         | :heavy_check_mark:                                                                               | Project name whose db is under target to delete collection.                                      |

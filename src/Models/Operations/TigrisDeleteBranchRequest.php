@@ -11,13 +11,8 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisDeleteBranchRequest
 {
-    /**
-     * $requestBody
-     * 
-     * @var array<string, mixed> $requestBody
-     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public array $requestBody;
+    public \tigris\core\Models\Shared\DeleteBranchRequest $deleteBranchRequest;
     
     /**
      * Name of the database branch to delete. <p></p>**Note**: `main` branch cannot be deleted, use DeleteProject instead
@@ -37,7 +32,7 @@ class TigrisDeleteBranchRequest
     
 	public function __construct()
 	{
-		$this->requestBody = [];
+		$this->deleteBranchRequest = new \tigris\core\Models\Shared\DeleteBranchRequest();
 		$this->branch = "";
 		$this->project = "";
 	}

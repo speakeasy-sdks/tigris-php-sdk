@@ -30,12 +30,12 @@ class BeginTransactionRequest
     /**
      * Options that can be used to modify the transaction semantics.
      * 
-     * @var ?array<string, mixed> $options
+     * @var ?\tigris\core\Models\Shared\TransactionOptions $options
      */
 	#[\JMS\Serializer\Annotation\SerializedName('options')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\TransactionOptions')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $options = null;
+    public ?TransactionOptions $options = null;
     
 	public function __construct()
 	{

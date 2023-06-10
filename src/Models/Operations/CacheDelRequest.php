@@ -11,13 +11,8 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class CacheDelRequest
 {
-    /**
-     * $requestBody
-     * 
-     * @var array<string, mixed> $requestBody
-     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public array $requestBody;
+    public \tigris\core\Models\Shared\DelRequest $delRequest;
     
     /**
      * cache key
@@ -45,7 +40,7 @@ class CacheDelRequest
     
 	public function __construct()
 	{
-		$this->requestBody = [];
+		$this->delRequest = new \tigris\core\Models\Shared\DelRequest();
 		$this->key = "";
 		$this->name = "";
 		$this->project = "";

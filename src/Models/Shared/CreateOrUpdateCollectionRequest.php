@@ -34,22 +34,22 @@ class CreateOrUpdateCollectionRequest
     /**
      * Collection requests modifying options.
      * 
-     * @var ?array<string, mixed> $options
+     * @var ?\tigris\core\Models\Shared\CollectionOptions $options
      */
 	#[\JMS\Serializer\Annotation\SerializedName('options')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\CollectionOptions')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $options = null;
+    public ?CollectionOptions $options = null;
     
     /**
      * The schema specifications are same as JSON schema specification defined <a href="https://json-schema.org/specification.html" title="here">here</a>.<p></p> Schema example: `{  "title": "user",  "description": "Collection of documents with details of users",  "properties": {    "id": {      "description": "A unique identifier for the user",      "type": "integer"    },    "name": {      "description": "Name of the user",      "type": "string",      "maxLength": 128    },    "balance": {      "description": "User account balance",      "type": "number"    }  },  "primary_key": ["id"] }`
      * 
-     * @var ?array<string, mixed> $schema
+     * @var ?\tigris\core\Models\Shared\CreateOrUpdateCollectionRequestSchema $schema
      */
 	#[\JMS\Serializer\Annotation\SerializedName('schema')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\CreateOrUpdateCollectionRequestSchema')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $schema = null;
+    public ?CreateOrUpdateCollectionRequestSchema $schema = null;
     
 	public function __construct()
 	{

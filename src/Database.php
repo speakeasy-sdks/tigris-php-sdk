@@ -138,7 +138,7 @@ class Database
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/branches/{branch}/create', \tigris\core\Models\Operations\TigrisCreateBranchRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "createBranchRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -188,7 +188,7 @@ class Database
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/database/branches/{branch}/delete', \tigris\core\Models\Operations\TigrisDeleteBranchRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "deleteBranchRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }

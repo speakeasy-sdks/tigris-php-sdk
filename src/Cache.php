@@ -82,7 +82,7 @@ class Cache
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/delete', \tigris\core\Models\Operations\CacheDeleteCacheRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "deleteCacheRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }
@@ -129,7 +129,7 @@ class Cache
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/{key}/delete', \tigris\core\Models\Operations\CacheDelRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $body = Utils\Utils::serializeRequestBody($request, "requestBody", "json");
+        $body = Utils\Utils::serializeRequestBody($request, "delRequest", "json");
         if ($body === null) {
             throw new \Exception('Request body is required');
         }

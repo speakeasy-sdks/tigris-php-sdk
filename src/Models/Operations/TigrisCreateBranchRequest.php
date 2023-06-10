@@ -11,13 +11,8 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisCreateBranchRequest
 {
-    /**
-     * $requestBody
-     * 
-     * @var array<string, mixed> $requestBody
-     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public array $requestBody;
+    public \tigris\core\Models\Shared\CreateBranchRequest $createBranchRequest;
     
     /**
      * Name of the database branch to be created. <p></p>**Note**: `main` is a reserved branch name for primary database and is automatically created with CreateProject
@@ -37,7 +32,7 @@ class TigrisCreateBranchRequest
     
 	public function __construct()
 	{
-		$this->requestBody = [];
+		$this->createBranchRequest = new \tigris\core\Models\Shared\CreateBranchRequest();
 		$this->branch = "";
 		$this->project = "";
 	}

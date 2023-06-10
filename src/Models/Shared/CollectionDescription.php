@@ -21,25 +21,20 @@ class CollectionDescription
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $collection = null;
     
-    /**
-     * $metadata
-     * 
-     * @var ?array<string, mixed> $metadata
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('metadata')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\CollectionMetadata')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $metadata = null;
+    public ?CollectionMetadata $metadata = null;
     
     /**
      * Collections schema
      * 
-     * @var ?array<string, mixed> $schema
+     * @var ?\tigris\core\Models\Shared\CollectionDescriptionSchema $schema
      */
 	#[\JMS\Serializer\Annotation\SerializedName('schema')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\CollectionDescriptionSchema')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $schema = null;
+    public ?CollectionDescriptionSchema $schema = null;
     
     /**
      * Collection size in bytes

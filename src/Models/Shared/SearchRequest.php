@@ -44,32 +44,27 @@ class SearchRequest
     /**
      * Facet query to aggregate results on given fields. The field name for the facet search can be passed like this `{"brand": { "size": 10 }}` where the size controls the total facets for this field.
      * 
-     * @var ?array<string, mixed> $facet
+     * @var ?\tigris\core\Models\Shared\SearchRequestFacet $facet
      */
 	#[\JMS\Serializer\Annotation\SerializedName('facet')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\SearchRequestFacet')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $facet = null;
+    public ?SearchRequestFacet $facet = null;
     
-    /**
-     * $fields
-     * 
-     * @var ?array<string, mixed> $fields
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('fields')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\SearchRequestFields')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $fields = null;
+    public ?SearchRequestFields $fields = null;
     
     /**
      * Filter stacks on top of query results to further narrow down the results. Similar to `ReadRequest.filter`
      * 
-     * @var ?array<string, mixed> $filter
+     * @var ?\tigris\core\Models\Shared\SearchRequestFilter $filter
      */
 	#[\JMS\Serializer\Annotation\SerializedName('filter')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\SearchRequestFilter')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $filter = null;
+    public ?SearchRequestFilter $filter = null;
     
     /**
      * Array of document field names to include in results. By default, all fields are included.
@@ -124,12 +119,12 @@ class SearchRequest
     /**
      * Array of fields and corresponding sort orders to order the results `[{ "salary": "$desc" }]`
      * 
-     * @var ?array<string, mixed> $sort
+     * @var ?\tigris\core\Models\Shared\SearchRequestSort $sort
      */
 	#[\JMS\Serializer\Annotation\SerializedName('sort')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\SearchRequestSort')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $sort = null;
+    public ?SearchRequestSort $sort = null;
     
 	public function __construct()
 	{

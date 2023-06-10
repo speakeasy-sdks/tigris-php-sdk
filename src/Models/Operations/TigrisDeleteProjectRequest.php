@@ -11,13 +11,8 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisDeleteProjectRequest
 {
-    /**
-     * $requestBody
-     * 
-     * @var array<string, mixed> $requestBody
-     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public array $requestBody;
+    public \tigris\core\Models\Shared\DeleteProjectRequest $deleteProjectRequest;
     
     /**
      * Delete Project with this name. <p></p>**Note**: Deletes all resources under this project. Use with caution.
@@ -29,7 +24,7 @@ class TigrisDeleteProjectRequest
     
 	public function __construct()
 	{
-		$this->requestBody = [];
+		$this->deleteProjectRequest = new \tigris\core\Models\Shared\DeleteProjectRequest();
 		$this->project = "";
 	}
 }

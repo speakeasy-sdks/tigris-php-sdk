@@ -14,12 +14,12 @@ class SearchHit
     /**
      * Actual search document
      * 
-     * @var ?array<string, mixed> $data
+     * @var ?\tigris\core\Models\Shared\SearchHitData $data
      */
 	#[\JMS\Serializer\Annotation\SerializedName('data')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\SearchHitData')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $data = null;
+    public ?SearchHitData $data = null;
     
     /**
      * Contains metadata related to the search hit, has information about document created_at/updated_at as well.

@@ -14,12 +14,12 @@ class ReadResponse
     /**
      * Object containing the collection document.
      * 
-     * @var ?array<string, mixed> $data
+     * @var ?\tigris\core\Models\Shared\ReadResponseData $data
      */
 	#[\JMS\Serializer\Annotation\SerializedName('data')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\ReadResponseData')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $data = null;
+    public ?ReadResponseData $data = null;
     
     /**
      * Has metadata related to the documents stored.

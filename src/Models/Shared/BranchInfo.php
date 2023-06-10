@@ -21,15 +21,10 @@ class BranchInfo
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $branch = null;
     
-    /**
-     * $metadata
-     * 
-     * @var ?array<string, mixed> $metadata
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('metadata')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\BranchMetadata')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $metadata = null;
+    public ?BranchMetadata $metadata = null;
     
 	public function __construct()
 	{

@@ -32,15 +32,10 @@ class InsertUserMetadataResponse
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $userId = null;
     
-    /**
-     * $value
-     * 
-     * @var ?array<string, mixed> $value
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('value')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\InsertUserMetadataResponseValue')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $value = null;
+    public ?InsertUserMetadataResponseValue $value = null;
     
 	public function __construct()
 	{

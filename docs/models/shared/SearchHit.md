@@ -1,0 +1,9 @@
+# SearchHit
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `data`                                                                                                     | [?SearchHitData](../../models/shared/SearchHitData.md)                                                     | :heavy_minus_sign:                                                                                         | Actual search document                                                                                     |
+| `metadata`                                                                                                 | [?SearchHitMeta](../../models/shared/SearchHitMeta.md)                                                     | :heavy_minus_sign:                                                                                         | Contains metadata related to the search hit, has information about document created_at/updated_at as well. |

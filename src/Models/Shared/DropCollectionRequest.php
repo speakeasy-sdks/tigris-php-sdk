@@ -24,12 +24,12 @@ class DropCollectionRequest
     /**
      * Collection requests modifying options.
      * 
-     * @var ?array<string, mixed> $options
+     * @var ?\tigris\core\Models\Shared\CollectionOptions $options
      */
 	#[\JMS\Serializer\Annotation\SerializedName('options')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\CollectionOptions')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $options = null;
+    public ?CollectionOptions $options = null;
     
 	public function __construct()
 	{

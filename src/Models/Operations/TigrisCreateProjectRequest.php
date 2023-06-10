@@ -11,13 +11,8 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class TigrisCreateProjectRequest
 {
-    /**
-     * $requestBody
-     * 
-     * @var array<string, mixed> $requestBody
-     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public array $requestBody;
+    public \tigris\core\Models\Shared\CreateProjectRequest $createProjectRequest;
     
     /**
      * Create project with this name.
@@ -29,7 +24,7 @@ class TigrisCreateProjectRequest
     
 	public function __construct()
 	{
-		$this->requestBody = [];
+		$this->createProjectRequest = new \tigris\core\Models\Shared\CreateProjectRequest();
 		$this->project = "";
 	}
 }

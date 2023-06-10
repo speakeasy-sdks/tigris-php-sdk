@@ -20,12 +20,12 @@ class ImportRequestOptions
     /**
      * Additional options to modify write requests.
      * 
-     * @var ?array<string, mixed> $writeOptions
+     * @var ?\tigris\core\Models\Shared\WriteOptions $writeOptions
      */
 	#[\JMS\Serializer\Annotation\SerializedName('write_options')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\WriteOptions')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $writeOptions = null;
+    public ?WriteOptions $writeOptions = null;
     
 	public function __construct()
 	{

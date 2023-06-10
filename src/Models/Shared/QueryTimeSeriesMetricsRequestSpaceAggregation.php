@@ -11,8 +11,8 @@ namespace tigris\core\Models\Shared;
 
 enum QueryTimeSeriesMetricsRequestSpaceAggregation: string
 {
-    case AVG = 'AVG';
-    case MIN = 'MIN';
-    case MAX = 'MAX';
-    case SUM = 'SUM';
+    case Avg = 'AVG';
+    case Min = 'MIN';
+    case Max = 'MAX';
+    case Sum = 'SUM';
 }

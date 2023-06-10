@@ -24,10 +24,10 @@ class ReplaceRequest
     /**
      * Array of documents to be replaced. Each document is a JSON object.
      * 
-     * @var ?array<array<string, mixed>> $documents
+     * @var ?array<\tigris\core\Models\Shared\ReplaceRequestDocuments> $documents
      */
 	#[\JMS\Serializer\Annotation\SerializedName('documents')]
-    #[\JMS\Serializer\Annotation\Type('array<array<string, mixed>>')]
+    #[\JMS\Serializer\Annotation\Type('array<tigris\core\Models\Shared\ReplaceRequestDocuments>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $documents = null;
     

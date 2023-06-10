@@ -37,15 +37,10 @@ class DescribeDatabaseResponse
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $collections = null;
     
-    /**
-     * $metadata
-     * 
-     * @var ?array<string, mixed> $metadata
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('metadata')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\DatabaseMetadata')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $metadata = null;
+    public ?DatabaseMetadata $metadata = null;
     
     /**
      * Sum of all the collections sizes present in this database

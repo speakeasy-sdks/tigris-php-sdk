@@ -22,15 +22,10 @@ class InsertNamespaceMetadataRequest
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $metadataKey = null;
     
-    /**
-     * $value
-     * 
-     * @var ?array<string, mixed> $value
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('value')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\InsertNamespaceMetadataRequestValue')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $value = null;
+    public ?InsertNamespaceMetadataRequestValue $value = null;
     
 	public function __construct()
 	{

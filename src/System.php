@@ -110,11 +110,11 @@ class System
      * 
      * Returns current namespace quota limits
      * 
-     * @param array<string, mixed> $request
+     * @param \tigris\core\Models\Shared\QuotaUsageRequest $request
      * @return \tigris\core\Models\Operations\ObservabilityQuotaUsageResponse
      */
 	public function observabilityQuotaUsage(
-        array $request,
+        \tigris\core\Models\Shared\QuotaUsageRequest $request,
     ): \tigris\core\Models\Operations\ObservabilityQuotaUsageResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -159,11 +159,11 @@ class System
      * 
      * Returns current namespace quota limits
      * 
-     * @param array<string, mixed> $request
+     * @param \tigris\core\Models\Shared\QuotaLimitsRequest $request
      * @return \tigris\core\Models\Operations\ObservabilityQuotaLimitsResponse
      */
 	public function queryQuotaLimits(
-        array $request,
+        \tigris\core\Models\Shared\QuotaLimitsRequest $request,
     ): \tigris\core\Models\Operations\ObservabilityQuotaLimitsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();

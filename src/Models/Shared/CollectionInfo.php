@@ -21,15 +21,10 @@ class CollectionInfo
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?string $collection = null;
     
-    /**
-     * $metadata
-     * 
-     * @var ?array<string, mixed> $metadata
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('metadata')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\CollectionMetadata')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $metadata = null;
+    public ?CollectionMetadata $metadata = null;
     
 	public function __construct()
 	{

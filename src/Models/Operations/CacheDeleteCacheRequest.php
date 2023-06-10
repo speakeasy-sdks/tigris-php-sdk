@@ -11,13 +11,8 @@ namespace tigris\core\Models\Operations;
 use \tigris\core\Utils\SpeakeasyMetadata;
 class CacheDeleteCacheRequest
 {
-    /**
-     * $requestBody
-     * 
-     * @var array<string, mixed> $requestBody
-     */
 	#[SpeakeasyMetadata('request:mediaType=application/json')]
-    public array $requestBody;
+    public \tigris\core\Models\Shared\DeleteCacheRequest $deleteCacheRequest;
     
     /**
      * cache name
@@ -37,7 +32,7 @@ class CacheDeleteCacheRequest
     
 	public function __construct()
 	{
-		$this->requestBody = [];
+		$this->deleteCacheRequest = new \tigris\core\Models\Shared\DeleteCacheRequest();
 		$this->name = "";
 		$this->project = "";
 	}
