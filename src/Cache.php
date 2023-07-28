@@ -40,7 +40,7 @@ class Cache
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
@@ -87,7 +87,7 @@ class Cache
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -134,7 +134,7 @@ class Cache
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('DELETE', $url, $options);
@@ -176,7 +176,7 @@ class Cache
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/{name}/{key}/get', \tigris\core\Models\Operations\CacheGetRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
@@ -223,7 +223,7 @@ class Cache
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
@@ -265,7 +265,7 @@ class Cache
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/projects/{project}/caches/list', \tigris\core\Models\Operations\CacheListCachesRequest::class, $request);
         
         $options = ['http_errors' => false];
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
@@ -308,7 +308,7 @@ class Cache
         
         $options = ['http_errors' => false];
         $options = array_merge_recursive($options, Utils\Utils::getQueryParams(\tigris\core\Models\Operations\CacheKeysRequest::class, $request, null));
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
@@ -355,7 +355,7 @@ class Cache
             throw new \Exception('Request body is required');
         }
         $options = array_merge_recursive($options, $body);
-        $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
+        $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->securityClient->request('POST', $url, $options);
