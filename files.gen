@@ -679,3 +679,4 @@ docs/models/shared/UpdateUserMetadataResponse.md
 docs/models/shared/UpdateUserMetadataRequestValue.md
 docs/models/shared/UpdateUserMetadataRequest.md
 docs/models/shared/Security.md
+.gitattributes
