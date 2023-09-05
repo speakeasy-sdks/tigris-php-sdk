@@ -287,7 +287,7 @@ class Search
      * @return \tigris\core\Models\Operations\SearchGetResponse
      */
 	public function getDocuments(
-        \tigris\core\Models\Operations\SearchGetRequest $request,
+        ?\tigris\core\Models\Operations\SearchGetRequest $request,
     ): \tigris\core\Models\Operations\SearchGetResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -330,7 +330,7 @@ class Search
      * @return \tigris\core\Models\Operations\SearchGetIndexResponse
      */
 	public function getIndex(
-        \tigris\core\Models\Operations\SearchGetIndexRequest $request,
+        ?\tigris\core\Models\Operations\SearchGetIndexRequest $request,
     ): \tigris\core\Models\Operations\SearchGetIndexResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -372,7 +372,7 @@ class Search
      * @return \tigris\core\Models\Operations\SearchListIndexesResponse
      */
 	public function listIndexes(
-        \tigris\core\Models\Operations\SearchListIndexesRequest $request,
+        ?\tigris\core\Models\Operations\SearchListIndexesRequest $request,
     ): \tigris\core\Models\Operations\SearchListIndexesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();

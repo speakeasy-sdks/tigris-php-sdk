@@ -169,7 +169,7 @@ class Cache
      * @return \tigris\core\Models\Operations\CacheGetResponse
      */
 	public function getKey(
-        \tigris\core\Models\Operations\CacheGetRequest $request,
+        ?\tigris\core\Models\Operations\CacheGetRequest $request,
     ): \tigris\core\Models\Operations\CacheGetResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -258,7 +258,7 @@ class Cache
      * @return \tigris\core\Models\Operations\CacheListCachesResponse
      */
 	public function list(
-        \tigris\core\Models\Operations\CacheListCachesRequest $request,
+        ?\tigris\core\Models\Operations\CacheListCachesRequest $request,
     ): \tigris\core\Models\Operations\CacheListCachesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -300,7 +300,7 @@ class Cache
      * @return \tigris\core\Models\Operations\CacheKeysResponse
      */
 	public function listKeys(
-        \tigris\core\Models\Operations\CacheKeysRequest $request,
+        ?\tigris\core\Models\Operations\CacheKeysRequest $request,
     ): \tigris\core\Models\Operations\CacheKeysResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();

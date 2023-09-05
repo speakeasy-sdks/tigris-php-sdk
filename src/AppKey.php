@@ -79,7 +79,7 @@ class AppKey
      * @return \tigris\core\Models\Operations\TigrisListAppKeysResponse
      */
 	public function list(
-        \tigris\core\Models\Operations\TigrisListAppKeysRequest $request,
+        ?\tigris\core\Models\Operations\TigrisListAppKeysRequest $request,
     ): \tigris\core\Models\Operations\TigrisListAppKeysResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();

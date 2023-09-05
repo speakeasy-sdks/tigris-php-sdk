@@ -280,7 +280,7 @@ class Database
      * @return \tigris\core\Models\Operations\TigrisListCollectionsResponse
      */
 	public function listCollections(
-        \tigris\core\Models\Operations\TigrisListCollectionsRequest $request,
+        ?\tigris\core\Models\Operations\TigrisListCollectionsRequest $request,
     ): \tigris\core\Models\Operations\TigrisListCollectionsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -375,7 +375,7 @@ class Database
      * @return \tigris\core\Models\Operations\TigrisListBranchesResponse
      */
 	public function tigrisListBranches(
-        \tigris\core\Models\Operations\TigrisListBranchesRequest $request,
+        ?\tigris\core\Models\Operations\TigrisListBranchesRequest $request,
     ): \tigris\core\Models\Operations\TigrisListBranchesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();

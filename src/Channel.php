@@ -28,7 +28,7 @@ class Channel
      * @return \tigris\core\Models\Operations\RealtimeGetRTChannelResponse
      */
 	public function get(
-        \tigris\core\Models\Operations\RealtimeGetRTChannelRequest $request,
+        ?\tigris\core\Models\Operations\RealtimeGetRTChannelRequest $request,
     ): \tigris\core\Models\Operations\RealtimeGetRTChannelResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -70,7 +70,7 @@ class Channel
      * @return \tigris\core\Models\Operations\RealtimeReadMessagesResponse
      */
 	public function getMessages(
-        \tigris\core\Models\Operations\RealtimeReadMessagesRequest $request,
+        ?\tigris\core\Models\Operations\RealtimeReadMessagesRequest $request,
     ): \tigris\core\Models\Operations\RealtimeReadMessagesResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -113,7 +113,7 @@ class Channel
      * @return \tigris\core\Models\Operations\RealtimeGetRTChannelsResponse
      */
 	public function list(
-        \tigris\core\Models\Operations\RealtimeGetRTChannelsRequest $request,
+        ?\tigris\core\Models\Operations\RealtimeGetRTChannelsRequest $request,
     ): \tigris\core\Models\Operations\RealtimeGetRTChannelsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -155,7 +155,7 @@ class Channel
      * @return \tigris\core\Models\Operations\RealtimeListSubscriptionsResponse
      */
 	public function listSubscriptions(
-        \tigris\core\Models\Operations\RealtimeListSubscriptionsRequest $request,
+        ?\tigris\core\Models\Operations\RealtimeListSubscriptionsRequest $request,
     ): \tigris\core\Models\Operations\RealtimeListSubscriptionsResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
@@ -245,7 +245,7 @@ class Channel
      * @return \tigris\core\Models\Operations\RealtimePresenceResponse
      */
 	public function realtimePresence(
-        \tigris\core\Models\Operations\RealtimePresenceRequest $request,
+        ?\tigris\core\Models\Operations\RealtimePresenceRequest $request,
     ): \tigris\core\Models\Operations\RealtimePresenceResponse
     {
         $baseUrl = $this->sdkConfiguration->getServerUrl();
