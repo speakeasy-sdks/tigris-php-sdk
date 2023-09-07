@@ -34,9 +34,9 @@ $sdk = SDK::builder()
 
 try {
     $request = new CreateNamespaceRequest();
-    $request->code = 896547;
-    $request->id = '2516fe4c-8b71-41e5-b7fd-2ed028921cdd';
-    $request->name = 'Nathaniel Marks';
+    $request->code = 878453;
+    $request->id = '21419598-90af-4a56-be25-16fe4c8b711e';
+    $request->name = 'Lola Koss';
 
     $response = $sdk->namespace->create($request);
 
@@ -119,9 +119,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementGetNamespaceMetadataRequest();
     $request->getNamespaceMetadataRequest = new GetNamespaceMetadataRequest();
-    $request->getNamespaceMetadataRequest->metadataKey = 'accusantium';
+    $request->getNamespaceMetadataRequest->metadataKey = 'sed';
     $request->getNamespaceMetadataRequest->value = new GetNamespaceMetadataRequestValue();
-    $request->metadataKey = 'ab';
+    $request->metadataKey = 'saepe';
 
     $response = $sdk->namespace->getMetadata($request);
 
@@ -169,9 +169,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementInsertNamespaceMetadataRequest();
     $request->insertNamespaceMetadataRequest = new InsertNamespaceMetadataRequest();
-    $request->insertNamespaceMetadataRequest->metadataKey = 'maiores';
+    $request->insertNamespaceMetadataRequest->metadataKey = 'pariatur';
     $request->insertNamespaceMetadataRequest->value = new InsertNamespaceMetadataRequestValue();
-    $request->metadataKey = 'quidem';
+    $request->metadataKey = 'accusantium';
 
     $response = $sdk->namespace->insertMetadata($request);
 
@@ -254,9 +254,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementUpdateNamespaceMetadataRequest();
     $request->updateNamespaceMetadataRequest = new UpdateNamespaceMetadataRequest();
-    $request->updateNamespaceMetadataRequest->metadataKey = 'ipsam';
+    $request->updateNamespaceMetadataRequest->metadataKey = 'consequuntur';
     $request->updateNamespaceMetadataRequest->value = new UpdateNamespaceMetadataRequestValue();
-    $request->metadataKey = 'voluptate';
+    $request->metadataKey = 'praesentium';
 
     $response = $sdk->namespace->updateMetadata($request);
 

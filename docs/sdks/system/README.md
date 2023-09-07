@@ -200,19 +200,19 @@ try {
     $request->additionalFunctions = [
         new AdditionalFunction(),
     ];
-    $request->branch = 'distinctio';
-    $request->collection = 'facilis';
-    $request->db = 'aliquid';
-    $request->from = 463150;
-    $request->function = QueryTimeSeriesMetricsRequestFunction::Count;
-    $request->metricName = 'temporibus';
-    $request->quantile = 1832.8;
+    $request->branch = 'iusto';
+    $request->collection = 'ipsum';
+    $request->db = 'quisquam';
+    $request->from = 947371;
+    $request->function = QueryTimeSeriesMetricsRequestFunction::Rate;
+    $request->metricName = 'tempore';
+    $request->quantile = 8802.98;
     $request->spaceAggregatedBy = [
-        'fugit',
+        'numquam',
     ];
-    $request->spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation::Avg;
-    $request->tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation::Read;
-    $request->to = 124833;
+    $request->spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation::Min;
+    $request->tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation::All;
+    $request->to = 957451;
 
     $response = $sdk->system->queryTimeSeriesMetrics($request);
 

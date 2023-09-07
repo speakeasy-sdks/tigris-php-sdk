@@ -45,13 +45,13 @@ $sdk = SDK::builder()
 try {
     $request = new SearchCreateByIdRequest();
     $request->createByIdRequest = new CreateByIdRequest();
-    $request->createByIdRequest->document = 'eaque';
-    $request->createByIdRequest->id = 'd5f0d30c-5fbb-4258-b053-202c73d5fe9b';
-    $request->createByIdRequest->index = 'perspiciatis';
-    $request->createByIdRequest->project = 'voluptatem';
-    $request->id = 'c28909b3-fe49-4a8d-9cbf-48633323f9b7';
-    $request->index = 'dignissimos';
-    $request->project = 'reiciendis';
+    $request->createByIdRequest->document = 'sunt';
+    $request->createByIdRequest->id = 'cddc6926-01fb-4576-b0d5-f0d30c5fbb25';
+    $request->createByIdRequest->index = 'totam';
+    $request->createByIdRequest->project = 'dignissimos';
+    $request->id = '053202c7-3d5f-4e9b-90c2-8909b3fe49a8';
+    $request->index = 'pariatur';
+    $request->project = 'provident';
 
     $response = $sdk->search->createDocument($request);
 
@@ -103,12 +103,12 @@ try {
     $request = new SearchCreateRequest();
     $request->createDocumentRequest = new CreateDocumentRequest();
     $request->createDocumentRequest->documents = [
-        'dolorum',
+        'nobis',
     ];
-    $request->createDocumentRequest->index = 'numquam';
-    $request->createDocumentRequest->project = 'veritatis';
-    $request->index = 'ipsa';
-    $request->project = 'ipsa';
+    $request->createDocumentRequest->index = 'libero';
+    $request->createDocumentRequest->project = 'delectus';
+    $request->index = 'quaerat';
+    $request->project = 'quos';
 
     $response = $sdk->search->createDocuments($request);
 
@@ -158,13 +158,12 @@ try {
     $request = new SearchDeleteRequest();
     $request->deleteDocumentRequest = new DeleteDocumentRequest();
     $request->deleteDocumentRequest->ids = [
-        'odio',
-        'quaerat',
+        'aliquid',
     ];
-    $request->deleteDocumentRequest->index = 'accusamus';
-    $request->deleteDocumentRequest->project = 'quidem';
-    $request->index = 'voluptatibus';
-    $request->project = 'voluptas';
+    $request->deleteDocumentRequest->index = 'dolorem';
+    $request->deleteDocumentRequest->project = 'dolorem';
+    $request->index = 'dolor';
+    $request->project = 'qui';
 
     $response = $sdk->search->deleteDocuments($request);
 
@@ -211,10 +210,10 @@ $sdk = SDK::builder()
 try {
     $request = new SearchDeleteIndexRequest();
     $request->deleteIndexRequest = new DeleteIndexRequest();
-    $request->deleteIndexRequest->name = 'Dr. Craig Littel DDS';
-    $request->deleteIndexRequest->project = 'dolorum';
-    $request->name = 'Colleen Pagac';
-    $request->project = 'necessitatibus';
+    $request->deleteIndexRequest->name = 'Mindy Marks';
+    $request->deleteIndexRequest->project = 'dignissimos';
+    $request->name = 'Allen Parisian Jr.';
+    $request->project = 'ipsa';
 
     $response = $sdk->search->deleteIndex($request);
 
@@ -267,30 +266,26 @@ try {
     $request = new SearchSearchRequest();
     $request->searchIndexRequest = new SearchIndexRequest();
     $request->searchIndexRequest->collation = new Collation();
-    $request->searchIndexRequest->collation->case = 'distinctio';
+    $request->searchIndexRequest->collation->case = 'iure';
     $request->searchIndexRequest->excludeFields = [
-        'nihil',
-        'ipsum',
-        'voluptate',
-        'id',
+        'odio',
     ];
-    $request->searchIndexRequest->facet = 'saepe';
-    $request->searchIndexRequest->filter = 'eius';
+    $request->searchIndexRequest->facet = 'quaerat';
+    $request->searchIndexRequest->filter = 'accusamus';
     $request->searchIndexRequest->includeFields = [
-        'perferendis',
+        'quidem',
     ];
-    $request->searchIndexRequest->index = 'amet';
-    $request->searchIndexRequest->page = 758379;
-    $request->searchIndexRequest->pageSize = 881586;
-    $request->searchIndexRequest->project = 'ad';
-    $request->searchIndexRequest->q = 'saepe';
+    $request->searchIndexRequest->index = 'voluptatibus';
+    $request->searchIndexRequest->page = 377752;
+    $request->searchIndexRequest->pageSize = 617658;
+    $request->searchIndexRequest->project = 'eos';
+    $request->searchIndexRequest->q = 'atque';
     $request->searchIndexRequest->searchFields = [
-        'deserunt',
-        'provident',
+        'sit',
     ];
-    $request->searchIndexRequest->sort = 'minima';
-    $request->index = 'repellendus';
-    $request->project = 'totam';
+    $request->searchIndexRequest->sort = 'fugiat';
+    $request->index = 'ab';
+    $request->project = 'soluta';
 
     $response = $sdk->search->findDocuments($request);
 
@@ -337,12 +332,10 @@ $sdk = SDK::builder()
 try {
     $request = new SearchGetRequest();
     $request->ids = [
-        'alias',
-        'at',
-        'quaerat',
+        'dolorum',
     ];
-    $request->index = 'tempora';
-    $request->project = 'vel';
+    $request->index = 'iusto';
+    $request->project = 'voluptate';
 
     $response = $sdk->search->getDocuments($request);
 
@@ -387,8 +380,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new SearchGetIndexRequest();
-    $request->name = 'Erick Denesik';
-    $request->project = 'esse';
+    $request->name = 'Alfredo Mohr';
+    $request->project = 'asperiores';
 
     $response = $sdk->search->getIndex($request);
 
@@ -433,10 +426,10 @@ $sdk = SDK::builder()
 
 try {
     $request = new SearchListIndexesRequest();
-    $request->filterBranch = 'harum';
-    $request->filterCollection = 'iusto';
-    $request->filterType = 'ipsum';
-    $request->project = 'quisquam';
+    $request->filterBranch = 'nihil';
+    $request->filterCollection = 'ipsum';
+    $request->filterType = 'voluptate';
+    $request->project = 'id';
 
     $response = $sdk->search->listIndexes($request);
 
@@ -484,11 +477,11 @@ $sdk = SDK::builder()
 try {
     $request = new SearchDeleteByQueryRequest();
     $request->deleteByQueryRequest = new DeleteByQueryRequest();
-    $request->deleteByQueryRequest->filter = 'tenetur';
-    $request->deleteByQueryRequest->index = 'amet';
-    $request->deleteByQueryRequest->project = 'tempore';
-    $request->index = 'accusamus';
-    $request->project = 'numquam';
+    $request->deleteByQueryRequest->filter = 'saepe';
+    $request->deleteByQueryRequest->index = 'eius';
+    $request->deleteByQueryRequest->project = 'aspernatur';
+    $request->index = 'perferendis';
+    $request->project = 'amet';
 
     $response = $sdk->search->queryDeleteDocuments($request);
 
@@ -539,13 +532,12 @@ try {
     $request = new SearchCreateOrReplaceRequest();
     $request->createOrReplaceDocumentRequest = new CreateOrReplaceDocumentRequest();
     $request->createOrReplaceDocumentRequest->documents = [
-        'dolorem',
-        'sapiente',
+        'optio',
     ];
-    $request->createOrReplaceDocumentRequest->index = 'totam';
-    $request->createOrReplaceDocumentRequest->project = 'nihil';
-    $request->index = 'sit';
-    $request->project = 'expedita';
+    $request->createOrReplaceDocumentRequest->index = 'accusamus';
+    $request->createOrReplaceDocumentRequest->project = 'ad';
+    $request->index = 'saepe';
+    $request->project = 'suscipit';
 
     $response = $sdk->search->replaceDocuments($request);
 
@@ -596,12 +588,12 @@ try {
     $request = new SearchUpdateRequest();
     $request->updateDocumentRequest = new UpdateDocumentRequest();
     $request->updateDocumentRequest->documents = [
-        'sed',
+        'deserunt',
     ];
-    $request->updateDocumentRequest->index = 'vel';
-    $request->updateDocumentRequest->project = 'libero';
-    $request->index = 'voluptas';
-    $request->project = 'deserunt';
+    $request->updateDocumentRequest->index = 'provident';
+    $request->updateDocumentRequest->project = 'minima';
+    $request->index = 'repellendus';
+    $request->project = 'totam';
 
     $response = $sdk->search->updateDocuments($request);
 
@@ -648,12 +640,12 @@ $sdk = SDK::builder()
 try {
     $request = new SearchCreateOrUpdateIndexRequest();
     $request->createOrUpdateIndexRequest = new CreateOrUpdateIndexRequest();
-    $request->createOrUpdateIndexRequest->name = 'Tracy Gottlieb';
+    $request->createOrUpdateIndexRequest->name = 'James Swaniawski';
     $request->createOrUpdateIndexRequest->onlyCreate = false;
-    $request->createOrUpdateIndexRequest->project = 'maxime';
-    $request->createOrUpdateIndexRequest->schema = 'pariatur';
-    $request->name = 'Keith Padberg';
-    $request->project = 'aspernatur';
+    $request->createOrUpdateIndexRequest->project = 'vel';
+    $request->createOrUpdateIndexRequest->schema = 'quod';
+    $request->name = 'Clarence Parisian';
+    $request->project = 'harum';
 
     $response = $sdk->search->updateIndex($request);
 

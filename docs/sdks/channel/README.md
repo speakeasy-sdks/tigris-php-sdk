@@ -232,9 +232,9 @@ try {
     $request->messagesRequest->messages = [
         new Message(),
     ];
-    $request->messagesRequest->project = 'aliquid';
-    $request->channel = 'cupiditate';
-    $request->project = 'quos';
+    $request->messagesRequest->project = 'qui';
+    $request->channel = 'aliquid';
+    $request->project = 'cupiditate';
 
     $response = $sdk->channel->pushMessages($request);
 
@@ -279,8 +279,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimePresenceRequest();
-    $request->channel = 'perferendis';
-    $request->project = 'magni';
+    $request->channel = 'quos';
+    $request->project = 'perferendis';
 
     $response = $sdk->channel->realtimePresence($request);
 
