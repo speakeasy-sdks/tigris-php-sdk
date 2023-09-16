@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace tigris\core\Models\Shared;
 
 
-/**
- * InsertResponse - OK
- * 
- * @package tigris\core\Models\Shared
- * @access public
- */
 class InsertResponse
 {
     /**

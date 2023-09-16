@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace tigris\core\Models\Shared;
 
 
-/**
- * Status - Default error response
- * 
- * @package tigris\core\Models\Shared
- * @access public
- */
 class Status
 {
     /**

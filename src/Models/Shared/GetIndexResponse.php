@@ -9,12 +9,6 @@ declare(strict_types=1);
 namespace tigris\core\Models\Shared;
 
 
-/**
- * GetIndexResponse - OK
- * 
- * @package tigris\core\Models\Shared
- * @access public
- */
 class GetIndexResponse
 {
 	#[\JMS\Serializer\Annotation\SerializedName('index')]

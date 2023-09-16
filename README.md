@@ -2128,6 +2128,39 @@ try {
 } catch (Exception $e) {
     // handle exception
 }
+```
+
+```php
+<?php
+
+declare(strict_types=1);
+require_once 'vendor/autoload.php';
+
+use \tigris\core\SDK;
+use \tigris\core\Models\Shared\Security;
+use \tigris\core\Models\Operations\CacheCreateCacheRequest;
+use \tigris\core\Models\Shared\CreateCacheRequest;
+use \tigris\core\Models\Shared\CreateCacheOptions;
+
+$sdk = SDK::builder()
+    ->build();
+
+try {
+    $request = new CacheCreateCacheRequest();
+    $request->createCacheRequest = new CreateCacheRequest();
+    $request->createCacheRequest->options = new CreateCacheOptions();
+    $request->createCacheRequest->options->ttlMs = 548814;
+    $request->name = 'Kelvin Sporer';
+    $request->project = 'corrupti';
+
+    $response = $sdk->cache->create($request);
+
+    if ($response->createCacheResponse !== null) {
+        // handle response
+    }
+} catch (Exception $e) {
+    // handle exception
+}
 ```<!-- Start SDK Example Usage -->
 
 <!-- End SDK Example Usage -->
@@ -2136,7 +2169,7 @@ try {
 ## Available Resources and Operations
 
 
-### [appKey](docs/sdks/appkey/README.md)
+### [AppKey](docs/sdks/appkey/README.md)
 
 * [delete](docs/sdks/appkey/README.md#delete) - Deletes the app key
 * [list](docs/sdks/appkey/README.md#list) - List all the app keys
@@ -2144,11 +2177,11 @@ try {
 * [tigrisCreateAppKey](docs/sdks/appkey/README.md#tigriscreateappkey) - Creates the app key
 * [update](docs/sdks/appkey/README.md#update) - Updates the description of the app key
 
-### [auth](docs/sdks/auth/README.md)
+### [Auth](docs/sdks/auth/README.md)
 
 * [get](docs/sdks/auth/README.md#get) - Access Token
 
-### [cache](docs/sdks/cache/README.md)
+### [Cache](docs/sdks/cache/README.md)
 
 * [create](docs/sdks/cache/README.md#create) - Creates the cache
 * [delete](docs/sdks/cache/README.md#delete) - Deletes the cache
@@ -2159,7 +2192,7 @@ try {
 * [listKeys](docs/sdks/cache/README.md#listkeys) - Lists all the key for this cache
 * [setKey](docs/sdks/cache/README.md#setkey) - Sets an entry in the cache
 
-### [channel](docs/sdks/channel/README.md)
+### [Channel](docs/sdks/channel/README.md)
 
 * [get](docs/sdks/channel/README.md#get) - Get the details about a channel
 * [getMessages](docs/sdks/channel/README.md#getmessages) - Get all messages for a channel
@@ -2168,7 +2201,7 @@ try {
 * [pushMessages](docs/sdks/channel/README.md#pushmessages) - push messages to a single channel
 * [realtimePresence](docs/sdks/channel/README.md#realtimepresence) - Presence about the channel
 
-### [collection](docs/sdks/collection/README.md)
+### [Collection](docs/sdks/collection/README.md)
 
 * [create](docs/sdks/collection/README.md#create) - Create or update a collection
 * [deleteDocuments](docs/sdks/collection/README.md#deletedocuments) - Delete Documents
@@ -2181,7 +2214,7 @@ try {
 * [searchDocuments](docs/sdks/collection/README.md#searchdocuments) - Search Documents.
 * [updateDocuments](docs/sdks/collection/README.md#updatedocuments) - Update Documents.
 
-### [database](docs/sdks/database/README.md)
+### [Database](docs/sdks/database/README.md)
 
 * [beginTransaction](docs/sdks/database/README.md#begintransaction) - Begin a transaction
 * [commitTransaction](docs/sdks/database/README.md#committransaction) - Commit a Transaction
@@ -2192,7 +2225,7 @@ try {
 * [rollbackTransaction](docs/sdks/database/README.md#rollbacktransaction) - Rollback a transaction
 * [tigrisListBranches](docs/sdks/database/README.md#tigrislistbranches) - List database branches
 
-### [namespace](docs/sdks/namespace/README.md)
+### [NamespaceT](docs/sdks/namespace/README.md)
 
 * [create](docs/sdks/namespace/README.md#create) - Creates a Namespace
 * [get](docs/sdks/namespace/README.md#get) - Describe the details of all namespaces
@@ -2201,13 +2234,13 @@ try {
 * [list](docs/sdks/namespace/README.md#list) - Lists all Namespaces
 * [updateMetadata](docs/sdks/namespace/README.md#updatemetadata) - Updates Namespace Metadata
 
-### [project](docs/sdks/project/README.md)
+### [Project](docs/sdks/project/README.md)
 
 * [create](docs/sdks/project/README.md#create) - Create Project
 * [deleteProject](docs/sdks/project/README.md#deleteproject) - Delete Project and all resources under project
 * [list](docs/sdks/project/README.md#list) - List Projects
 
-### [search](docs/sdks/search/README.md)
+### [Search](docs/sdks/search/README.md)
 
 * [createDocument](docs/sdks/search/README.md#createdocument) - Create a single document
 * [createDocuments](docs/sdks/search/README.md#createdocuments) - Create multiple documents
@@ -2222,7 +2255,7 @@ try {
 * [updateDocuments](docs/sdks/search/README.md#updatedocuments) - Update documents in an index
 * [updateIndex](docs/sdks/search/README.md#updateindex) - Creates or updates search index
 
-### [system](docs/sdks/system/README.md)
+### [System](docs/sdks/system/README.md)
 
 * [getHealth](docs/sdks/system/README.md#gethealth) - Health Check
 * [getServerInfo](docs/sdks/system/README.md#getserverinfo) - Information about the server
@@ -2230,7 +2263,7 @@ try {
 * [queryQuotaLimits](docs/sdks/system/README.md#queryquotalimits) - Queries current namespace quota limits
 * [queryTimeSeriesMetrics](docs/sdks/system/README.md#querytimeseriesmetrics) - Queries time series metrics
 
-### [user](docs/sdks/user/README.md)
+### [User](docs/sdks/user/README.md)
 
 * [getMetadata](docs/sdks/user/README.md#getmetadata) - Reads the User Metadata
 * [insertMetadata](docs/sdks/user/README.md#insertmetadata) - Inserts User Metadata
