@@ -34,8 +34,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimeGetRTChannelRequest();
-    $request->channel = 'quasi';
-    $request->project = 'repudiandae';
+    $request->channel = 'est';
+    $request->project = 'quibusdam';
 
     $response = $sdk->channel->get($request);
 
@@ -80,14 +80,14 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimeReadMessagesRequest();
-    $request->channel = 'sint';
-    $request->end = 'veritatis';
-    $request->event = 'itaque';
-    $request->limit = 277718;
-    $request->project = 'enim';
-    $request->sessionId = 'consequatur';
-    $request->socketId = 'est';
-    $request->start = 'quibusdam';
+    $request->channel = 'explicabo';
+    $request->end = 'deserunt';
+    $request->event = 'distinctio';
+    $request->limit = 841386;
+    $request->project = 'labore';
+    $request->sessionId = 'modi';
+    $request->socketId = 'qui';
+    $request->start = 'aliquid';
 
     $response = $sdk->channel->getMessages($request);
 
@@ -132,7 +132,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimeGetRTChannelsRequest();
-    $request->project = 'explicabo';
+    $request->project = 'cupiditate';
 
     $response = $sdk->channel->list($request);
 
@@ -177,10 +177,10 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimeListSubscriptionsRequest();
-    $request->channel = 'deserunt';
-    $request->page = 716327;
-    $request->pageSize = 841386;
-    $request->project = 'labore';
+    $request->channel = 'quos';
+    $request->page = 20107;
+    $request->pageSize = 164940;
+    $request->project = 'assumenda';
 
     $response = $sdk->channel->listSubscriptions($request);
 
@@ -228,13 +228,13 @@ $sdk = SDK::builder()
 try {
     $request = new RealtimeMessagesRequest();
     $request->messagesRequest = new MessagesRequest();
-    $request->messagesRequest->channel = 'modi';
+    $request->messagesRequest->channel = 'ipsam';
     $request->messagesRequest->messages = [
         new Message(),
     ];
-    $request->messagesRequest->project = 'qui';
-    $request->channel = 'aliquid';
-    $request->project = 'cupiditate';
+    $request->messagesRequest->project = 'alias';
+    $request->channel = 'fugit';
+    $request->project = 'dolorum';
 
     $response = $sdk->channel->pushMessages($request);
 
@@ -279,8 +279,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimePresenceRequest();
-    $request->channel = 'quos';
-    $request->project = 'perferendis';
+    $request->channel = 'excepturi';
+    $request->project = 'tempora';
 
     $response = $sdk->channel->realtimePresence($request);
 

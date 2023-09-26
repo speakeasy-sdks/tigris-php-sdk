@@ -200,19 +200,19 @@ try {
     $request->additionalFunctions = [
         new AdditionalFunction(),
     ];
-    $request->branch = 'iusto';
-    $request->collection = 'ipsum';
-    $request->db = 'quisquam';
-    $request->from = 947371;
-    $request->function = QueryTimeSeriesMetricsRequestFunction::Rate;
-    $request->metricName = 'tempore';
-    $request->quantile = 8802.98;
+    $request->branch = 'enim';
+    $request->collection = 'dolorem';
+    $request->db = 'sapiente';
+    $request->from = 518201;
+    $request->function = QueryTimeSeriesMetricsRequestFunction::Count;
+    $request->metricName = 'sit';
+    $request->quantile = 7115.84;
     $request->spaceAggregatedBy = [
-        'numquam',
+        'neque',
     ];
-    $request->spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation::Min;
-    $request->tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation::All;
-    $request->to = 957451;
+    $request->spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation::Avg;
+    $request->tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation::Read;
+    $request->to = 730442;
 
     $response = $sdk->system->queryTimeSeriesMetrics($request);
 

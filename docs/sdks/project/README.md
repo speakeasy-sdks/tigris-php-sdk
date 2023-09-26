@@ -33,7 +33,7 @@ $sdk = SDK::builder()
 try {
     $request = new TigrisCreateProjectRequest();
     $request->createProjectRequest = new CreateProjectRequest();
-    $request->project = 'natus';
+    $request->project = 'excepturi';
 
     $response = $sdk->project->create($request);
 
@@ -80,7 +80,7 @@ $sdk = SDK::builder()
 try {
     $request = new TigrisDeleteProjectRequest();
     $request->deleteProjectRequest = new DeleteProjectRequest();
-    $request->project = 'magni';
+    $request->project = 'odit';
 
     $response = $sdk->project->deleteProject($request);
 

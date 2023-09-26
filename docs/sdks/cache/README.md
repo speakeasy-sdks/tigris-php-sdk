@@ -40,9 +40,9 @@ try {
     $request = new CacheCreateCacheRequest();
     $request->createCacheRequest = new CreateCacheRequest();
     $request->createCacheRequest->options = new CreateCacheOptions();
-    $request->createCacheRequest->options->ttlMs = 244425;
-    $request->name = 'Miss Eugene Hauck';
-    $request->project = 'enim';
+    $request->createCacheRequest->options->ttlMs = 138183;
+    $request->name = 'Jimmy Wiegand';
+    $request->project = 'possimus';
 
     $response = $sdk->cache->create($request);
 
@@ -89,8 +89,8 @@ $sdk = SDK::builder()
 try {
     $request = new CacheDeleteCacheRequest();
     $request->deleteCacheRequest = new DeleteCacheRequest();
-    $request->name = 'Angelica Dietrich';
-    $request->project = 'id';
+    $request->name = 'Joyce Mueller';
+    $request->project = 'quasi';
 
     $response = $sdk->cache->delete($request);
 
@@ -137,9 +137,9 @@ $sdk = SDK::builder()
 try {
     $request = new CacheDelRequest();
     $request->delRequest = new DelRequest();
-    $request->key = 'possimus';
-    $request->name = 'Joyce Mueller';
-    $request->project = 'quasi';
+    $request->key = 'reiciendis';
+    $request->name = 'Caleb Koss';
+    $request->project = 'ipsa';
 
     $response = $sdk->cache->deleteKeys($request);
 
@@ -184,9 +184,9 @@ $sdk = SDK::builder()
 
 try {
     $request = new CacheGetRequest();
-    $request->key = 'reiciendis';
-    $request->name = 'Caleb Koss';
-    $request->project = 'ipsa';
+    $request->key = 'omnis';
+    $request->name = 'Ms. Karla Aufderhar';
+    $request->project = 'maiores';
 
     $response = $sdk->cache->getKey($request);
 
@@ -233,10 +233,10 @@ $sdk = SDK::builder()
 try {
     $request = new CacheGetSetRequest();
     $request->getSetRequest = new GetSetRequest();
-    $request->getSetRequest->value = 'omnis';
-    $request->key = 'voluptate';
-    $request->name = 'Thomas Batz';
-    $request->project = 'maiores';
+    $request->getSetRequest->value = 'dicta';
+    $request->key = 'corporis';
+    $request->name = 'Heidi Carter';
+    $request->project = 'accusamus';
 
     $response = $sdk->cache->getSetKey($request);
 
@@ -281,7 +281,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new CacheListCachesRequest();
-    $request->project = 'dicta';
+    $request->project = 'commodi';
 
     $response = $sdk->cache->list($request);
 
@@ -326,11 +326,11 @@ $sdk = SDK::builder()
 
 try {
     $request = new CacheKeysRequest();
-    $request->count = 359444;
-    $request->cursor = 296140;
-    $request->name = 'Mildred Pfeffer';
-    $request->pattern = 'commodi';
-    $request->project = 'repudiandae';
+    $request->count = 918236;
+    $request->cursor = 64147;
+    $request->name = 'Alison Mann';
+    $request->pattern = 'modi';
+    $request->project = 'praesentium';
 
     $response = $sdk->cache->listKeys($request);
 
@@ -377,14 +377,14 @@ $sdk = SDK::builder()
 try {
     $request = new CacheSetRequest();
     $request->setRequest = new SetRequest();
-    $request->setRequest->ex = 64147;
+    $request->setRequest->ex = 523248;
     $request->setRequest->nx = false;
-    $request->setRequest->px = 216822;
-    $request->setRequest->value = 'quidem';
+    $request->setRequest->px = 916723;
+    $request->setRequest->value = 'quasi';
     $request->setRequest->xx = false;
-    $request->key = 'molestias';
-    $request->name = 'Ervin Gleason';
-    $request->project = 'voluptates';
+    $request->key = 'repudiandae';
+    $request->name = 'Patrick Ward';
+    $request->project = 'consequatur';
 
     $response = $sdk->cache->setKey($request);
 

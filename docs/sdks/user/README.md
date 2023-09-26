@@ -34,9 +34,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementGetUserMetadataRequest();
     $request->getUserMetadataRequest = new GetUserMetadataRequest();
-    $request->getUserMetadataRequest->metadataKey = 'totam';
+    $request->getUserMetadataRequest->metadataKey = 'voluptas';
     $request->getUserMetadataRequest->value = new GetUserMetadataRequestValue();
-    $request->metadataKey = 'nihil';
+    $request->metadataKey = 'deserunt';
 
     $response = $sdk->user->getMetadata($request);
 
@@ -84,9 +84,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementInsertUserMetadataRequest();
     $request->insertUserMetadataRequest = new InsertUserMetadataRequest();
-    $request->insertUserMetadataRequest->metadataKey = 'sit';
+    $request->insertUserMetadataRequest->metadataKey = 'quam';
     $request->insertUserMetadataRequest->value = new InsertUserMetadataRequestValue();
-    $request->metadataKey = 'expedita';
+    $request->metadataKey = 'ipsum';
 
     $response = $sdk->user->insertMetadata($request);
 
@@ -134,9 +134,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementUpdateUserMetadataRequest();
     $request->updateUserMetadataRequest = new UpdateUserMetadataRequest();
-    $request->updateUserMetadataRequest->metadataKey = 'neque';
+    $request->updateUserMetadataRequest->metadataKey = 'incidunt';
     $request->updateUserMetadataRequest->value = new UpdateUserMetadataRequestValue();
-    $request->metadataKey = 'sed';
+    $request->metadataKey = 'qui';
 
     $response = $sdk->user->updateMetadata($request);
 

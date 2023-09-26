@@ -34,9 +34,9 @@ $sdk = SDK::builder()
 
 try {
     $request = new CreateNamespaceRequest();
-    $request->code = 878453;
-    $request->id = '21419598-90af-4a56-be25-16fe4c8b711e';
-    $request->name = 'Lola Koss';
+    $request->code = 551816;
+    $request->id = '90afa563-e251-46fe-8c8b-711e5b7fd2ed';
+    $request->name = 'Kathryn Lang';
 
     $response = $sdk->namespace->create($request);
 
@@ -119,9 +119,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementGetNamespaceMetadataRequest();
     $request->getNamespaceMetadataRequest = new GetNamespaceMetadataRequest();
-    $request->getNamespaceMetadataRequest->metadataKey = 'sed';
+    $request->getNamespaceMetadataRequest->metadataKey = 'sunt';
     $request->getNamespaceMetadataRequest->value = new GetNamespaceMetadataRequestValue();
-    $request->metadataKey = 'saepe';
+    $request->metadataKey = 'quo';
 
     $response = $sdk->namespace->getMetadata($request);
 
@@ -169,9 +169,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementInsertNamespaceMetadataRequest();
     $request->insertNamespaceMetadataRequest = new InsertNamespaceMetadataRequest();
-    $request->insertNamespaceMetadataRequest->metadataKey = 'pariatur';
+    $request->insertNamespaceMetadataRequest->metadataKey = 'illum';
     $request->insertNamespaceMetadataRequest->value = new InsertNamespaceMetadataRequestValue();
-    $request->metadataKey = 'accusantium';
+    $request->metadataKey = 'pariatur';
 
     $response = $sdk->namespace->insertMetadata($request);
 
@@ -254,9 +254,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementUpdateNamespaceMetadataRequest();
     $request->updateNamespaceMetadataRequest = new UpdateNamespaceMetadataRequest();
-    $request->updateNamespaceMetadataRequest->metadataKey = 'consequuntur';
+    $request->updateNamespaceMetadataRequest->metadataKey = 'maxime';
     $request->updateNamespaceMetadataRequest->value = new UpdateNamespaceMetadataRequestValue();
-    $request->metadataKey = 'praesentium';
+    $request->metadataKey = 'ea';
 
     $response = $sdk->namespace->updateMetadata($request);
 

@@ -38,7 +38,7 @@ class System
         $options['headers']['Accept'] = 'application/json';
         $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
-        $httpResponse = $this->sdkConfiguration->defaultClient->request('GET', $url, $options);
+        $httpResponse = $this->sdkConfiguration->securityClient->request('GET', $url, $options);
         
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
