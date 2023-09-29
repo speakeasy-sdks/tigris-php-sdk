@@ -1,4 +1,5 @@
 # NamespaceT
+(*namespace*)
 
 ## Overview
 
@@ -34,9 +35,9 @@ $sdk = SDK::builder()
 
 try {
     $request = new CreateNamespaceRequest();
-    $request->code = 551816;
-    $request->id = '90afa563-e251-46fe-8c8b-711e5b7fd2ed';
-    $request->name = 'Kathryn Lang';
+    $request->code = 481196;
+    $request->id = '<ID>';
+    $request->name = 'Tasty island Southwest';
 
     $response = $sdk->namespace->create($request);
 
@@ -119,9 +120,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementGetNamespaceMetadataRequest();
     $request->getNamespaceMetadataRequest = new GetNamespaceMetadataRequest();
-    $request->getNamespaceMetadataRequest->metadataKey = 'sunt';
+    $request->getNamespaceMetadataRequest->metadataKey = 'or Plastic';
     $request->getNamespaceMetadataRequest->value = new GetNamespaceMetadataRequestValue();
-    $request->metadataKey = 'quo';
+    $request->metadataKey = 'offensively Electric';
 
     $response = $sdk->namespace->getMetadata($request);
 
@@ -169,9 +170,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementInsertNamespaceMetadataRequest();
     $request->insertNamespaceMetadataRequest = new InsertNamespaceMetadataRequest();
-    $request->insertNamespaceMetadataRequest->metadataKey = 'illum';
+    $request->insertNamespaceMetadataRequest->metadataKey = 'Curve Liaison calculate';
     $request->insertNamespaceMetadataRequest->value = new InsertNamespaceMetadataRequestValue();
-    $request->metadataKey = 'pariatur';
+    $request->metadataKey = 'female Tantalum';
 
     $response = $sdk->namespace->insertMetadata($request);
 
@@ -254,9 +255,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementUpdateNamespaceMetadataRequest();
     $request->updateNamespaceMetadataRequest = new UpdateNamespaceMetadataRequest();
-    $request->updateNamespaceMetadataRequest->metadataKey = 'maxime';
+    $request->updateNamespaceMetadataRequest->metadataKey = 'platforms Concrete Tempe';
     $request->updateNamespaceMetadataRequest->value = new UpdateNamespaceMetadataRequestValue();
-    $request->metadataKey = 'ea';
+    $request->metadataKey = 'transmitting Silicon North';
 
     $response = $sdk->namespace->updateMetadata($request);
 

@@ -1,4 +1,5 @@
 # Search
+(*search*)
 
 ## Overview
 
@@ -45,13 +46,13 @@ $sdk = SDK::builder()
 try {
     $request = new SearchCreateByIdRequest();
     $request->createByIdRequest = new CreateByIdRequest();
-    $request->createByIdRequest->document = 'ea';
-    $request->createByIdRequest->id = '01fb576b-0d5f-40d3-8c5f-bb2587053202';
-    $request->createByIdRequest->index = 'minus';
-    $request->createByIdRequest->project = 'quam';
-    $request->id = '3d5fe9b9-0c28-4909-b3fe-49a8d9cbf486';
-    $request->index = 'dolorem';
-    $request->project = 'dolorem';
+    $request->createByIdRequest->document = 'Radon mRNA female';
+    $request->createByIdRequest->id = '<ID>';
+    $request->createByIdRequest->index = 'Electric pioneer';
+    $request->createByIdRequest->project = 'Rock';
+    $request->id = '<ID>';
+    $request->index = 'cyan';
+    $request->project = 'Tesla Concrete Metrics';
 
     $response = $sdk->search->createDocument($request);
 
@@ -103,12 +104,12 @@ try {
     $request = new SearchCreateRequest();
     $request->createDocumentRequest = new CreateDocumentRequest();
     $request->createDocumentRequest->documents = [
-        'dolor',
+        'Assistant',
     ];
-    $request->createDocumentRequest->index = 'qui';
-    $request->createDocumentRequest->project = 'ipsum';
-    $request->index = 'hic';
-    $request->project = 'excepturi';
+    $request->createDocumentRequest->index = 'Cadmium monitor West';
+    $request->createDocumentRequest->project = 'majestically Israeli';
+    $request->index = 'Northeast Tala Plastic';
+    $request->project = 'tempting Iron South';
 
     $response = $sdk->search->createDocuments($request);
 
@@ -158,12 +159,12 @@ try {
     $request = new SearchDeleteRequest();
     $request->deleteDocumentRequest = new DeleteDocumentRequest();
     $request->deleteDocumentRequest->ids = [
-        'cum',
+        'times',
     ];
-    $request->deleteDocumentRequest->index = 'voluptate';
-    $request->deleteDocumentRequest->project = 'dignissimos';
-    $request->index = 'reiciendis';
-    $request->project = 'amet';
+    $request->deleteDocumentRequest->index = 'consequently';
+    $request->deleteDocumentRequest->project = 'Plastic Samarium Programmable';
+    $request->index = 'likewise Awesome turquoise';
+    $request->project = 'North Handmade lime';
 
     $response = $sdk->search->deleteDocuments($request);
 
@@ -210,10 +211,10 @@ $sdk = SDK::builder()
 try {
     $request = new SearchDeleteIndexRequest();
     $request->deleteIndexRequest = new DeleteIndexRequest();
-    $request->deleteIndexRequest->name = 'Mr. Bradley Bogan';
-    $request->deleteIndexRequest->project = 'odio';
-    $request->name = 'Sophia Predovic';
-    $request->project = 'natus';
+    $request->deleteIndexRequest->name = 'New Tandem Romania';
+    $request->deleteIndexRequest->project = 'Executive minor Brooklyn';
+    $request->name = 'however Trans woman';
+    $request->project = 'standardization National bait';
 
     $response = $sdk->search->deleteIndex($request);
 
@@ -266,26 +267,26 @@ try {
     $request = new SearchSearchRequest();
     $request->searchIndexRequest = new SearchIndexRequest();
     $request->searchIndexRequest->collation = new Collation();
-    $request->searchIndexRequest->collation->case = 'eos';
+    $request->searchIndexRequest->collation->case = 'deify';
     $request->searchIndexRequest->excludeFields = [
-        'atque',
+        'how',
     ];
-    $request->searchIndexRequest->facet = 'sit';
-    $request->searchIndexRequest->filter = 'fugiat';
+    $request->searchIndexRequest->facet = 'Tesla Stage Salad';
+    $request->searchIndexRequest->filter = 'Senior Terbium';
     $request->searchIndexRequest->includeFields = [
-        'ab',
+        'World',
     ];
-    $request->searchIndexRequest->index = 'soluta';
-    $request->searchIndexRequest->page = 679393;
-    $request->searchIndexRequest->pageSize = 478596;
-    $request->searchIndexRequest->project = 'voluptate';
-    $request->searchIndexRequest->q = 'dolorum';
+    $request->searchIndexRequest->index = 'that so volt';
+    $request->searchIndexRequest->page = 337935;
+    $request->searchIndexRequest->pageSize = 65006;
+    $request->searchIndexRequest->project = 'degree Indiana infomediaries';
+    $request->searchIndexRequest->q = 'Diesel';
     $request->searchIndexRequest->searchFields = [
-        'deleniti',
+        'Southeast',
     ];
-    $request->searchIndexRequest->sort = 'omnis';
-    $request->index = 'necessitatibus';
-    $request->project = 'distinctio';
+    $request->searchIndexRequest->sort = 'Buckinghamshire woot Steel';
+    $request->index = 'Guiana Rock deliverables';
+    $request->project = 'yum by 24/7';
 
     $response = $sdk->search->findDocuments($request);
 
@@ -332,10 +333,10 @@ $sdk = SDK::builder()
 try {
     $request = new SearchGetRequest();
     $request->ids = [
-        'asperiores',
+        'turquoise',
     ];
-    $request->index = 'nihil';
-    $request->project = 'ipsum';
+    $request->index = 'Loan Northwest';
+    $request->project = 'Bugatti Federation';
 
     $response = $sdk->search->getDocuments($request);
 
@@ -380,8 +381,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new SearchGetIndexRequest();
-    $request->name = 'Alberta Ullrich';
-    $request->project = 'perferendis';
+    $request->name = 'reboot female';
+    $request->project = 'male';
 
     $response = $sdk->search->getIndex($request);
 
@@ -426,10 +427,10 @@ $sdk = SDK::builder()
 
 try {
     $request = new SearchListIndexesRequest();
-    $request->filterBranch = 'amet';
-    $request->filterCollection = 'optio';
-    $request->filterType = 'accusamus';
-    $request->project = 'ad';
+    $request->filterBranch = 'dynamic';
+    $request->filterCollection = 'bolívar Flat';
+    $request->filterType = 'Officer Franc Denar';
+    $request->project = 'Mountain SUV';
 
     $response = $sdk->search->listIndexes($request);
 
@@ -477,11 +478,11 @@ $sdk = SDK::builder()
 try {
     $request = new SearchDeleteByQueryRequest();
     $request->deleteByQueryRequest = new DeleteByQueryRequest();
-    $request->deleteByQueryRequest->filter = 'saepe';
-    $request->deleteByQueryRequest->index = 'suscipit';
-    $request->deleteByQueryRequest->project = 'deserunt';
-    $request->index = 'provident';
-    $request->project = 'minima';
+    $request->deleteByQueryRequest->filter = 'visible whose IB';
+    $request->deleteByQueryRequest->index = 'Wyoming';
+    $request->deleteByQueryRequest->project = 'Diesel male';
+    $request->index = 'Table Ytterbium';
+    $request->project = 'harness';
 
     $response = $sdk->search->queryDeleteDocuments($request);
 
@@ -532,12 +533,12 @@ try {
     $request = new SearchCreateOrReplaceRequest();
     $request->createOrReplaceDocumentRequest = new CreateOrReplaceDocumentRequest();
     $request->createOrReplaceDocumentRequest->documents = [
-        'repellendus',
+        'female West Southeast',
     ];
-    $request->createOrReplaceDocumentRequest->index = 'totam';
-    $request->createOrReplaceDocumentRequest->project = 'similique';
-    $request->index = 'alias';
-    $request->project = 'at';
+    $request->createOrReplaceDocumentRequest->index = 'Total phew';
+    $request->createOrReplaceDocumentRequest->project = 'gee Coupe Bicycle';
+    $request->index = 'Chief';
+    $request->project = 'coolly Bicycle temporibus';
 
     $response = $sdk->search->replaceDocuments($request);
 
@@ -588,12 +589,12 @@ try {
     $request = new SearchUpdateRequest();
     $request->updateDocumentRequest = new UpdateDocumentRequest();
     $request->updateDocumentRequest->documents = [
-        'quaerat',
+        'Northwest',
     ];
-    $request->updateDocumentRequest->index = 'tempora';
-    $request->updateDocumentRequest->project = 'vel';
-    $request->index = 'quod';
-    $request->project = 'officiis';
+    $request->updateDocumentRequest->index = 'West';
+    $request->updateDocumentRequest->project = 'Jewelery black Functionality';
+    $request->index = 'Market';
+    $request->project = 'Trans Ramp services';
 
     $response = $sdk->search->updateDocuments($request);
 
@@ -640,12 +641,12 @@ $sdk = SDK::builder()
 try {
     $request = new SearchCreateOrUpdateIndexRequest();
     $request->createOrUpdateIndexRequest = new CreateOrUpdateIndexRequest();
-    $request->createOrUpdateIndexRequest->name = 'Jan Wilderman';
+    $request->createOrUpdateIndexRequest->name = 'maiores when male';
     $request->createOrUpdateIndexRequest->onlyCreate = false;
-    $request->createOrUpdateIndexRequest->project = 'iusto';
-    $request->createOrUpdateIndexRequest->schema = 'ipsum';
-    $request->name = 'Saul Fay';
-    $request->project = 'numquam';
+    $request->createOrUpdateIndexRequest->project = 'eius optical West';
+    $request->createOrUpdateIndexRequest->schema = 'pointed';
+    $request->name = 'parse East Arsenic';
+    $request->project = 'capacity Bicycle';
 
     $response = $sdk->search->updateIndex($request);
 

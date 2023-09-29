@@ -1,4 +1,5 @@
 # System
+(*system*)
 
 ## Overview
 
@@ -200,19 +201,19 @@ try {
     $request->additionalFunctions = [
         new AdditionalFunction(),
     ];
-    $request->branch = 'enim';
-    $request->collection = 'dolorem';
-    $request->db = 'sapiente';
-    $request->from = 518201;
-    $request->function = QueryTimeSeriesMetricsRequestFunction::Count;
-    $request->metricName = 'sit';
-    $request->quantile = 7115.84;
+    $request->branch = 'Rubidium';
+    $request->collection = 'against regional state';
+    $request->db = 'bypassing where Card';
+    $request->from = 100390;
+    $request->function = QueryTimeSeriesMetricsRequestFunction::None;
+    $request->metricName = 'indexing';
+    $request->quantile = 3773.36;
     $request->spaceAggregatedBy = [
-        'neque',
+        'Germanium',
     ];
-    $request->spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation::Avg;
-    $request->tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation::Read;
-    $request->to = 730442;
+    $request->spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation::Sum;
+    $request->tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation::All;
+    $request->to = 773737;
 
     $response = $sdk->system->queryTimeSeriesMetrics($request);
 

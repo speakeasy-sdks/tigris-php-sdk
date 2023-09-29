@@ -1,4 +1,5 @@
 # Cache
+(*cache*)
 
 ## Overview
 
@@ -40,9 +41,9 @@ try {
     $request = new CacheCreateCacheRequest();
     $request->createCacheRequest = new CreateCacheRequest();
     $request->createCacheRequest->options = new CreateCacheOptions();
-    $request->createCacheRequest->options->ttlMs = 138183;
-    $request->name = 'Jimmy Wiegand';
-    $request->project = 'possimus';
+    $request->createCacheRequest->options->ttlMs = 481196;
+    $request->name = 'Tasty island Southwest';
+    $request->project = 'National Lauderhill';
 
     $response = $sdk->cache->create($request);
 
@@ -89,8 +90,8 @@ $sdk = SDK::builder()
 try {
     $request = new CacheDeleteCacheRequest();
     $request->deleteCacheRequest = new DeleteCacheRequest();
-    $request->name = 'Joyce Mueller';
-    $request->project = 'quasi';
+    $request->name = 'Architect Cotton port';
+    $request->project = 'qua';
 
     $response = $sdk->cache->delete($request);
 
@@ -137,9 +138,9 @@ $sdk = SDK::builder()
 try {
     $request = new CacheDelRequest();
     $request->delRequest = new DelRequest();
-    $request->key = 'reiciendis';
-    $request->name = 'Caleb Koss';
-    $request->project = 'ipsa';
+    $request->key = '<key>';
+    $request->name = 'man Seamless before';
+    $request->project = 'Diesel';
 
     $response = $sdk->cache->deleteKeys($request);
 
@@ -184,9 +185,9 @@ $sdk = SDK::builder()
 
 try {
     $request = new CacheGetRequest();
-    $request->key = 'omnis';
-    $request->name = 'Ms. Karla Aufderhar';
-    $request->project = 'maiores';
+    $request->key = '<key>';
+    $request->name = 'lux robust';
+    $request->project = 'index';
 
     $response = $sdk->cache->getKey($request);
 
@@ -233,10 +234,10 @@ $sdk = SDK::builder()
 try {
     $request = new CacheGetSetRequest();
     $request->getSetRequest = new GetSetRequest();
-    $request->getSetRequest->value = 'dicta';
-    $request->key = 'corporis';
-    $request->name = 'Heidi Carter';
-    $request->project = 'accusamus';
+    $request->getSetRequest->value = 'Bronze';
+    $request->key = '<key>';
+    $request->name = 'portal salmon';
+    $request->project = 'kelvin Harbors';
 
     $response = $sdk->cache->getSetKey($request);
 
@@ -281,7 +282,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new CacheListCachesRequest();
-    $request->project = 'commodi';
+    $request->project = 'Bronze Architect';
 
     $response = $sdk->cache->list($request);
 
@@ -326,11 +327,11 @@ $sdk = SDK::builder()
 
 try {
     $request = new CacheKeysRequest();
-    $request->count = 918236;
-    $request->cursor = 64147;
-    $request->name = 'Alison Mann';
-    $request->pattern = 'modi';
-    $request->project = 'praesentium';
+    $request->count = 618311;
+    $request->cursor = 739921;
+    $request->name = 'invoice pink';
+    $request->pattern = 'whose West vivid';
+    $request->project = 'compelling duh';
 
     $response = $sdk->cache->listKeys($request);
 
@@ -377,14 +378,14 @@ $sdk = SDK::builder()
 try {
     $request = new CacheSetRequest();
     $request->setRequest = new SetRequest();
-    $request->setRequest->ex = 523248;
+    $request->setRequest->ex = 170966;
     $request->setRequest->nx = false;
-    $request->setRequest->px = 916723;
-    $request->setRequest->value = 'quasi';
+    $request->setRequest->px = 17597;
+    $request->setRequest->value = 'monetize';
     $request->setRequest->xx = false;
-    $request->key = 'repudiandae';
-    $request->name = 'Patrick Ward';
-    $request->project = 'consequatur';
+    $request->key = '<key>';
+    $request->name = 'Shanahan Phased';
+    $request->project = 'Gasoline';
 
     $response = $sdk->cache->setKey($request);
 

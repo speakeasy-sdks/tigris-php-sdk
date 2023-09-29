@@ -20,9 +20,9 @@ try {
     $request = new CacheCreateCacheRequest();
     $request->createCacheRequest = new CreateCacheRequest();
     $request->createCacheRequest->options = new CreateCacheOptions();
-    $request->createCacheRequest->options->ttlMs = 548814;
-    $request->name = 'Kelvin Sporer';
-    $request->project = 'corrupti';
+    $request->createCacheRequest->options->ttlMs = 481196;
+    $request->name = 'Tasty island Southwest';
+    $request->project = 'National Lauderhill';
 
     $response = $sdk->cache->create($request);
 
