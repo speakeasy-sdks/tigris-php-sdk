@@ -30,7 +30,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Shared\CreateNamespaceRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -76,7 +80,11 @@ require_once 'vendor/autoload.php';
 use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -114,7 +122,11 @@ use \tigris\core\Models\Operations\ManagementGetNamespaceMetadataRequest;
 use \tigris\core\Models\Shared\GetNamespaceMetadataRequest;
 use \tigris\core\Models\Shared\GetNamespaceMetadataRequestValue;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -164,7 +176,11 @@ use \tigris\core\Models\Operations\ManagementInsertNamespaceMetadataRequest;
 use \tigris\core\Models\Shared\InsertNamespaceMetadataRequest;
 use \tigris\core\Models\Shared\InsertNamespaceMetadataRequestValue;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -211,7 +227,11 @@ require_once 'vendor/autoload.php';
 use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -249,7 +269,11 @@ use \tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataRequest;
 use \tigris\core\Models\Shared\UpdateNamespaceMetadataRequest;
 use \tigris\core\Models\Shared\UpdateNamespaceMetadataRequestValue;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

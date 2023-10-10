@@ -29,7 +29,11 @@ use \tigris\core\Models\Operations\ManagementGetUserMetadataRequest;
 use \tigris\core\Models\Shared\GetUserMetadataRequest;
 use \tigris\core\Models\Shared\GetUserMetadataRequestValue;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -79,7 +83,11 @@ use \tigris\core\Models\Operations\ManagementInsertUserMetadataRequest;
 use \tigris\core\Models\Shared\InsertUserMetadataRequest;
 use \tigris\core\Models\Shared\InsertUserMetadataRequestValue;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -129,7 +137,11 @@ use \tigris\core\Models\Operations\ManagementUpdateUserMetadataRequest;
 use \tigris\core\Models\Shared\UpdateUserMetadataRequest;
 use \tigris\core\Models\Shared\UpdateUserMetadataRequestValue;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

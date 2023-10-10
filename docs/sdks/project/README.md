@@ -28,7 +28,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisCreateProjectRequest;
 use \tigris\core\Models\Shared\CreateProjectRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -75,7 +79,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisDeleteProjectRequest;
 use \tigris\core\Models\Shared\DeleteProjectRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -120,7 +128,11 @@ require_once 'vendor/autoload.php';
 use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

@@ -30,7 +30,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\RealtimeGetRTChannelRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -76,7 +80,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\RealtimeReadMessagesRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -128,7 +136,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\RealtimeGetRTChannelsRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -173,7 +185,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\RealtimeListSubscriptionsRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -223,7 +239,11 @@ use \tigris\core\Models\Operations\RealtimeMessagesRequest;
 use \tigris\core\Models\Shared\MessagesRequest;
 use \tigris\core\Models\Shared\Message;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -275,7 +295,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\RealtimePresenceRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

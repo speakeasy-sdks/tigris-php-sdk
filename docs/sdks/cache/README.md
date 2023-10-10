@@ -34,7 +34,11 @@ use \tigris\core\Models\Operations\CacheCreateCacheRequest;
 use \tigris\core\Models\Shared\CreateCacheRequest;
 use \tigris\core\Models\Shared\CreateCacheOptions;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -84,7 +88,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\CacheDeleteCacheRequest;
 use \tigris\core\Models\Shared\DeleteCacheRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -132,7 +140,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\CacheDelRequest;
 use \tigris\core\Models\Shared\DelRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -180,7 +192,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\CacheGetRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -228,7 +244,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\CacheGetSetRequest;
 use \tigris\core\Models\Shared\GetSetRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -277,7 +297,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\CacheListCachesRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -322,7 +346,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\CacheKeysRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -372,7 +400,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\CacheSetRequest;
 use \tigris\core\Models\Shared\SetRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

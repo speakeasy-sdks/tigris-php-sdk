@@ -40,7 +40,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\SearchCreateByIdRequest;
 use \tigris\core\Models\Shared\CreateByIdRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -97,7 +101,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\SearchCreateRequest;
 use \tigris\core\Models\Shared\CreateDocumentRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -152,7 +160,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\SearchDeleteRequest;
 use \tigris\core\Models\Shared\DeleteDocumentRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -205,7 +217,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\SearchDeleteIndexRequest;
 use \tigris\core\Models\Shared\DeleteIndexRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -260,7 +276,11 @@ use \tigris\core\Models\Operations\SearchSearchRequest;
 use \tigris\core\Models\Shared\SearchIndexRequest;
 use \tigris\core\Models\Shared\Collation;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -327,7 +347,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\SearchGetRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -376,7 +400,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\SearchGetIndexRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -422,7 +450,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\SearchListIndexesRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -472,7 +504,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\SearchDeleteByQueryRequest;
 use \tigris\core\Models\Shared\DeleteByQueryRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -526,7 +562,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\SearchCreateOrReplaceRequest;
 use \tigris\core\Models\Shared\CreateOrReplaceDocumentRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -582,7 +622,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\SearchUpdateRequest;
 use \tigris\core\Models\Shared\UpdateDocumentRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -635,7 +679,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\SearchCreateOrUpdateIndexRequest;
 use \tigris\core\Models\Shared\CreateOrUpdateIndexRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

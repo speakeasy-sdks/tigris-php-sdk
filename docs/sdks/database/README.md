@@ -36,7 +36,11 @@ use \tigris\core\Models\Operations\TigrisBeginTransactionRequest;
 use \tigris\core\Models\Shared\BeginTransactionRequest;
 use \tigris\core\Models\Shared\TransactionOptions;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -86,7 +90,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisCommitTransactionRequest;
 use \tigris\core\Models\Shared\CommitTransactionRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -134,7 +142,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisCreateBranchRequest;
 use \tigris\core\Models\Shared\CreateBranchRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -183,7 +195,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisDeleteBranchRequest;
 use \tigris\core\Models\Shared\DeleteBranchRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -232,7 +248,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisDescribeDatabaseRequest;
 use \tigris\core\Models\Shared\DescribeDatabaseRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -281,7 +301,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisListCollectionsRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -329,7 +353,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisRollbackTransactionRequest;
 use \tigris\core\Models\Shared\RollbackTransactionRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -376,7 +404,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisListBranchesRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

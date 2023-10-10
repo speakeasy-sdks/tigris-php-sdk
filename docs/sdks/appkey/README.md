@@ -30,7 +30,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisDeleteAppKeyRequest;
 use \tigris\core\Models\Shared\DeleteAppKeyRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -77,7 +81,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisListAppKeysRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -123,7 +131,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisRotateAppKeySecretRequest;
 use \tigris\core\Models\Shared\RotateAppKeyRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -172,7 +184,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisCreateAppKeyRequest;
 use \tigris\core\Models\Shared\CreateAppKeyRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -221,7 +237,11 @@ use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Operations\TigrisUpdateAppKeyRequest;
 use \tigris\core\Models\Shared\UpdateAppKeyRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

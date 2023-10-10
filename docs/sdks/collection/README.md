@@ -41,7 +41,11 @@ use \tigris\core\Models\Shared\CreateOrUpdateCollectionRequest;
 use \tigris\core\Models\Shared\CollectionOptions;
 use \tigris\core\Models\Shared\CreateOrUpdateCollectionRequestSchema;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -97,7 +101,11 @@ use \tigris\core\Models\Shared\DeleteRequestOptions;
 use \tigris\core\Models\Shared\Collation;
 use \tigris\core\Models\Shared\WriteOptions;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -153,7 +161,11 @@ use \tigris\core\Models\Operations\TigrisDescribeCollectionRequest;
 use \tigris\core\Models\Shared\DescribeCollectionRequest;
 use \tigris\core\Models\Shared\CollectionOptions;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -208,7 +220,11 @@ use \tigris\core\Models\Operations\TigrisDropCollectionRequest;
 use \tigris\core\Models\Shared\DropCollectionRequest;
 use \tigris\core\Models\Shared\CollectionOptions;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -266,7 +282,11 @@ use \tigris\core\Models\Shared\ImportRequestDocuments;
 use \tigris\core\Models\Shared\ImportRequestOptions;
 use \tigris\core\Models\Shared\WriteOptions;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -332,7 +352,11 @@ use \tigris\core\Models\Shared\InsertRequestDocuments;
 use \tigris\core\Models\Shared\InsertRequestOptions;
 use \tigris\core\Models\Shared\WriteOptions;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -395,7 +419,11 @@ use \tigris\core\Models\Shared\ReadRequestFilter;
 use \tigris\core\Models\Shared\ReadRequestOptions;
 use \tigris\core\Models\Shared\Collation;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -456,7 +484,11 @@ use \tigris\core\Models\Shared\ReplaceRequestDocuments;
 use \tigris\core\Models\Shared\ReplaceRequestOptions;
 use \tigris\core\Models\Shared\WriteOptions;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -518,7 +550,11 @@ use \tigris\core\Models\Shared\SearchRequestFields;
 use \tigris\core\Models\Shared\SearchRequestFilter;
 use \tigris\core\Models\Shared\SearchRequestSort;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -590,7 +626,11 @@ use \tigris\core\Models\Shared\UpdateRequestOptions;
 use \tigris\core\Models\Shared\Collation;
 use \tigris\core\Models\Shared\WriteOptions;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

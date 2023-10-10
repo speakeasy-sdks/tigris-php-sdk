@@ -26,7 +26,11 @@ require_once 'vendor/autoload.php';
 use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {

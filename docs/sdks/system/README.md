@@ -28,7 +28,11 @@ require_once 'vendor/autoload.php';
 use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -63,7 +67,11 @@ require_once 'vendor/autoload.php';
 use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -99,7 +107,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Shared\QuotaUsageRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -143,7 +155,11 @@ use \tigris\core\SDK;
 use \tigris\core\Models\Shared\Security;
 use \tigris\core\Models\Shared\QuotaLimitsRequest;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
@@ -193,7 +209,11 @@ use \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestFunction;
 use \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestSpaceAggregation;
 use \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestTigrisOperation;
 
+$security = new Security();
+$security->bearerAuth = '';
+
 $sdk = SDK::builder()
+    ->setSecurity($security)
     ->build();
 
 try {
