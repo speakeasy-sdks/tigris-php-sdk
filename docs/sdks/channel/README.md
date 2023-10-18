@@ -39,8 +39,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimeGetRTChannelRequest();
-    $request->channel = 'Group Cambridgeshire';
-    $request->project = 'reintermediate fuchsia Planner';
+    $request->channel = 'motivating';
+    $request->project = 'Account';
 
     $response = $sdk->channel->get($request);
 
@@ -89,14 +89,14 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimeReadMessagesRequest();
-    $request->channel = 'parallelism';
-    $request->end = 'sympathetic array';
-    $request->event = 'withdrawal';
-    $request->limit = 451433;
-    $request->project = 'Account';
-    $request->sessionId = 'Northeast';
-    $request->socketId = 'green';
-    $request->start = 'Rock Automotive Grove';
+    $request->channel = 'East';
+    $request->end = 'Platinum';
+    $request->event = 'sympathetic';
+    $request->limit = 537241;
+    $request->project = 'asymmetric';
+    $request->sessionId = 'withdrawal';
+    $request->socketId = 'withdrawal';
+    $request->start = 'Account';
 
     $response = $sdk->channel->getMessages($request);
 
@@ -145,7 +145,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimeGetRTChannelsRequest();
-    $request->project = 'Bronze Architect';
+    $request->project = 'Future';
 
     $response = $sdk->channel->list($request);
 
@@ -194,10 +194,10 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimeListSubscriptionsRequest();
-    $request->channel = 'UTF8 doting Brazil';
-    $request->page = 980290;
-    $request->pageSize = 408746;
-    $request->project = 'Crew';
+    $request->channel = 'internationalise';
+    $request->page = 909851;
+    $request->pageSize = 863205;
+    $request->project = 'Car';
 
     $response = $sdk->channel->listSubscriptions($request);
 
@@ -249,13 +249,13 @@ $sdk = SDK::builder()
 try {
     $request = new RealtimeMessagesRequest();
     $request->messagesRequest = new MessagesRequest();
-    $request->messagesRequest->channel = 'Representative Manager';
+    $request->messagesRequest->channel = 'payment';
     $request->messagesRequest->messages = [
         new Message(),
     ];
-    $request->messagesRequest->project = 'Man';
-    $request->channel = 'phew';
-    $request->project = 'Concrete';
+    $request->messagesRequest->project = 'pronoun';
+    $request->channel = 'Elegant';
+    $request->project = 'Man';
 
     $response = $sdk->channel->pushMessages($request);
 
@@ -304,8 +304,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimePresenceRequest();
-    $request->channel = 'orchid AI second';
-    $request->project = 'thankful Consultant';
+    $request->channel = 'successfully';
+    $request->project = 'Applications';
 
     $response = $sdk->channel->realtimePresence($request);
 

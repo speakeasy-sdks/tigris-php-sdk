@@ -46,8 +46,8 @@ try {
     $request->createCacheRequest = new CreateCacheRequest();
     $request->createCacheRequest->options = new CreateCacheOptions();
     $request->createCacheRequest->options->ttlMs = 481196;
-    $request->name = 'Tasty island Southwest';
-    $request->project = 'National Lauderhill';
+    $request->name = 'Electric';
+    $request->project = 'pirouette';
 
     $response = $sdk->cache->create($request);
 
@@ -98,8 +98,8 @@ $sdk = SDK::builder()
 try {
     $request = new CacheDeleteCacheRequest();
     $request->deleteCacheRequest = new DeleteCacheRequest();
-    $request->name = 'Architect Cotton port';
-    $request->project = 'qua';
+    $request->name = 'roughly';
+    $request->project = 'EXE';
 
     $response = $sdk->cache->delete($request);
 
@@ -151,8 +151,8 @@ try {
     $request = new CacheDelRequest();
     $request->delRequest = new DelRequest();
     $request->key = '<key>';
-    $request->name = 'man Seamless before';
-    $request->project = 'Diesel';
+    $request->name = 'Orchestrator';
+    $request->project = 'gray';
 
     $response = $sdk->cache->deleteKeys($request);
 
@@ -202,8 +202,8 @@ $sdk = SDK::builder()
 try {
     $request = new CacheGetRequest();
     $request->key = '<key>';
-    $request->name = 'lux robust';
-    $request->project = 'index';
+    $request->name = 'man';
+    $request->project = 'robust';
 
     $response = $sdk->cache->getKey($request);
 
@@ -254,10 +254,10 @@ $sdk = SDK::builder()
 try {
     $request = new CacheGetSetRequest();
     $request->getSetRequest = new GetSetRequest();
-    $request->getSetRequest->value = 'Bronze';
+    $request->getSetRequest->value = 'black';
     $request->key = '<key>';
-    $request->name = 'portal salmon';
-    $request->project = 'kelvin Harbors';
+    $request->name = 'Direct';
+    $request->project = 'deleniti';
 
     $response = $sdk->cache->getSetKey($request);
 
@@ -306,7 +306,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new CacheListCachesRequest();
-    $request->project = 'Bronze Architect';
+    $request->project = 'Future';
 
     $response = $sdk->cache->list($request);
 
@@ -357,9 +357,9 @@ try {
     $request = new CacheKeysRequest();
     $request->count = 618311;
     $request->cursor = 739921;
-    $request->name = 'invoice pink';
-    $request->pattern = 'whose West vivid';
-    $request->project = 'compelling duh';
+    $request->name = 'withdrawal';
+    $request->pattern = 'deliberately';
+    $request->project = 'Synchronised';
 
     $response = $sdk->cache->listKeys($request);
 
@@ -413,11 +413,11 @@ try {
     $request->setRequest->ex = 170966;
     $request->setRequest->nx = false;
     $request->setRequest->px = 17597;
-    $request->setRequest->value = 'monetize';
+    $request->setRequest->value = 'Gloves';
     $request->setRequest->xx = false;
     $request->key = '<key>';
-    $request->name = 'Shanahan Phased';
-    $request->project = 'Gasoline';
+    $request->name = 'synergize';
+    $request->project = 'Shanahan';
 
     $response = $sdk->cache->setKey($request);
 

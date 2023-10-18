@@ -41,7 +41,7 @@ try {
     $request = new CreateNamespaceRequest();
     $request->code = 481196;
     $request->id = '<ID>';
-    $request->name = 'Tasty island Southwest';
+    $request->name = 'Electric';
 
     $response = $sdk->namespace->create($request);
 
@@ -132,9 +132,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementGetNamespaceMetadataRequest();
     $request->getNamespaceMetadataRequest = new GetNamespaceMetadataRequest();
-    $request->getNamespaceMetadataRequest->metadataKey = 'or Plastic';
+    $request->getNamespaceMetadataRequest->metadataKey = 'Chief';
     $request->getNamespaceMetadataRequest->value = new GetNamespaceMetadataRequestValue();
-    $request->metadataKey = 'offensively Electric';
+    $request->metadataKey = 'port';
 
     $response = $sdk->namespace->getMetadata($request);
 
@@ -186,9 +186,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementInsertNamespaceMetadataRequest();
     $request->insertNamespaceMetadataRequest = new InsertNamespaceMetadataRequest();
-    $request->insertNamespaceMetadataRequest->metadataKey = 'Curve Liaison calculate';
+    $request->insertNamespaceMetadataRequest->metadataKey = 'Diesel';
     $request->insertNamespaceMetadataRequest->value = new InsertNamespaceMetadataRequestValue();
-    $request->metadataKey = 'female Tantalum';
+    $request->metadataKey = 'Developer';
 
     $response = $sdk->namespace->insertMetadata($request);
 
@@ -279,9 +279,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementUpdateNamespaceMetadataRequest();
     $request->updateNamespaceMetadataRequest = new UpdateNamespaceMetadataRequest();
-    $request->updateNamespaceMetadataRequest->metadataKey = 'platforms Concrete Tempe';
+    $request->updateNamespaceMetadataRequest->metadataKey = 'fate';
     $request->updateNamespaceMetadataRequest->value = new UpdateNamespaceMetadataRequestValue();
-    $request->metadataKey = 'transmitting Silicon North';
+    $request->metadataKey = 'Illinois';
 
     $response = $sdk->namespace->updateMetadata($request);
 

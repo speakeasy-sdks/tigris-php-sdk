@@ -39,9 +39,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementGetUserMetadataRequest();
     $request->getUserMetadataRequest = new GetUserMetadataRequest();
-    $request->getUserMetadataRequest->metadataKey = 'or Plastic';
+    $request->getUserMetadataRequest->metadataKey = 'Chief';
     $request->getUserMetadataRequest->value = new GetUserMetadataRequestValue();
-    $request->metadataKey = 'offensively Electric';
+    $request->metadataKey = 'port';
 
     $response = $sdk->user->getMetadata($request);
 
@@ -93,9 +93,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementInsertUserMetadataRequest();
     $request->insertUserMetadataRequest = new InsertUserMetadataRequest();
-    $request->insertUserMetadataRequest->metadataKey = 'Curve Liaison calculate';
+    $request->insertUserMetadataRequest->metadataKey = 'Diesel';
     $request->insertUserMetadataRequest->value = new InsertUserMetadataRequestValue();
-    $request->metadataKey = 'female Tantalum';
+    $request->metadataKey = 'Developer';
 
     $response = $sdk->user->insertMetadata($request);
 
@@ -147,9 +147,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementUpdateUserMetadataRequest();
     $request->updateUserMetadataRequest = new UpdateUserMetadataRequest();
-    $request->updateUserMetadataRequest->metadataKey = 'platforms Concrete Tempe';
+    $request->updateUserMetadataRequest->metadataKey = 'fate';
     $request->updateUserMetadataRequest->value = new UpdateUserMetadataRequestValue();
-    $request->metadataKey = 'transmitting Silicon North';
+    $request->metadataKey = 'Illinois';
 
     $response = $sdk->user->updateMetadata($request);
 

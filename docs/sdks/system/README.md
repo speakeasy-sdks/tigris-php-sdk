@@ -221,19 +221,19 @@ try {
     $request->additionalFunctions = [
         new AdditionalFunction(),
     ];
-    $request->branch = 'Rubidium';
-    $request->collection = 'against regional state';
-    $request->db = 'bypassing where Card';
-    $request->from = 100390;
+    $request->branch = 'Concrete';
+    $request->collection = 'Codes';
+    $request->db = 'regional';
+    $request->from = 498326;
     $request->function = QueryTimeSeriesMetricsRequestFunction::None;
-    $request->metricName = 'indexing';
-    $request->quantile = 3773.36;
+    $request->metricName = 'transmit';
+    $request->quantile = 5070.51;
     $request->spaceAggregatedBy = [
-        'Germanium',
+        'Southwest',
     ];
     $request->spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation::Sum;
-    $request->tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation::All;
-    $request->to = 773737;
+    $request->tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation::Read;
+    $request->to = 741757;
 
     $response = $sdk->system->queryTimeSeriesMetrics($request);
 

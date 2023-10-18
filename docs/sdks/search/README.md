@@ -50,13 +50,13 @@ $sdk = SDK::builder()
 try {
     $request = new SearchCreateByIdRequest();
     $request->createByIdRequest = new CreateByIdRequest();
-    $request->createByIdRequest->document = 'Radon mRNA female';
+    $request->createByIdRequest->document = 'Bicycle';
     $request->createByIdRequest->id = '<ID>';
-    $request->createByIdRequest->index = 'Electric pioneer';
-    $request->createByIdRequest->project = 'Rock';
+    $request->createByIdRequest->index = 'mRNA';
+    $request->createByIdRequest->project = 'female';
     $request->id = '<ID>';
-    $request->index = 'cyan';
-    $request->project = 'Tesla Concrete Metrics';
+    $request->index = 'Internal';
+    $request->project = 'Palladium';
 
     $response = $sdk->search->createDocument($request);
 
@@ -112,12 +112,12 @@ try {
     $request = new SearchCreateRequest();
     $request->createDocumentRequest = new CreateDocumentRequest();
     $request->createDocumentRequest->documents = [
-        'Assistant',
+        'Ohio',
     ];
-    $request->createDocumentRequest->index = 'Cadmium monitor West';
-    $request->createDocumentRequest->project = 'majestically Israeli';
-    $request->index = 'Northeast Tala Plastic';
-    $request->project = 'tempting Iron South';
+    $request->createDocumentRequest->index = 'Toyota';
+    $request->createDocumentRequest->project = 'Cadmium';
+    $request->index = 'monitor';
+    $request->project = 'West';
 
     $response = $sdk->search->createDocuments($request);
 
@@ -173,10 +173,10 @@ try {
     $request->deleteDocumentRequest->ids = [
         'times',
     ];
-    $request->deleteDocumentRequest->index = 'consequently';
-    $request->deleteDocumentRequest->project = 'Plastic Samarium Programmable';
-    $request->index = 'likewise Awesome turquoise';
-    $request->project = 'North Handmade lime';
+    $request->deleteDocumentRequest->index = 'Southwest';
+    $request->deleteDocumentRequest->project = 'Glover';
+    $request->index = 'Planner';
+    $request->project = 'Samarium';
 
     $response = $sdk->search->deleteDocuments($request);
 
@@ -227,10 +227,10 @@ $sdk = SDK::builder()
 try {
     $request = new SearchDeleteIndexRequest();
     $request->deleteIndexRequest = new DeleteIndexRequest();
-    $request->deleteIndexRequest->name = 'New Tandem Romania';
-    $request->deleteIndexRequest->project = 'Executive minor Brooklyn';
-    $request->name = 'however Trans woman';
-    $request->project = 'standardization National bait';
+    $request->deleteIndexRequest->name = 'Liaison';
+    $request->deleteIndexRequest->project = 'Marketing';
+    $request->name = 'Tandem';
+    $request->project = 'Romania';
 
     $response = $sdk->search->deleteIndex($request);
 
@@ -287,26 +287,26 @@ try {
     $request = new SearchSearchRequest();
     $request->searchIndexRequest = new SearchIndexRequest();
     $request->searchIndexRequest->collation = new Collation();
-    $request->searchIndexRequest->collation->case = 'deify';
+    $request->searchIndexRequest->collation->case = 'Cambridgeshire';
     $request->searchIndexRequest->excludeFields = [
-        'how',
+        'Unbranded',
     ];
-    $request->searchIndexRequest->facet = 'Tesla Stage Salad';
-    $request->searchIndexRequest->filter = 'Senior Terbium';
+    $request->searchIndexRequest->facet = 'Soft';
+    $request->searchIndexRequest->filter = 'green';
     $request->searchIndexRequest->includeFields = [
+        'Salad',
+    ];
+    $request->searchIndexRequest->index = 'dolorum';
+    $request->searchIndexRequest->page = 72323;
+    $request->searchIndexRequest->pageSize = 732983;
+    $request->searchIndexRequest->project = 'capitalism';
+    $request->searchIndexRequest->q = 'Terbium';
+    $request->searchIndexRequest->searchFields = [
         'World',
     ];
-    $request->searchIndexRequest->index = 'that so volt';
-    $request->searchIndexRequest->page = 337935;
-    $request->searchIndexRequest->pageSize = 65006;
-    $request->searchIndexRequest->project = 'degree Indiana infomediaries';
-    $request->searchIndexRequest->q = 'Diesel';
-    $request->searchIndexRequest->searchFields = [
-        'Southeast',
-    ];
-    $request->searchIndexRequest->sort = 'Buckinghamshire woot Steel';
-    $request->index = 'Guiana Rock deliverables';
-    $request->project = 'yum by 24/7';
+    $request->searchIndexRequest->sort = 'Trial';
+    $request->index = 'so';
+    $request->project = 'volt';
 
     $response = $sdk->search->findDocuments($request);
 
@@ -359,8 +359,8 @@ try {
     $request->ids = [
         'turquoise',
     ];
-    $request->index = 'Loan Northwest';
-    $request->project = 'Bugatti Federation';
+    $request->index = 'navigating';
+    $request->project = 'generating';
 
     $response = $sdk->search->getDocuments($request);
 
@@ -409,8 +409,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new SearchGetIndexRequest();
-    $request->name = 'reboot female';
-    $request->project = 'male';
+    $request->name = 'woman';
+    $request->project = 'female';
 
     $response = $sdk->search->getIndex($request);
 
@@ -459,10 +459,10 @@ $sdk = SDK::builder()
 
 try {
     $request = new SearchListIndexesRequest();
-    $request->filterBranch = 'dynamic';
-    $request->filterCollection = 'bolívar Flat';
-    $request->filterType = 'Officer Franc Denar';
-    $request->project = 'Mountain SUV';
+    $request->filterBranch = 'Avon';
+    $request->filterCollection = 'executive';
+    $request->filterType = 'harness';
+    $request->project = 'bolívar';
 
     $response = $sdk->search->listIndexes($request);
 
@@ -514,11 +514,11 @@ $sdk = SDK::builder()
 try {
     $request = new SearchDeleteByQueryRequest();
     $request->deleteByQueryRequest = new DeleteByQueryRequest();
-    $request->deleteByQueryRequest->filter = 'visible whose IB';
-    $request->deleteByQueryRequest->index = 'Wyoming';
-    $request->deleteByQueryRequest->project = 'Diesel male';
-    $request->index = 'Table Ytterbium';
-    $request->project = 'harness';
+    $request->deleteByQueryRequest->filter = 'unnaturally';
+    $request->deleteByQueryRequest->index = 'zowie';
+    $request->deleteByQueryRequest->project = 'jet';
+    $request->index = 'budgetary';
+    $request->project = 'nag';
 
     $response = $sdk->search->queryDeleteDocuments($request);
 
@@ -573,12 +573,12 @@ try {
     $request = new SearchCreateOrReplaceRequest();
     $request->createOrReplaceDocumentRequest = new CreateOrReplaceDocumentRequest();
     $request->createOrReplaceDocumentRequest->documents = [
-        'female West Southeast',
+        'male',
     ];
-    $request->createOrReplaceDocumentRequest->index = 'Total phew';
-    $request->createOrReplaceDocumentRequest->project = 'gee Coupe Bicycle';
-    $request->index = 'Chief';
-    $request->project = 'coolly Bicycle temporibus';
+    $request->createOrReplaceDocumentRequest->index = 'Avon';
+    $request->createOrReplaceDocumentRequest->project = 'before';
+    $request->index = 'great';
+    $request->project = 'Total';
 
     $response = $sdk->search->replaceDocuments($request);
 
@@ -633,12 +633,12 @@ try {
     $request = new SearchUpdateRequest();
     $request->updateDocumentRequest = new UpdateDocumentRequest();
     $request->updateDocumentRequest->documents = [
-        'Northwest',
+        'revolutionary',
     ];
-    $request->updateDocumentRequest->index = 'West';
-    $request->updateDocumentRequest->project = 'Jewelery black Functionality';
-    $request->index = 'Market';
-    $request->project = 'Trans Ramp services';
+    $request->updateDocumentRequest->index = 'Strategist';
+    $request->updateDocumentRequest->project = 'Jewelery';
+    $request->index = 'black';
+    $request->project = 'Functionality';
 
     $response = $sdk->search->updateDocuments($request);
 
@@ -689,12 +689,12 @@ $sdk = SDK::builder()
 try {
     $request = new SearchCreateOrUpdateIndexRequest();
     $request->createOrUpdateIndexRequest = new CreateOrUpdateIndexRequest();
-    $request->createOrUpdateIndexRequest->name = 'maiores when male';
+    $request->createOrUpdateIndexRequest->name = 'Agent';
     $request->createOrUpdateIndexRequest->onlyCreate = false;
-    $request->createOrUpdateIndexRequest->project = 'eius optical West';
-    $request->createOrUpdateIndexRequest->schema = 'pointed';
-    $request->name = 'parse East Arsenic';
-    $request->project = 'capacity Bicycle';
+    $request->createOrUpdateIndexRequest->project = 'male';
+    $request->createOrUpdateIndexRequest->schema = 'Land';
+    $request->name = 'optical';
+    $request->project = 'West';
 
     $response = $sdk->search->updateIndex($request);
 
