@@ -221,19 +221,19 @@ try {
     $request->additionalFunctions = [
         new AdditionalFunction(),
     ];
-    $request->branch = 'Concrete';
-    $request->collection = 'Codes';
-    $request->db = 'regional';
-    $request->from = 498326;
+    $request->branch = 'string';
+    $request->collection = 'string';
+    $request->db = 'string';
+    $request->from = 262768;
     $request->function = QueryTimeSeriesMetricsRequestFunction::None;
-    $request->metricName = 'transmit';
-    $request->quantile = 5070.51;
+    $request->metricName = 'string';
+    $request->quantile = 3054.25;
     $request->spaceAggregatedBy = [
-        'Southwest',
+        'string',
     ];
-    $request->spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation::Sum;
+    $request->spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation::Max;
     $request->tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation::Read;
-    $request->to = 741757;
+    $request->to = 424991;
 
     $response = $sdk->system->queryTimeSeriesMetrics($request);
 

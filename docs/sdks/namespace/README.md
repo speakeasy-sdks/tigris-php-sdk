@@ -41,7 +41,7 @@ try {
     $request = new CreateNamespaceRequest();
     $request->code = 481196;
     $request->id = '<ID>';
-    $request->name = 'Electric';
+    $request->name = 'string';
 
     $response = $sdk->namespace->create($request);
 
@@ -132,9 +132,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementGetNamespaceMetadataRequest();
     $request->getNamespaceMetadataRequest = new GetNamespaceMetadataRequest();
-    $request->getNamespaceMetadataRequest->metadataKey = 'Chief';
+    $request->getNamespaceMetadataRequest->metadataKey = 'string';
     $request->getNamespaceMetadataRequest->value = new GetNamespaceMetadataRequestValue();
-    $request->metadataKey = 'port';
+    $request->metadataKey = 'string';
 
     $response = $sdk->namespace->getMetadata($request);
 
@@ -186,9 +186,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementInsertNamespaceMetadataRequest();
     $request->insertNamespaceMetadataRequest = new InsertNamespaceMetadataRequest();
-    $request->insertNamespaceMetadataRequest->metadataKey = 'Diesel';
+    $request->insertNamespaceMetadataRequest->metadataKey = 'string';
     $request->insertNamespaceMetadataRequest->value = new InsertNamespaceMetadataRequestValue();
-    $request->metadataKey = 'Developer';
+    $request->metadataKey = 'string';
 
     $response = $sdk->namespace->insertMetadata($request);
 
@@ -279,9 +279,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementUpdateNamespaceMetadataRequest();
     $request->updateNamespaceMetadataRequest = new UpdateNamespaceMetadataRequest();
-    $request->updateNamespaceMetadataRequest->metadataKey = 'fate';
+    $request->updateNamespaceMetadataRequest->metadataKey = 'string';
     $request->updateNamespaceMetadataRequest->value = new UpdateNamespaceMetadataRequestValue();
-    $request->metadataKey = 'Illinois';
+    $request->metadataKey = 'string';
 
     $response = $sdk->namespace->updateMetadata($request);
 

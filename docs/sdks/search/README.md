@@ -50,13 +50,13 @@ $sdk = SDK::builder()
 try {
     $request = new SearchCreateByIdRequest();
     $request->createByIdRequest = new CreateByIdRequest();
-    $request->createByIdRequest->document = 'Bicycle';
+    $request->createByIdRequest->document = 'string';
     $request->createByIdRequest->id = '<ID>';
-    $request->createByIdRequest->index = 'mRNA';
-    $request->createByIdRequest->project = 'female';
+    $request->createByIdRequest->index = 'string';
+    $request->createByIdRequest->project = 'string';
     $request->id = '<ID>';
-    $request->index = 'Internal';
-    $request->project = 'Palladium';
+    $request->index = 'string';
+    $request->project = 'string';
 
     $response = $sdk->search->createDocument($request);
 
@@ -112,12 +112,12 @@ try {
     $request = new SearchCreateRequest();
     $request->createDocumentRequest = new CreateDocumentRequest();
     $request->createDocumentRequest->documents = [
-        'Ohio',
+        'string',
     ];
-    $request->createDocumentRequest->index = 'Toyota';
-    $request->createDocumentRequest->project = 'Cadmium';
-    $request->index = 'monitor';
-    $request->project = 'West';
+    $request->createDocumentRequest->index = 'string';
+    $request->createDocumentRequest->project = 'string';
+    $request->index = 'string';
+    $request->project = 'string';
 
     $response = $sdk->search->createDocuments($request);
 
@@ -171,12 +171,12 @@ try {
     $request = new SearchDeleteRequest();
     $request->deleteDocumentRequest = new DeleteDocumentRequest();
     $request->deleteDocumentRequest->ids = [
-        'times',
+        'string',
     ];
-    $request->deleteDocumentRequest->index = 'Southwest';
-    $request->deleteDocumentRequest->project = 'Glover';
-    $request->index = 'Planner';
-    $request->project = 'Samarium';
+    $request->deleteDocumentRequest->index = 'string';
+    $request->deleteDocumentRequest->project = 'string';
+    $request->index = 'string';
+    $request->project = 'string';
 
     $response = $sdk->search->deleteDocuments($request);
 
@@ -227,10 +227,10 @@ $sdk = SDK::builder()
 try {
     $request = new SearchDeleteIndexRequest();
     $request->deleteIndexRequest = new DeleteIndexRequest();
-    $request->deleteIndexRequest->name = 'Liaison';
-    $request->deleteIndexRequest->project = 'Marketing';
-    $request->name = 'Tandem';
-    $request->project = 'Romania';
+    $request->deleteIndexRequest->name = 'string';
+    $request->deleteIndexRequest->project = 'string';
+    $request->name = 'string';
+    $request->project = 'string';
 
     $response = $sdk->search->deleteIndex($request);
 
@@ -287,26 +287,26 @@ try {
     $request = new SearchSearchRequest();
     $request->searchIndexRequest = new SearchIndexRequest();
     $request->searchIndexRequest->collation = new Collation();
-    $request->searchIndexRequest->collation->case = 'Cambridgeshire';
+    $request->searchIndexRequest->collation->case = 'string';
     $request->searchIndexRequest->excludeFields = [
-        'Unbranded',
+        'string',
     ];
-    $request->searchIndexRequest->facet = 'Soft';
-    $request->searchIndexRequest->filter = 'green';
+    $request->searchIndexRequest->facet = 'string';
+    $request->searchIndexRequest->filter = 'string';
     $request->searchIndexRequest->includeFields = [
-        'Salad',
+        'string',
     ];
-    $request->searchIndexRequest->index = 'dolorum';
-    $request->searchIndexRequest->page = 72323;
-    $request->searchIndexRequest->pageSize = 732983;
-    $request->searchIndexRequest->project = 'capitalism';
-    $request->searchIndexRequest->q = 'Terbium';
+    $request->searchIndexRequest->index = 'string';
+    $request->searchIndexRequest->page = 71364;
+    $request->searchIndexRequest->pageSize = 998280;
+    $request->searchIndexRequest->project = 'string';
+    $request->searchIndexRequest->q = 'string';
     $request->searchIndexRequest->searchFields = [
-        'World',
+        'string',
     ];
-    $request->searchIndexRequest->sort = 'Trial';
-    $request->index = 'so';
-    $request->project = 'volt';
+    $request->searchIndexRequest->sort = 'string';
+    $request->index = 'string';
+    $request->project = 'string';
 
     $response = $sdk->search->findDocuments($request);
 
@@ -357,10 +357,10 @@ $sdk = SDK::builder()
 try {
     $request = new SearchGetRequest();
     $request->ids = [
-        'turquoise',
+        'string',
     ];
-    $request->index = 'navigating';
-    $request->project = 'generating';
+    $request->index = 'string';
+    $request->project = 'string';
 
     $response = $sdk->search->getDocuments($request);
 
@@ -409,8 +409,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new SearchGetIndexRequest();
-    $request->name = 'woman';
-    $request->project = 'female';
+    $request->name = 'string';
+    $request->project = 'string';
 
     $response = $sdk->search->getIndex($request);
 
@@ -459,10 +459,10 @@ $sdk = SDK::builder()
 
 try {
     $request = new SearchListIndexesRequest();
-    $request->filterBranch = 'Avon';
-    $request->filterCollection = 'executive';
-    $request->filterType = 'harness';
-    $request->project = 'bolívar';
+    $request->filterBranch = 'string';
+    $request->filterCollection = 'string';
+    $request->filterType = 'string';
+    $request->project = 'string';
 
     $response = $sdk->search->listIndexes($request);
 
@@ -514,11 +514,11 @@ $sdk = SDK::builder()
 try {
     $request = new SearchDeleteByQueryRequest();
     $request->deleteByQueryRequest = new DeleteByQueryRequest();
-    $request->deleteByQueryRequest->filter = 'unnaturally';
-    $request->deleteByQueryRequest->index = 'zowie';
-    $request->deleteByQueryRequest->project = 'jet';
-    $request->index = 'budgetary';
-    $request->project = 'nag';
+    $request->deleteByQueryRequest->filter = 'string';
+    $request->deleteByQueryRequest->index = 'string';
+    $request->deleteByQueryRequest->project = 'string';
+    $request->index = 'string';
+    $request->project = 'string';
 
     $response = $sdk->search->queryDeleteDocuments($request);
 
@@ -573,12 +573,12 @@ try {
     $request = new SearchCreateOrReplaceRequest();
     $request->createOrReplaceDocumentRequest = new CreateOrReplaceDocumentRequest();
     $request->createOrReplaceDocumentRequest->documents = [
-        'male',
+        'string',
     ];
-    $request->createOrReplaceDocumentRequest->index = 'Avon';
-    $request->createOrReplaceDocumentRequest->project = 'before';
-    $request->index = 'great';
-    $request->project = 'Total';
+    $request->createOrReplaceDocumentRequest->index = 'string';
+    $request->createOrReplaceDocumentRequest->project = 'string';
+    $request->index = 'string';
+    $request->project = 'string';
 
     $response = $sdk->search->replaceDocuments($request);
 
@@ -633,12 +633,12 @@ try {
     $request = new SearchUpdateRequest();
     $request->updateDocumentRequest = new UpdateDocumentRequest();
     $request->updateDocumentRequest->documents = [
-        'revolutionary',
+        'string',
     ];
-    $request->updateDocumentRequest->index = 'Strategist';
-    $request->updateDocumentRequest->project = 'Jewelery';
-    $request->index = 'black';
-    $request->project = 'Functionality';
+    $request->updateDocumentRequest->index = 'string';
+    $request->updateDocumentRequest->project = 'string';
+    $request->index = 'string';
+    $request->project = 'string';
 
     $response = $sdk->search->updateDocuments($request);
 
@@ -689,12 +689,12 @@ $sdk = SDK::builder()
 try {
     $request = new SearchCreateOrUpdateIndexRequest();
     $request->createOrUpdateIndexRequest = new CreateOrUpdateIndexRequest();
-    $request->createOrUpdateIndexRequest->name = 'Agent';
+    $request->createOrUpdateIndexRequest->name = 'string';
     $request->createOrUpdateIndexRequest->onlyCreate = false;
-    $request->createOrUpdateIndexRequest->project = 'male';
-    $request->createOrUpdateIndexRequest->schema = 'Land';
-    $request->name = 'optical';
-    $request->project = 'West';
+    $request->createOrUpdateIndexRequest->project = 'string';
+    $request->createOrUpdateIndexRequest->schema = 'string';
+    $request->name = 'string';
+    $request->project = 'string';
 
     $response = $sdk->search->updateIndex($request);
 

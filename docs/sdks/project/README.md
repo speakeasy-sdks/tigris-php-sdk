@@ -38,7 +38,7 @@ $sdk = SDK::builder()
 try {
     $request = new TigrisCreateProjectRequest();
     $request->createProjectRequest = new CreateProjectRequest();
-    $request->project = 'neural';
+    $request->project = 'string';
 
     $response = $sdk->project->create($request);
 
@@ -89,7 +89,7 @@ $sdk = SDK::builder()
 try {
     $request = new TigrisDeleteProjectRequest();
     $request->deleteProjectRequest = new DeleteProjectRequest();
-    $request->project = 'Diesel';
+    $request->project = 'string';
 
     $response = $sdk->project->deleteProject($request);
 

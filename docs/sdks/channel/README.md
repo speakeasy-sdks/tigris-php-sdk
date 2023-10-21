@@ -39,8 +39,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimeGetRTChannelRequest();
-    $request->channel = 'motivating';
-    $request->project = 'Account';
+    $request->channel = 'string';
+    $request->project = 'string';
 
     $response = $sdk->channel->get($request);
 
@@ -89,14 +89,14 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimeReadMessagesRequest();
-    $request->channel = 'East';
-    $request->end = 'Platinum';
-    $request->event = 'sympathetic';
-    $request->limit = 537241;
-    $request->project = 'asymmetric';
-    $request->sessionId = 'withdrawal';
-    $request->socketId = 'withdrawal';
-    $request->start = 'Account';
+    $request->channel = 'string';
+    $request->end = 'string';
+    $request->event = 'string';
+    $request->limit = 7235;
+    $request->project = 'string';
+    $request->sessionId = 'string';
+    $request->socketId = 'string';
+    $request->start = 'string';
 
     $response = $sdk->channel->getMessages($request);
 
@@ -145,7 +145,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimeGetRTChannelsRequest();
-    $request->project = 'Future';
+    $request->project = 'string';
 
     $response = $sdk->channel->list($request);
 
@@ -194,10 +194,10 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimeListSubscriptionsRequest();
-    $request->channel = 'internationalise';
-    $request->page = 909851;
-    $request->pageSize = 863205;
-    $request->project = 'Car';
+    $request->channel = 'string';
+    $request->page = 994262;
+    $request->pageSize = 462408;
+    $request->project = 'string';
 
     $response = $sdk->channel->listSubscriptions($request);
 
@@ -249,13 +249,13 @@ $sdk = SDK::builder()
 try {
     $request = new RealtimeMessagesRequest();
     $request->messagesRequest = new MessagesRequest();
-    $request->messagesRequest->channel = 'payment';
+    $request->messagesRequest->channel = 'string';
     $request->messagesRequest->messages = [
         new Message(),
     ];
-    $request->messagesRequest->project = 'pronoun';
-    $request->channel = 'Elegant';
-    $request->project = 'Man';
+    $request->messagesRequest->project = 'string';
+    $request->channel = 'string';
+    $request->project = 'string';
 
     $response = $sdk->channel->pushMessages($request);
 
@@ -304,8 +304,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new RealtimePresenceRequest();
-    $request->channel = 'successfully';
-    $request->project = 'Applications';
+    $request->channel = 'string';
+    $request->project = 'string';
 
     $response = $sdk->channel->realtimePresence($request);
 

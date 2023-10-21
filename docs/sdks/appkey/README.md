@@ -41,7 +41,7 @@ try {
     $request = new TigrisDeleteAppKeyRequest();
     $request->deleteAppKeyRequest = new DeleteAppKeyRequest();
     $request->deleteAppKeyRequest->id = '<ID>';
-    $request->project = 'roughly';
+    $request->project = 'string';
 
     $response = $sdk->appKey->delete($request);
 
@@ -90,7 +90,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new TigrisListAppKeysRequest();
-    $request->project = 'Future';
+    $request->project = 'string';
 
     $response = $sdk->appKey->list($request);
 
@@ -142,8 +142,8 @@ try {
     $request = new TigrisRotateAppKeySecretRequest();
     $request->rotateAppKeyRequest = new RotateAppKeyRequest();
     $request->rotateAppKeyRequest->id = '<ID>';
-    $request->rotateAppKeyRequest->project = 'visualize';
-    $request->project = 'impressionable';
+    $request->rotateAppKeyRequest->project = 'string';
+    $request->project = 'string';
 
     $response = $sdk->appKey->rotate($request);
 
@@ -195,8 +195,8 @@ try {
     $request = new TigrisCreateAppKeyRequest();
     $request->createAppKeyRequest = new CreateAppKeyRequest();
     $request->createAppKeyRequest->description = 'User-centric bifurcated product';
-    $request->createAppKeyRequest->name = 'Bronze';
-    $request->project = 'Liaison';
+    $request->createAppKeyRequest->name = 'string';
+    $request->project = 'string';
 
     $response = $sdk->appKey->tigrisCreateAppKey($request);
 
@@ -249,8 +249,8 @@ try {
     $request->updateAppKeyRequest = new UpdateAppKeyRequest();
     $request->updateAppKeyRequest->description = 'Optimized 24/7 middleware';
     $request->updateAppKeyRequest->id = '<ID>';
-    $request->updateAppKeyRequest->name = 'complexity';
-    $request->project = 'Supervisor';
+    $request->updateAppKeyRequest->name = 'string';
+    $request->project = 'string';
 
     $response = $sdk->appKey->update($request);
 

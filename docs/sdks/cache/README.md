@@ -46,8 +46,8 @@ try {
     $request->createCacheRequest = new CreateCacheRequest();
     $request->createCacheRequest->options = new CreateCacheOptions();
     $request->createCacheRequest->options->ttlMs = 481196;
-    $request->name = 'Electric';
-    $request->project = 'pirouette';
+    $request->name = 'string';
+    $request->project = 'string';
 
     $response = $sdk->cache->create($request);
 
@@ -98,8 +98,8 @@ $sdk = SDK::builder()
 try {
     $request = new CacheDeleteCacheRequest();
     $request->deleteCacheRequest = new DeleteCacheRequest();
-    $request->name = 'roughly';
-    $request->project = 'EXE';
+    $request->name = 'string';
+    $request->project = 'string';
 
     $response = $sdk->cache->delete($request);
 
@@ -151,8 +151,8 @@ try {
     $request = new CacheDelRequest();
     $request->delRequest = new DelRequest();
     $request->key = '<key>';
-    $request->name = 'Orchestrator';
-    $request->project = 'gray';
+    $request->name = 'string';
+    $request->project = 'string';
 
     $response = $sdk->cache->deleteKeys($request);
 
@@ -202,8 +202,8 @@ $sdk = SDK::builder()
 try {
     $request = new CacheGetRequest();
     $request->key = '<key>';
-    $request->name = 'man';
-    $request->project = 'robust';
+    $request->name = 'string';
+    $request->project = 'string';
 
     $response = $sdk->cache->getKey($request);
 
@@ -254,10 +254,10 @@ $sdk = SDK::builder()
 try {
     $request = new CacheGetSetRequest();
     $request->getSetRequest = new GetSetRequest();
-    $request->getSetRequest->value = 'black';
+    $request->getSetRequest->value = 'string';
     $request->key = '<key>';
-    $request->name = 'Direct';
-    $request->project = 'deleniti';
+    $request->name = 'string';
+    $request->project = 'string';
 
     $response = $sdk->cache->getSetKey($request);
 
@@ -306,7 +306,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new CacheListCachesRequest();
-    $request->project = 'Future';
+    $request->project = 'string';
 
     $response = $sdk->cache->list($request);
 
@@ -357,9 +357,9 @@ try {
     $request = new CacheKeysRequest();
     $request->count = 618311;
     $request->cursor = 739921;
-    $request->name = 'withdrawal';
-    $request->pattern = 'deliberately';
-    $request->project = 'Synchronised';
+    $request->name = 'string';
+    $request->pattern = 'string';
+    $request->project = 'string';
 
     $response = $sdk->cache->listKeys($request);
 
@@ -413,11 +413,11 @@ try {
     $request->setRequest->ex = 170966;
     $request->setRequest->nx = false;
     $request->setRequest->px = 17597;
-    $request->setRequest->value = 'Gloves';
+    $request->setRequest->value = 'string';
     $request->setRequest->xx = false;
     $request->key = '<key>';
-    $request->name = 'synergize';
-    $request->project = 'Shanahan';
+    $request->name = 'string';
+    $request->project = 'string';
 
     $response = $sdk->cache->setKey($request);
 

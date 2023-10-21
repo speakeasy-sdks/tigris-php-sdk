@@ -39,9 +39,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementGetUserMetadataRequest();
     $request->getUserMetadataRequest = new GetUserMetadataRequest();
-    $request->getUserMetadataRequest->metadataKey = 'Chief';
+    $request->getUserMetadataRequest->metadataKey = 'string';
     $request->getUserMetadataRequest->value = new GetUserMetadataRequestValue();
-    $request->metadataKey = 'port';
+    $request->metadataKey = 'string';
 
     $response = $sdk->user->getMetadata($request);
 
@@ -93,9 +93,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementInsertUserMetadataRequest();
     $request->insertUserMetadataRequest = new InsertUserMetadataRequest();
-    $request->insertUserMetadataRequest->metadataKey = 'Diesel';
+    $request->insertUserMetadataRequest->metadataKey = 'string';
     $request->insertUserMetadataRequest->value = new InsertUserMetadataRequestValue();
-    $request->metadataKey = 'Developer';
+    $request->metadataKey = 'string';
 
     $response = $sdk->user->insertMetadata($request);
 
@@ -147,9 +147,9 @@ $sdk = SDK::builder()
 try {
     $request = new ManagementUpdateUserMetadataRequest();
     $request->updateUserMetadataRequest = new UpdateUserMetadataRequest();
-    $request->updateUserMetadataRequest->metadataKey = 'fate';
+    $request->updateUserMetadataRequest->metadataKey = 'string';
     $request->updateUserMetadataRequest->value = new UpdateUserMetadataRequestValue();
-    $request->metadataKey = 'Illinois';
+    $request->metadataKey = 'string';
 
     $response = $sdk->user->updateMetadata($request);
 

@@ -46,9 +46,9 @@ $sdk = SDK::builder()
 try {
     $request = new TigrisBeginTransactionRequest();
     $request->beginTransactionRequest = new BeginTransactionRequest();
-    $request->beginTransactionRequest->branch = 'ew';
+    $request->beginTransactionRequest->branch = 'string';
     $request->beginTransactionRequest->options = new TransactionOptions();
-    $request->project = 'deposit';
+    $request->project = 'string';
 
     $response = $sdk->database->beginTransaction($request);
 
@@ -100,8 +100,8 @@ $sdk = SDK::builder()
 try {
     $request = new TigrisCommitTransactionRequest();
     $request->commitTransactionRequest = new CommitTransactionRequest();
-    $request->commitTransactionRequest->branch = 'Metrics';
-    $request->project = 'extensible';
+    $request->commitTransactionRequest->branch = 'string';
+    $request->project = 'string';
 
     $response = $sdk->database->commitTransaction($request);
 
@@ -152,8 +152,8 @@ $sdk = SDK::builder()
 try {
     $request = new TigrisCreateBranchRequest();
     $request->createBranchRequest = new CreateBranchRequest();
-    $request->branch = 'Nissan';
-    $request->project = 'majestically';
+    $request->branch = 'string';
+    $request->project = 'string';
 
     $response = $sdk->database->createBranch($request);
 
@@ -205,8 +205,8 @@ $sdk = SDK::builder()
 try {
     $request = new TigrisDeleteBranchRequest();
     $request->deleteBranchRequest = new DeleteBranchRequest();
-    $request->branch = 'Berkshire';
-    $request->project = 'Shoes';
+    $request->branch = 'string';
+    $request->project = 'string';
 
     $response = $sdk->database->deleteBranch($request);
 
@@ -258,10 +258,10 @@ $sdk = SDK::builder()
 try {
     $request = new TigrisDescribeDatabaseRequest();
     $request->describeDatabaseRequest = new DescribeDatabaseRequest();
-    $request->describeDatabaseRequest->branch = 'copy';
-    $request->describeDatabaseRequest->project = 'Luxurious';
-    $request->describeDatabaseRequest->schemaFormat = 'Home';
-    $request->project = 'turquoise';
+    $request->describeDatabaseRequest->branch = 'string';
+    $request->describeDatabaseRequest->project = 'string';
+    $request->describeDatabaseRequest->schemaFormat = 'string';
+    $request->project = 'string';
 
     $response = $sdk->database->describe($request);
 
@@ -310,8 +310,8 @@ $sdk = SDK::builder()
 
 try {
     $request = new TigrisListCollectionsRequest();
-    $request->branch = 'blah';
-    $request->project = 'Porsche';
+    $request->branch = 'string';
+    $request->project = 'string';
 
     $response = $sdk->database->listCollections($request);
 
@@ -363,8 +363,8 @@ $sdk = SDK::builder()
 try {
     $request = new TigrisRollbackTransactionRequest();
     $request->rollbackTransactionRequest = new RollbackTransactionRequest();
-    $request->rollbackTransactionRequest->branch = 'optimisation';
-    $request->project = 'Southwest';
+    $request->rollbackTransactionRequest->branch = 'string';
+    $request->project = 'string';
 
     $response = $sdk->database->rollbackTransaction($request);
 
@@ -413,7 +413,7 @@ $sdk = SDK::builder()
 
 try {
     $request = new TigrisListBranchesRequest();
-    $request->project = 'withdrawal';
+    $request->project = 'string';
 
     $response = $sdk->database->tigrisListBranches($request);
 

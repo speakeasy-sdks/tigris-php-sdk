@@ -2219,8 +2219,8 @@ try {
     $request->createCacheRequest = new CreateCacheRequest();
     $request->createCacheRequest->options = new CreateCacheOptions();
     $request->createCacheRequest->options->ttlMs = 481196;
-    $request->name = 'Electric';
-    $request->project = 'pirouette';
+    $request->name = 'string';
+    $request->project = 'string';
 
     $response = $sdk->cache->create($request);
 
