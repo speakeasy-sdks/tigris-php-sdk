@@ -44,10 +44,10 @@ class ImportRequest
     /**
      * Array of documents to import. Each document is a JSON object.
      * 
-     * @var ?array<\tigris\core\Models\Shared\ImportRequestDocuments> $documents
+     * @var ?array<\tigris\core\Models\Shared\Documents> $documents
      */
 	#[\JMS\Serializer\Annotation\SerializedName('documents')]
-    #[\JMS\Serializer\Annotation\Type('array<tigris\core\Models\Shared\ImportRequestDocuments>')]
+    #[\JMS\Serializer\Annotation\Type('array<tigris\core\Models\Shared\Documents>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $documents = null;
     

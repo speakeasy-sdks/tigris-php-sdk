@@ -1,5 +1,5 @@
 # Search
-(*search*)
+
 
 ## Overview
 
@@ -35,21 +35,20 @@ CreateById is used for indexing a single document. The API expects a single docu
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\SearchCreateByIdRequest;
-use \tigris\core\Models\Shared\CreateByIdRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new SearchCreateByIdRequest();
-    $request->createByIdRequest = new CreateByIdRequest();
+    $request = new Operations\SearchCreateByIdRequest();
+    $request->createByIdRequest = new Shared\CreateByIdRequest();
     $request->createByIdRequest->document = 'string';
     $request->createByIdRequest->id = '<ID>';
     $request->createByIdRequest->index = 'string';
@@ -96,21 +95,20 @@ Create is used for indexing a single or multiple documents. The API expects an a
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\SearchCreateRequest;
-use \tigris\core\Models\Shared\CreateDocumentRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new SearchCreateRequest();
-    $request->createDocumentRequest = new CreateDocumentRequest();
+    $request = new Operations\SearchCreateRequest();
+    $request->createDocumentRequest = new Shared\CreateDocumentRequest();
     $request->createDocumentRequest->documents = [
         'string',
     ];
@@ -155,21 +153,20 @@ Delete one or more documents by id. Returns an array of status indicating the st
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\SearchDeleteRequest;
-use \tigris\core\Models\Shared\DeleteDocumentRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new SearchDeleteRequest();
-    $request->deleteDocumentRequest = new DeleteDocumentRequest();
+    $request = new Operations\SearchDeleteRequest();
+    $request->deleteDocumentRequest = new Shared\DeleteDocumentRequest();
     $request->deleteDocumentRequest->ids = [
         'string',
     ];
@@ -212,21 +209,20 @@ Deletes search index
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\SearchDeleteIndexRequest;
-use \tigris\core\Models\Shared\DeleteIndexRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new SearchDeleteIndexRequest();
-    $request->deleteIndexRequest = new DeleteIndexRequest();
+    $request = new Operations\SearchDeleteIndexRequest();
+    $request->deleteIndexRequest = new Shared\DeleteIndexRequest();
     $request->deleteIndexRequest->name = 'string';
     $request->deleteIndexRequest->project = 'string';
     $request->name = 'string';
@@ -270,23 +266,21 @@ Searches an index for the documents matching the query. A search can be a term s
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\SearchSearchRequest;
-use \tigris\core\Models\Shared\SearchIndexRequest;
-use \tigris\core\Models\Shared\Collation;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new SearchSearchRequest();
-    $request->searchIndexRequest = new SearchIndexRequest();
-    $request->searchIndexRequest->collation = new Collation();
+    $request = new Operations\SearchSearchRequest();
+    $request->searchIndexRequest = new Shared\SearchIndexRequest();
+    $request->searchIndexRequest->collation = new Shared\Collation();
     $request->searchIndexRequest->collation->case = 'string';
     $request->searchIndexRequest->excludeFields = [
         'string',
@@ -343,19 +337,19 @@ Retrieves one or more documents by id. The response is an array of documents in 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\SearchGetRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new SearchGetRequest();
+    $request = new Operations\SearchGetRequest();
     $request->ids = [
         'string',
     ];
@@ -396,19 +390,19 @@ Get information about a search index
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\SearchGetIndexRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new SearchGetIndexRequest();
+    $request = new Operations\SearchGetIndexRequest();
     $request->name = 'string';
     $request->project = 'string';
 
@@ -446,19 +440,19 @@ List search indexes
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\SearchListIndexesRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new SearchListIndexesRequest();
+    $request = new Operations\SearchListIndexesRequest();
     $request->filterBranch = 'string';
     $request->filterCollection = 'string';
     $request->filterType = 'string';
@@ -499,21 +493,20 @@ DeleteByQuery is used to delete documents that match the filter. A filter is req
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\SearchDeleteByQueryRequest;
-use \tigris\core\Models\Shared\DeleteByQueryRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new SearchDeleteByQueryRequest();
-    $request->deleteByQueryRequest = new DeleteByQueryRequest();
+    $request = new Operations\SearchDeleteByQueryRequest();
+    $request->deleteByQueryRequest = new Shared\DeleteByQueryRequest();
     $request->deleteByQueryRequest->filter = 'string';
     $request->deleteByQueryRequest->index = 'string';
     $request->deleteByQueryRequest->project = 'string';
@@ -557,21 +550,20 @@ Creates or replaces one or more documents. Each document is a JSON object. A doc
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\SearchCreateOrReplaceRequest;
-use \tigris\core\Models\Shared\CreateOrReplaceDocumentRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new SearchCreateOrReplaceRequest();
-    $request->createOrReplaceDocumentRequest = new CreateOrReplaceDocumentRequest();
+    $request = new Operations\SearchCreateOrReplaceRequest();
+    $request->createOrReplaceDocumentRequest = new Shared\CreateOrReplaceDocumentRequest();
     $request->createOrReplaceDocumentRequest->documents = [
         'string',
     ];
@@ -617,21 +609,20 @@ Updates one or more documents by "id". Each document is required to have the
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\SearchUpdateRequest;
-use \tigris\core\Models\Shared\UpdateDocumentRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new SearchUpdateRequest();
-    $request->updateDocumentRequest = new UpdateDocumentRequest();
+    $request = new Operations\SearchUpdateRequest();
+    $request->updateDocumentRequest = new Shared\UpdateDocumentRequest();
     $request->updateDocumentRequest->documents = [
         'string',
     ];
@@ -674,21 +665,20 @@ Creates or updates search index
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\SearchCreateOrUpdateIndexRequest;
-use \tigris\core\Models\Shared\CreateOrUpdateIndexRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new SearchCreateOrUpdateIndexRequest();
-    $request->createOrUpdateIndexRequest = new CreateOrUpdateIndexRequest();
+    $request = new Operations\SearchCreateOrUpdateIndexRequest();
+    $request->createOrUpdateIndexRequest = new Shared\CreateOrUpdateIndexRequest();
     $request->createOrUpdateIndexRequest->name = 'string';
     $request->createOrUpdateIndexRequest->onlyCreate = false;
     $request->createOrUpdateIndexRequest->project = 'string';

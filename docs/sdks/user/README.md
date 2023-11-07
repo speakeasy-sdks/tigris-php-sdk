@@ -1,5 +1,5 @@
 # User
-(*user*)
+
 
 ## Overview
 
@@ -23,24 +23,22 @@ GetUserMetadata inserts the user metadata object
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\ManagementGetUserMetadataRequest;
-use \tigris\core\Models\Shared\GetUserMetadataRequest;
-use \tigris\core\Models\Shared\GetUserMetadataRequestValue;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ManagementGetUserMetadataRequest();
-    $request->getUserMetadataRequest = new GetUserMetadataRequest();
+    $request = new Operations\ManagementGetUserMetadataRequest();
+    $request->getUserMetadataRequest = new Shared\GetUserMetadataRequest();
     $request->getUserMetadataRequest->metadataKey = 'string';
-    $request->getUserMetadataRequest->value = new GetUserMetadataRequestValue();
+    $request->getUserMetadataRequest->value = new Shared\GetUserMetadataRequestValue();
     $request->metadataKey = 'string';
 
     $response = $sdk->user->getMetadata($request);
@@ -77,24 +75,22 @@ insertUserMetadata inserts the user metadata object
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\ManagementInsertUserMetadataRequest;
-use \tigris\core\Models\Shared\InsertUserMetadataRequest;
-use \tigris\core\Models\Shared\InsertUserMetadataRequestValue;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ManagementInsertUserMetadataRequest();
-    $request->insertUserMetadataRequest = new InsertUserMetadataRequest();
+    $request = new Operations\ManagementInsertUserMetadataRequest();
+    $request->insertUserMetadataRequest = new Shared\InsertUserMetadataRequest();
     $request->insertUserMetadataRequest->metadataKey = 'string';
-    $request->insertUserMetadataRequest->value = new InsertUserMetadataRequestValue();
+    $request->insertUserMetadataRequest->value = new Shared\InsertUserMetadataRequestValue();
     $request->metadataKey = 'string';
 
     $response = $sdk->user->insertMetadata($request);
@@ -131,24 +127,22 @@ updateUserMetadata updates the user metadata object
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\ManagementUpdateUserMetadataRequest;
-use \tigris\core\Models\Shared\UpdateUserMetadataRequest;
-use \tigris\core\Models\Shared\UpdateUserMetadataRequestValue;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ManagementUpdateUserMetadataRequest();
-    $request->updateUserMetadataRequest = new UpdateUserMetadataRequest();
+    $request = new Operations\ManagementUpdateUserMetadataRequest();
+    $request->updateUserMetadataRequest = new Shared\UpdateUserMetadataRequest();
     $request->updateUserMetadataRequest->metadataKey = 'string';
-    $request->updateUserMetadataRequest->value = new UpdateUserMetadataRequestValue();
+    $request->updateUserMetadataRequest->value = new Shared\UpdateUserMetadataRequestValue();
     $request->metadataKey = 'string';
 
     $response = $sdk->user->updateMetadata($request);

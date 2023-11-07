@@ -18,9 +18,9 @@ namespace tigris\core\Models\Shared;
 class RollupFunction
 {
 	#[\JMS\Serializer\Annotation\SerializedName('aggregator')]
-    #[\JMS\Serializer\Annotation\Type('enum<tigris\core\Models\Shared\RollupFunctionAggregator>')]
+    #[\JMS\Serializer\Annotation\Type('enum<tigris\core\Models\Shared\Aggregator>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?RollupFunctionAggregator $aggregator = null;
+    public ?Aggregator $aggregator = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('interval')]
     #[\JMS\Serializer\Annotation\Type('int')]

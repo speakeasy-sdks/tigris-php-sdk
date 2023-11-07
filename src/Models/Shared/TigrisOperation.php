@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace tigris\core\Models\Shared;
 
 
-enum QueryTimeSeriesMetricsRequestTigrisOperation: string
+enum TigrisOperation: string
 {
     case All = 'ALL';
     case Read = 'READ';

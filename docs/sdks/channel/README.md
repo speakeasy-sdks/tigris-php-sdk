@@ -1,5 +1,5 @@
 # Channel
-(*channel*)
+
 
 ## Overview
 
@@ -26,19 +26,19 @@ Get the details about a channel
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\RealtimeGetRTChannelRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RealtimeGetRTChannelRequest();
+    $request = new Operations\RealtimeGetRTChannelRequest();
     $request->channel = 'string';
     $request->project = 'string';
 
@@ -76,19 +76,19 @@ Get all messages for a channel
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\RealtimeReadMessagesRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RealtimeReadMessagesRequest();
+    $request = new Operations\RealtimeReadMessagesRequest();
     $request->channel = 'string';
     $request->end = 'string';
     $request->event = 'string';
@@ -132,19 +132,19 @@ Get all channels for your application project
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\RealtimeGetRTChannelsRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RealtimeGetRTChannelsRequest();
+    $request = new Operations\RealtimeGetRTChannelsRequest();
     $request->project = 'string';
 
     $response = $sdk->channel->list($request);
@@ -181,19 +181,19 @@ Get the subscriptions details about a channel
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\RealtimeListSubscriptionsRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RealtimeListSubscriptionsRequest();
+    $request = new Operations\RealtimeListSubscriptionsRequest();
     $request->channel = 'string';
     $request->page = 994262;
     $request->pageSize = 462408;
@@ -233,25 +233,23 @@ push messages to a single channel
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\RealtimeMessagesRequest;
-use \tigris\core\Models\Shared\MessagesRequest;
-use \tigris\core\Models\Shared\Message;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RealtimeMessagesRequest();
-    $request->messagesRequest = new MessagesRequest();
+    $request = new Operations\RealtimeMessagesRequest();
+    $request->messagesRequest = new Shared\MessagesRequest();
     $request->messagesRequest->channel = 'string';
     $request->messagesRequest->messages = [
-        new Message(),
+        new Shared\Message(),
     ];
     $request->messagesRequest->project = 'string';
     $request->channel = 'string';
@@ -291,19 +289,19 @@ Presence about the channel
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\RealtimePresenceRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new RealtimePresenceRequest();
+    $request = new Operations\RealtimePresenceRequest();
     $request->channel = 'string';
     $request->project = 'string';
 

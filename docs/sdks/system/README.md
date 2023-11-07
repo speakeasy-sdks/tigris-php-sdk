@@ -1,5 +1,5 @@
 # System
-(*system*)
+
 
 ## Overview
 
@@ -25,13 +25,13 @@ This endpoint can be used to check the liveness of the server.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
+use \tigris\core;
+use \tigris\core\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
@@ -64,13 +64,13 @@ Provides the information about the server. This information includes returning t
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
+use \tigris\core;
+use \tigris\core\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
@@ -103,19 +103,18 @@ Returns current namespace quota limits
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Shared\QuotaUsageRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new QuotaUsageRequest();
+    $request = new Shared\QuotaUsageRequest();
 
     $response = $sdk->system->observabilityQuotaUsage($request);
 
@@ -151,19 +150,18 @@ Returns current namespace quota limits
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Shared\QuotaLimitsRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new QuotaLimitsRequest();
+    $request = new Shared\QuotaLimitsRequest();
 
     $response = $sdk->system->queryQuotaLimits($request);
 
@@ -199,40 +197,33 @@ Queries time series metrics
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequest;
-use \tigris\core\Models\Shared\AdditionalFunction;
-use \tigris\core\Models\Shared\RollupFunction;
-use \tigris\core\Models\Shared\RollupFunctionAggregator;
-use \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestFunction;
-use \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestSpaceAggregation;
-use \tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestTigrisOperation;
+use \tigris\core;
+use \tigris\core\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new QueryTimeSeriesMetricsRequest();
+    $request = new Shared\QueryTimeSeriesMetricsRequest();
     $request->additionalFunctions = [
-        new AdditionalFunction(),
+        new Shared\AdditionalFunction(),
     ];
     $request->branch = 'string';
     $request->collection = 'string';
     $request->db = 'string';
     $request->from = 262768;
-    $request->function = QueryTimeSeriesMetricsRequestFunction::None;
+    $request->function = Shared\FunctionT::None;
     $request->metricName = 'string';
     $request->quantile = 3054.25;
     $request->spaceAggregatedBy = [
         'string',
     ];
-    $request->spaceAggregation = QueryTimeSeriesMetricsRequestSpaceAggregation::Max;
-    $request->tigrisOperation = QueryTimeSeriesMetricsRequestTigrisOperation::Read;
+    $request->spaceAggregation = Shared\SpaceAggregation::Max;
+    $request->tigrisOperation = Shared\TigrisOperation::Read;
     $request->to = 424991;
 
     $response = $sdk->system->queryTimeSeriesMetrics($request);

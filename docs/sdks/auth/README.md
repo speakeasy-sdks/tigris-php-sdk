@@ -1,5 +1,5 @@
 # Auth
-(*auth*)
+
 
 ## Overview
 
@@ -23,13 +23,13 @@ Endpoint for receiving access token from Tigris Server. The endpoint requires Gr
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
+use \tigris\core;
+use \tigris\core\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 

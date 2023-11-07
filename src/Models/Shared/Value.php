@@ -9,9 +9,9 @@ declare(strict_types=1);
 namespace tigris\core\Models\Shared;
 
 
-enum QueryTimeSeriesMetricsRequestFunction: string
+class Value
 {
-    case Rate = 'RATE';
-    case Count = 'COUNT';
-    case None = 'NONE';
+	public function __construct()
+	{
+	}
 }

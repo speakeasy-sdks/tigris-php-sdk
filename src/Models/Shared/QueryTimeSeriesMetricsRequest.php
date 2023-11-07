@@ -48,9 +48,9 @@ class QueryTimeSeriesMetricsRequest
     public ?int $from = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('function')]
-    #[\JMS\Serializer\Annotation\Type('enum<tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestFunction>')]
+    #[\JMS\Serializer\Annotation\Type('enum<tigris\core\Models\Shared\FunctionT>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?QueryTimeSeriesMetricsRequestFunction $function = null;
+    public ?FunctionT $function = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('metric_name')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -73,14 +73,14 @@ class QueryTimeSeriesMetricsRequest
     public ?array $spaceAggregatedBy = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('space_aggregation')]
-    #[\JMS\Serializer\Annotation\Type('enum<tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestSpaceAggregation>')]
+    #[\JMS\Serializer\Annotation\Type('enum<tigris\core\Models\Shared\SpaceAggregation>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?QueryTimeSeriesMetricsRequestSpaceAggregation $spaceAggregation = null;
+    public ?SpaceAggregation $spaceAggregation = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('tigris_operation')]
-    #[\JMS\Serializer\Annotation\Type('enum<tigris\core\Models\Shared\QueryTimeSeriesMetricsRequestTigrisOperation>')]
+    #[\JMS\Serializer\Annotation\Type('enum<tigris\core\Models\Shared\TigrisOperation>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?QueryTimeSeriesMetricsRequestTigrisOperation $tigrisOperation = null;
+    public ?TigrisOperation $tigrisOperation = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('to')]
     #[\JMS\Serializer\Annotation\Type('int')]

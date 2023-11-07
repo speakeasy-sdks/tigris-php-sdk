@@ -7,23 +7,21 @@
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use tigris\core\SDK;
-use tigris\core\Models\Shared\Security;
-use tigris\core\Models\Operations\CacheCreateCacheRequest;
-use tigris\core\Models\Shared\CreateCacheRequest;
-use tigris\core\Models\Shared\CreateCacheOptions;
+use tigris\core;
+use tigris\core\Models\Shared;
+use tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CacheCreateCacheRequest();
-    $request->createCacheRequest = new CreateCacheRequest();
-    $request->createCacheRequest->options = new CreateCacheOptions();
+    $request = new Operations\CacheCreateCacheRequest();
+    $request->createCacheRequest = new Shared\CreateCacheRequest();
+    $request->createCacheRequest->options = new Shared\CreateCacheOptions();
     $request->createCacheRequest->options->ttlMs = 481196;
     $request->name = 'string';
     $request->project = 'string';

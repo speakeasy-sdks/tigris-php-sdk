@@ -10,12 +10,12 @@ namespace tigris\core\Models\Shared;
 
 
 /**
- * SearchRequestFacet - Facet query to aggregate results on given fields. The field name for the facet search can be passed like this `{"brand": { "size": 10 }}` where the size controls the total facets for this field.
+ * Fields - To read specific fields from a document. Default is all.
  * 
  * @package tigris\core\Models\Shared
  * @access public
  */
-class SearchRequestFacet
+class Fields
 {
 	public function __construct()
 	{

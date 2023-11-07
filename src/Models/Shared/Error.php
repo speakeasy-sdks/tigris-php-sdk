@@ -20,12 +20,12 @@ class Error
     /**
      * The status code is a short, machine parsable string, which uniquely identifies the error type. Tigris to HTTP code mapping [here](/reference/http-code)
      * 
-     * @var ?\tigris\core\Models\Shared\ErrorCode $code
+     * @var ?\tigris\core\Models\Shared\Code $code
      */
 	#[\JMS\Serializer\Annotation\SerializedName('code')]
-    #[\JMS\Serializer\Annotation\Type('enum<tigris\core\Models\Shared\ErrorCode>')]
+    #[\JMS\Serializer\Annotation\Type('enum<tigris\core\Models\Shared\Code>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ErrorCode $code = null;
+    public ?Code $code = null;
     
     /**
      * A developer-facing descriptive error message

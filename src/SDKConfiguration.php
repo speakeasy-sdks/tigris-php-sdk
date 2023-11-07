@@ -17,9 +17,9 @@ class SDKConfiguration
 	public int $serverIndex = 0;
 	public string $language = 'php';
 	public string $openapiDocVersion = '0.0.1';
-	public string $sdkVersion = '0.50.0';
-	public string $genVersion = '2.169.0';
-	public string $userAgent = 'speakeasy-sdk/php 0.50.0 2.169.0 0.0.1 tigris-data/tigris-api';
+	public string $sdkVersion = '0.51.0';
+	public string $genVersion = '2.181.1';
+	public string $userAgent = 'speakeasy-sdk/php 0.51.0 2.181.1 0.0.1 tigris-data/tigris-api';
 	
 
 	public function getServerUrl(): string

@@ -1,5 +1,5 @@
 # AppKey
-(*appKey*)
+
 
 ## Overview
 
@@ -25,21 +25,20 @@ Delete an app key.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisDeleteAppKeyRequest;
-use \tigris\core\Models\Shared\DeleteAppKeyRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisDeleteAppKeyRequest();
-    $request->deleteAppKeyRequest = new DeleteAppKeyRequest();
+    $request = new Operations\TigrisDeleteAppKeyRequest();
+    $request->deleteAppKeyRequest = new Shared\DeleteAppKeyRequest();
     $request->deleteAppKeyRequest->id = '<ID>';
     $request->project = 'string';
 
@@ -77,19 +76,19 @@ Lists all app keys visible to requesting actor.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisListAppKeysRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisListAppKeysRequest();
+    $request = new Operations\TigrisListAppKeysRequest();
     $request->project = 'string';
 
     $response = $sdk->appKey->list($request);
@@ -126,21 +125,20 @@ Endpoint is used to rotate the secret for the app key.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisRotateAppKeySecretRequest;
-use \tigris\core\Models\Shared\RotateAppKeyRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisRotateAppKeySecretRequest();
-    $request->rotateAppKeyRequest = new RotateAppKeyRequest();
+    $request = new Operations\TigrisRotateAppKeySecretRequest();
+    $request->rotateAppKeyRequest = new Shared\RotateAppKeyRequest();
     $request->rotateAppKeyRequest->id = '<ID>';
     $request->rotateAppKeyRequest->project = 'string';
     $request->project = 'string';
@@ -179,21 +177,20 @@ Create an app key.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisCreateAppKeyRequest;
-use \tigris\core\Models\Shared\CreateAppKeyRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisCreateAppKeyRequest();
-    $request->createAppKeyRequest = new CreateAppKeyRequest();
+    $request = new Operations\TigrisCreateAppKeyRequest();
+    $request->createAppKeyRequest = new Shared\CreateAppKeyRequest();
     $request->createAppKeyRequest->description = 'User-centric bifurcated product';
     $request->createAppKeyRequest->name = 'string';
     $request->project = 'string';
@@ -232,21 +229,20 @@ Update the description of an app key.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisUpdateAppKeyRequest;
-use \tigris\core\Models\Shared\UpdateAppKeyRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisUpdateAppKeyRequest();
-    $request->updateAppKeyRequest = new UpdateAppKeyRequest();
+    $request = new Operations\TigrisUpdateAppKeyRequest();
+    $request->updateAppKeyRequest = new Shared\UpdateAppKeyRequest();
     $request->updateAppKeyRequest->description = 'Optimized 24/7 middleware';
     $request->updateAppKeyRequest->id = '<ID>';
     $request->updateAppKeyRequest->name = 'string';

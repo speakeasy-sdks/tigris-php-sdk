@@ -1,5 +1,5 @@
 # Cache
-(*cache*)
+
 
 ## Overview
 
@@ -28,23 +28,21 @@ Creates the cache
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\CacheCreateCacheRequest;
-use \tigris\core\Models\Shared\CreateCacheRequest;
-use \tigris\core\Models\Shared\CreateCacheOptions;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CacheCreateCacheRequest();
-    $request->createCacheRequest = new CreateCacheRequest();
-    $request->createCacheRequest->options = new CreateCacheOptions();
+    $request = new Operations\CacheCreateCacheRequest();
+    $request->createCacheRequest = new Shared\CreateCacheRequest();
+    $request->createCacheRequest->options = new Shared\CreateCacheOptions();
     $request->createCacheRequest->options->ttlMs = 481196;
     $request->name = 'string';
     $request->project = 'string';
@@ -83,21 +81,20 @@ Deletes the cache
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\CacheDeleteCacheRequest;
-use \tigris\core\Models\Shared\DeleteCacheRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CacheDeleteCacheRequest();
-    $request->deleteCacheRequest = new DeleteCacheRequest();
+    $request = new Operations\CacheDeleteCacheRequest();
+    $request->deleteCacheRequest = new Shared\DeleteCacheRequest();
     $request->name = 'string';
     $request->project = 'string';
 
@@ -135,21 +132,20 @@ Deletes an entry from cache
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\CacheDelRequest;
-use \tigris\core\Models\Shared\DelRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CacheDelRequest();
-    $request->delRequest = new DelRequest();
+    $request = new Operations\CacheDelRequest();
+    $request->delRequest = new Shared\DelRequest();
     $request->key = '<key>';
     $request->name = 'string';
     $request->project = 'string';
@@ -188,19 +184,19 @@ Reads an entry from cache
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\CacheGetRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CacheGetRequest();
+    $request = new Operations\CacheGetRequest();
     $request->key = '<key>';
     $request->name = 'string';
     $request->project = 'string';
@@ -239,21 +235,20 @@ Sets an entry in the cache and returns the previous value if exists
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\CacheGetSetRequest;
-use \tigris\core\Models\Shared\GetSetRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CacheGetSetRequest();
-    $request->getSetRequest = new GetSetRequest();
+    $request = new Operations\CacheGetSetRequest();
+    $request->getSetRequest = new Shared\GetSetRequest();
     $request->getSetRequest->value = 'string';
     $request->key = '<key>';
     $request->name = 'string';
@@ -293,19 +288,19 @@ Lists all the caches for the given project
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\CacheListCachesRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CacheListCachesRequest();
+    $request = new Operations\CacheListCachesRequest();
     $request->project = 'string';
 
     $response = $sdk->cache->list($request);
@@ -342,19 +337,19 @@ Lists all the key for this cache
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\CacheKeysRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CacheKeysRequest();
+    $request = new Operations\CacheKeysRequest();
     $request->count = 618311;
     $request->cursor = 739921;
     $request->name = 'string';
@@ -395,21 +390,20 @@ Sets an entry in the cache
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\CacheSetRequest;
-use \tigris\core\Models\Shared\SetRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CacheSetRequest();
-    $request->setRequest = new SetRequest();
+    $request = new Operations\CacheSetRequest();
+    $request->setRequest = new Shared\SetRequest();
     $request->setRequest->ex = 170966;
     $request->setRequest->nx = false;
     $request->setRequest->px = 17597;

@@ -44,12 +44,12 @@ class SearchRequest
     /**
      * Facet query to aggregate results on given fields. The field name for the facet search can be passed like this `{"brand": { "size": 10 }}` where the size controls the total facets for this field.
      * 
-     * @var ?\tigris\core\Models\Shared\SearchRequestFacet $facet
+     * @var ?\tigris\core\Models\Shared\Facet $facet
      */
 	#[\JMS\Serializer\Annotation\SerializedName('facet')]
-    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\SearchRequestFacet')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\Facet')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?SearchRequestFacet $facet = null;
+    public ?Facet $facet = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('fields')]
     #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\SearchRequestFields')]
@@ -119,12 +119,12 @@ class SearchRequest
     /**
      * Array of fields and corresponding sort orders to order the results `[{ "salary": "$desc" }]`
      * 
-     * @var ?\tigris\core\Models\Shared\SearchRequestSort $sort
+     * @var ?\tigris\core\Models\Shared\Sort $sort
      */
 	#[\JMS\Serializer\Annotation\SerializedName('sort')]
-    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\SearchRequestSort')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\Sort')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?SearchRequestSort $sort = null;
+    public ?Sort $sort = null;
     
 	public function __construct()
 	{

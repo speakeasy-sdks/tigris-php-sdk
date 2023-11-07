@@ -23,9 +23,9 @@ class GetNamespaceMetadataRequest
     public ?string $metadataKey = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('value')]
-    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\GetNamespaceMetadataRequestValue')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\Value')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?GetNamespaceMetadataRequestValue $value = null;
+    public ?Value $value = null;
     
 	public function __construct()
 	{

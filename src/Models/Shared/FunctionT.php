@@ -9,9 +9,9 @@ declare(strict_types=1);
 namespace tigris\core\Models\Shared;
 
 
-class GetNamespaceMetadataRequestValue
+enum FunctionT: string
 {
-	public function __construct()
-	{
-	}
+    case Rate = 'RATE';
+    case Count = 'COUNT';
+    case None = 'NONE';
 }

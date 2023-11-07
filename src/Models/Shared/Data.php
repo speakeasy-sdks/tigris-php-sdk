@@ -10,12 +10,12 @@ namespace tigris\core\Models\Shared;
 
 
 /**
- * SearchRequestSort - Array of fields and corresponding sort orders to order the results `[{ "salary": "$desc" }]`
+ * Data - Object containing the collection document.
  * 
  * @package tigris\core\Models\Shared
  * @access public
  */
-class SearchRequestSort
+class Data
 {
 	public function __construct()
 	{

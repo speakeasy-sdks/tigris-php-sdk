@@ -29,12 +29,12 @@ class CollectionDescription
     /**
      * Collections schema
      * 
-     * @var ?\tigris\core\Models\Shared\CollectionDescriptionSchema $schema
+     * @var ?\tigris\core\Models\Shared\Schema $schema
      */
 	#[\JMS\Serializer\Annotation\SerializedName('schema')]
-    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\CollectionDescriptionSchema')]
+    #[\JMS\Serializer\Annotation\Type('tigris\core\Models\Shared\Schema')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?CollectionDescriptionSchema $schema = null;
+    public ?Schema $schema = null;
     
     /**
      * Collection size in bytes

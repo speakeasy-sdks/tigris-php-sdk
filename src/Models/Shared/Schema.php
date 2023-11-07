@@ -10,12 +10,12 @@ namespace tigris\core\Models\Shared;
 
 
 /**
- * ReadResponseData - Object containing the collection document.
+ * Schema - Collections schema
  * 
  * @package tigris\core\Models\Shared
  * @access public
  */
-class ReadResponseData
+class Schema
 {
 	public function __construct()
 	{

@@ -1,5 +1,5 @@
 # Collection
-(*collection*)
+
 
 ## Overview
 
@@ -34,27 +34,24 @@ Creates a new collection or atomically upgrades the collection to the new schema
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionRequest;
-use \tigris\core\Models\Shared\CreateOrUpdateCollectionRequest;
-use \tigris\core\Models\Shared\CollectionOptions;
-use \tigris\core\Models\Shared\CreateOrUpdateCollectionRequestSchema;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisCreateOrUpdateCollectionRequest();
-    $request->createOrUpdateCollectionRequest = new CreateOrUpdateCollectionRequest();
+    $request = new Operations\TigrisCreateOrUpdateCollectionRequest();
+    $request->createOrUpdateCollectionRequest = new Shared\CreateOrUpdateCollectionRequest();
     $request->createOrUpdateCollectionRequest->branch = 'string';
     $request->createOrUpdateCollectionRequest->onlyCreate = false;
-    $request->createOrUpdateCollectionRequest->options = new CollectionOptions();
-    $request->createOrUpdateCollectionRequest->schema = new CreateOrUpdateCollectionRequestSchema();
+    $request->createOrUpdateCollectionRequest->options = new Shared\CollectionOptions();
+    $request->createOrUpdateCollectionRequest->schema = new Shared\CreateOrUpdateCollectionRequestSchema();
     $request->collection = 'string';
     $request->project = 'string';
 
@@ -92,32 +89,27 @@ Delete a range of documents in the collection using the condition provided in th
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisDeleteRequest;
-use \tigris\core\Models\Shared\DeleteRequest;
-use \tigris\core\Models\Shared\DeleteRequestFilter;
-use \tigris\core\Models\Shared\DeleteRequestOptions;
-use \tigris\core\Models\Shared\Collation;
-use \tigris\core\Models\Shared\WriteOptions;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisDeleteRequest();
-    $request->deleteRequest = new DeleteRequest();
+    $request = new Operations\TigrisDeleteRequest();
+    $request->deleteRequest = new Shared\DeleteRequest();
     $request->deleteRequest->branch = 'string';
-    $request->deleteRequest->filter = new DeleteRequestFilter();
-    $request->deleteRequest->options = new DeleteRequestOptions();
-    $request->deleteRequest->options->collation = new Collation();
+    $request->deleteRequest->filter = new Shared\Filter();
+    $request->deleteRequest->options = new Shared\DeleteRequestOptions();
+    $request->deleteRequest->options->collation = new Shared\Collation();
     $request->deleteRequest->options->collation->case = 'string';
     $request->deleteRequest->options->limit = 968874;
-    $request->deleteRequest->options->writeOptions = new WriteOptions();
+    $request->deleteRequest->options->writeOptions = new Shared\WriteOptions();
     $request->collection = 'string';
     $request->project = 'string';
 
@@ -155,25 +147,23 @@ Returns the information related to the collection. This can be used to retrieve 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisDescribeCollectionRequest;
-use \tigris\core\Models\Shared\DescribeCollectionRequest;
-use \tigris\core\Models\Shared\CollectionOptions;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisDescribeCollectionRequest();
-    $request->describeCollectionRequest = new DescribeCollectionRequest();
+    $request = new Operations\TigrisDescribeCollectionRequest();
+    $request->describeCollectionRequest = new Shared\DescribeCollectionRequest();
     $request->describeCollectionRequest->branch = 'string';
     $request->describeCollectionRequest->collection = 'string';
-    $request->describeCollectionRequest->options = new CollectionOptions();
+    $request->describeCollectionRequest->options = new Shared\CollectionOptions();
     $request->describeCollectionRequest->project = 'string';
     $request->describeCollectionRequest->schemaFormat = 'string';
     $request->collection = 'string';
@@ -214,24 +204,22 @@ Drops the collection inside this project. This API deletes all of the
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisDropCollectionRequest;
-use \tigris\core\Models\Shared\DropCollectionRequest;
-use \tigris\core\Models\Shared\CollectionOptions;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisDropCollectionRequest();
-    $request->dropCollectionRequest = new DropCollectionRequest();
+    $request = new Operations\TigrisDropCollectionRequest();
+    $request->dropCollectionRequest = new Shared\DropCollectionRequest();
     $request->dropCollectionRequest->branch = 'string';
-    $request->dropCollectionRequest->options = new CollectionOptions();
+    $request->dropCollectionRequest->options = new Shared\CollectionOptions();
     $request->collection = 'string';
     $request->project = 'string';
 
@@ -274,34 +262,30 @@ Imports documents into the collection.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisImportRequest;
-use \tigris\core\Models\Shared\ImportRequest;
-use \tigris\core\Models\Shared\ImportRequestDocuments;
-use \tigris\core\Models\Shared\ImportRequestOptions;
-use \tigris\core\Models\Shared\WriteOptions;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisImportRequest();
-    $request->importRequest = new ImportRequest();
+    $request = new Operations\TigrisImportRequest();
+    $request->importRequest = new Shared\ImportRequest();
     $request->importRequest->autogenerated = [
         'string',
     ];
     $request->importRequest->branch = 'string';
     $request->importRequest->createCollection = false;
     $request->importRequest->documents = [
-        new ImportRequestDocuments(),
+        new Shared\Documents(),
     ];
-    $request->importRequest->options = new ImportRequestOptions();
-    $request->importRequest->options->writeOptions = new WriteOptions();
+    $request->importRequest->options = new Shared\ImportRequestOptions();
+    $request->importRequest->options->writeOptions = new Shared\WriteOptions();
     $request->importRequest->primaryKey = [
         'string',
     ];
@@ -344,30 +328,26 @@ Inserts new documents in the collection and returns an AlreadyExists error if an
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisInsertRequest;
-use \tigris\core\Models\Shared\InsertRequest;
-use \tigris\core\Models\Shared\InsertRequestDocuments;
-use \tigris\core\Models\Shared\InsertRequestOptions;
-use \tigris\core\Models\Shared\WriteOptions;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisInsertRequest();
-    $request->insertRequest = new InsertRequest();
+    $request = new Operations\TigrisInsertRequest();
+    $request->insertRequest = new Shared\InsertRequest();
     $request->insertRequest->branch = 'string';
     $request->insertRequest->documents = [
-        new InsertRequestDocuments(),
+        new Shared\InsertRequestDocuments(),
     ];
-    $request->insertRequest->options = new InsertRequestOptions();
-    $request->insertRequest->options->writeOptions = new WriteOptions();
+    $request->insertRequest->options = new Shared\InsertRequestOptions();
+    $request->insertRequest->options->writeOptions = new Shared\WriteOptions();
     $request->collection = 'string';
     $request->project = 'string';
 
@@ -410,30 +390,25 @@ Reads a range of documents from the collection, or messages from a collection in
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisReadRequest;
-use \tigris\core\Models\Shared\ReadRequest;
-use \tigris\core\Models\Shared\ReadRequestFields;
-use \tigris\core\Models\Shared\ReadRequestFilter;
-use \tigris\core\Models\Shared\ReadRequestOptions;
-use \tigris\core\Models\Shared\Collation;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisReadRequest();
-    $request->readRequest = new ReadRequest();
+    $request = new Operations\TigrisReadRequest();
+    $request->readRequest = new Shared\ReadRequest();
     $request->readRequest->branch = 'string';
-    $request->readRequest->fields = new ReadRequestFields();
-    $request->readRequest->filter = new ReadRequestFilter();
-    $request->readRequest->options = new ReadRequestOptions();
-    $request->readRequest->options->collation = new Collation();
+    $request->readRequest->fields = new Shared\Fields();
+    $request->readRequest->filter = new Shared\ReadRequestFilter();
+    $request->readRequest->options = new Shared\ReadRequestOptions();
+    $request->readRequest->options->collation = new Shared\Collation();
     $request->readRequest->options->collation->case = 'string';
     $request->readRequest->options->limit = 649883;
     $request->readRequest->options->offset = 'string';
@@ -476,30 +451,26 @@ Inserts the documents or replaces the existing documents in the collections.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisReplaceRequest;
-use \tigris\core\Models\Shared\ReplaceRequest;
-use \tigris\core\Models\Shared\ReplaceRequestDocuments;
-use \tigris\core\Models\Shared\ReplaceRequestOptions;
-use \tigris\core\Models\Shared\WriteOptions;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisReplaceRequest();
-    $request->replaceRequest = new ReplaceRequest();
+    $request = new Operations\TigrisReplaceRequest();
+    $request->replaceRequest = new Shared\ReplaceRequest();
     $request->replaceRequest->branch = 'string';
     $request->replaceRequest->documents = [
-        new ReplaceRequestDocuments(),
+        new Shared\ReplaceRequestDocuments(),
     ];
-    $request->replaceRequest->options = new ReplaceRequestOptions();
-    $request->replaceRequest->options->writeOptions = new WriteOptions();
+    $request->replaceRequest->options = new Shared\ReplaceRequestOptions();
+    $request->replaceRequest->options->writeOptions = new Shared\WriteOptions();
     $request->collection = 'string';
     $request->project = 'string';
 
@@ -540,35 +511,29 @@ Searches a collection for the documents matching the query, or messages in case 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisSearchRequest;
-use \tigris\core\Models\Shared\SearchRequest;
-use \tigris\core\Models\Shared\Collation;
-use \tigris\core\Models\Shared\SearchRequestFacet;
-use \tigris\core\Models\Shared\SearchRequestFields;
-use \tigris\core\Models\Shared\SearchRequestFilter;
-use \tigris\core\Models\Shared\SearchRequestSort;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisSearchRequest();
-    $request->searchRequest = new SearchRequest();
+    $request = new Operations\TigrisSearchRequest();
+    $request->searchRequest = new Shared\SearchRequest();
     $request->searchRequest->branch = 'string';
-    $request->searchRequest->collation = new Collation();
+    $request->searchRequest->collation = new Shared\Collation();
     $request->searchRequest->collation->case = 'string';
     $request->searchRequest->excludeFields = [
         'string',
     ];
-    $request->searchRequest->facet = new SearchRequestFacet();
-    $request->searchRequest->fields = new SearchRequestFields();
-    $request->searchRequest->filter = new SearchRequestFilter();
+    $request->searchRequest->facet = new Shared\Facet();
+    $request->searchRequest->fields = new Shared\SearchRequestFields();
+    $request->searchRequest->filter = new Shared\SearchRequestFilter();
     $request->searchRequest->includeFields = [
         'string',
     ];
@@ -578,7 +543,7 @@ try {
     $request->searchRequest->searchFields = [
         'string',
     ];
-    $request->searchRequest->sort = new SearchRequestSort();
+    $request->searchRequest->sort = new Shared\Sort();
     $request->collection = 'string';
     $request->project = 'string';
 
@@ -616,34 +581,28 @@ Update a range of documents in the collection using the condition provided in th
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisUpdateRequest;
-use \tigris\core\Models\Shared\UpdateRequest;
-use \tigris\core\Models\Shared\UpdateRequestFields;
-use \tigris\core\Models\Shared\UpdateRequestFilter;
-use \tigris\core\Models\Shared\UpdateRequestOptions;
-use \tigris\core\Models\Shared\Collation;
-use \tigris\core\Models\Shared\WriteOptions;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisUpdateRequest();
-    $request->updateRequest = new UpdateRequest();
+    $request = new Operations\TigrisUpdateRequest();
+    $request->updateRequest = new Shared\UpdateRequest();
     $request->updateRequest->branch = 'string';
-    $request->updateRequest->fields = new UpdateRequestFields();
-    $request->updateRequest->filter = new UpdateRequestFilter();
-    $request->updateRequest->options = new UpdateRequestOptions();
-    $request->updateRequest->options->collation = new Collation();
+    $request->updateRequest->fields = new Shared\UpdateRequestFields();
+    $request->updateRequest->filter = new Shared\UpdateRequestFilter();
+    $request->updateRequest->options = new Shared\UpdateRequestOptions();
+    $request->updateRequest->options->collation = new Shared\Collation();
     $request->updateRequest->options->collation->case = 'string';
     $request->updateRequest->options->limit = 286496;
-    $request->updateRequest->options->writeOptions = new WriteOptions();
+    $request->updateRequest->options->writeOptions = new Shared\WriteOptions();
     $request->collection = 'string';
     $request->project = 'string';
 

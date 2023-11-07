@@ -1,5 +1,5 @@
 # Project
-(*project*)
+
 
 ## Overview
 
@@ -23,21 +23,20 @@ Creates a new project. Returns an AlreadyExists error with a status code 409 if 
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisCreateProjectRequest;
-use \tigris\core\Models\Shared\CreateProjectRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisCreateProjectRequest();
-    $request->createProjectRequest = new CreateProjectRequest();
+    $request = new Operations\TigrisCreateProjectRequest();
+    $request->createProjectRequest = new Shared\CreateProjectRequest();
     $request->project = 'string';
 
     $response = $sdk->project->create($request);
@@ -74,21 +73,20 @@ Delete Project deletes all the collections in this project along with all of the
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisDeleteProjectRequest;
-use \tigris\core\Models\Shared\DeleteProjectRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisDeleteProjectRequest();
-    $request->deleteProjectRequest = new DeleteProjectRequest();
+    $request = new Operations\TigrisDeleteProjectRequest();
+    $request->deleteProjectRequest = new Shared\DeleteProjectRequest();
     $request->project = 'string';
 
     $response = $sdk->project->deleteProject($request);
@@ -125,13 +123,13 @@ List returns all the projects.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
+use \tigris\core;
+use \tigris\core\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 

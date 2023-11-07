@@ -1,5 +1,5 @@
 # Database
-(*database*)
+
 
 ## Overview
 
@@ -30,24 +30,22 @@ Starts a new transaction and returns a transactional object. All reads/writes pe
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisBeginTransactionRequest;
-use \tigris\core\Models\Shared\BeginTransactionRequest;
-use \tigris\core\Models\Shared\TransactionOptions;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisBeginTransactionRequest();
-    $request->beginTransactionRequest = new BeginTransactionRequest();
+    $request = new Operations\TigrisBeginTransactionRequest();
+    $request->beginTransactionRequest = new Shared\BeginTransactionRequest();
     $request->beginTransactionRequest->branch = 'string';
-    $request->beginTransactionRequest->options = new TransactionOptions();
+    $request->beginTransactionRequest->options = new Shared\TransactionOptions();
     $request->project = 'string';
 
     $response = $sdk->database->beginTransaction($request);
@@ -85,21 +83,20 @@ Atomically commit all the changes performed in the context of the transaction. C
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisCommitTransactionRequest;
-use \tigris\core\Models\Shared\CommitTransactionRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisCommitTransactionRequest();
-    $request->commitTransactionRequest = new CommitTransactionRequest();
+    $request = new Operations\TigrisCommitTransactionRequest();
+    $request->commitTransactionRequest = new Shared\CommitTransactionRequest();
     $request->commitTransactionRequest->branch = 'string';
     $request->project = 'string';
 
@@ -137,21 +134,20 @@ Creates a new database branch, if not already existing.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisCreateBranchRequest;
-use \tigris\core\Models\Shared\CreateBranchRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisCreateBranchRequest();
-    $request->createBranchRequest = new CreateBranchRequest();
+    $request = new Operations\TigrisCreateBranchRequest();
+    $request->createBranchRequest = new Shared\CreateBranchRequest();
     $request->branch = 'string';
     $request->project = 'string';
 
@@ -190,21 +186,20 @@ Deletes a database branch, if exists.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisDeleteBranchRequest;
-use \tigris\core\Models\Shared\DeleteBranchRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisDeleteBranchRequest();
-    $request->deleteBranchRequest = new DeleteBranchRequest();
+    $request = new Operations\TigrisDeleteBranchRequest();
+    $request->deleteBranchRequest = new Shared\DeleteBranchRequest();
     $request->branch = 'string';
     $request->project = 'string';
 
@@ -243,21 +238,20 @@ This API returns information related to the project along with all the collectio
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisDescribeDatabaseRequest;
-use \tigris\core\Models\Shared\DescribeDatabaseRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisDescribeDatabaseRequest();
-    $request->describeDatabaseRequest = new DescribeDatabaseRequest();
+    $request = new Operations\TigrisDescribeDatabaseRequest();
+    $request->describeDatabaseRequest = new Shared\DescribeDatabaseRequest();
     $request->describeDatabaseRequest->branch = 'string';
     $request->describeDatabaseRequest->project = 'string';
     $request->describeDatabaseRequest->schemaFormat = 'string';
@@ -297,19 +291,19 @@ List all the collections present in the project passed in the request.
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisListCollectionsRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisListCollectionsRequest();
+    $request = new Operations\TigrisListCollectionsRequest();
     $request->branch = 'string';
     $request->project = 'string';
 
@@ -348,21 +342,20 @@ Rollback transaction discards all the changes
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisRollbackTransactionRequest;
-use \tigris\core\Models\Shared\RollbackTransactionRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisRollbackTransactionRequest();
-    $request->rollbackTransactionRequest = new RollbackTransactionRequest();
+    $request = new Operations\TigrisRollbackTransactionRequest();
+    $request->rollbackTransactionRequest = new Shared\RollbackTransactionRequest();
     $request->rollbackTransactionRequest->branch = 'string';
     $request->project = 'string';
 
@@ -400,19 +393,19 @@ List database branches
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\TigrisListBranchesRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new TigrisListBranchesRequest();
+    $request = new Operations\TigrisListBranchesRequest();
     $request->project = 'string';
 
     $response = $sdk->database->tigrisListBranches($request);

@@ -82,67 +82,11 @@ class SDK
 	];
   	
     /**
-     * The application keys section provide APIs that can be used to manage application keys for your project. A single project can have one or more application keys.
-     * 
-     * @var AppKey $$appKey
-     */
-	public AppKey $appKey;
-	
-    /**
      * The auth section of API provides OAuth 2.0 APIs. Tigris supports pluggable OAuth provider. Pass the token in the headers for authentication, as an example `-H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6I"`(replace it with your token). All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.
      * 
      * @var Auth $$auth
      */
 	public Auth $auth;
-	
-    /**
-     * The cache section provide APIs that can be used to perform cache operations.
-     * 
-     * @var Cache $$cache
-     */
-	public Cache $cache;
-	
-    /**
-     * The realtime section provide APIs that can be used realtime operations.
-     * 
-     * @var Channel $$channel
-     */
-	public Channel $channel;
-	
-    /**
-     * The Collections section provide APIs that can be used to manage collections. A collection can have one or more documents.
-     * 
-     * @var Collection $$collection
-     */
-	public Collection $collection;
-	
-    /**
-     * The Database section provide APIs that can be used to interact with the database. A single Database can have one or more collections. A database is created automatically for you when you create a project.
-     * 
-     * @var Database $$database
-     */
-	public Database $database;
-	
-    /**
-     * The Management section provide APIs that can be used to manage users, and app_keys.
-     * 
-     * @var NamespaceT $$namespace
-     */
-	public NamespaceT $namespace;
-	
-    /**
-     * Every Tigris projects comes with a transactional document database built on FoundationDB, one of the most resilient and battle-tested open source distributed key-value store. A database is created automatically for you when you create a project.
-     * 
-     * @var Project $$project
-     */
-	public Project $project;
-	
-    /**
-     * The search section provides you APIs that can be used to implement powerful apps with search experiences. You can manage storing documents on your own or you can simply integrate it with your database.
-     * 
-     * @var Search $$search
-     */
-	public Search $search;
 	
     /**
      * The Observability section has APIs that provides full visibility into the health, metrics, and monitoring of the Server.
@@ -152,11 +96,67 @@ class SDK
 	public System $system;
 	
     /**
+     * The Management section provide APIs that can be used to manage users, and app_keys.
+     * 
+     * @var NamespaceT $$namespace
+     */
+	public NamespaceT $namespace;
+	
+    /**
      * A User on the Tigris Platform.
      * 
      * @var User $$user
      */
 	public User $user;
+	
+    /**
+     * Every Tigris projects comes with a transactional document database built on FoundationDB, one of the most resilient and battle-tested open source distributed key-value store. A database is created automatically for you when you create a project.
+     * 
+     * @var Project $$project
+     */
+	public Project $project;
+	
+    /**
+     * The application keys section provide APIs that can be used to manage application keys for your project. A single project can have one or more application keys.
+     * 
+     * @var AppKey $$appKey
+     */
+	public AppKey $appKey;
+	
+    /**
+     * The cache section provide APIs that can be used to perform cache operations.
+     * 
+     * @var Cache $$cache
+     */
+	public Cache $cache;
+	
+    /**
+     * The Database section provide APIs that can be used to interact with the database. A single Database can have one or more collections. A database is created automatically for you when you create a project.
+     * 
+     * @var Database $$database
+     */
+	public Database $database;
+	
+    /**
+     * The Collections section provide APIs that can be used to manage collections. A collection can have one or more documents.
+     * 
+     * @var Collection $$collection
+     */
+	public Collection $collection;
+	
+    /**
+     * The realtime section provide APIs that can be used realtime operations.
+     * 
+     * @var Channel $$channel
+     */
+	public Channel $channel;
+	
+    /**
+     * The search section provides you APIs that can be used to implement powerful apps with search experiences. You can manage storing documents on your own or you can simply integrate it with your database.
+     * 
+     * @var Search $$search
+     */
+	public Search $search;
 		
 	private SDKConfiguration $sdkConfiguration;
 
@@ -177,26 +177,26 @@ class SDK
 	{
 		$this->sdkConfiguration = $sdkConfiguration;
 		
-		$this->appKey = new AppKey($this->sdkConfiguration);
-		
 		$this->auth = new Auth($this->sdkConfiguration);
-		
-		$this->cache = new Cache($this->sdkConfiguration);
-		
-		$this->channel = new Channel($this->sdkConfiguration);
-		
-		$this->collection = new Collection($this->sdkConfiguration);
-		
-		$this->database = new Database($this->sdkConfiguration);
-		
-		$this->namespace = new NamespaceT($this->sdkConfiguration);
-		
-		$this->project = new Project($this->sdkConfiguration);
-		
-		$this->search = new Search($this->sdkConfiguration);
 		
 		$this->system = new System($this->sdkConfiguration);
 		
+		$this->namespace = new NamespaceT($this->sdkConfiguration);
+		
 		$this->user = new User($this->sdkConfiguration);
+		
+		$this->project = new Project($this->sdkConfiguration);
+		
+		$this->appKey = new AppKey($this->sdkConfiguration);
+		
+		$this->cache = new Cache($this->sdkConfiguration);
+		
+		$this->database = new Database($this->sdkConfiguration);
+		
+		$this->collection = new Collection($this->sdkConfiguration);
+		
+		$this->channel = new Channel($this->sdkConfiguration);
+		
+		$this->search = new Search($this->sdkConfiguration);
 	}
 }

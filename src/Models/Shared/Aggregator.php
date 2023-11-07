@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace tigris\core\Models\Shared;
 
 
-enum RollupFunctionAggregator: string
+enum Aggregator: string
 {
     case RollupAggregatorSum = 'ROLLUP_AGGREGATOR_SUM';
     case RollupAggregatorCount = 'ROLLUP_AGGREGATOR_COUNT';

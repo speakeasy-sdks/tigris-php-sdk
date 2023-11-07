@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace tigris\core\Models\Shared;
 
 
-enum QueryTimeSeriesMetricsRequestSpaceAggregation: string
+enum SpaceAggregation: string
 {
     case Avg = 'AVG';
     case Min = 'MIN';

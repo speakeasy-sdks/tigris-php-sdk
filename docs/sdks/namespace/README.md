@@ -1,5 +1,5 @@
 # NamespaceT
-(*namespace*)
+
 
 ## Overview
 
@@ -26,19 +26,18 @@ Creates a new namespace, if it does not exist
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Shared\CreateNamespaceRequest;
+use \tigris\core;
+use \tigris\core\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new CreateNamespaceRequest();
+    $request = new Shared\CreateNamespaceRequest();
     $request->code = 481196;
     $request->id = '<ID>';
     $request->name = 'string';
@@ -77,13 +76,13 @@ Get details for all namespaces
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
+use \tigris\core;
+use \tigris\core\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
@@ -116,24 +115,22 @@ GetNamespaceMetadata inserts the user metadata object
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\ManagementGetNamespaceMetadataRequest;
-use \tigris\core\Models\Shared\GetNamespaceMetadataRequest;
-use \tigris\core\Models\Shared\GetNamespaceMetadataRequestValue;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ManagementGetNamespaceMetadataRequest();
-    $request->getNamespaceMetadataRequest = new GetNamespaceMetadataRequest();
+    $request = new Operations\ManagementGetNamespaceMetadataRequest();
+    $request->getNamespaceMetadataRequest = new Shared\GetNamespaceMetadataRequest();
     $request->getNamespaceMetadataRequest->metadataKey = 'string';
-    $request->getNamespaceMetadataRequest->value = new GetNamespaceMetadataRequestValue();
+    $request->getNamespaceMetadataRequest->value = new Shared\Value();
     $request->metadataKey = 'string';
 
     $response = $sdk->namespace->getMetadata($request);
@@ -170,24 +167,22 @@ InsertNamespaceMetadata inserts the namespace metadata object
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\ManagementInsertNamespaceMetadataRequest;
-use \tigris\core\Models\Shared\InsertNamespaceMetadataRequest;
-use \tigris\core\Models\Shared\InsertNamespaceMetadataRequestValue;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ManagementInsertNamespaceMetadataRequest();
-    $request->insertNamespaceMetadataRequest = new InsertNamespaceMetadataRequest();
+    $request = new Operations\ManagementInsertNamespaceMetadataRequest();
+    $request->insertNamespaceMetadataRequest = new Shared\InsertNamespaceMetadataRequest();
     $request->insertNamespaceMetadataRequest->metadataKey = 'string';
-    $request->insertNamespaceMetadataRequest->value = new InsertNamespaceMetadataRequestValue();
+    $request->insertNamespaceMetadataRequest->value = new Shared\InsertNamespaceMetadataRequestValue();
     $request->metadataKey = 'string';
 
     $response = $sdk->namespace->insertMetadata($request);
@@ -224,13 +219,13 @@ List all namespace
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
+use \tigris\core;
+use \tigris\core\Models\Shared;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
@@ -263,24 +258,22 @@ UpdateNamespaceMetadata updates the user metadata object
 declare(strict_types=1);
 require_once 'vendor/autoload.php';
 
-use \tigris\core\SDK;
-use \tigris\core\Models\Shared\Security;
-use \tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataRequest;
-use \tigris\core\Models\Shared\UpdateNamespaceMetadataRequest;
-use \tigris\core\Models\Shared\UpdateNamespaceMetadataRequestValue;
+use \tigris\core;
+use \tigris\core\Models\Shared;
+use \tigris\core\Models\Operations;
 
-$security = new Security();
+$security = new Shared\Security();
 $security->bearerAuth = '';
 
-$sdk = SDK::builder()
+$sdk = core\SDK::builder()
     ->setSecurity($security)
     ->build();
 
 try {
-    $request = new ManagementUpdateNamespaceMetadataRequest();
-    $request->updateNamespaceMetadataRequest = new UpdateNamespaceMetadataRequest();
+    $request = new Operations\ManagementUpdateNamespaceMetadataRequest();
+    $request->updateNamespaceMetadataRequest = new Shared\UpdateNamespaceMetadataRequest();
     $request->updateNamespaceMetadataRequest->metadataKey = 'string';
-    $request->updateNamespaceMetadataRequest->value = new UpdateNamespaceMetadataRequestValue();
+    $request->updateNamespaceMetadataRequest->value = new Shared\UpdateNamespaceMetadataRequestValue();
     $request->metadataKey = 'string';
 
     $response = $sdk->namespace->updateMetadata($request);
