@@ -47,5 +47,5 @@ try {
 
 ### Response
 
-**[?\tigris\core\Models\Operations\AuthGetAccessTokenResponse](../../models/operations/AuthGetAccessTokenResponse.md)**
+**[?\tigris\core\Models\Operations\AuthGetAccessTokenResponse](../../Models/Operations/AuthGetAccessTokenResponse.md)**
 

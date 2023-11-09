@@ -1,0 +1,9 @@
+# TigrisRollbackTransactionRequest
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `rollbackTransactionRequest`                                                                               | [\tigris\core\Models\Shared\RollbackTransactionRequest](../../Models/Shared/RollbackTransactionRequest.md) | :heavy_check_mark:                                                                                         | N/A                                                                                                        |
+| `project`                                                                                                  | *string*                                                                                                   | :heavy_check_mark:                                                                                         | Project name whose DB this transaction belongs to.                                                         |

@@ -1,0 +1,11 @@
+# CollectionDescription
+
+
+## Fields
+
+| Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `collection`                                                                                | *?string*                                                                                   | :heavy_minus_sign:                                                                          | Name of the collection.                                                                     |
+| `metadata`                                                                                  | [?\tigris\core\Models\Shared\CollectionMetadata](../../Models/Shared/CollectionMetadata.md) | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `schema`                                                                                    | [?\tigris\core\Models\Shared\Schema](../../Models/Shared/Schema.md)                         | :heavy_minus_sign:                                                                          | Collections schema                                                                          |
+| `size`                                                                                      | *?int*                                                                                      | :heavy_minus_sign:                                                                          | Collection size in bytes                                                                    |

@@ -61,12 +61,12 @@ try {
 
 | Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [\tigris\core\Models\Operations\CacheCreateCacheRequest](../../models/operations/CacheCreateCacheRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `$request`                                                                                                   | [\tigris\core\Models\Operations\CacheCreateCacheRequest](../../Models/Operations/CacheCreateCacheRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\CacheCreateCacheResponse](../../models/operations/CacheCreateCacheResponse.md)**
+**[?\tigris\core\Models\Operations\CacheCreateCacheResponse](../../Models/Operations/CacheCreateCacheResponse.md)**
 
 
 ## delete
@@ -112,12 +112,12 @@ try {
 
 | Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [\tigris\core\Models\Operations\CacheDeleteCacheRequest](../../models/operations/CacheDeleteCacheRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `$request`                                                                                                   | [\tigris\core\Models\Operations\CacheDeleteCacheRequest](../../Models/Operations/CacheDeleteCacheRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\CacheDeleteCacheResponse](../../models/operations/CacheDeleteCacheResponse.md)**
+**[?\tigris\core\Models\Operations\CacheDeleteCacheResponse](../../Models/Operations/CacheDeleteCacheResponse.md)**
 
 
 ## deleteKeys
@@ -164,12 +164,12 @@ try {
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [\tigris\core\Models\Operations\CacheDelRequest](../../models/operations/CacheDelRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `$request`                                                                                   | [\tigris\core\Models\Operations\CacheDelRequest](../../Models/Operations/CacheDelRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\CacheDelResponse](../../models/operations/CacheDelResponse.md)**
+**[?\tigris\core\Models\Operations\CacheDelResponse](../../Models/Operations/CacheDelResponse.md)**
 
 
 ## getKey
@@ -215,12 +215,12 @@ try {
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [\tigris\core\Models\Operations\CacheGetRequest](../../models/operations/CacheGetRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `$request`                                                                                   | [\tigris\core\Models\Operations\CacheGetRequest](../../Models/Operations/CacheGetRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\CacheGetResponse](../../models/operations/CacheGetResponse.md)**
+**[?\tigris\core\Models\Operations\CacheGetResponse](../../Models/Operations/CacheGetResponse.md)**
 
 
 ## getSetKey
@@ -268,12 +268,12 @@ try {
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [\tigris\core\Models\Operations\CacheGetSetRequest](../../models/operations/CacheGetSetRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `$request`                                                                                         | [\tigris\core\Models\Operations\CacheGetSetRequest](../../Models/Operations/CacheGetSetRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\CacheGetSetResponse](../../models/operations/CacheGetSetResponse.md)**
+**[?\tigris\core\Models\Operations\CacheGetSetResponse](../../Models/Operations/CacheGetSetResponse.md)**
 
 
 ## list
@@ -317,12 +317,12 @@ try {
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                 | [\tigris\core\Models\Operations\CacheListCachesRequest](../../models/operations/CacheListCachesRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `$request`                                                                                                 | [\tigris\core\Models\Operations\CacheListCachesRequest](../../Models/Operations/CacheListCachesRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\CacheListCachesResponse](../../models/operations/CacheListCachesResponse.md)**
+**[?\tigris\core\Models\Operations\CacheListCachesResponse](../../Models/Operations/CacheListCachesResponse.md)**
 
 
 ## listKeys
@@ -370,12 +370,12 @@ try {
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [\tigris\core\Models\Operations\CacheKeysRequest](../../models/operations/CacheKeysRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `$request`                                                                                     | [\tigris\core\Models\Operations\CacheKeysRequest](../../Models/Operations/CacheKeysRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\CacheKeysResponse](../../models/operations/CacheKeysResponse.md)**
+**[?\tigris\core\Models\Operations\CacheKeysResponse](../../Models/Operations/CacheKeysResponse.md)**
 
 
 ## setKey
@@ -427,10 +427,10 @@ try {
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `$request`                                                                                   | [\tigris\core\Models\Operations\CacheSetRequest](../../models/operations/CacheSetRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `$request`                                                                                   | [\tigris\core\Models\Operations\CacheSetRequest](../../Models/Operations/CacheSetRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\CacheSetResponse](../../models/operations/CacheSetResponse.md)**
+**[?\tigris\core\Models\Operations\CacheSetResponse](../../Models/Operations/CacheSetResponse.md)**
 

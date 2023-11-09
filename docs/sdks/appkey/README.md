@@ -56,12 +56,12 @@ try {
 
 | Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [\tigris\core\Models\Operations\TigrisDeleteAppKeyRequest](../../models/operations/TigrisDeleteAppKeyRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `$request`                                                                                                       | [\tigris\core\Models\Operations\TigrisDeleteAppKeyRequest](../../Models/Operations/TigrisDeleteAppKeyRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisDeleteAppKeyResponse](../../models/operations/TigrisDeleteAppKeyResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisDeleteAppKeyResponse](../../Models/Operations/TigrisDeleteAppKeyResponse.md)**
 
 
 ## list
@@ -105,12 +105,12 @@ try {
 
 | Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [\tigris\core\Models\Operations\TigrisListAppKeysRequest](../../models/operations/TigrisListAppKeysRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `$request`                                                                                                     | [\tigris\core\Models\Operations\TigrisListAppKeysRequest](../../Models/Operations/TigrisListAppKeysRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisListAppKeysResponse](../../models/operations/TigrisListAppKeysResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisListAppKeysResponse](../../Models/Operations/TigrisListAppKeysResponse.md)**
 
 
 ## rotate
@@ -157,12 +157,12 @@ try {
 
 | Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                   | [\tigris\core\Models\Operations\TigrisRotateAppKeySecretRequest](../../models/operations/TigrisRotateAppKeySecretRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `$request`                                                                                                                   | [\tigris\core\Models\Operations\TigrisRotateAppKeySecretRequest](../../Models/Operations/TigrisRotateAppKeySecretRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisRotateAppKeySecretResponse](../../models/operations/TigrisRotateAppKeySecretResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisRotateAppKeySecretResponse](../../Models/Operations/TigrisRotateAppKeySecretResponse.md)**
 
 
 ## tigrisCreateAppKey
@@ -209,12 +209,12 @@ try {
 
 | Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [\tigris\core\Models\Operations\TigrisCreateAppKeyRequest](../../models/operations/TigrisCreateAppKeyRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `$request`                                                                                                       | [\tigris\core\Models\Operations\TigrisCreateAppKeyRequest](../../Models/Operations/TigrisCreateAppKeyRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisCreateAppKeyResponse](../../models/operations/TigrisCreateAppKeyResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisCreateAppKeyResponse](../../Models/Operations/TigrisCreateAppKeyResponse.md)**
 
 
 ## update
@@ -262,10 +262,10 @@ try {
 
 | Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [\tigris\core\Models\Operations\TigrisUpdateAppKeyRequest](../../models/operations/TigrisUpdateAppKeyRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `$request`                                                                                                       | [\tigris\core\Models\Operations\TigrisUpdateAppKeyRequest](../../Models/Operations/TigrisUpdateAppKeyRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisUpdateAppKeyResponse](../../models/operations/TigrisUpdateAppKeyResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisUpdateAppKeyResponse](../../Models/Operations/TigrisUpdateAppKeyResponse.md)**
 

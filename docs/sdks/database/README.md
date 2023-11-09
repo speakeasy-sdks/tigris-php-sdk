@@ -62,12 +62,12 @@ try {
 
 | Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                               | [\tigris\core\Models\Operations\TigrisBeginTransactionRequest](../../models/operations/TigrisBeginTransactionRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `$request`                                                                                                               | [\tigris\core\Models\Operations\TigrisBeginTransactionRequest](../../Models/Operations/TigrisBeginTransactionRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisBeginTransactionResponse](../../models/operations/TigrisBeginTransactionResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisBeginTransactionResponse](../../Models/Operations/TigrisBeginTransactionResponse.md)**
 
 
 ## commitTransaction
@@ -114,12 +114,12 @@ try {
 
 | Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                 | [\tigris\core\Models\Operations\TigrisCommitTransactionRequest](../../models/operations/TigrisCommitTransactionRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `$request`                                                                                                                 | [\tigris\core\Models\Operations\TigrisCommitTransactionRequest](../../Models/Operations/TigrisCommitTransactionRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisCommitTransactionResponse](../../models/operations/TigrisCommitTransactionResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisCommitTransactionResponse](../../Models/Operations/TigrisCommitTransactionResponse.md)**
 
 
 ## createBranch
@@ -165,12 +165,12 @@ try {
 
 | Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [\tigris\core\Models\Operations\TigrisCreateBranchRequest](../../models/operations/TigrisCreateBranchRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `$request`                                                                                                       | [\tigris\core\Models\Operations\TigrisCreateBranchRequest](../../Models/Operations/TigrisCreateBranchRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisCreateBranchResponse](../../models/operations/TigrisCreateBranchResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisCreateBranchResponse](../../Models/Operations/TigrisCreateBranchResponse.md)**
 
 
 ## deleteBranch
@@ -217,12 +217,12 @@ try {
 
 | Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [\tigris\core\Models\Operations\TigrisDeleteBranchRequest](../../models/operations/TigrisDeleteBranchRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `$request`                                                                                                       | [\tigris\core\Models\Operations\TigrisDeleteBranchRequest](../../Models/Operations/TigrisDeleteBranchRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisDeleteBranchResponse](../../models/operations/TigrisDeleteBranchResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisDeleteBranchResponse](../../Models/Operations/TigrisDeleteBranchResponse.md)**
 
 
 ## describe
@@ -271,12 +271,12 @@ try {
 
 | Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                               | [\tigris\core\Models\Operations\TigrisDescribeDatabaseRequest](../../models/operations/TigrisDescribeDatabaseRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `$request`                                                                                                               | [\tigris\core\Models\Operations\TigrisDescribeDatabaseRequest](../../Models/Operations/TigrisDescribeDatabaseRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisDescribeDatabaseResponse](../../models/operations/TigrisDescribeDatabaseResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisDescribeDatabaseResponse](../../Models/Operations/TigrisDescribeDatabaseResponse.md)**
 
 
 ## listCollections
@@ -321,12 +321,12 @@ try {
 
 | Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                             | [\tigris\core\Models\Operations\TigrisListCollectionsRequest](../../models/operations/TigrisListCollectionsRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `$request`                                                                                                             | [\tigris\core\Models\Operations\TigrisListCollectionsRequest](../../Models/Operations/TigrisListCollectionsRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisListCollectionsResponse](../../models/operations/TigrisListCollectionsResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisListCollectionsResponse](../../Models/Operations/TigrisListCollectionsResponse.md)**
 
 
 ## rollbackTransaction
@@ -373,12 +373,12 @@ try {
 
 | Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                                     | [\tigris\core\Models\Operations\TigrisRollbackTransactionRequest](../../models/operations/TigrisRollbackTransactionRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `$request`                                                                                                                     | [\tigris\core\Models\Operations\TigrisRollbackTransactionRequest](../../Models/Operations/TigrisRollbackTransactionRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisRollbackTransactionResponse](../../models/operations/TigrisRollbackTransactionResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisRollbackTransactionResponse](../../Models/Operations/TigrisRollbackTransactionResponse.md)**
 
 
 ## tigrisListBranches
@@ -422,10 +422,10 @@ try {
 
 | Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [\tigris\core\Models\Operations\TigrisListBranchesRequest](../../models/operations/TigrisListBranchesRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `$request`                                                                                                       | [\tigris\core\Models\Operations\TigrisListBranchesRequest](../../Models/Operations/TigrisListBranchesRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisListBranchesResponse](../../models/operations/TigrisListBranchesResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisListBranchesResponse](../../Models/Operations/TigrisListBranchesResponse.md)**
 

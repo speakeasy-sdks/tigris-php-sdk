@@ -55,12 +55,12 @@ try {
 
 | Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                                     | [\tigris\core\Models\Operations\ManagementGetUserMetadataRequest](../../models/operations/ManagementGetUserMetadataRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `$request`                                                                                                                     | [\tigris\core\Models\Operations\ManagementGetUserMetadataRequest](../../Models/Operations/ManagementGetUserMetadataRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\ManagementGetUserMetadataResponse](../../models/operations/ManagementGetUserMetadataResponse.md)**
+**[?\tigris\core\Models\Operations\ManagementGetUserMetadataResponse](../../Models/Operations/ManagementGetUserMetadataResponse.md)**
 
 
 ## insertMetadata
@@ -107,12 +107,12 @@ try {
 
 | Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                                           | [\tigris\core\Models\Operations\ManagementInsertUserMetadataRequest](../../models/operations/ManagementInsertUserMetadataRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `$request`                                                                                                                           | [\tigris\core\Models\Operations\ManagementInsertUserMetadataRequest](../../Models/Operations/ManagementInsertUserMetadataRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\ManagementInsertUserMetadataResponse](../../models/operations/ManagementInsertUserMetadataResponse.md)**
+**[?\tigris\core\Models\Operations\ManagementInsertUserMetadataResponse](../../Models/Operations/ManagementInsertUserMetadataResponse.md)**
 
 
 ## updateMetadata
@@ -159,10 +159,10 @@ try {
 
 | Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                                           | [\tigris\core\Models\Operations\ManagementUpdateUserMetadataRequest](../../models/operations/ManagementUpdateUserMetadataRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `$request`                                                                                                                           | [\tigris\core\Models\Operations\ManagementUpdateUserMetadataRequest](../../Models/Operations/ManagementUpdateUserMetadataRequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\ManagementUpdateUserMetadataResponse](../../models/operations/ManagementUpdateUserMetadataResponse.md)**
+**[?\tigris\core\Models\Operations\ManagementUpdateUserMetadataResponse](../../Models/Operations/ManagementUpdateUserMetadataResponse.md)**
 

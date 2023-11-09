@@ -1,0 +1,9 @@
+# TigrisBeginTransactionRequest
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `beginTransactionRequest`                                                                            | [\tigris\core\Models\Shared\BeginTransactionRequest](../../Models/Shared/BeginTransactionRequest.md) | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `project`                                                                                            | *string*                                                                                             | :heavy_check_mark:                                                                                   | Project name whose DB this transaction belongs to.                                                   |

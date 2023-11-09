@@ -1,0 +1,9 @@
+# TigrisCreateProjectRequest
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `createProjectRequest`                                                                         | [\tigris\core\Models\Shared\CreateProjectRequest](../../Models/Shared/CreateProjectRequest.md) | :heavy_check_mark:                                                                             | N/A                                                                                            |
+| `project`                                                                                      | *string*                                                                                       | :heavy_check_mark:                                                                             | Create project with this name.                                                                 |

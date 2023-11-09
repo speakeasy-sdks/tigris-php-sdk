@@ -1,0 +1,10 @@
+# CacheCreateCacheRequest
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `createCacheRequest`                                                                       | [\tigris\core\Models\Shared\CreateCacheRequest](../../Models/Shared/CreateCacheRequest.md) | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `name`                                                                                     | *string*                                                                                   | :heavy_check_mark:                                                                         | cache name                                                                                 |
+| `project`                                                                                  | *string*                                                                                   | :heavy_check_mark:                                                                         | Tigris project name                                                                        |

@@ -56,12 +56,12 @@ try {
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                         | [\tigris\core\Models\Shared\CreateNamespaceRequest](../../models/shared/CreateNamespaceRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `$request`                                                                                         | [\tigris\core\Models\Shared\CreateNamespaceRequest](../../Models/Shared/CreateNamespaceRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\CreateNamespaceResponse](../../models/operations/CreateNamespaceResponse.md)**
+**[?\tigris\core\Models\Operations\CreateNamespaceResponse](../../Models/Operations/CreateNamespaceResponse.md)**
 
 
 ## get
@@ -100,7 +100,7 @@ try {
 
 ### Response
 
-**[?\tigris\core\Models\Operations\ManagementDescribeNamespacesResponse](../../models/operations/ManagementDescribeNamespacesResponse.md)**
+**[?\tigris\core\Models\Operations\ManagementDescribeNamespacesResponse](../../Models/Operations/ManagementDescribeNamespacesResponse.md)**
 
 
 ## getMetadata
@@ -147,12 +147,12 @@ try {
 
 | Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                               | [\tigris\core\Models\Operations\ManagementGetNamespaceMetadataRequest](../../models/operations/ManagementGetNamespaceMetadataRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `$request`                                                                                                                               | [\tigris\core\Models\Operations\ManagementGetNamespaceMetadataRequest](../../Models/Operations/ManagementGetNamespaceMetadataRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\ManagementGetNamespaceMetadataResponse](../../models/operations/ManagementGetNamespaceMetadataResponse.md)**
+**[?\tigris\core\Models\Operations\ManagementGetNamespaceMetadataResponse](../../Models/Operations/ManagementGetNamespaceMetadataResponse.md)**
 
 
 ## insertMetadata
@@ -199,12 +199,12 @@ try {
 
 | Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                     | [\tigris\core\Models\Operations\ManagementInsertNamespaceMetadataRequest](../../models/operations/ManagementInsertNamespaceMetadataRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| `$request`                                                                                                                                     | [\tigris\core\Models\Operations\ManagementInsertNamespaceMetadataRequest](../../Models/Operations/ManagementInsertNamespaceMetadataRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\ManagementInsertNamespaceMetadataResponse](../../models/operations/ManagementInsertNamespaceMetadataResponse.md)**
+**[?\tigris\core\Models\Operations\ManagementInsertNamespaceMetadataResponse](../../Models/Operations/ManagementInsertNamespaceMetadataResponse.md)**
 
 
 ## list
@@ -243,7 +243,7 @@ try {
 
 ### Response
 
-**[?\tigris\core\Models\Operations\ManagementListNamespacesResponse](../../models/operations/ManagementListNamespacesResponse.md)**
+**[?\tigris\core\Models\Operations\ManagementListNamespacesResponse](../../Models/Operations/ManagementListNamespacesResponse.md)**
 
 
 ## updateMetadata
@@ -290,10 +290,10 @@ try {
 
 | Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                                     | [\tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataRequest](../../models/operations/ManagementUpdateNamespaceMetadataRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| `$request`                                                                                                                                     | [\tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataRequest](../../Models/Operations/ManagementUpdateNamespaceMetadataRequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataResponse](../../models/operations/ManagementUpdateNamespaceMetadataResponse.md)**
+**[?\tigris\core\Models\Operations\ManagementUpdateNamespaceMetadataResponse](../../Models/Operations/ManagementUpdateNamespaceMetadataResponse.md)**
 

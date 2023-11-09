@@ -1,0 +1,10 @@
+# CacheDeleteCacheRequest
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `deleteCacheRequest`                                                                       | [\tigris\core\Models\Shared\DeleteCacheRequest](../../Models/Shared/DeleteCacheRequest.md) | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `name`                                                                                     | *string*                                                                                   | :heavy_check_mark:                                                                         | cache name                                                                                 |
+| `project`                                                                                  | *string*                                                                                   | :heavy_check_mark:                                                                         | Tigris project name                                                                        |

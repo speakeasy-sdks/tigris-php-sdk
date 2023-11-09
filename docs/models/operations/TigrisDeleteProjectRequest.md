@@ -1,9 +1,0 @@
-# TigrisDeleteProjectRequest
-
-
-## Fields
-
-| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `deleteProjectRequest`                                                                                      | [\tigris\core\Models\Shared\DeleteProjectRequest](../../models/shared/DeleteProjectRequest.md)              | :heavy_check_mark:                                                                                          | N/A                                                                                                         |
-| `project`                                                                                                   | *string*                                                                                                    | :heavy_check_mark:                                                                                          | Delete Project with this name. <p></p>**Note**: Deletes all resources under this project. Use with caution. |

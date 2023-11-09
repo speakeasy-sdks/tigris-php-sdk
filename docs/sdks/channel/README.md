@@ -56,12 +56,12 @@ try {
 
 | Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                           | [\tigris\core\Models\Operations\RealtimeGetRTChannelRequest](../../models/operations/RealtimeGetRTChannelRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `$request`                                                                                                           | [\tigris\core\Models\Operations\RealtimeGetRTChannelRequest](../../Models/Operations/RealtimeGetRTChannelRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\RealtimeGetRTChannelResponse](../../models/operations/RealtimeGetRTChannelResponse.md)**
+**[?\tigris\core\Models\Operations\RealtimeGetRTChannelResponse](../../Models/Operations/RealtimeGetRTChannelResponse.md)**
 
 
 ## getMessages
@@ -112,12 +112,12 @@ try {
 
 | Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                           | [\tigris\core\Models\Operations\RealtimeReadMessagesRequest](../../models/operations/RealtimeReadMessagesRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `$request`                                                                                                           | [\tigris\core\Models\Operations\RealtimeReadMessagesRequest](../../Models/Operations/RealtimeReadMessagesRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\RealtimeReadMessagesResponse](../../models/operations/RealtimeReadMessagesResponse.md)**
+**[?\tigris\core\Models\Operations\RealtimeReadMessagesResponse](../../Models/Operations/RealtimeReadMessagesResponse.md)**
 
 
 ## list
@@ -161,12 +161,12 @@ try {
 
 | Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                             | [\tigris\core\Models\Operations\RealtimeGetRTChannelsRequest](../../models/operations/RealtimeGetRTChannelsRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `$request`                                                                                                             | [\tigris\core\Models\Operations\RealtimeGetRTChannelsRequest](../../Models/Operations/RealtimeGetRTChannelsRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\RealtimeGetRTChannelsResponse](../../models/operations/RealtimeGetRTChannelsResponse.md)**
+**[?\tigris\core\Models\Operations\RealtimeGetRTChannelsResponse](../../Models/Operations/RealtimeGetRTChannelsResponse.md)**
 
 
 ## listSubscriptions
@@ -213,12 +213,12 @@ try {
 
 | Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                                     | [\tigris\core\Models\Operations\RealtimeListSubscriptionsRequest](../../models/operations/RealtimeListSubscriptionsRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `$request`                                                                                                                     | [\tigris\core\Models\Operations\RealtimeListSubscriptionsRequest](../../Models/Operations/RealtimeListSubscriptionsRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\RealtimeListSubscriptionsResponse](../../models/operations/RealtimeListSubscriptionsResponse.md)**
+**[?\tigris\core\Models\Operations\RealtimeListSubscriptionsResponse](../../Models/Operations/RealtimeListSubscriptionsResponse.md)**
 
 
 ## pushMessages
@@ -269,12 +269,12 @@ try {
 
 | Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [\tigris\core\Models\Operations\RealtimeMessagesRequest](../../models/operations/RealtimeMessagesRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `$request`                                                                                                   | [\tigris\core\Models\Operations\RealtimeMessagesRequest](../../Models/Operations/RealtimeMessagesRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\RealtimeMessagesResponse](../../models/operations/RealtimeMessagesResponse.md)**
+**[?\tigris\core\Models\Operations\RealtimeMessagesResponse](../../Models/Operations/RealtimeMessagesResponse.md)**
 
 
 ## realtimePresence
@@ -319,10 +319,10 @@ try {
 
 | Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [\tigris\core\Models\Operations\RealtimePresenceRequest](../../models/operations/RealtimePresenceRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `$request`                                                                                                   | [\tigris\core\Models\Operations\RealtimePresenceRequest](../../Models/Operations/RealtimePresenceRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\RealtimePresenceResponse](../../models/operations/RealtimePresenceResponse.md)**
+**[?\tigris\core\Models\Operations\RealtimePresenceResponse](../../Models/Operations/RealtimePresenceResponse.md)**
 

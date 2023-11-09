@@ -1,0 +1,10 @@
+# ReadResponse
+
+
+## Fields
+
+| Field                                                                                   | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `data`                                                                                  | [?\tigris\core\Models\Shared\Data](../../Models/Shared/Data.md)                         | :heavy_minus_sign:                                                                      | Object containing the collection document.                                              |
+| `metadata`                                                                              | [?\tigris\core\Models\Shared\ResponseMetadata](../../Models/Shared/ResponseMetadata.md) | :heavy_minus_sign:                                                                      | Has metadata related to the documents stored.                                           |
+| `resumeToken`                                                                           | *?string*                                                                               | :heavy_minus_sign:                                                                      | An internal key, used for pagination.                                                   |

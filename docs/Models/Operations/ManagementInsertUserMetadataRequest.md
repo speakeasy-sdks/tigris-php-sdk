@@ -1,0 +1,9 @@
+# ManagementInsertUserMetadataRequest
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `insertUserMetadataRequest`                                                                              | [\tigris\core\Models\Shared\InsertUserMetadataRequest](../../Models/Shared/InsertUserMetadataRequest.md) | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
+| `metadataKey`                                                                                            | *string*                                                                                                 | :heavy_check_mark:                                                                                       | N/A                                                                                                      |

@@ -1,0 +1,9 @@
+# ManagementGetNamespaceMetadataRequest
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `getNamespaceMetadataRequest`                                                                                | [\tigris\core\Models\Shared\GetNamespaceMetadataRequest](../../Models/Shared/GetNamespaceMetadataRequest.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
+| `metadataKey`                                                                                                | *string*                                                                                                     | :heavy_check_mark:                                                                                           | N/A                                                                                                          |

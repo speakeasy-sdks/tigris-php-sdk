@@ -53,12 +53,12 @@ try {
 
 | Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                         | [\tigris\core\Models\Operations\TigrisCreateProjectRequest](../../models/operations/TigrisCreateProjectRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `$request`                                                                                                         | [\tigris\core\Models\Operations\TigrisCreateProjectRequest](../../Models/Operations/TigrisCreateProjectRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisCreateProjectResponse](../../models/operations/TigrisCreateProjectResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisCreateProjectResponse](../../Models/Operations/TigrisCreateProjectResponse.md)**
 
 
 ## deleteProject
@@ -103,12 +103,12 @@ try {
 
 | Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                         | [\tigris\core\Models\Operations\TigrisDeleteProjectRequest](../../models/operations/TigrisDeleteProjectRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `$request`                                                                                                         | [\tigris\core\Models\Operations\TigrisDeleteProjectRequest](../../Models/Operations/TigrisDeleteProjectRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisDeleteProjectResponse](../../models/operations/TigrisDeleteProjectResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisDeleteProjectResponse](../../Models/Operations/TigrisDeleteProjectResponse.md)**
 
 
 ## list
@@ -147,5 +147,5 @@ try {
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisListProjectsResponse](../../models/operations/TigrisListProjectsResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisListProjectsResponse](../../Models/Operations/TigrisListProjectsResponse.md)**
 

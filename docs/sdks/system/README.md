@@ -49,7 +49,7 @@ try {
 
 ### Response
 
-**[?\tigris\core\Models\Operations\HealthAPIHealthResponse](../../models/operations/HealthAPIHealthResponse.md)**
+**[?\tigris\core\Models\Operations\HealthAPIHealthResponse](../../Models/Operations/HealthAPIHealthResponse.md)**
 
 
 ## getServerInfo
@@ -88,7 +88,7 @@ try {
 
 ### Response
 
-**[?\tigris\core\Models\Operations\ObservabilityGetInfoResponse](../../models/operations/ObservabilityGetInfoResponse.md)**
+**[?\tigris\core\Models\Operations\ObservabilityGetInfoResponse](../../Models/Operations/ObservabilityGetInfoResponse.md)**
 
 
 ## observabilityQuotaUsage
@@ -130,12 +130,12 @@ try {
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [\tigris\core\Models\Shared\QuotaUsageRequest](../../models/shared/QuotaUsageRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `$request`                                                                               | [\tigris\core\Models\Shared\QuotaUsageRequest](../../Models/Shared/QuotaUsageRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\ObservabilityQuotaUsageResponse](../../models/operations/ObservabilityQuotaUsageResponse.md)**
+**[?\tigris\core\Models\Operations\ObservabilityQuotaUsageResponse](../../Models/Operations/ObservabilityQuotaUsageResponse.md)**
 
 
 ## queryQuotaLimits
@@ -177,12 +177,12 @@ try {
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `$request`                                                                                 | [\tigris\core\Models\Shared\QuotaLimitsRequest](../../models/shared/QuotaLimitsRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `$request`                                                                                 | [\tigris\core\Models\Shared\QuotaLimitsRequest](../../Models/Shared/QuotaLimitsRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\ObservabilityQuotaLimitsResponse](../../models/operations/ObservabilityQuotaLimitsResponse.md)**
+**[?\tigris\core\Models\Operations\ObservabilityQuotaLimitsResponse](../../Models/Operations/ObservabilityQuotaLimitsResponse.md)**
 
 
 ## queryTimeSeriesMetrics
@@ -240,10 +240,10 @@ try {
 
 | Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                       | [\tigris\core\Models\Shared\QueryTimeSeriesMetricsRequest](../../models/shared/QueryTimeSeriesMetricsRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `$request`                                                                                                       | [\tigris\core\Models\Shared\QueryTimeSeriesMetricsRequest](../../Models/Shared/QueryTimeSeriesMetricsRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsResponse](../../models/operations/ObservabilityQueryTimeSeriesMetricsResponse.md)**
+**[?\tigris\core\Models\Operations\ObservabilityQueryTimeSeriesMetricsResponse](../../Models/Operations/ObservabilityQueryTimeSeriesMetricsResponse.md)**
 

@@ -1,9 +1,0 @@
-# SearchHit
-
-
-## Fields
-
-| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `data`                                                                                                     | [?\tigris\core\Models\Shared\SearchHitData](../../models/shared/SearchHitData.md)                          | :heavy_minus_sign:                                                                                         | Actual search document                                                                                     |
-| `metadata`                                                                                                 | [?\tigris\core\Models\Shared\SearchHitMeta](../../models/shared/SearchHitMeta.md)                          | :heavy_minus_sign:                                                                                         | Contains metadata related to the search hit, has information about document created_at/updated_at as well. |

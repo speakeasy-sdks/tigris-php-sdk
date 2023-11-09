@@ -69,12 +69,12 @@ try {
 
 | Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                               | [\tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionRequest](../../models/operations/TigrisCreateOrUpdateCollectionRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `$request`                                                                                                                               | [\tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionRequest](../../Models/Operations/TigrisCreateOrUpdateCollectionRequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionResponse](../../models/operations/TigrisCreateOrUpdateCollectionResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisCreateOrUpdateCollectionResponse](../../Models/Operations/TigrisCreateOrUpdateCollectionResponse.md)**
 
 
 ## deleteDocuments
@@ -127,12 +127,12 @@ try {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [\tigris\core\Models\Operations\TigrisDeleteRequest](../../models/operations/TigrisDeleteRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [\tigris\core\Models\Operations\TigrisDeleteRequest](../../Models/Operations/TigrisDeleteRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisDeleteResponse](../../models/operations/TigrisDeleteResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisDeleteResponse](../../Models/Operations/TigrisDeleteResponse.md)**
 
 
 ## describe
@@ -183,12 +183,12 @@ try {
 
 | Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                   | [\tigris\core\Models\Operations\TigrisDescribeCollectionRequest](../../models/operations/TigrisDescribeCollectionRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `$request`                                                                                                                   | [\tigris\core\Models\Operations\TigrisDescribeCollectionRequest](../../Models/Operations/TigrisDescribeCollectionRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisDescribeCollectionResponse](../../models/operations/TigrisDescribeCollectionResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisDescribeCollectionResponse](../../Models/Operations/TigrisDescribeCollectionResponse.md)**
 
 
 ## drop
@@ -237,12 +237,12 @@ try {
 
 | Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                           | [\tigris\core\Models\Operations\TigrisDropCollectionRequest](../../models/operations/TigrisDropCollectionRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `$request`                                                                                                           | [\tigris\core\Models\Operations\TigrisDropCollectionRequest](../../Models/Operations/TigrisDropCollectionRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisDropCollectionResponse](../../models/operations/TigrisDropCollectionResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisDropCollectionResponse](../../Models/Operations/TigrisDropCollectionResponse.md)**
 
 
 ## importDocuments
@@ -306,12 +306,12 @@ try {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [\tigris\core\Models\Operations\TigrisImportRequest](../../models/operations/TigrisImportRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [\tigris\core\Models\Operations\TigrisImportRequest](../../Models/Operations/TigrisImportRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisImportResponse](../../models/operations/TigrisImportResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisImportResponse](../../Models/Operations/TigrisImportResponse.md)**
 
 
 ## insertDocuments
@@ -365,12 +365,12 @@ try {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [\tigris\core\Models\Operations\TigrisInsertRequest](../../models/operations/TigrisInsertRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [\tigris\core\Models\Operations\TigrisInsertRequest](../../Models/Operations/TigrisInsertRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisInsertResponse](../../models/operations/TigrisInsertResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisInsertResponse](../../Models/Operations/TigrisInsertResponse.md)**
 
 
 ## readDocuments
@@ -431,12 +431,12 @@ try {
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                       | [\tigris\core\Models\Operations\TigrisReadRequest](../../models/operations/TigrisReadRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `$request`                                                                                       | [\tigris\core\Models\Operations\TigrisReadRequest](../../Models/Operations/TigrisReadRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisReadResponse](../../models/operations/TigrisReadResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisReadResponse](../../Models/Operations/TigrisReadResponse.md)**
 
 
 ## replaceDocuments
@@ -488,12 +488,12 @@ try {
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                             | [\tigris\core\Models\Operations\TigrisReplaceRequest](../../models/operations/TigrisReplaceRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `$request`                                                                                             | [\tigris\core\Models\Operations\TigrisReplaceRequest](../../Models/Operations/TigrisReplaceRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisReplaceResponse](../../models/operations/TigrisReplaceResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisReplaceResponse](../../Models/Operations/TigrisReplaceResponse.md)**
 
 
 ## searchDocuments
@@ -561,12 +561,12 @@ try {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [\tigris\core\Models\Operations\TigrisSearchRequest](../../models/operations/TigrisSearchRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [\tigris\core\Models\Operations\TigrisSearchRequest](../../Models/Operations/TigrisSearchRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisSearchResponse](../../models/operations/TigrisSearchResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisSearchResponse](../../Models/Operations/TigrisSearchResponse.md)**
 
 
 ## updateDocuments
@@ -620,10 +620,10 @@ try {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [\tigris\core\Models\Operations\TigrisUpdateRequest](../../models/operations/TigrisUpdateRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [\tigris\core\Models\Operations\TigrisUpdateRequest](../../Models/Operations/TigrisUpdateRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\TigrisUpdateResponse](../../models/operations/TigrisUpdateResponse.md)**
+**[?\tigris\core\Models\Operations\TigrisUpdateResponse](../../Models/Operations/TigrisUpdateResponse.md)**
 

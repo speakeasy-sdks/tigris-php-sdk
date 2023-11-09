@@ -1,9 +1,0 @@
-# ManagementUpdateUserMetadataRequest
-
-
-## Fields
-
-| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `updateUserMetadataRequest`                                                                              | [\tigris\core\Models\Shared\UpdateUserMetadataRequest](../../models/shared/UpdateUserMetadataRequest.md) | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
-| `metadataKey`                                                                                            | *string*                                                                                                 | :heavy_check_mark:                                                                                       | N/A                                                                                                      |

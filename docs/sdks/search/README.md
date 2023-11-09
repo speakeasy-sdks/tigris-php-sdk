@@ -71,12 +71,12 @@ try {
 
 | Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                   | [\tigris\core\Models\Operations\SearchCreateByIdRequest](../../models/operations/SearchCreateByIdRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `$request`                                                                                                   | [\tigris\core\Models\Operations\SearchCreateByIdRequest](../../Models/Operations/SearchCreateByIdRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\SearchCreateByIdResponse](../../models/operations/SearchCreateByIdResponse.md)**
+**[?\tigris\core\Models\Operations\SearchCreateByIdResponse](../../Models/Operations/SearchCreateByIdResponse.md)**
 
 
 ## createDocuments
@@ -131,12 +131,12 @@ try {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [\tigris\core\Models\Operations\SearchCreateRequest](../../models/operations/SearchCreateRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [\tigris\core\Models\Operations\SearchCreateRequest](../../Models/Operations/SearchCreateRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\SearchCreateResponse](../../models/operations/SearchCreateResponse.md)**
+**[?\tigris\core\Models\Operations\SearchCreateResponse](../../Models/Operations/SearchCreateResponse.md)**
 
 
 ## deleteDocuments
@@ -189,12 +189,12 @@ try {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [\tigris\core\Models\Operations\SearchDeleteRequest](../../models/operations/SearchDeleteRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [\tigris\core\Models\Operations\SearchDeleteRequest](../../Models/Operations/SearchDeleteRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\SearchDeleteResponse](../../models/operations/SearchDeleteResponse.md)**
+**[?\tigris\core\Models\Operations\SearchDeleteResponse](../../Models/Operations/SearchDeleteResponse.md)**
 
 
 ## deleteIndex
@@ -242,12 +242,12 @@ try {
 
 | Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [\tigris\core\Models\Operations\SearchDeleteIndexRequest](../../models/operations/SearchDeleteIndexRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `$request`                                                                                                     | [\tigris\core\Models\Operations\SearchDeleteIndexRequest](../../Models/Operations/SearchDeleteIndexRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\SearchDeleteIndexResponse](../../models/operations/SearchDeleteIndexResponse.md)**
+**[?\tigris\core\Models\Operations\SearchDeleteIndexResponse](../../Models/Operations/SearchDeleteIndexResponse.md)**
 
 
 ## findDocuments
@@ -316,12 +316,12 @@ try {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [\tigris\core\Models\Operations\SearchSearchRequest](../../models/operations/SearchSearchRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [\tigris\core\Models\Operations\SearchSearchRequest](../../Models/Operations/SearchSearchRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\SearchSearchResponse](../../models/operations/SearchSearchResponse.md)**
+**[?\tigris\core\Models\Operations\SearchSearchResponse](../../Models/Operations/SearchSearchResponse.md)**
 
 
 ## getDocuments
@@ -370,12 +370,12 @@ try {
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `$request`                                                                                     | [\tigris\core\Models\Operations\SearchGetRequest](../../models/operations/SearchGetRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `$request`                                                                                     | [\tigris\core\Models\Operations\SearchGetRequest](../../Models/Operations/SearchGetRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\SearchGetResponse](../../models/operations/SearchGetResponse.md)**
+**[?\tigris\core\Models\Operations\SearchGetResponse](../../Models/Operations/SearchGetResponse.md)**
 
 
 ## getIndex
@@ -420,12 +420,12 @@ try {
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                               | [\tigris\core\Models\Operations\SearchGetIndexRequest](../../models/operations/SearchGetIndexRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `$request`                                                                                               | [\tigris\core\Models\Operations\SearchGetIndexRequest](../../Models/Operations/SearchGetIndexRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\SearchGetIndexResponse](../../models/operations/SearchGetIndexResponse.md)**
+**[?\tigris\core\Models\Operations\SearchGetIndexResponse](../../Models/Operations/SearchGetIndexResponse.md)**
 
 
 ## listIndexes
@@ -472,12 +472,12 @@ try {
 
 | Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                     | [\tigris\core\Models\Operations\SearchListIndexesRequest](../../models/operations/SearchListIndexesRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `$request`                                                                                                     | [\tigris\core\Models\Operations\SearchListIndexesRequest](../../Models/Operations/SearchListIndexesRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\SearchListIndexesResponse](../../models/operations/SearchListIndexesResponse.md)**
+**[?\tigris\core\Models\Operations\SearchListIndexesResponse](../../Models/Operations/SearchListIndexesResponse.md)**
 
 
 ## queryDeleteDocuments
@@ -527,12 +527,12 @@ try {
 
 | Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                         | [\tigris\core\Models\Operations\SearchDeleteByQueryRequest](../../models/operations/SearchDeleteByQueryRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `$request`                                                                                                         | [\tigris\core\Models\Operations\SearchDeleteByQueryRequest](../../Models/Operations/SearchDeleteByQueryRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\SearchDeleteByQueryResponse](../../models/operations/SearchDeleteByQueryResponse.md)**
+**[?\tigris\core\Models\Operations\SearchDeleteByQueryResponse](../../Models/Operations/SearchDeleteByQueryResponse.md)**
 
 
 ## replaceDocuments
@@ -586,12 +586,12 @@ try {
 
 | Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                             | [\tigris\core\Models\Operations\SearchCreateOrReplaceRequest](../../models/operations/SearchCreateOrReplaceRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `$request`                                                                                                             | [\tigris\core\Models\Operations\SearchCreateOrReplaceRequest](../../Models/Operations/SearchCreateOrReplaceRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\SearchCreateOrReplaceResponse](../../models/operations/SearchCreateOrReplaceResponse.md)**
+**[?\tigris\core\Models\Operations\SearchCreateOrReplaceResponse](../../Models/Operations/SearchCreateOrReplaceResponse.md)**
 
 
 ## updateDocuments
@@ -645,12 +645,12 @@ try {
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                           | [\tigris\core\Models\Operations\SearchUpdateRequest](../../models/operations/SearchUpdateRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `$request`                                                                                           | [\tigris\core\Models\Operations\SearchUpdateRequest](../../Models/Operations/SearchUpdateRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\SearchUpdateResponse](../../models/operations/SearchUpdateResponse.md)**
+**[?\tigris\core\Models\Operations\SearchUpdateResponse](../../Models/Operations/SearchUpdateResponse.md)**
 
 
 ## updateIndex
@@ -700,10 +700,10 @@ try {
 
 | Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                                     | [\tigris\core\Models\Operations\SearchCreateOrUpdateIndexRequest](../../models/operations/SearchCreateOrUpdateIndexRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `$request`                                                                                                                     | [\tigris\core\Models\Operations\SearchCreateOrUpdateIndexRequest](../../Models/Operations/SearchCreateOrUpdateIndexRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response
 
-**[?\tigris\core\Models\Operations\SearchCreateOrUpdateIndexResponse](../../models/operations/SearchCreateOrUpdateIndexResponse.md)**
+**[?\tigris\core\Models\Operations\SearchCreateOrUpdateIndexResponse](../../Models/Operations/SearchCreateOrUpdateIndexResponse.md)**
 
