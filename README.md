@@ -2195,6 +2195,8 @@ try {
     // handle exception
 }
 ```<!-- Start SDK Example Usage -->
+### Example
+
 ```php
 <?php
 
