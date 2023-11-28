@@ -1,6 +1,6 @@
 # tigris-data/tigris-api
 
-<!-- Start SDK Installation -->
+<!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 ### Composer
@@ -26,7 +26,7 @@ Then run the following command:
 ```bash
 composer update
 ```
-<!-- End SDK Installation -->
+<!-- End SDK Installation [installation] -->
 
 ## SDK Example Usage
 ```php
@@ -2194,7 +2194,9 @@ try {
 } catch (Exception $e) {
     // handle exception
 }
-```<!-- Start SDK Example Usage -->
+```<!-- Start SDK Example Usage [usage] -->
+## SDK Example Usage
+
 ### Example
 
 ```php
@@ -2232,11 +2234,10 @@ try {
 }
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
 
-<!-- Start SDK Available Operations -->
+<!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
-
 
 ### [Auth](docs/sdks/auth/README.md)
 
@@ -2337,13 +2338,9 @@ try {
 * [replaceDocuments](docs/sdks/search/README.md#replacedocuments) - Create or replace documents in an index
 * [updateDocuments](docs/sdks/search/README.md#updatedocuments) - Update documents in an index
 * [updateIndex](docs/sdks/search/README.md#updateindex) - Creates or updates search index
-<!-- End SDK Available Operations -->
+<!-- End Available Resources and Operations [operations] -->
 
 
-
-<!-- Start Dev Containers -->
-
-<!-- End Dev Containers -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

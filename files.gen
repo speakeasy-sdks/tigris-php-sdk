@@ -348,7 +348,6 @@ src/Models/Shared/UpdateDocumentRequest.php
 src/Models/Shared/CreateOrUpdateIndexResponse.php
 src/Models/Shared/CreateOrUpdateIndexRequest.php
 src/Models/Shared/Security.php
-USAGE.md
 docs/Models/Operations/AuthGetAccessTokenResponse.md
 docs/Models/Operations/HealthAPIHealthResponse.md
 docs/Models/Operations/ObservabilityGetInfoResponse.md
@@ -679,4 +678,5 @@ docs/sdks/database/README.md
 docs/sdks/collection/README.md
 docs/sdks/channel/README.md
 docs/sdks/search/README.md
+USAGE.md
 .gitattributes
