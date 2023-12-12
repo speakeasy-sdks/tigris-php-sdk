@@ -31,16 +31,14 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RealtimeGetRTChannelRequest();
+        $request = new Operations\RealtimeGetRTChannelRequest();
     $request->channel = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->channel->get($request);
 
@@ -81,14 +79,12 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RealtimeReadMessagesRequest();
+        $request = new Operations\RealtimeReadMessagesRequest();
     $request->channel = 'string';
     $request->end = 'string';
     $request->event = 'string';
@@ -96,7 +92,7 @@ try {
     $request->project = 'string';
     $request->sessionId = 'string';
     $request->socketId = 'string';
-    $request->start = 'string';
+    $request->start = 'string';;
 
     $response = $sdk->channel->getMessages($request);
 
@@ -137,15 +133,13 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RealtimeGetRTChannelsRequest();
-    $request->project = 'string';
+        $request = new Operations\RealtimeGetRTChannelsRequest();
+    $request->project = 'string';;
 
     $response = $sdk->channel->list($request);
 
@@ -186,18 +180,16 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RealtimeListSubscriptionsRequest();
+        $request = new Operations\RealtimeListSubscriptionsRequest();
     $request->channel = 'string';
     $request->page = 994262;
     $request->pageSize = 462408;
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->channel->listSubscriptions($request);
 
@@ -238,14 +230,12 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RealtimeMessagesRequest();
+        $request = new Operations\RealtimeMessagesRequest();
     $request->messagesRequest = new Shared\MessagesRequest();
     $request->messagesRequest->channel = 'string';
     $request->messagesRequest->messages = [
@@ -253,7 +243,7 @@ try {
     ];
     $request->messagesRequest->project = 'string';
     $request->channel = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->channel->pushMessages($request);
 
@@ -294,16 +284,14 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\RealtimePresenceRequest();
+        $request = new Operations\RealtimePresenceRequest();
     $request->channel = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->channel->realtimePresence($request);
 

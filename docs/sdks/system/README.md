@@ -29,11 +29,9 @@ use \tigris\core;
 use \tigris\core\Models\Shared;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->system->getHealth();
@@ -68,11 +66,9 @@ use \tigris\core;
 use \tigris\core\Models\Shared;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->system->getServerInfo();
@@ -107,14 +103,12 @@ use \tigris\core;
 use \tigris\core\Models\Shared;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\QuotaUsageRequest();
+        $request = new Shared\QuotaUsageRequest();;
 
     $response = $sdk->system->observabilityQuotaUsage($request);
 
@@ -154,14 +148,12 @@ use \tigris\core;
 use \tigris\core\Models\Shared;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\QuotaLimitsRequest();
+        $request = new Shared\QuotaLimitsRequest();;
 
     $response = $sdk->system->queryQuotaLimits($request);
 
@@ -201,14 +193,12 @@ use \tigris\core;
 use \tigris\core\Models\Shared;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\QueryTimeSeriesMetricsRequest();
+        $request = new Shared\QueryTimeSeriesMetricsRequest();
     $request->additionalFunctions = [
         new Shared\AdditionalFunction(),
     ];
@@ -224,7 +214,7 @@ try {
     ];
     $request->spaceAggregation = Shared\SpaceAggregation::Max;
     $request->tigrisOperation = Shared\TigrisOperation::Read;
-    $request->to = 424991;
+    $request->to = 424991;;
 
     $response = $sdk->system->queryTimeSeriesMetrics($request);
 

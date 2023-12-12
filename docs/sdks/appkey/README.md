@@ -30,17 +30,15 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisDeleteAppKeyRequest();
+        $request = new Operations\TigrisDeleteAppKeyRequest();
     $request->deleteAppKeyRequest = new Shared\DeleteAppKeyRequest();
     $request->deleteAppKeyRequest->id = '<ID>';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->appKey->delete($request);
 
@@ -81,15 +79,13 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisListAppKeysRequest();
-    $request->project = 'string';
+        $request = new Operations\TigrisListAppKeysRequest();
+    $request->project = 'string';;
 
     $response = $sdk->appKey->list($request);
 
@@ -130,18 +126,16 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisRotateAppKeySecretRequest();
+        $request = new Operations\TigrisRotateAppKeySecretRequest();
     $request->rotateAppKeyRequest = new Shared\RotateAppKeyRequest();
     $request->rotateAppKeyRequest->id = '<ID>';
     $request->rotateAppKeyRequest->project = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->appKey->rotate($request);
 
@@ -182,18 +176,16 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisCreateAppKeyRequest();
+        $request = new Operations\TigrisCreateAppKeyRequest();
     $request->createAppKeyRequest = new Shared\CreateAppKeyRequest();
     $request->createAppKeyRequest->description = 'User-centric bifurcated product';
     $request->createAppKeyRequest->name = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->appKey->tigrisCreateAppKey($request);
 
@@ -234,19 +226,17 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisUpdateAppKeyRequest();
+        $request = new Operations\TigrisUpdateAppKeyRequest();
     $request->updateAppKeyRequest = new Shared\UpdateAppKeyRequest();
     $request->updateAppKeyRequest->description = 'Optimized 24/7 middleware';
     $request->updateAppKeyRequest->id = '<ID>';
     $request->updateAppKeyRequest->name = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->appKey->update($request);
 

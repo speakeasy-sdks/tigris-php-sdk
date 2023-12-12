@@ -33,19 +33,17 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CacheCreateCacheRequest();
+        $request = new Operations\CacheCreateCacheRequest();
     $request->createCacheRequest = new Shared\CreateCacheRequest();
     $request->createCacheRequest->options = new Shared\CreateCacheOptions();
     $request->createCacheRequest->options->ttlMs = 481196;
     $request->name = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->cache->create($request);
 
@@ -86,17 +84,15 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CacheDeleteCacheRequest();
+        $request = new Operations\CacheDeleteCacheRequest();
     $request->deleteCacheRequest = new Shared\DeleteCacheRequest();
     $request->name = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->cache->delete($request);
 
@@ -137,18 +133,16 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CacheDelRequest();
+        $request = new Operations\CacheDelRequest();
     $request->delRequest = new Shared\DelRequest();
     $request->key = '<key>';
     $request->name = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->cache->deleteKeys($request);
 
@@ -189,17 +183,15 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CacheGetRequest();
+        $request = new Operations\CacheGetRequest();
     $request->key = '<key>';
     $request->name = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->cache->getKey($request);
 
@@ -240,19 +232,17 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CacheGetSetRequest();
+        $request = new Operations\CacheGetSetRequest();
     $request->getSetRequest = new Shared\GetSetRequest();
     $request->getSetRequest->value = 'string';
     $request->key = '<key>';
     $request->name = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->cache->getSetKey($request);
 
@@ -293,15 +283,13 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CacheListCachesRequest();
-    $request->project = 'string';
+        $request = new Operations\CacheListCachesRequest();
+    $request->project = 'string';;
 
     $response = $sdk->cache->list($request);
 
@@ -342,19 +330,17 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CacheKeysRequest();
+        $request = new Operations\CacheKeysRequest();
     $request->count = 618311;
     $request->cursor = 739921;
     $request->name = 'string';
     $request->pattern = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->cache->listKeys($request);
 
@@ -395,14 +381,12 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\CacheSetRequest();
+        $request = new Operations\CacheSetRequest();
     $request->setRequest = new Shared\SetRequest();
     $request->setRequest->ex = 170966;
     $request->setRequest->nx = false;
@@ -411,7 +395,7 @@ try {
     $request->setRequest->xx = false;
     $request->key = '<key>';
     $request->name = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->cache->setKey($request);
 

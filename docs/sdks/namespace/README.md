@@ -30,17 +30,15 @@ use \tigris\core;
 use \tigris\core\Models\Shared;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Shared\CreateNamespaceRequest();
+        $request = new Shared\CreateNamespaceRequest();
     $request->code = 481196;
     $request->id = '<ID>';
-    $request->name = 'string';
+    $request->name = 'string';;
 
     $response = $sdk->namespace->create($request);
 
@@ -80,11 +78,9 @@ use \tigris\core;
 use \tigris\core\Models\Shared;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->namespace->get();
@@ -120,18 +116,16 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ManagementGetNamespaceMetadataRequest();
+        $request = new Operations\ManagementGetNamespaceMetadataRequest();
     $request->getNamespaceMetadataRequest = new Shared\GetNamespaceMetadataRequest();
     $request->getNamespaceMetadataRequest->metadataKey = 'string';
     $request->getNamespaceMetadataRequest->value = new Shared\Value();
-    $request->metadataKey = 'string';
+    $request->metadataKey = 'string';;
 
     $response = $sdk->namespace->getMetadata($request);
 
@@ -172,18 +166,16 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ManagementInsertNamespaceMetadataRequest();
+        $request = new Operations\ManagementInsertNamespaceMetadataRequest();
     $request->insertNamespaceMetadataRequest = new Shared\InsertNamespaceMetadataRequest();
     $request->insertNamespaceMetadataRequest->metadataKey = 'string';
     $request->insertNamespaceMetadataRequest->value = new Shared\InsertNamespaceMetadataRequestValue();
-    $request->metadataKey = 'string';
+    $request->metadataKey = 'string';;
 
     $response = $sdk->namespace->insertMetadata($request);
 
@@ -223,11 +215,9 @@ use \tigris\core;
 use \tigris\core\Models\Shared;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->namespace->list();
@@ -263,18 +253,16 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ManagementUpdateNamespaceMetadataRequest();
+        $request = new Operations\ManagementUpdateNamespaceMetadataRequest();
     $request->updateNamespaceMetadataRequest = new Shared\UpdateNamespaceMetadataRequest();
     $request->updateNamespaceMetadataRequest->metadataKey = 'string';
     $request->updateNamespaceMetadataRequest->value = new Shared\UpdateNamespaceMetadataRequestValue();
-    $request->metadataKey = 'string';
+    $request->metadataKey = 'string';;
 
     $response = $sdk->namespace->updateMetadata($request);
 

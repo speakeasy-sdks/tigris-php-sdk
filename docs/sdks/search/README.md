@@ -40,14 +40,12 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SearchCreateByIdRequest();
+        $request = new Operations\SearchCreateByIdRequest();
     $request->createByIdRequest = new Shared\CreateByIdRequest();
     $request->createByIdRequest->document = 'string';
     $request->createByIdRequest->id = '<ID>';
@@ -55,7 +53,7 @@ try {
     $request->createByIdRequest->project = 'string';
     $request->id = '<ID>';
     $request->index = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->search->createDocument($request);
 
@@ -100,14 +98,12 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SearchCreateRequest();
+        $request = new Operations\SearchCreateRequest();
     $request->createDocumentRequest = new Shared\CreateDocumentRequest();
     $request->createDocumentRequest->documents = [
         'string',
@@ -115,7 +111,7 @@ try {
     $request->createDocumentRequest->index = 'string';
     $request->createDocumentRequest->project = 'string';
     $request->index = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->search->createDocuments($request);
 
@@ -158,14 +154,12 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SearchDeleteRequest();
+        $request = new Operations\SearchDeleteRequest();
     $request->deleteDocumentRequest = new Shared\DeleteDocumentRequest();
     $request->deleteDocumentRequest->ids = [
         'string',
@@ -173,7 +167,7 @@ try {
     $request->deleteDocumentRequest->index = 'string';
     $request->deleteDocumentRequest->project = 'string';
     $request->index = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->search->deleteDocuments($request);
 
@@ -214,19 +208,17 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SearchDeleteIndexRequest();
+        $request = new Operations\SearchDeleteIndexRequest();
     $request->deleteIndexRequest = new Shared\DeleteIndexRequest();
     $request->deleteIndexRequest->name = 'string';
     $request->deleteIndexRequest->project = 'string';
     $request->name = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->search->deleteIndex($request);
 
@@ -271,14 +263,12 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SearchSearchRequest();
+        $request = new Operations\SearchSearchRequest();
     $request->searchIndexRequest = new Shared\SearchIndexRequest();
     $request->searchIndexRequest->collation = new Shared\Collation();
     $request->searchIndexRequest->collation->case = 'string';
@@ -300,7 +290,7 @@ try {
     ];
     $request->searchIndexRequest->sort = 'string';
     $request->index = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->search->findDocuments($request);
 
@@ -342,19 +332,17 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SearchGetRequest();
+        $request = new Operations\SearchGetRequest();
     $request->ids = [
         'string',
     ];
     $request->index = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->search->getDocuments($request);
 
@@ -395,16 +383,14 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SearchGetIndexRequest();
+        $request = new Operations\SearchGetIndexRequest();
     $request->name = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->search->getIndex($request);
 
@@ -445,18 +431,16 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SearchListIndexesRequest();
+        $request = new Operations\SearchListIndexesRequest();
     $request->filterBranch = 'string';
     $request->filterCollection = 'string';
     $request->filterType = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->search->listIndexes($request);
 
@@ -498,20 +482,18 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SearchDeleteByQueryRequest();
+        $request = new Operations\SearchDeleteByQueryRequest();
     $request->deleteByQueryRequest = new Shared\DeleteByQueryRequest();
     $request->deleteByQueryRequest->filter = 'string';
     $request->deleteByQueryRequest->index = 'string';
     $request->deleteByQueryRequest->project = 'string';
     $request->index = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->search->queryDeleteDocuments($request);
 
@@ -555,14 +537,12 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SearchCreateOrReplaceRequest();
+        $request = new Operations\SearchCreateOrReplaceRequest();
     $request->createOrReplaceDocumentRequest = new Shared\CreateOrReplaceDocumentRequest();
     $request->createOrReplaceDocumentRequest->documents = [
         'string',
@@ -570,7 +550,7 @@ try {
     $request->createOrReplaceDocumentRequest->index = 'string';
     $request->createOrReplaceDocumentRequest->project = 'string';
     $request->index = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->search->replaceDocuments($request);
 
@@ -614,14 +594,12 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SearchUpdateRequest();
+        $request = new Operations\SearchUpdateRequest();
     $request->updateDocumentRequest = new Shared\UpdateDocumentRequest();
     $request->updateDocumentRequest->documents = [
         'string',
@@ -629,7 +607,7 @@ try {
     $request->updateDocumentRequest->index = 'string';
     $request->updateDocumentRequest->project = 'string';
     $request->index = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->search->updateDocuments($request);
 
@@ -670,21 +648,19 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\SearchCreateOrUpdateIndexRequest();
+        $request = new Operations\SearchCreateOrUpdateIndexRequest();
     $request->createOrUpdateIndexRequest = new Shared\CreateOrUpdateIndexRequest();
     $request->createOrUpdateIndexRequest->name = 'string';
     $request->createOrUpdateIndexRequest->onlyCreate = false;
     $request->createOrUpdateIndexRequest->project = 'string';
     $request->createOrUpdateIndexRequest->schema = 'string';
     $request->name = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->search->updateIndex($request);
 

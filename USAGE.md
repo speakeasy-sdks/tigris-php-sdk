@@ -10,7 +10,7 @@ use tigris\core\Models\Shared;
 use tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
 $sdk = core\SDK::builder()
     ->setSecurity($security)

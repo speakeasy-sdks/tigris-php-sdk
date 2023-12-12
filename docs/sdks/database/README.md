@@ -35,18 +35,16 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisBeginTransactionRequest();
+        $request = new Operations\TigrisBeginTransactionRequest();
     $request->beginTransactionRequest = new Shared\BeginTransactionRequest();
     $request->beginTransactionRequest->branch = 'string';
     $request->beginTransactionRequest->options = new Shared\TransactionOptions();
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->database->beginTransaction($request);
 
@@ -88,17 +86,15 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisCommitTransactionRequest();
+        $request = new Operations\TigrisCommitTransactionRequest();
     $request->commitTransactionRequest = new Shared\CommitTransactionRequest();
     $request->commitTransactionRequest->branch = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->database->commitTransaction($request);
 
@@ -139,17 +135,15 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisCreateBranchRequest();
+        $request = new Operations\TigrisCreateBranchRequest();
     $request->createBranchRequest = new Shared\CreateBranchRequest();
     $request->branch = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->database->createBranch($request);
 
@@ -191,17 +185,15 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisDeleteBranchRequest();
+        $request = new Operations\TigrisDeleteBranchRequest();
     $request->deleteBranchRequest = new Shared\DeleteBranchRequest();
     $request->branch = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->database->deleteBranch($request);
 
@@ -243,19 +235,17 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisDescribeDatabaseRequest();
+        $request = new Operations\TigrisDescribeDatabaseRequest();
     $request->describeDatabaseRequest = new Shared\DescribeDatabaseRequest();
     $request->describeDatabaseRequest->branch = 'string';
     $request->describeDatabaseRequest->project = 'string';
     $request->describeDatabaseRequest->schemaFormat = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->database->describe($request);
 
@@ -296,16 +286,14 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisListCollectionsRequest();
+        $request = new Operations\TigrisListCollectionsRequest();
     $request->branch = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->database->listCollections($request);
 
@@ -347,17 +335,15 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisRollbackTransactionRequest();
+        $request = new Operations\TigrisRollbackTransactionRequest();
     $request->rollbackTransactionRequest = new Shared\RollbackTransactionRequest();
     $request->rollbackTransactionRequest->branch = 'string';
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->database->rollbackTransaction($request);
 
@@ -398,15 +384,13 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisListBranchesRequest();
-    $request->project = 'string';
+        $request = new Operations\TigrisListBranchesRequest();
+    $request->project = 'string';;
 
     $response = $sdk->database->tigrisListBranches($request);
 

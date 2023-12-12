@@ -28,16 +28,14 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisCreateProjectRequest();
+        $request = new Operations\TigrisCreateProjectRequest();
     $request->createProjectRequest = new Shared\CreateProjectRequest();
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->project->create($request);
 
@@ -78,16 +76,14 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\TigrisDeleteProjectRequest();
+        $request = new Operations\TigrisDeleteProjectRequest();
     $request->deleteProjectRequest = new Shared\DeleteProjectRequest();
-    $request->project = 'string';
+    $request->project = 'string';;
 
     $response = $sdk->project->deleteProject($request);
 
@@ -127,11 +123,9 @@ use \tigris\core;
 use \tigris\core\Models\Shared;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
     $response = $sdk->project->list();

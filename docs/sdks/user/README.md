@@ -28,18 +28,16 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ManagementGetUserMetadataRequest();
+        $request = new Operations\ManagementGetUserMetadataRequest();
     $request->getUserMetadataRequest = new Shared\GetUserMetadataRequest();
     $request->getUserMetadataRequest->metadataKey = 'string';
     $request->getUserMetadataRequest->value = new Shared\GetUserMetadataRequestValue();
-    $request->metadataKey = 'string';
+    $request->metadataKey = 'string';;
 
     $response = $sdk->user->getMetadata($request);
 
@@ -80,18 +78,16 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ManagementInsertUserMetadataRequest();
+        $request = new Operations\ManagementInsertUserMetadataRequest();
     $request->insertUserMetadataRequest = new Shared\InsertUserMetadataRequest();
     $request->insertUserMetadataRequest->metadataKey = 'string';
     $request->insertUserMetadataRequest->value = new Shared\InsertUserMetadataRequestValue();
-    $request->metadataKey = 'string';
+    $request->metadataKey = 'string';;
 
     $response = $sdk->user->insertMetadata($request);
 
@@ -132,18 +128,16 @@ use \tigris\core\Models\Shared;
 use \tigris\core\Models\Operations;
 
 $security = new Shared\Security();
-$security->bearerAuth = '';
+$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
 
-$sdk = core\SDK::builder()
-    ->setSecurity($security)
-    ->build();
+$sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
-    $request = new Operations\ManagementUpdateUserMetadataRequest();
+        $request = new Operations\ManagementUpdateUserMetadataRequest();
     $request->updateUserMetadataRequest = new Shared\UpdateUserMetadataRequest();
     $request->updateUserMetadataRequest->metadataKey = 'string';
     $request->updateUserMetadataRequest->value = new Shared\UpdateUserMetadataRequestValue();
-    $request->metadataKey = 'string';
+    $request->metadataKey = 'string';;
 
     $response = $sdk->user->updateMetadata($request);
 
