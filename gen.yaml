@@ -1,22 +1,10 @@
-configVersion: 1.0.0
-management:
-  docChecksum: db7bd8f69518c551928aef7eb16008e2
-  docVersion: 0.0.1
-  speakeasyVersion: 1.126.0
-  generationVersion: 2.213.3
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: SDK
-  repoURL: https://github.com/speakeasy-sdks/tigris-php-sdk.git
   usageSnippets:
     optionalPropertyRendering: withExample
-features:
-  php:
-    core: 3.2.0
-    examples: 2.81.3
-    globalSecurity: 2.81.2
-    globalServerURLs: 2.82.1
-    nameOverrides: 2.81.1
+  fixes:
+    nameResolutionDec2023: false
 php:
   version: 0.52.0
   imports:
@@ -28,9 +16,7 @@ php:
       shared: Models/Shared
       webhooks: Models/Webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/speakeasy-sdks/tigris-php-sdk
   maxMethodParams: 0
   namespace: tigris\core
   outputModelSuffix: output
   packageName: tigris-data/tigris-api
-  repoSubDirectory: .
