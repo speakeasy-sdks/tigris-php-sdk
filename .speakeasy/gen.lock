@@ -4,9 +4,9 @@ management:
   docChecksum: db7bd8f69518c551928aef7eb16008e2
   docVersion: 0.0.1
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 0.52.0
-  configChecksum: 30b1ceded5ab1a88923f634d8eee7603
+  generationVersion: 2.237.2
+  releaseVersion: 0.52.1
+  configChecksum: 71abe32c2e3e68d9bfafc756348f844b
   repoURL: https://github.com/speakeasy-sdks/tigris-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/tigris-php-sdk
@@ -14,7 +14,7 @@ features:
   php:
     core: 3.3.0
     examples: 2.81.3
-    globalSecurity: 2.81.2
+    globalSecurity: 2.81.3
     globalServerURLs: 2.82.1
     nameOverrides: 2.81.1
 generatedFiles:
