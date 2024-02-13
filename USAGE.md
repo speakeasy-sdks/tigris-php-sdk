@@ -29,7 +29,7 @@ try {
     if ($response->createCacheResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 

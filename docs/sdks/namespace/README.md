@@ -45,7 +45,7 @@ try {
     if ($response->createNamespaceResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -88,7 +88,7 @@ try {
     if ($response->describeNamespacesResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -132,7 +132,7 @@ try {
     if ($response->getNamespaceMetadataResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -182,7 +182,7 @@ try {
     if ($response->insertNamespaceMetadataResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -225,7 +225,7 @@ try {
     if ($response->listNamespacesResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -269,7 +269,7 @@ try {
     if ($response->updateNamespaceMetadataResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

@@ -42,7 +42,7 @@ try {
     if ($response->createProjectResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -90,7 +90,7 @@ try {
     if ($response->deleteProjectResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -133,7 +133,7 @@ try {
     if ($response->listProjectsResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

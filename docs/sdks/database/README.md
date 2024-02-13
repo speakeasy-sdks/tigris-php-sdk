@@ -51,7 +51,7 @@ try {
     if ($response->beginTransactionResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -101,7 +101,7 @@ try {
     if ($response->commitTransactionResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -150,7 +150,7 @@ try {
     if ($response->createBranchResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -200,7 +200,7 @@ try {
     if ($response->deleteBranchResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -252,7 +252,7 @@ try {
     if ($response->describeDatabaseResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -300,7 +300,7 @@ try {
     if ($response->listCollectionsResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -350,7 +350,7 @@ try {
     if ($response->rollbackTransactionResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -397,7 +397,7 @@ try {
     if ($response->listBranchesResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

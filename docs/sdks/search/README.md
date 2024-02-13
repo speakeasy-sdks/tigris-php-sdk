@@ -60,7 +60,7 @@ try {
     if ($response->createByIdResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -118,7 +118,7 @@ try {
     if ($response->createDocumentResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -174,7 +174,7 @@ try {
     if ($response->deleteDocumentResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -225,7 +225,7 @@ try {
     if ($response->deleteIndexResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -297,7 +297,7 @@ try {
     if ($response->searchIndexResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -349,7 +349,7 @@ try {
     if ($response->getDocumentResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -397,7 +397,7 @@ try {
     if ($response->getIndexResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -447,7 +447,7 @@ try {
     if ($response->listIndexesResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -500,7 +500,7 @@ try {
     if ($response->deleteByQueryResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -557,7 +557,7 @@ try {
     if ($response->createOrReplaceDocumentResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -614,7 +614,7 @@ try {
     if ($response->updateDocumentResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -667,7 +667,7 @@ try {
     if ($response->createOrUpdateIndexResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

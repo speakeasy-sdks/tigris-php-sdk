@@ -45,7 +45,7 @@ try {
     if ($response->deleteAppKeyResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -92,7 +92,7 @@ try {
     if ($response->listAppKeysResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -142,7 +142,7 @@ try {
     if ($response->rotateAppKeyResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -192,7 +192,7 @@ try {
     if ($response->createAppKeyResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -243,7 +243,7 @@ try {
     if ($response->updateAppKeyResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

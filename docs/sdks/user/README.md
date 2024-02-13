@@ -44,7 +44,7 @@ try {
     if ($response->getUserMetadataResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -94,7 +94,7 @@ try {
     if ($response->insertUserMetadataResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -144,7 +144,7 @@ try {
     if ($response->updateUserMetadataResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```

@@ -39,7 +39,7 @@ try {
     if ($response->healthCheckResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -76,7 +76,7 @@ try {
     if ($response->getInfoResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -115,7 +115,7 @@ try {
     if ($response->quotaUsageResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -160,7 +160,7 @@ try {
     if ($response->quotaLimitsResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
@@ -221,7 +221,7 @@ try {
     if ($response->queryTimeSeriesMetricsResponse !== null) {
         // handle response
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
     // handle exception
 }
 ```
