@@ -42,8 +42,8 @@ try {
     $request->createCacheRequest = new Shared\CreateCacheRequest();
     $request->createCacheRequest->options = new Shared\CreateCacheOptions();
     $request->createCacheRequest->options->ttlMs = 481196;
-    $request->name = 'string';
-    $request->project = 'string';;
+    $request->name = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->cache->create($request);
 
@@ -91,8 +91,8 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CacheDeleteCacheRequest();
     $request->deleteCacheRequest = new Shared\DeleteCacheRequest();
-    $request->name = 'string';
-    $request->project = 'string';;
+    $request->name = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->cache->delete($request);
 
@@ -141,8 +141,8 @@ try {
         $request = new Operations\CacheDelRequest();
     $request->delRequest = new Shared\DelRequest();
     $request->key = '<key>';
-    $request->name = 'string';
-    $request->project = 'string';;
+    $request->name = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->cache->deleteKeys($request);
 
@@ -190,8 +190,8 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CacheGetRequest();
     $request->key = '<key>';
-    $request->name = 'string';
-    $request->project = 'string';;
+    $request->name = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->cache->getKey($request);
 
@@ -239,10 +239,10 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\CacheGetSetRequest();
     $request->getSetRequest = new Shared\GetSetRequest();
-    $request->getSetRequest->value = 'string';
+    $request->getSetRequest->value = '<value>';
     $request->key = '<key>';
-    $request->name = 'string';
-    $request->project = 'string';;
+    $request->name = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->cache->getSetKey($request);
 
@@ -289,7 +289,7 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\CacheListCachesRequest();
-    $request->project = 'string';;
+    $request->project = '<value>';;
 
     $response = $sdk->cache->list($request);
 
@@ -338,9 +338,9 @@ try {
         $request = new Operations\CacheKeysRequest();
     $request->count = 618311;
     $request->cursor = 739921;
-    $request->name = 'string';
-    $request->pattern = 'string';
-    $request->project = 'string';;
+    $request->name = '<value>';
+    $request->pattern = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->cache->listKeys($request);
 
@@ -391,11 +391,11 @@ try {
     $request->setRequest->ex = 170966;
     $request->setRequest->nx = false;
     $request->setRequest->px = 17597;
-    $request->setRequest->value = 'string';
+    $request->setRequest->value = '<value>';
     $request->setRequest->xx = false;
     $request->key = '<key>';
-    $request->name = 'string';
-    $request->project = 'string';;
+    $request->name = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->cache->setKey($request);
 

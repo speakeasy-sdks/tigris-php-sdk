@@ -35,9 +35,9 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ManagementGetUserMetadataRequest();
     $request->getUserMetadataRequest = new Shared\GetUserMetadataRequest();
-    $request->getUserMetadataRequest->metadataKey = 'string';
+    $request->getUserMetadataRequest->metadataKey = '<value>';
     $request->getUserMetadataRequest->value = new Shared\GetUserMetadataRequestValue();
-    $request->metadataKey = 'string';;
+    $request->metadataKey = '<value>';;
 
     $response = $sdk->user->getMetadata($request);
 
@@ -85,9 +85,9 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ManagementInsertUserMetadataRequest();
     $request->insertUserMetadataRequest = new Shared\InsertUserMetadataRequest();
-    $request->insertUserMetadataRequest->metadataKey = 'string';
+    $request->insertUserMetadataRequest->metadataKey = '<value>';
     $request->insertUserMetadataRequest->value = new Shared\InsertUserMetadataRequestValue();
-    $request->metadataKey = 'string';;
+    $request->metadataKey = '<value>';;
 
     $response = $sdk->user->insertMetadata($request);
 
@@ -135,9 +135,9 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ManagementUpdateUserMetadataRequest();
     $request->updateUserMetadataRequest = new Shared\UpdateUserMetadataRequest();
-    $request->updateUserMetadataRequest->metadataKey = 'string';
+    $request->updateUserMetadataRequest->metadataKey = '<value>';
     $request->updateUserMetadataRequest->value = new Shared\UpdateUserMetadataRequestValue();
-    $request->metadataKey = 'string';;
+    $request->metadataKey = '<value>';;
 
     $response = $sdk->user->updateMetadata($request);
 

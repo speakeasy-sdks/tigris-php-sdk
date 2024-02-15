@@ -47,13 +47,13 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\SearchCreateByIdRequest();
     $request->createByIdRequest = new Shared\CreateByIdRequest();
-    $request->createByIdRequest->document = 'string';
-    $request->createByIdRequest->id = '<ID>';
-    $request->createByIdRequest->index = 'string';
-    $request->createByIdRequest->project = 'string';
-    $request->id = '<ID>';
-    $request->index = 'string';
-    $request->project = 'string';;
+    $request->createByIdRequest->document = '<value>';
+    $request->createByIdRequest->id = '<id>';
+    $request->createByIdRequest->index = '<value>';
+    $request->createByIdRequest->project = '<value>';
+    $request->id = '<id>';
+    $request->index = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->search->createDocument($request);
 
@@ -106,12 +106,12 @@ try {
         $request = new Operations\SearchCreateRequest();
     $request->createDocumentRequest = new Shared\CreateDocumentRequest();
     $request->createDocumentRequest->documents = [
-        'string',
+        '<value>',
     ];
-    $request->createDocumentRequest->index = 'string';
-    $request->createDocumentRequest->project = 'string';
-    $request->index = 'string';
-    $request->project = 'string';;
+    $request->createDocumentRequest->index = '<value>';
+    $request->createDocumentRequest->project = '<value>';
+    $request->index = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->search->createDocuments($request);
 
@@ -162,12 +162,12 @@ try {
         $request = new Operations\SearchDeleteRequest();
     $request->deleteDocumentRequest = new Shared\DeleteDocumentRequest();
     $request->deleteDocumentRequest->ids = [
-        'string',
+        '<value>',
     ];
-    $request->deleteDocumentRequest->index = 'string';
-    $request->deleteDocumentRequest->project = 'string';
-    $request->index = 'string';
-    $request->project = 'string';;
+    $request->deleteDocumentRequest->index = '<value>';
+    $request->deleteDocumentRequest->project = '<value>';
+    $request->index = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->search->deleteDocuments($request);
 
@@ -215,10 +215,10 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\SearchDeleteIndexRequest();
     $request->deleteIndexRequest = new Shared\DeleteIndexRequest();
-    $request->deleteIndexRequest->name = 'string';
-    $request->deleteIndexRequest->project = 'string';
-    $request->name = 'string';
-    $request->project = 'string';;
+    $request->deleteIndexRequest->name = '<value>';
+    $request->deleteIndexRequest->project = '<value>';
+    $request->name = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->search->deleteIndex($request);
 
@@ -271,26 +271,26 @@ try {
         $request = new Operations\SearchSearchRequest();
     $request->searchIndexRequest = new Shared\SearchIndexRequest();
     $request->searchIndexRequest->collation = new Shared\Collation();
-    $request->searchIndexRequest->collation->case = 'string';
+    $request->searchIndexRequest->collation->case = '<value>';
     $request->searchIndexRequest->excludeFields = [
-        'string',
+        '<value>',
     ];
-    $request->searchIndexRequest->facet = 'string';
-    $request->searchIndexRequest->filter = 'string';
+    $request->searchIndexRequest->facet = '<value>';
+    $request->searchIndexRequest->filter = '<value>';
     $request->searchIndexRequest->includeFields = [
-        'string',
+        '<value>',
     ];
-    $request->searchIndexRequest->index = 'string';
+    $request->searchIndexRequest->index = '<value>';
     $request->searchIndexRequest->page = 71364;
     $request->searchIndexRequest->pageSize = 998280;
-    $request->searchIndexRequest->project = 'string';
-    $request->searchIndexRequest->q = 'string';
+    $request->searchIndexRequest->project = '<value>';
+    $request->searchIndexRequest->q = '<value>';
     $request->searchIndexRequest->searchFields = [
-        'string',
+        '<value>',
     ];
-    $request->searchIndexRequest->sort = 'string';
-    $request->index = 'string';
-    $request->project = 'string';;
+    $request->searchIndexRequest->sort = '<value>';
+    $request->index = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->search->findDocuments($request);
 
@@ -339,10 +339,10 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\SearchGetRequest();
     $request->ids = [
-        'string',
+        '<value>',
     ];
-    $request->index = 'string';
-    $request->project = 'string';;
+    $request->index = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->search->getDocuments($request);
 
@@ -389,8 +389,8 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\SearchGetIndexRequest();
-    $request->name = 'string';
-    $request->project = 'string';;
+    $request->name = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->search->getIndex($request);
 
@@ -437,10 +437,10 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\SearchListIndexesRequest();
-    $request->filterBranch = 'string';
-    $request->filterCollection = 'string';
-    $request->filterType = 'string';
-    $request->project = 'string';;
+    $request->filterBranch = '<value>';
+    $request->filterCollection = '<value>';
+    $request->filterType = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->search->listIndexes($request);
 
@@ -489,11 +489,11 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\SearchDeleteByQueryRequest();
     $request->deleteByQueryRequest = new Shared\DeleteByQueryRequest();
-    $request->deleteByQueryRequest->filter = 'string';
-    $request->deleteByQueryRequest->index = 'string';
-    $request->deleteByQueryRequest->project = 'string';
-    $request->index = 'string';
-    $request->project = 'string';;
+    $request->deleteByQueryRequest->filter = '<value>';
+    $request->deleteByQueryRequest->index = '<value>';
+    $request->deleteByQueryRequest->project = '<value>';
+    $request->index = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->search->queryDeleteDocuments($request);
 
@@ -545,12 +545,12 @@ try {
         $request = new Operations\SearchCreateOrReplaceRequest();
     $request->createOrReplaceDocumentRequest = new Shared\CreateOrReplaceDocumentRequest();
     $request->createOrReplaceDocumentRequest->documents = [
-        'string',
+        '<value>',
     ];
-    $request->createOrReplaceDocumentRequest->index = 'string';
-    $request->createOrReplaceDocumentRequest->project = 'string';
-    $request->index = 'string';
-    $request->project = 'string';;
+    $request->createOrReplaceDocumentRequest->index = '<value>';
+    $request->createOrReplaceDocumentRequest->project = '<value>';
+    $request->index = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->search->replaceDocuments($request);
 
@@ -602,12 +602,12 @@ try {
         $request = new Operations\SearchUpdateRequest();
     $request->updateDocumentRequest = new Shared\UpdateDocumentRequest();
     $request->updateDocumentRequest->documents = [
-        'string',
+        '<value>',
     ];
-    $request->updateDocumentRequest->index = 'string';
-    $request->updateDocumentRequest->project = 'string';
-    $request->index = 'string';
-    $request->project = 'string';;
+    $request->updateDocumentRequest->index = '<value>';
+    $request->updateDocumentRequest->project = '<value>';
+    $request->index = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->search->updateDocuments($request);
 
@@ -655,12 +655,12 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\SearchCreateOrUpdateIndexRequest();
     $request->createOrUpdateIndexRequest = new Shared\CreateOrUpdateIndexRequest();
-    $request->createOrUpdateIndexRequest->name = 'string';
+    $request->createOrUpdateIndexRequest->name = '<value>';
     $request->createOrUpdateIndexRequest->onlyCreate = false;
-    $request->createOrUpdateIndexRequest->project = 'string';
-    $request->createOrUpdateIndexRequest->schema = 'string';
-    $request->name = 'string';
-    $request->project = 'string';;
+    $request->createOrUpdateIndexRequest->project = '<value>';
+    $request->createOrUpdateIndexRequest->schema = '<value>';
+    $request->name = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->search->updateIndex($request);
 

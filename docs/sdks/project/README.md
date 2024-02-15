@@ -35,7 +35,7 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\TigrisCreateProjectRequest();
     $request->createProjectRequest = new Shared\CreateProjectRequest();
-    $request->project = 'string';;
+    $request->project = '<value>';;
 
     $response = $sdk->project->create($request);
 
@@ -83,7 +83,7 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\TigrisDeleteProjectRequest();
     $request->deleteProjectRequest = new Shared\DeleteProjectRequest();
-    $request->project = 'string';;
+    $request->project = '<value>';;
 
     $response = $sdk->project->deleteProject($request);
 

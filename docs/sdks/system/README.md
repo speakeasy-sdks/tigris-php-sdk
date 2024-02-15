@@ -202,15 +202,15 @@ try {
     $request->additionalFunctions = [
         new Shared\AdditionalFunction(),
     ];
-    $request->branch = 'string';
-    $request->collection = 'string';
-    $request->db = 'string';
+    $request->branch = '<value>';
+    $request->collection = '<value>';
+    $request->db = '<value>';
     $request->from = 262768;
     $request->function = Shared\FunctionT::None;
-    $request->metricName = 'string';
+    $request->metricName = '<value>';
     $request->quantile = 3054.25;
     $request->spaceAggregatedBy = [
-        'string',
+        '<value>',
     ];
     $request->spaceAggregation = Shared\SpaceAggregation::Max;
     $request->tigrisOperation = Shared\TigrisOperation::Read;

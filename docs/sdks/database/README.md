@@ -42,9 +42,9 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\TigrisBeginTransactionRequest();
     $request->beginTransactionRequest = new Shared\BeginTransactionRequest();
-    $request->beginTransactionRequest->branch = 'string';
+    $request->beginTransactionRequest->branch = '<value>';
     $request->beginTransactionRequest->options = new Shared\TransactionOptions();
-    $request->project = 'string';;
+    $request->project = '<value>';;
 
     $response = $sdk->database->beginTransaction($request);
 
@@ -93,8 +93,8 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\TigrisCommitTransactionRequest();
     $request->commitTransactionRequest = new Shared\CommitTransactionRequest();
-    $request->commitTransactionRequest->branch = 'string';
-    $request->project = 'string';;
+    $request->commitTransactionRequest->branch = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->database->commitTransaction($request);
 
@@ -142,8 +142,8 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\TigrisCreateBranchRequest();
     $request->createBranchRequest = new Shared\CreateBranchRequest();
-    $request->branch = 'string';
-    $request->project = 'string';;
+    $request->branch = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->database->createBranch($request);
 
@@ -192,8 +192,8 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\TigrisDeleteBranchRequest();
     $request->deleteBranchRequest = new Shared\DeleteBranchRequest();
-    $request->branch = 'string';
-    $request->project = 'string';;
+    $request->branch = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->database->deleteBranch($request);
 
@@ -242,10 +242,10 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\TigrisDescribeDatabaseRequest();
     $request->describeDatabaseRequest = new Shared\DescribeDatabaseRequest();
-    $request->describeDatabaseRequest->branch = 'string';
-    $request->describeDatabaseRequest->project = 'string';
-    $request->describeDatabaseRequest->schemaFormat = 'string';
-    $request->project = 'string';;
+    $request->describeDatabaseRequest->branch = '<value>';
+    $request->describeDatabaseRequest->project = '<value>';
+    $request->describeDatabaseRequest->schemaFormat = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->database->describe($request);
 
@@ -292,8 +292,8 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\TigrisListCollectionsRequest();
-    $request->branch = 'string';
-    $request->project = 'string';;
+    $request->branch = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->database->listCollections($request);
 
@@ -342,8 +342,8 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\TigrisRollbackTransactionRequest();
     $request->rollbackTransactionRequest = new Shared\RollbackTransactionRequest();
-    $request->rollbackTransactionRequest->branch = 'string';
-    $request->project = 'string';;
+    $request->rollbackTransactionRequest->branch = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->database->rollbackTransaction($request);
 
@@ -390,7 +390,7 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\TigrisListBranchesRequest();
-    $request->project = 'string';;
+    $request->project = '<value>';;
 
     $response = $sdk->database->tigrisListBranches($request);
 

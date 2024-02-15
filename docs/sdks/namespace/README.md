@@ -37,8 +37,8 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Shared\CreateNamespaceRequest();
     $request->code = 481196;
-    $request->id = '<ID>';
-    $request->name = 'string';;
+    $request->id = '<id>';
+    $request->name = '<value>';;
 
     $response = $sdk->namespace->create($request);
 
@@ -123,9 +123,9 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ManagementGetNamespaceMetadataRequest();
     $request->getNamespaceMetadataRequest = new Shared\GetNamespaceMetadataRequest();
-    $request->getNamespaceMetadataRequest->metadataKey = 'string';
+    $request->getNamespaceMetadataRequest->metadataKey = '<value>';
     $request->getNamespaceMetadataRequest->value = new Shared\Value();
-    $request->metadataKey = 'string';;
+    $request->metadataKey = '<value>';;
 
     $response = $sdk->namespace->getMetadata($request);
 
@@ -173,9 +173,9 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ManagementInsertNamespaceMetadataRequest();
     $request->insertNamespaceMetadataRequest = new Shared\InsertNamespaceMetadataRequest();
-    $request->insertNamespaceMetadataRequest->metadataKey = 'string';
+    $request->insertNamespaceMetadataRequest->metadataKey = '<value>';
     $request->insertNamespaceMetadataRequest->value = new Shared\InsertNamespaceMetadataRequestValue();
-    $request->metadataKey = 'string';;
+    $request->metadataKey = '<value>';;
 
     $response = $sdk->namespace->insertMetadata($request);
 
@@ -260,9 +260,9 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\ManagementUpdateNamespaceMetadataRequest();
     $request->updateNamespaceMetadataRequest = new Shared\UpdateNamespaceMetadataRequest();
-    $request->updateNamespaceMetadataRequest->metadataKey = 'string';
+    $request->updateNamespaceMetadataRequest->metadataKey = '<value>';
     $request->updateNamespaceMetadataRequest->value = new Shared\UpdateNamespaceMetadataRequestValue();
-    $request->metadataKey = 'string';;
+    $request->metadataKey = '<value>';;
 
     $response = $sdk->namespace->updateMetadata($request);
 

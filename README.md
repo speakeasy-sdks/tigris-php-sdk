@@ -2221,8 +2221,8 @@ try {
     $request->createCacheRequest = new Shared\CreateCacheRequest();
     $request->createCacheRequest->options = new Shared\CreateCacheOptions();
     $request->createCacheRequest->options->ttlMs = 481196;
-    $request->name = 'string';
-    $request->project = 'string';
+    $request->name = '<value>';
+    $request->project = '<value>';
 
     $response = $sdk->cache->create($request);
 

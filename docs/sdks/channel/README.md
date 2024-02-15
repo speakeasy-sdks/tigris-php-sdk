@@ -37,8 +37,8 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RealtimeGetRTChannelRequest();
-    $request->channel = 'string';
-    $request->project = 'string';;
+    $request->channel = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->channel->get($request);
 
@@ -85,14 +85,14 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RealtimeReadMessagesRequest();
-    $request->channel = 'string';
-    $request->end = 'string';
-    $request->event = 'string';
+    $request->channel = '<value>';
+    $request->end = '<value>';
+    $request->event = '<value>';
     $request->limit = 7235;
-    $request->project = 'string';
-    $request->sessionId = 'string';
-    $request->socketId = 'string';
-    $request->start = 'string';;
+    $request->project = '<value>';
+    $request->sessionId = '<value>';
+    $request->socketId = '<value>';
+    $request->start = '<value>';;
 
     $response = $sdk->channel->getMessages($request);
 
@@ -139,7 +139,7 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RealtimeGetRTChannelsRequest();
-    $request->project = 'string';;
+    $request->project = '<value>';;
 
     $response = $sdk->channel->list($request);
 
@@ -186,10 +186,10 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RealtimeListSubscriptionsRequest();
-    $request->channel = 'string';
+    $request->channel = '<value>';
     $request->page = 994262;
     $request->pageSize = 462408;
-    $request->project = 'string';;
+    $request->project = '<value>';;
 
     $response = $sdk->channel->listSubscriptions($request);
 
@@ -237,13 +237,13 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 try {
         $request = new Operations\RealtimeMessagesRequest();
     $request->messagesRequest = new Shared\MessagesRequest();
-    $request->messagesRequest->channel = 'string';
+    $request->messagesRequest->channel = '<value>';
     $request->messagesRequest->messages = [
         new Shared\Message(),
     ];
-    $request->messagesRequest->project = 'string';
-    $request->channel = 'string';
-    $request->project = 'string';;
+    $request->messagesRequest->project = '<value>';
+    $request->channel = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->channel->pushMessages($request);
 
@@ -290,8 +290,8 @@ $sdk = core\SDK::builder()->setSecurity($security)->build();
 
 try {
         $request = new Operations\RealtimePresenceRequest();
-    $request->channel = 'string';
-    $request->project = 'string';;
+    $request->channel = '<value>';
+    $request->project = '<value>';;
 
     $response = $sdk->channel->realtimePresence($request);
 
