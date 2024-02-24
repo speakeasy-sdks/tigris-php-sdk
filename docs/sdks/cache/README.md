@@ -26,7 +26,8 @@ Creates the cache
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -77,7 +78,8 @@ Deletes the cache
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -126,7 +128,8 @@ Deletes an entry from cache
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -176,7 +179,8 @@ Reads an entry from cache
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -225,7 +229,8 @@ Sets an entry in the cache and returns the previous value if exists
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -276,7 +281,8 @@ Lists all the caches for the given project
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -323,7 +329,8 @@ Lists all the key for this cache
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -374,7 +381,8 @@ Sets an entry in the cache
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;

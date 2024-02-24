@@ -23,7 +23,8 @@ Delete an app key.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -72,7 +73,8 @@ Lists all app keys visible to requesting actor.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -119,7 +121,8 @@ Endpoint is used to rotate the secret for the app key.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -169,7 +172,8 @@ Create an app key.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -219,7 +223,8 @@ Update the description of an app key.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;

@@ -33,7 +33,8 @@ CreateById is used for indexing a single document. The API expects a single docu
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -91,7 +92,8 @@ Create is used for indexing a single or multiple documents. The API expects an a
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -147,7 +149,8 @@ Delete one or more documents by id. Returns an array of status indicating the st
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -201,7 +204,8 @@ Deletes search index
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -256,7 +260,8 @@ Searches an index for the documents matching the query. A search can be a term s
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -325,7 +330,8 @@ Retrieves one or more documents by id. The response is an array of documents in 
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -376,7 +382,8 @@ Get information about a search index
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -424,7 +431,8 @@ List search indexes
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -475,7 +483,8 @@ DeleteByQuery is used to delete documents that match the filter. A filter is req
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -530,7 +539,8 @@ Creates or replaces one or more documents. Each document is a JSON object. A doc
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -587,7 +597,8 @@ Updates one or more documents by "id". Each document is required to have the
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -641,7 +652,8 @@ Creates or updates search index
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;

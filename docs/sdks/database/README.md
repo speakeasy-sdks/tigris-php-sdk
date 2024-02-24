@@ -28,7 +28,8 @@ Starts a new transaction and returns a transactional object. All reads/writes pe
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -79,7 +80,8 @@ Atomically commit all the changes performed in the context of the transaction. C
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -128,7 +130,8 @@ Creates a new database branch, if not already existing.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -178,7 +181,8 @@ Deletes a database branch, if exists.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -228,7 +232,8 @@ This API returns information related to the project along with all the collectio
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -279,7 +284,8 @@ List all the collections present in the project passed in the request.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -328,7 +334,8 @@ Rollback transaction discards all the changes
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -377,7 +384,8 @@ List database branches
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;

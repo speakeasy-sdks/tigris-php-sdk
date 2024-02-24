@@ -32,7 +32,8 @@ Creates a new collection or atomically upgrades the collection to the new schema
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -85,7 +86,8 @@ Delete a range of documents in the collection using the condition provided in th
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -141,7 +143,8 @@ Returns the information related to the collection. This can be used to retrieve 
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -196,7 +199,8 @@ Drops the collection inside this project. This API deletes all of the
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -252,7 +256,8 @@ Imports documents into the collection.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -316,7 +321,8 @@ Inserts new documents in the collection and returns an AlreadyExists error if an
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -376,7 +382,8 @@ Reads a range of documents from the collection, or messages from a collection in
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -435,7 +442,8 @@ Inserts the documents or replaces the existing documents in the collections.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -493,7 +501,8 @@ Searches a collection for the documents matching the query, or messages in case 
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -561,7 +570,8 @@ Update a range of documents in the collection using the condition provided in th
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;

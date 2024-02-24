@@ -23,15 +23,13 @@ This endpoint can be used to check the liveness of the server.
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
 
-$security = new Shared\Security();
-$security->bearerAuth = '<YOUR_BEARER_TOKEN_HERE>';
-
-$sdk = core\SDK::builder()->setSecurity($security)->build();
+$sdk = core\SDK::builder()->build();
 
 try {
     $response = $sdk->system->getHealth();
@@ -60,7 +58,8 @@ Provides the information about the server. This information includes returning t
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -97,7 +96,8 @@ Returns current namespace quota limits
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -142,7 +142,8 @@ Returns current namespace quota limits
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
@@ -187,7 +188,8 @@ Queries time series metrics
 <?php
 
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+
+require 'vendor/autoload.php';
 
 use \tigris\core;
 use \tigris\core\Models\Shared;
