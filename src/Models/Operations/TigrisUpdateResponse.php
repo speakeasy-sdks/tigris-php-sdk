@@ -20,6 +20,14 @@ class TigrisUpdateResponse
     public string $contentType;
     
     /**
+     * Default error response
+     * 
+     * @var ?\tigris\core\Models\Shared\Status $status
+     */
+	
+    public ?\tigris\core\Models\Shared\Status $status = null;
+    
+    /**
      * HTTP response status code for this operation
      * 
      * @var int $statusCode
@@ -36,14 +44,6 @@ class TigrisUpdateResponse
     public ?\Psr\Http\Message\ResponseInterface $rawResponse;
     
     /**
-     * Default error response
-     * 
-     * @var ?\tigris\core\Models\Shared\Status $status
-     */
-	
-    public ?\tigris\core\Models\Shared\Status $status = null;
-    
-    /**
      * OK
      * 
      * @var ?\tigris\core\Models\Shared\UpdateResponse $updateResponse
@@ -54,9 +54,9 @@ class TigrisUpdateResponse
 	public function __construct()
 	{
 		$this->contentType = "";
+		$this->status = null;
 		$this->statusCode = 0;
 		$this->rawResponse = null;
-		$this->status = null;
 		$this->updateResponse = null;
 	}
 }
